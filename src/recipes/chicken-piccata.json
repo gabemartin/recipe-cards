@@ -1,0 +1,163 @@
+{
+  "title": "Chicken Piccata",
+  "subtitle": "Pan-seared tenders in a light lemon-caper butter sauce. Served over angel hair.",
+  "storageKey": "chicken_piccata_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "2 lbs chicken tenders" },
+    {              "label": "Serves",  "value": "~4" },
+    {              "label": "Sauce",   "value": "Lemon + capers" },
+    {              "label": "Pasta",   "value": "Angel hair" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Light, silky sauce—not thick like gravy. Lemon does the heavy lifting.",
+    "items": [
+      "<strong>2 lbs chicken tenders</strong> (or sliced breasts)",
+      "<strong>1½–2 tsp kosher salt</strong>",
+      "<strong>1–1½ tsp black pepper</strong>",
+      "<strong>~¾ cup all-purpose flour</strong> (for dredging)",
+      "<strong>2–3 tbsp olive oil</strong>",
+      "<strong>4 tbsp butter</strong> (divided: 2 tbsp for searing, 2 tbsp for finishing)",
+      "<strong>1–1½ tsp garlic</strong> (fresh minced or roasted paste)",
+      "<strong>½ cup fresh lemon juice</strong>",
+      "<strong>1½ cups chicken broth</strong> (bouillon + water is fine)",
+      "<strong>3–4 tbsp capers</strong> (drained)",
+      "<strong>~8 oz angel hair pasta</strong>",
+      "Parmesan + parsley (optional, for serving)"
+    ],
+    "callout": "<strong>Key rule:</strong> Sauce should be light and silky—not heavy. If it's too thick, it's reduced too far."
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Chicken seared in batches for a proper crust, then a bright pan sauce built from the fond. Butter finish makes it glossy without being heavy."
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season + dredge</strong> chicken in flour",
+            "<strong>Sear in batches</strong>—don't crowd the pan",
+            "<strong>Build sauce</strong> from the pan drippings",
+            "<strong>Butter-finish</strong> for silky texture",
+            "<strong>Toss pasta in sauce</strong>, plate chicken on top"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Lesson learned:</strong> Pasta + sauce first, then chicken on top = best result."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Prep Chicken",
+      "checkboxLabel": "Pat dry, season, dredge in flour",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat chicken <strong>very dry</strong> with paper towels.",
+            "Season both sides with <strong>salt + pepper</strong>.",
+            "Lightly <strong>dredge in flour</strong>—shake off all excess. Thin coating only."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why dry matters:</strong> Moisture = steam = no crust. Dry chicken browns; wet chicken stews."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Sear Chicken (in Batches)",
+      "checkboxLabel": "Sear all chicken, set aside",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat skillet to <strong>medium-high</strong>.",
+            "Add <strong>1 tbsp olive oil + 1 tbsp butter</strong>.",
+            "Wait until butter melts and foam <strong>settles</strong>—that's your cue.",
+            "Add chicken in a <strong>single layer</strong> (don't crowd).",
+            "Cook <strong>2–3 min first side</strong>—don't move it.",
+            "Flip → cook <strong>2 min second side</strong>.",
+            "Remove to plate. <strong>Repeat</strong> for remaining batches."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Crowding kills browning.</strong> Work in batches. Foam settling = correct temp."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Build the Sauce",
+      "checkboxLabel": "Garlic → lemon → broth → capers",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Lower heat to <strong>medium</strong>.",
+            "Add <strong>garlic</strong> → cook <strong>10–15 sec</strong> (don't brown).",
+            "Add <strong>lemon juice + chicken broth</strong>.",
+            "<strong>Scrape the pan</strong>—that fond is flavor.",
+            "Add <strong>capers</strong>.",
+            "Simmer <strong>2–4 min</strong> until slightly reduced."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Scraping the pan is important.</strong> All those browned bits = the sauce's backbone."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Butter Finish",
+      "checkboxLabel": "Swirl in 2 tbsp butter until glossy",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Reduce heat to <strong>low</strong>.",
+            "Add <strong>2 tbsp cold butter</strong>.",
+            "<strong>Swirl the pan</strong> (don't stir aggressively) until butter is fully melted and sauce looks glossy."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Target texture:</strong> Light, silky, slightly thickened. Not heavy. Not gravy. If it's too thick, add a splash of broth."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Combine + Serve",
+      "checkboxLabel": "Pasta in sauce, chicken on top",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>cooked angel hair</strong> to the pan → toss to coat in sauce.",
+            "Plate the pasta.",
+            "Return chicken to pan briefly to warm, <strong>or</strong> place directly on top of pasta.",
+            "Spoon extra sauce over everything.",
+            "Finish with <strong>parmesan + parsley</strong> if using."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Order matters:</strong> Pasta in sauce first, chicken on top. Better coverage, better bite."
+        }
+      ]
+    }
+  ]
+}
