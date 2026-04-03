@@ -27,6 +27,21 @@ node generate.js
 open dist/index.html
 ```
 
+### Dev server (recommended for local development)
+
+```bash
+npm run dev
+```
+
+Starts a local server at `http://localhost:4000` that:
+
+- Serves the `dist/` directory
+- Watches `src/` and `generate.js` for changes
+- Rebuilds automatically on save
+- Live-reloads the browser (no manual refresh needed)
+
+Override the port with `PORT=8080 npm run dev`.
+
 To build a single recipe:
 
 ```bash

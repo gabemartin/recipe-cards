@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node generate.js",
-    "build:watch": "node --watch generate.js"
+    "build:watch": "node --watch generate.js",
+    "dev": "node dev.js"
   }
 }
