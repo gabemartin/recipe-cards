@@ -856,6 +856,13 @@ function buildIndex(entries) {
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Recipe Cards</title>
   <meta name="description" content="Phone-optimized step-by-step recipe cards." />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#18130d" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Recipe Cards" />
+  <link rel="apple-touch-icon" href="icons/chef-icon.png" />
   <style>
     :root{
       --black-deep:#18130d; --accent:#ff8b00; --accent-dark:#ff5800;
@@ -878,7 +885,7 @@ function buildIndex(entries) {
       -webkit-font-smoothing:antialiased;
       min-height:100%;
     }
-    .wrap{ max-width:560px; margin:0 auto; padding:24px 14px 40px; }
+    .wrap{ max-width:560px; margin:0 auto; padding:24px 14px 40px; padding-top:max(24px,env(safe-area-inset-top)); }
     .page-title{
       font-size:28px; font-weight:900; margin:0 0 4px;
       letter-spacing:.2px; line-height:1.1;
