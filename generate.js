@@ -442,7 +442,16 @@ dialog.fsdlg::backdrop{ background: transparent; }
   gap: 14px;
   max-width: 560px;
   margin: 0 auto;
+  min-height: 100%;
 }
+.fsnav{
+  display:flex;
+  gap:10px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+.fsnav .btn{ flex:1; display:flex; justify-content:center; }
+.btn:disabled{ opacity:.32; pointer-events:none; }
 .modal{
   padding: 16px;
   display:flex;
@@ -661,6 +670,10 @@ ${slides}
         <button class="x" id="closeFsDlg" type="button" aria-label="Close fullscreen">✕</button>
       </div>
       <div id="fsBody"></div>
+      <div class="fsnav">
+        <button class="btn" id="fsPrev" type="button">‹ Prev</button>
+        <button class="btn primary" id="fsNext" type="button">Next ›</button>
+      </div>
     </div>
   </dialog>
 
@@ -730,16 +743,35 @@ ${slides}
     });
 
     const fsDlg = document.getElementById("fsDlg");
+    let fsIdx = 0;
+
+    function fsLoad(idx) {
+      fsIdx = idx;
+      const card = swiper.slides[fsIdx].querySelector(".card");
+      document.getElementById("fsKicker").textContent = card.querySelector(".kicker").textContent;
+      document.getElementById("fsTitle").textContent = card.querySelector(".h").textContent;
+      document.getElementById("fsBody").innerHTML = card.querySelector(".cardbody").innerHTML;
+      document.getElementById("fsPrev").disabled = fsIdx === 0;
+      document.getElementById("fsNext").disabled = fsIdx === swiper.slides.length - 1;
+      swiper.slideTo(fsIdx, 0);
+    }
+
     document.querySelectorAll(".expand-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const card = btn.closest(".card");
-        document.getElementById("fsKicker").textContent = card.querySelector(".kicker").textContent;
-        document.getElementById("fsTitle").textContent = card.querySelector(".h").textContent;
-        document.getElementById("fsBody").innerHTML = card.querySelector(".cardbody").innerHTML;
-        fsDlg.showModal();
-      });
+      btn.addEventListener("click", () => { fsLoad(swiper.activeIndex); fsDlg.showModal(); });
     });
     document.getElementById("closeFsDlg").addEventListener("click", () => fsDlg.close());
+    document.getElementById("fsPrev").addEventListener("click", () => { if(fsIdx > 0) fsLoad(fsIdx - 1); });
+    document.getElementById("fsNext").addEventListener("click", () => { if(fsIdx < swiper.slides.length - 1) fsLoad(fsIdx + 1); });
+
+    let fsTouchX = 0;
+    fsDlg.addEventListener("touchstart", e => { fsTouchX = e.touches[0].clientX; }, { passive: true });
+    fsDlg.addEventListener("touchend", e => {
+      const dx = e.changedTouches[0].clientX - fsTouchX;
+      if(Math.abs(dx) > 44) {
+        if(dx < 0 && fsIdx < swiper.slides.length - 1) fsLoad(fsIdx + 1);
+        else if(dx > 0 && fsIdx > 0) fsLoad(fsIdx - 1);
+      }
+    });
 
     document.getElementById("resetChecks").addEventListener("click", () => resetChecks());
     document.getElementById("print").addEventListener("click", () => window.print());
