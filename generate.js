@@ -680,6 +680,117 @@ ${slides}
 </html>`;
 }
 
+// ─── Index page ───────────────────────────────────────────────────────────────
+
+function buildIndex(entries) {
+  // entries: [{ name, recipe }]
+  const cards = entries.map(({ name, recipe }) => {
+    const stepCount = recipe.slides.filter(s => s.checkboxLabel).length;
+    const chips = recipe.chips.slice(0, 3).map(renderChip).join("\n          ");
+    return `
+    <a class="icard" href="${name}.html">
+      <div class="icard-head">
+        <div>
+          <p class="kicker">${stepCount} steps</p>
+          <h2 class="h">${recipe.title}</h2>
+          <p class="muted">${recipe.subtitle}</p>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="chips">
+        ${chips}
+      </div>
+    </a>`.trimStart();
+  }).join("\n");
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Recipe Cards</title>
+  <meta name="description" content="Phone-optimized step-by-step recipe cards." />
+  <style>
+    :root{
+      --black-deep:#18130d; --accent:#ff8b00; --accent-dark:#ff5800;
+      --stroke:rgba(221,216,203,.20); --stroke-2:rgba(221,216,203,.28);
+      --text:rgba(255,255,255,.92); --muted:rgba(221,216,203,.82);
+      --radius-xl:26px; --radius-lg:20px;
+      --shadow-lg:0 22px 60px rgba(0,0,0,.55);
+      --shadow-md:0 14px 36px rgba(0,0,0,.38);
+      --font:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      --text-xs:12px; --text-sm:14px; --text-base:16px; --text-2xl:24px;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; margin:0; }
+    body{
+      font-family:var(--font); color:var(--text);
+      background:
+        radial-gradient(900px 540px at 15% -5%, rgba(255,139,0,.14), transparent 55%),
+        radial-gradient(900px 540px at 95% 0%, rgba(255,88,0,.12), transparent 56%),
+        var(--black-deep);
+      -webkit-font-smoothing:antialiased;
+      min-height:100%;
+    }
+    .wrap{ max-width:560px; margin:0 auto; padding:24px 14px 40px; }
+    .page-title{
+      font-size:28px; font-weight:900; margin:0 0 4px;
+      letter-spacing:.2px; line-height:1.1;
+    }
+    .page-sub{ color:var(--muted); font-size:var(--text-sm); margin:0 0 24px; line-height:1.4; }
+    .list{ display:flex; flex-direction:column; gap:12px; }
+    .icard{
+      display:flex; flex-direction:column; gap:12px;
+      border-radius:var(--radius-xl); border:1px solid var(--stroke);
+      background:
+        radial-gradient(900px 380px at 30% -20%, rgba(255,139,0,.10), transparent 55%),
+        linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045));
+      box-shadow:var(--shadow-lg);
+      padding:16px 16px 14px;
+      text-decoration:none; color:inherit;
+      transition:border-color .18s ease, transform .08s ease;
+    }
+    .icard:hover{ border-color:var(--stroke-2); transform:translateY(-1px); }
+    .icard:active{ transform:scale(.99); }
+    .icard-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+    .kicker{
+      margin:0 0 4px; text-transform:uppercase; letter-spacing:.18em;
+      color:rgba(221,216,203,.72); font-size:11px; font-weight:900;
+    }
+    .h{ margin:0; font-size:var(--text-2xl); font-weight:900; line-height:1.1; }
+    .muted{ margin:6px 0 0; color:var(--muted); font-size:var(--text-sm); line-height:1.35; }
+    .arrow{
+      flex:0 0 auto; width:40px; height:40px; border-radius:16px;
+      border:1px solid var(--stroke); background:rgba(255,255,255,.06);
+      display:grid; place-items:center; font-size:22px; color:var(--text);
+    }
+    .chips{ display:flex; gap:8px; flex-wrap:wrap; }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--stroke); background:rgba(255,255,255,.05);
+      border-radius:999px; padding:6px 10px;
+      font-size:var(--text-xs); color:var(--muted); white-space:nowrap;
+    }
+    .chip b{ color:var(--text); font-weight:800; }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background:var(--accent); box-shadow:0 0 0 4px rgba(255,139,0,.16);
+    }
+    .empty{ color:var(--muted); font-size:var(--text-sm); text-align:center; padding:40px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="page-title">Recipe Cards</h1>
+    <p class="page-sub">Tap a recipe to open the step-by-step card view.</p>
+    <div class="list">
+${cards || '      <p class="empty">No recipes yet.</p>'}
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
 // ─── CLI ──────────────────────────────────────────────────────────────────────
 
 function processFile(src) {
@@ -690,20 +801,24 @@ function processFile(src) {
   const out = join(outDir, `${name}.html`);
   writeFileSync(out, buildHTML(recipe), "utf8");
   console.log(`  ✓ ${src} → dist/${name}.html`);
+  return { name, recipe };
 }
 
 const args = process.argv.slice(2);
 
 if (args.length > 0) {
-  // Build specific files
+  // Build specific files (no index update)
   args.forEach(processFile);
 } else {
-  // Build all recipes
+  // Build all recipes + regenerate index
   const recipesDir = join(__dirname, "src", "recipes");
   const files = readdirSync(recipesDir).filter(f => f.endsWith(".json"));
   if (files.length === 0) {
     console.log("No recipe JSON files found in src/recipes/");
   } else {
-    files.forEach(f => processFile(join(recipesDir, f)));
+    const entries = files.map(f => processFile(join(recipesDir, f)));
+    const outDir = join(__dirname, "dist");
+    writeFileSync(join(outDir, "index.html"), buildIndex(entries), "utf8");
+    console.log(`  ✓ index → dist/index.html (${entries.length} recipe${entries.length === 1 ? "" : "s"})`);
   }
 }
