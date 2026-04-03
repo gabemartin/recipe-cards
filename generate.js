@@ -5,7 +5,7 @@
  *        node generate.js          (builds all recipes in src/recipes/)
  */
 
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "fs";
 import { join, basename, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -278,7 +278,7 @@ main{
   font-weight: 900;
   letter-spacing:.2px;
 }
-.stepnum{
+.expand-btn{
   flex:0 0 auto;
   width: 46px; height: 46px;
   border-radius: 18px;
@@ -286,11 +286,16 @@ main{
   background: rgba(255,255,255,.06);
   display:grid;
   place-items:center;
-  font-weight: 900;
-  font-size: 16px;
-  color: var(--white);
+  cursor:pointer;
+  color: var(--muted);
   z-index:1;
+  appearance:none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .15s ease, color .15s ease, transform .08s ease;
 }
+.expand-btn:hover{ background: rgba(255,255,255,.11); color: var(--text); }
+.expand-btn:active{ transform: scale(.92); }
+.expand-btn:focus-visible{ outline:none; box-shadow: var(--focus); }
 
 .cardbody{ z-index:1; }
 .p{
@@ -409,6 +414,35 @@ dialog::backdrop{
   background: rgba(0,0,0,.55);
   backdrop-filter: blur(3px);
 }
+dialog.fsdlg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  overflow-y: auto;
+  background:
+    radial-gradient(900px 540px at 15% -5%, rgba(255,139,0,.14), transparent 55%),
+    radial-gradient(900px 540px at 95% 0%, rgba(255,88,0,.10), transparent 56%),
+    var(--bg);
+  box-shadow: none;
+}
+dialog.fsdlg::backdrop{ background: transparent; }
+.fsmodal{
+  padding: 16px;
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+  max-width: 560px;
+  margin: 0 auto;
+}
 .modal{
   padding: 16px;
   display:flex;
@@ -502,7 +536,9 @@ function renderSlide(slide, index) {
                   <p class="kicker">${slide.kicker}</p>
                   <h2 class="h">${slide.title}</h2>
                 </div>
-                <div class="stepnum">${stepLabel}</div>
+                <button class="expand-btn" type="button" aria-label="View fullscreen">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
               </div>
 
               <div class="cardbody">
@@ -534,6 +570,13 @@ function buildHTML(recipe) {
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>${recipe.title}</title>
   <meta name="description" content="${escapeAttr(recipe.subtitle)}" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#18130d" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="${escapeAttr(recipe.title)}" />
+  <link rel="apple-touch-icon" href="icons/chef-icon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>${CSS}</style>
 </head>
@@ -608,6 +651,19 @@ ${slides}
     </div>
   </dialog>
 
+  <dialog id="fsDlg" class="fsdlg">
+    <div class="fsmodal safe-top safe-bot">
+      <div class="modalhead">
+        <div>
+          <p class="kicker" id="fsKicker"></p>
+          <h2 class="h" id="fsTitle"></h2>
+        </div>
+        <button class="x" id="closeFsDlg" type="button" aria-label="Close fullscreen">✕</button>
+      </div>
+      <div id="fsBody"></div>
+    </div>
+  </dialog>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const CHECK_KEYS = [${checkIds.join(",")}];
@@ -672,6 +728,18 @@ ${slides}
                      rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
       if(!inside) dlg.close();
     });
+
+    const fsDlg = document.getElementById("fsDlg");
+    document.querySelectorAll(".expand-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".card");
+        document.getElementById("fsKicker").textContent = card.querySelector(".kicker").textContent;
+        document.getElementById("fsTitle").textContent = card.querySelector(".h").textContent;
+        document.getElementById("fsBody").innerHTML = card.querySelector(".cardbody").innerHTML;
+        fsDlg.showModal();
+      });
+    });
+    document.getElementById("closeFsDlg").addEventListener("click", () => fsDlg.close());
 
     document.getElementById("resetChecks").addEventListener("click", () => resetChecks());
     document.getElementById("print").addEventListener("click", () => window.print());
@@ -820,5 +888,34 @@ if (args.length > 0) {
     const outDir = join(__dirname, "dist");
     writeFileSync(join(outDir, "index.html"), buildIndex(entries), "utf8");
     console.log(`  ✓ index → dist/index.html (${entries.length} recipe${entries.length === 1 ? "" : "s"})`);
+
+    // Generate web app manifest
+    const manifest = {
+      name: "Recipe Cards",
+      short_name: "Recipes",
+      description: "Phone-optimized step-by-step recipe cards.",
+      start_url: "./index.html",
+      display: "standalone",
+      background_color: "#18130d",
+      theme_color: "#18130d",
+      icons: [
+        { src: "icons/chef-icon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+        { src: "icons/chef-icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+        { src: "icons/chef-icon.png",     sizes: "512x512", type: "image/png", purpose: "any maskable" }
+      ]
+    };
+    writeFileSync(join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2), "utf8");
+    console.log("  ✓ manifest.json");
+
+    // Copy icons from src/icons/ → dist/icons/ if present
+    const srcIconsDir = join(__dirname, "src", "icons");
+    if (existsSync(srcIconsDir)) {
+      const outIconsDir = join(outDir, "icons");
+      mkdirSync(outIconsDir, { recursive: true });
+      readdirSync(srcIconsDir).forEach(f => {
+        writeFileSync(join(outIconsDir, f), readFileSync(join(srcIconsDir, f)));
+      });
+      console.log("  ✓ icons/");
+    }
   }
 }
