@@ -415,11 +415,13 @@ dialog::backdrop{
   backdrop-filter: blur(3px);
 }
 dialog.fsdlg{
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%; max-width: 100%;
-  height: 100%; max-height: 100%;
+  inset: 0;
   margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
   border-radius: 0;
   border: none;
   overflow: hidden;
@@ -431,7 +433,7 @@ dialog.fsdlg{
     var(--bg);
   box-shadow: none;
 }
-dialog.fsdlg::backdrop{ background: rgba(0,0,0,.4); backdrop-filter: blur(4px); }
+dialog.fsdlg::backdrop{ background: rgba(0,0,0,.6); backdrop-filter: blur(4px); }
 .fstopbar{
   flex: 0 0 auto;
   display: flex;
