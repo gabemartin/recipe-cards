@@ -416,42 +416,56 @@ dialog::backdrop{
 }
 dialog.fsdlg{
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  max-height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; max-width: 100%;
+  height: 100%; max-height: 100%;
   margin: 0;
   border-radius: 0;
   border: none;
-  overflow-y: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background:
     radial-gradient(900px 540px at 15% -5%, rgba(255,139,0,.14), transparent 55%),
     radial-gradient(900px 540px at 95% 0%, rgba(255,88,0,.10), transparent 56%),
     var(--bg);
   box-shadow: none;
 }
-dialog.fsdlg::backdrop{ background: transparent; }
-.fsmodal{
+dialog.fsdlg::backdrop{ background: rgba(0,0,0,.4); backdrop-filter: blur(4px); }
+.fstopbar{
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--stroke);
+  background: rgba(24,19,13,.72);
+  backdrop-filter: blur(14px);
+}
+.fs-swiper{
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.fs-swiper .swiper-slide{
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.fsslide{
   padding: 16px;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
   max-width: 560px;
   margin: 0 auto;
-  min-height: 100%;
 }
-.fsnav{
-  display:flex;
-  gap:10px;
-  margin-top: auto;
-  padding-top: 8px;
+.fsbottombar{
+  flex: 0 0 auto;
+  border-top: 1px solid var(--stroke);
+  background: linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
+  backdrop-filter: blur(14px);
 }
-.fsnav .btn{ flex:1; display:flex; justify-content:center; }
-.btn:disabled{ opacity:.32; pointer-events:none; }
 .modal{
   padding: 16px;
   display:flex;
@@ -563,6 +577,25 @@ function renderSlide(slide, index) {
 function buildHTML(recipe) {
   const chips = recipe.chips.map(renderChip).join("\n            ");
   const slides = recipe.slides.map((s, i) => renderSlide(s, i)).join("\n");
+  const fsSlides = recipe.slides.map((s, i) => {
+    const checkbox = s.checkboxLabel
+      ? `<div class="checkrow">
+              <input id="fsc${i}" type="checkbox" />
+              <label for="fsc${i}">${s.checkboxLabel}</label>
+            </div>`
+      : "";
+    const body = s.body.map(renderBodyBlock).join("\n          ");
+    return `          <div class="swiper-slide">
+            <div class="fsslide">
+              <p class="kicker">${s.kicker}</p>
+              <h2 class="h">${s.title}</h2>
+              <div class="cardbody">
+                ${checkbox}
+          ${body}
+              </div>
+            </div>
+          </div>`;
+  }).join("\n");
   const ingredientItems = recipe.ingredients.items
     .map(i => `<li>${i}</li>`)
     .join("\n        ");
@@ -624,7 +657,7 @@ function buildHTML(recipe) {
     </header>
 
     <main>
-      <div class="swiper" aria-label="Recipe steps carousel">
+      <div class="swiper main-swiper" aria-label="Recipe steps carousel">
         <div class="swiper-wrapper">
 ${slides}
         </div>
@@ -661,18 +694,18 @@ ${slides}
   </dialog>
 
   <dialog id="fsDlg" class="fsdlg">
-    <div class="fsmodal safe-top safe-bot">
-      <div class="modalhead">
-        <div>
-          <p class="kicker" id="fsKicker"></p>
-          <h2 class="h" id="fsTitle"></h2>
-        </div>
-        <button class="x" id="closeFsDlg" type="button" aria-label="Close fullscreen">✕</button>
+    <div class="fstopbar safe-top">
+      <button class="x" id="closeFsDlg" type="button" aria-label="Close fullscreen">✕</button>
+    </div>
+    <div class="swiper fs-swiper">
+      <div class="swiper-wrapper">
+${fsSlides}
       </div>
-      <div id="fsBody"></div>
-      <div class="fsnav">
-        <button class="btn" id="fsPrev" type="button">‹ Prev</button>
-        <button class="btn primary" id="fsNext" type="button">Next ›</button>
+    </div>
+    <div class="fsbottombar safe-bot">
+      <div class="nav">
+        <button class="btn" id="fsPrev" type="button" aria-label="Previous step">‹ Prev</button>
+        <button class="btn primary" id="fsNext" type="button" aria-label="Next step">Next ›</button>
       </div>
     </div>
   </dialog>
@@ -705,7 +738,7 @@ ${slides}
       localStorage.setItem(LS_KEY, JSON.stringify({}));
     }
 
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper(".main-swiper", {
       slidesPerView: 1,
       spaceBetween: 14,
       speed: 260,
@@ -743,35 +776,43 @@ ${slides}
     });
 
     const fsDlg = document.getElementById("fsDlg");
-    let fsIdx = 0;
+    const fsSwiper = new Swiper(".fs-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 260,
+      threshold: 8,
+      grabCursor: true,
+      keyboard: { enabled: true },
+      a11y: { enabled: true }
+    });
 
-    function fsLoad(idx) {
-      fsIdx = idx;
-      const card = swiper.slides[fsIdx].querySelector(".card");
-      document.getElementById("fsKicker").textContent = card.querySelector(".kicker").textContent;
-      document.getElementById("fsTitle").textContent = card.querySelector(".h").textContent;
-      document.getElementById("fsBody").innerHTML = card.querySelector(".cardbody").innerHTML;
-      document.getElementById("fsPrev").disabled = fsIdx === 0;
-      document.getElementById("fsNext").disabled = fsIdx === swiper.slides.length - 1;
-      swiper.slideTo(fsIdx, 0);
+    function updateFsNav() {
+      document.getElementById("fsPrev").disabled = fsSwiper.isBeginning;
+      document.getElementById("fsNext").disabled = fsSwiper.isEnd;
+    }
+    fsSwiper.on("slideChange", () => {
+      swiper.slideTo(fsSwiper.activeIndex, 0);
+      updateFsNav();
+    });
+    updateFsNav();
+
+    function openFs(idx) {
+      fsSwiper.slideTo(idx, 0);
+      updateFsNav();
+      document.documentElement.style.overflow = "hidden";
+      fsDlg.showModal();
+    }
+    function closeFs() {
+      fsDlg.close();
+      document.documentElement.style.overflow = "";
     }
 
     document.querySelectorAll(".expand-btn").forEach(btn => {
-      btn.addEventListener("click", () => { fsLoad(swiper.activeIndex); fsDlg.showModal(); });
+      btn.addEventListener("click", () => openFs(swiper.activeIndex));
     });
-    document.getElementById("closeFsDlg").addEventListener("click", () => fsDlg.close());
-    document.getElementById("fsPrev").addEventListener("click", () => { if(fsIdx > 0) fsLoad(fsIdx - 1); });
-    document.getElementById("fsNext").addEventListener("click", () => { if(fsIdx < swiper.slides.length - 1) fsLoad(fsIdx + 1); });
-
-    let fsTouchX = 0;
-    fsDlg.addEventListener("touchstart", e => { fsTouchX = e.touches[0].clientX; }, { passive: true });
-    fsDlg.addEventListener("touchend", e => {
-      const dx = e.changedTouches[0].clientX - fsTouchX;
-      if(Math.abs(dx) > 44) {
-        if(dx < 0 && fsIdx < swiper.slides.length - 1) fsLoad(fsIdx + 1);
-        else if(dx > 0 && fsIdx > 0) fsLoad(fsIdx - 1);
-      }
-    });
+    document.getElementById("closeFsDlg").addEventListener("click", closeFs);
+    document.getElementById("fsPrev").addEventListener("click", () => fsSwiper.slidePrev());
+    document.getElementById("fsNext").addEventListener("click", () => fsSwiper.slideNext());
 
     document.getElementById("resetChecks").addEventListener("click", () => resetChecks());
     document.getElementById("print").addEventListener("click", () => window.print());
