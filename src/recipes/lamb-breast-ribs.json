@@ -1,0 +1,182 @@
+{
+  "title": "Crispy Lemon Lamb Breast Ribs",
+  "subtitle": "Slow-rendered at 300°F, then blasted hot for crisp edges. Built to serve with tzatziki + roasted potatoes.",
+  "storageKey": "lamb_ribs_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Cut",    "value": "Lamb breast plate" },
+    {              "label": "Render", "value": "300°F" },
+    {              "label": "Crisp",  "value": "475°F" },
+    {              "label": "Finish", "value": "Lemon + cilantro" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients (Lamb)",
+    "note": "Built for rib-style pieces with lemon brightness to keep it from feeling heavy.",
+    "items": [
+      "<strong>1 split lamb breast plate</strong> (about 2.5–3.5 lb), cut into 1–2 slabs",
+      "<strong>Kosher salt</strong> (about 1½ tbsp total, adjust to size)",
+      "<strong>Black pepper</strong> (about 1 tsp)",
+      "<strong>Dried oregano</strong> (about 1 tsp)",
+      "<strong>Rosemary</strong> (1 tbsp chopped fresh or 1 tsp dried)",
+      "<strong>Garlic</strong> (3–5 cloves, grated or very finely minced)",
+      "<strong>Lemon zest</strong> (from 1 lemon)",
+      "<strong>Fresh lemon juice</strong> (2–4 tbsp, for crisp phase + finishing)",
+      "<strong>Olive oil</strong> (optional, 1 tbsp for rubbing / crisp assist)"
+    ],
+    "callout": "<strong>Pairing:</strong> tzatziki + lamb-fat roasted potatoes. (You already proved this combo is dangerous.)"
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Lamb breast is rich (pork-belly energy). The trick is to <strong>render</strong> the fat slowly, then <strong>crisp</strong> the cut surfaces at high heat so it tastes bold—not greasy."
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season + dry</strong> (uncovered in fridge if you have time)",
+            "<strong>Slow roast 300°F</strong> until soft &amp; jiggly",
+            "<strong>Rest</strong> so it slices clean",
+            "<strong>Slice into ribs</strong> and blast at 475°F for crisp edges",
+            "<strong>Finish with lemon</strong> to cut richness"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Serving vibe:</strong> rib-style pieces + tzatziki + roasted potatoes. Lemon is the balance lever."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season + Score",
+      "checkboxLabel": "Pat dry, score fat, season heavily",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat lamb <strong>very dry</strong>.",
+            "Lightly <strong>score the fat</strong> in a crosshatch (don't worry if it's a bit deep—this cut is forgiving).",
+            "Rub with: <strong>kosher salt</strong>, black pepper, <strong>oregano</strong>, rosemary, grated garlic, and <strong>lemon zest</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Tip:</strong> Fat needs more salt than lean meat. If in doubt, add a light extra pinch on the fat side."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Air-Dry (Optional, but great)",
+      "checkboxLabel": "Rest uncovered (30 min to 5 hrs)",
+      "body": [
+        {
+          "type": "p",
+          "html": "Place lamb on a rack and rest <strong>uncovered</strong> in the fridge if you can. Even 30–60 minutes helps the surface dry for better crisp later."
+        },
+        {
+          "type": "callout",
+          "html": "<strong>No time?</strong> Skip this and proceed—your crisp phase still works."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Slow Roast / Render",
+      "checkboxLabel": "Roast at 300°F until tender",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>300°F</strong>.",
+            "Place lamb <strong>fat-side up</strong> on a rack over a sheet pan (uncovered).",
+            "Roast <strong>2.5–3 hours</strong> (two pieces may finish a little sooner)."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Doneness cue:</strong> it should feel <strong>soft &amp; jiggly</strong>. If using a thermometer, aim ~<strong>185–195°F</strong>.<br/><br/><strong>If browning too fast:</strong> loosely tent with foil (don't seal—avoid steaming)."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Rest (Don't Skip)",
+      "checkboxLabel": "Rest 20–45 minutes",
+      "body": [
+        {
+          "type": "p",
+          "html": "Remove from oven and rest <strong>20–45 minutes</strong>. This firms everything up so you can slice clean rib-style pieces."
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Good news:</strong> this cut can rest longer (even an hour) without drama—especially since you'll re-crisp it."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Slice Into Ribs",
+      "checkboxLabel": "Flip bone-side up &amp; slice between ribs",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Flip the slab <strong>bone-side up</strong>.",
+            "Slice into rib strips between bones/cartilage.",
+            "Lay pieces on the rack with space between (more airflow = more crisp)."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Optional crisp boost:</strong> lightly blot cut faces with a paper towel before the blast."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Blast for Crisp",
+      "checkboxLabel": "475°F for 15–20 minutes",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Raise oven to <strong>475°F</strong>.",
+            "Lightly brush or drizzle ribs with <strong>lemon juice</strong> (don't soak).",
+            "Roast <strong>15–20 minutes</strong> until edges are deeply browned and crisp."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Want more?</strong> Broil <strong>2–3 minutes</strong> at the end for extra char—watch closely."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 7",
+      "title": "Finish + Serve",
+      "checkboxLabel": "Lemon + salt + cilantro, serve hot",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Immediately squeeze <strong>fresh lemon</strong> over the ribs.",
+            "Sprinkle a pinch of <strong>salt</strong> (flaky if you have it).",
+            "Scatter <strong>chopped cilantro</strong> (or parsley if available).",
+            "Serve with tzatziki on the side (dip, don't drown)."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Balance rule:</strong> If it tastes \"too rich,\" add more lemon—not more salt."
+        }
+      ]
+    }
+  ]
+}

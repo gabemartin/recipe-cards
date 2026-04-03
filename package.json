@@ -1,0 +1,10 @@
+{
+  "name": "recipe-cards",
+  "version": "1.0.0",
+  "description": "Generate phone-optimized swipeable recipe cards from JSON",
+  "type": "module",
+  "scripts": {
+    "build": "node generate.js",
+    "build:watch": "node --watch generate.js"
+  }
+}
