@@ -433,6 +433,7 @@ dialog.fsdlg{
     var(--bg);
   box-shadow: none;
 }
+dialog.fsdlg:not([open]){ display: none; }
 dialog.fsdlg::backdrop{ background: rgba(0,0,0,.6); backdrop-filter: blur(4px); }
 .fstopbar{
   flex: 0 0 auto;
