@@ -490,8 +490,8 @@ dialog.fsdlg::backdrop{ background: rgba(0,0,0,.38); backdrop-filter: none; }
   font-weight: 900;
   line-height:1.1;
 }
-.modal{
-  font-size: 200%;
+.modal *{
+  font-size: 3rem;
 }
 .x{
   width: 40px; height: 40px;
