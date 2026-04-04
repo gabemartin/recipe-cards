@@ -615,7 +615,7 @@ function buildHTML(recipe) {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>${recipe.title}</title>
   <meta name="description" content="${escapeAttr(recipe.subtitle)}" />
   <link rel="manifest" href="manifest.json" />
@@ -854,7 +854,7 @@ function buildIndex(entries) {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>Recipe Cards</title>
   <meta name="description" content="Phone-optimized step-by-step recipe cards." />
   <link rel="manifest" href="manifest.json" />
