@@ -1,3 +1,112 @@
+# Recipe JSON Schema Reference
+
+## Top-level fields
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `title` | string | yes | Recipe name, used as page `<title>` and H1 |
+| `subtitle` | string | yes | One-line description shown in the header and meta description |
+| `storageKey` | string | yes | `localStorage` key for checkbox persistence. Format: `snake_case_checks_v1` |
+| `chips` | array | yes | 3-4 quick-info pills shown in the header |
+| `ingredients` | object | yes | Ingredients modal content |
+| `slides` | array | yes | Swiper carousel slides (overview + steps) |
+
+## Chips
+
+```json
+{ "dot": true, "label": "Protein", "value": "2 lbs chicken tenders" }
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `dot` | boolean | no | If `true`, renders an accent dot before the label. Use on the first chip only. |
+| `label` | string | yes | Bold label (e.g., "Protein", "Serves", "Temp") |
+| `value` | string | yes | Value text |
+
+## Ingredients
+
+```json
+{
+  "heading": "Ingredients (Lamb)",
+  "note": "Short note shown under the heading.",
+  "items": [
+    "<strong>1 lb something</strong>, prepared however"
+  ],
+  "callout": "<strong>Tip:</strong> anything worth highlighting."
+}
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `heading` | string | yes | Modal heading |
+| `note` | string | no | Note shown below the heading |
+| `items` | string[] | yes | Each item is an HTML string. Wrap quantity + ingredient name in `<strong>`. |
+| `callout` | string | no | Highlighted callout box at the bottom of the ingredient list |
+
+## Slides
+
+### Overview slide (always first)
+
+```json
+{
+  "kicker": "Overview",
+  "title": "What You're Making",
+  "body": [...]
+}
+```
+
+No `checkboxLabel` on the overview slide.
+
+### Step slides
+
+```json
+{
+  "kicker": "Step 1",
+  "title": "Season + Score",
+  "checkboxLabel": "Pat dry, score fat, season heavily",
+  "body": [...]
+}
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `kicker` | string | yes | Small uppercase label. `"Overview"` or `"Step N"`. |
+| `title` | string | yes | Step title. Short and descriptive. |
+| `checkboxLabel` | string | no | If set, renders a persistent checkbox. Required on all step slides. Short imperative phrase. |
+| `body` | array | yes | Array of body blocks (see below) |
+
+## Body block types
+
+### Paragraph
+
+```json
+{ "type": "p", "html": "Descriptive text with <strong>bold</strong> for emphasis." }
+```
+
+### Bulleted list (preferred for step instructions)
+
+```json
+{ "type": "ul", "items": [
+  "Do <strong>this thing</strong> first.",
+  "Then do <strong>this</strong>."
+]}
+```
+
+### Callout (tips, warnings, doneness cues)
+
+```json
+{ "type": "callout", "html": "<strong>Key rule:</strong> Explanation of why this matters." }
+```
+
+### Spacer (10px vertical gap)
+
+```json
+{ "type": "spacer" }
+```
+
+## Full example
+
+```json
 {
   "title": "Chicken Piccata",
   "subtitle": "Pan-seared tenders in a light lemon-caper butter sauce. Served over angel hair.",
@@ -9,7 +118,7 @@
     {              "label": "Pasta",   "value": "Angel hair" }
   ],
   "ingredients": {
-    "heading": "Ingredients!!!",
+    "heading": "Ingredients",
     "note": "Light, silky sauce—not thick like gravy. Lemon does the heavy lifting.",
     "items": [
       "<strong>2 lbs chicken tenders</strong> (or sliced breasts)",
@@ -36,9 +145,7 @@
           "type": "p",
           "html": "Chicken seared in batches for a proper crust, then a bright pan sauce built from the fond. Butter finish makes it glossy without being heavy."
         },
-        {
-          "type": "spacer"
-        },
+        { "type": "spacer" },
         {
           "type": "ul",
           "items": [
@@ -100,7 +207,7 @@
     {
       "kicker": "Step 3",
       "title": "Build the Sauce",
-      "checkboxLabel": "Garlic → lemon → broth → capers",
+      "checkboxLabel": "Garlic, lemon, broth, capers",
       "body": [
         {
           "type": "ul",
@@ -161,3 +268,21 @@
     }
   ]
 }
+```
+
+## Naming conventions
+
+| Item | Rule | Example |
+|---|---|---|
+| Filename | kebab-case, `.json` extension | `lamb-breast-ribs.json` |
+| `storageKey` | snake_case + `_checks_v1` suffix | `lamb_ribs_checks_v1` |
+| `title` | Title case, the dish name | `"Crispy Lemon Lamb Breast Ribs"` |
+| `subtitle` | One sentence, ends with period | `"Slow-rendered at 300°F, then blasted hot for crisp edges."` |
+
+## HTML conventions in content strings
+
+- `<strong>` for ingredient quantities, key actions, and emphasis
+- `<em>` for occasional italic emphasis
+- `<br/>` for line breaks within a callout
+- `&amp;` for literal ampersands
+- No other HTML tags are needed; content is rendered as-is

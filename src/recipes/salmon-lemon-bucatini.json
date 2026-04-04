@@ -1,0 +1,164 @@
+{
+  "title": "Salmon & Lemon Bucatini",
+  "subtitle": "Seared salmon flaked over bucatini with crème fraîche, butter, and lots of lemon. Brussels sprout leaves for crunch.",
+  "storageKey": "salmon_lemon_bucatini_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Salmon fillets" },
+    {              "label": "Pasta",   "value": "Bucatini" },
+    {              "label": "Sauce",   "value": "Crème fraîche + lemon" },
+    {              "label": "Serves",  "value": "~2–3" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Simplified from Blue Apron. Crème fraîche + butter does the heavy lifting.",
+    "items": [
+      "<strong>2 salmon fillets</strong> (~6 oz each, skin-on or off)",
+      "<strong>8–12 oz bucatini</strong>",
+      "<strong>Brussels sprouts</strong> (big handful, leaves separated or halved) — or sub spinach",
+      "<strong>3–4 tbsp crème fraîche</strong>",
+      "<strong>3–4 tbsp butter</strong> (a big chunk)",
+      "<strong>Lots of lemon juice</strong> (2–3 lemons' worth)",
+      "<strong>Lemon zest</strong> (from 1 lemon)",
+      "<strong>2–3 cloves garlic</strong> (minced)",
+      "<strong>Kosher salt &amp; black pepper</strong>",
+      "<strong>Parmesan</strong> (for finishing)",
+      "<strong>Panko breadcrumbs</strong> (optional — for topping)",
+      "Parsley or chives (optional, for finishing)",
+      "Olive oil (for searing)"
+    ],
+    "callout": "<strong>Key move:</strong> Salt your pasta water more than you're comfortable with. That starchy, salty water is what makes the sauce come together."
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Seared salmon flaked into lemony bucatini. The sauce is dead simple: crème fraîche, a big chunk of butter, lots of lemon, and reserved pasta water until it <em>starts smackin'</em>."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Sear salmon</strong> and set it aside",
+            "<strong>Cook bucatini</strong>—salt the water aggressively, save a cup",
+            "<strong>Sauté Brussels sprouts</strong> (or wilt spinach)",
+            "<strong>Build the sauce</strong> with crème fraîche, butter, lemon + pasta water",
+            "<strong>Combine everything</strong> and finish with parmesan"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Adapted from Blue Apron.</strong> Original recipe is gone, but this is the version that matters—simplified with crème fraîche instead of the fussier original sauce."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Sear the Salmon",
+      "checkboxLabel": "Sear salmon, flake, set aside",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat salmon <strong>very dry</strong>.",
+            "Season with <strong>salt &amp; pepper</strong>.",
+            "Heat a drizzle of <strong>olive oil</strong> in a skillet over <strong>medium-high</strong>.",
+            "Sear <strong>skin-side down first</strong> (if skin-on) for <strong>3–4 min</strong> until crisp.",
+            "Flip and cook <strong>2–3 min</strong> more—don't overcook, it'll break apart when you flake it.",
+            "Remove to a plate. <strong>Flake into bite-size pieces</strong> when cool enough to handle."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't stress the flake:</strong> Rough, uneven pieces are fine. They'll nestle into the pasta."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Cook the Pasta",
+      "checkboxLabel": "Boil bucatini, reserve 1 cup water",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Bring a big pot of water to a boil.",
+            "Salt it <strong>more than you're comfortable with</strong>—this is important.",
+            "Cook <strong>bucatini</strong> until al dente per package directions.",
+            "Before draining, <strong>reserve at least 1 cup</strong> of the starchy pasta water.",
+            "Drain the pasta."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>That pasta water is your secret weapon.</strong> Starchy + salty = emulsifies the sauce and makes everything glossy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Cook the Brussels Sprouts",
+      "checkboxLabel": "Sauté sprout leaves until tender",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Separate <strong>Brussels sprout leaves</strong> (or halve small sprouts). If subbing spinach, just have it ready.",
+            "In the same skillet (or a fresh pan), heat a little <strong>olive oil</strong> over <strong>medium-high</strong>.",
+            "Cook <strong>3–5 min</strong> until tender and getting some color.",
+            "Season with a pinch of <strong>salt</strong>. Set aside or leave in the pan for the next step."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Spinach swap:</strong> If using spinach instead, skip this step—just wilt it in for 30 seconds when you combine."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Build the Sauce &amp; Combine",
+      "checkboxLabel": "Crème fraîche + butter + lemon + pasta water",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a large pan over <strong>medium-low</strong>, add the <strong>crème fraîche</strong> and a <strong>big chunk of butter</strong>.",
+            "Stir until melted and combined.",
+            "Squeeze in <strong>lots of lemon juice</strong> and add the <strong>zest</strong>. Season with <strong>salt &amp; pepper</strong>.",
+            "Add the <strong>drained pasta</strong> and <strong>Brussels sprouts</strong>.",
+            "Toss everything together, adding <strong>reserved pasta water a splash at a time</strong> until the sauce coats the pasta and starts looking glossy.",
+            "Fold in the <strong>flaked salmon</strong> gently.",
+            "Toss with <strong>parmesan</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>\"Till it starts smackin'\":</strong> Keep adding pasta water in small splashes. You'll know when the sauce is glossy, clingy, and bright—not dry, not soupy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Finish &amp; Serve",
+      "checkboxLabel": "Top with breadcrumbs (optional) and serve",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Optional:</strong> Toast <strong>panko breadcrumbs</strong> in butter until golden. Mix with lemon zest and parmesan.",
+            "Plate the pasta.",
+            "Top with <strong>toasted breadcrumbs</strong>, extra parmesan, and fresh herbs if you've got them.",
+            "Finish with a final squeeze of <strong>lemon</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Skip the breadcrumbs?</strong> Totally fine. The dish stands on its own without them."
+        }
+      ]
+    }
+  ]
+}

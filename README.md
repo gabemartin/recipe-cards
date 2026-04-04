@@ -50,6 +50,12 @@ node generate.js src/recipes/lamb-breast-ribs.json
 
 ## Adding a new recipe
 
+### AI-assisted recipe creation
+
+A Cursor skill is included at `.cursor/skills/generate-recipe/`. Say "create a new recipe" and paste a URL, photo, or raw text — the agent will generate the JSON and build the HTML.
+
+### Manual recipe creation
+
 1. Copy an existing recipe as a starting point:
    ```bash
    cp src/recipes/lamb-breast-ribs.json src/recipes/my-recipe.json
