@@ -274,6 +274,8 @@ main{
   width:100%;
   min-height: 560px;
   padding: 6px 0 14px;
+  overflow:hidden;
+  touch-action: pan-y;
 }
 .swiper-slide{ height:auto; display:flex; }
 
@@ -478,6 +480,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   flex: 1;
   min-height: 0;
   overflow: hidden;
+  touch-action: pan-y;
 }
 .expanded-steps-swiper .swiper-slide{
   height: 100%;
