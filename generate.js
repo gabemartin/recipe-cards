@@ -683,7 +683,7 @@ function buildHTML(recipe) {
       <div class="topbar">
         <div class="brandrow">
           <div class="titlecluster">
-            <a class="btn btn-back" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}<span>Back</span></a>
+            <a class="btn btn-back" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}</a>
             <div class="titlestack">
               <h1 class="title">${recipe.title}</h1>
               <p class="subtitle">${recipe.subtitle}</p>
