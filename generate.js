@@ -99,7 +99,19 @@ header{
   background: var(--chrome-header-bg);
   border-bottom: 1px solid var(--border);
 }
-
+.top-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding: 12px 14px;
+}
+#openIngredients{
+  white-space: nowrap;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 .topbar{
   padding: 14px 14px 12px;
   display:flex;
@@ -680,18 +692,20 @@ function buildHTML(recipe) {
 <body>
   <div class="app">
     <header class="safe-top">
+      <nav class="top-nav">
+        <a class="btn btn-back" id="backToIndex" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}</a>
+        <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
+          ${HI.queueList}<span>Ingredients</span>
+        </button>
+      </nav>
       <div class="topbar">
         <div class="brandrow">
           <div class="titlecluster">
-            <a class="btn btn-back" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}</a>
             <div class="titlestack">
               <h1 class="title">${recipe.title}</h1>
               <p class="subtitle">${recipe.subtitle}</p>
             </div>
           </div>
-          <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
-            ${HI.queueList}<span>Ingredients</span>
-          </button>
         </div>
 
         <div class="chiprow">

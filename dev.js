@@ -9,6 +9,7 @@ import { readFileSync, watchFile, readdirSync, statSync, existsSync } from "fs";
 import { join, extname } from "path";
 import { execFile } from "child_process";
 import { fileURLToPath } from "url";
+import { networkInterfaces } from "os";
 
 const __dirname = import.meta.dirname ?? join(fileURLToPath(import.meta.url), "..");
 const DIST = join(__dirname, "dist");
@@ -132,7 +133,19 @@ server.on("error", (err) => {
   process.exit(1);
 });
 
-server.listen(PORT, () => {
-  console.log(`\n  \x1b[1mDev server running at\x1b[0m \x1b[36mhttp://localhost:${PORT}\x1b[0m\n`);
+function getLanIP() {
+  for (const ifaces of Object.values(networkInterfaces())) {
+    for (const iface of ifaces) {
+      if (iface.family === "IPv4" && !iface.internal) return iface.address;
+    }
+  }
+  return null;
+}
+
+server.listen(PORT, "0.0.0.0", () => {
+  const lanIP = getLanIP();
+  console.log(`\n  \x1b[1mDev server running at\x1b[0m \x1b[36mhttp://localhost:${PORT}\x1b[0m`);
+  if (lanIP) console.log(`  \x1b[1mNetwork:\x1b[0m              \x1b[36mhttp://${lanIP}:${PORT}\x1b[0m`);
+  console.log();
   rebuild();
 });

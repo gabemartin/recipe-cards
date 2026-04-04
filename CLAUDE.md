@@ -2,7 +2,7 @@
 
 ```bash
 npm run build          # Generate all dist/*.html from src/recipes/*.json
-npm run dev            # Dev server at http://localhost:4000 (rebuilds on change; refresh browser manually)
+npm run dev            # Dev server at http://localhost:4000 + LAN URL (rebuilds on change; refresh browser manually)
 npm run build:watch    # Rebuild on file change (no live reload)
 node generate.js src/recipes/foo.json  # Build a single recipe
 ```
@@ -15,7 +15,7 @@ src/icons/          (PWA icons, referenced in manifest)
 ```
 
 - `generate.js` — sole build artifact; inlines all CSS, Swiper CDN JS, and wires up localStorage checkboxes into each HTML file
-- `dev.js` — zero-dep HTTP server; polls mtimes on recipe JSON, icons, and `generate.js`, rebuilds on real edits (no auto browser reload; avoids macOS `fs.watch` rebuild loops)
+- `dev.js` — zero-dep HTTP server bound to `0.0.0.0` (accessible from other devices on the network); polls mtimes on recipe JSON, icons, and `generate.js`, rebuilds on real edits (no auto browser reload; avoids macOS `fs.watch` rebuild loops)
 - `dist/` is gitignored; GitHub Actions deploys it
 
 ## Recipe JSON Schema
