@@ -51,6 +51,7 @@ Read [schema-reference.md](schema-reference.md) for the complete field reference
 - **Slides 1+** are cooking steps: `kicker: "Step N"`, each **must** have a `checkboxLabel` (short imperative phrase summarizing the step).
 - **Chips**: 3-4 total. First chip gets `"dot": true` for the primary identifier (usually the protein or main ingredient). Remaining chips cover serving size, key technique, or accompaniment.
 - **Ingredients**: Each item uses `<strong>` around the quantity and ingredient name. Optional prep notes follow outside the strong tag.
+- **Shopping list**: A simplified grocery-store version of the ingredients. Consolidate duplicates (e.g., "lemon zest" + "lemon juice" becomes "2 lemons"). Include `substitutes` array for ingredients that have common swaps. See schema-reference.md for the format.
 - **Callouts**: Use for practical tips, common mistakes, or doneness cues. Not required on every slide -- only where genuinely useful.
 - **Body blocks**: Use `p` for prose, `ul` for instruction lists (preferred for steps), `callout` for tips, `spacer` for visual breaks. See schema-reference.md for the type definitions.
 

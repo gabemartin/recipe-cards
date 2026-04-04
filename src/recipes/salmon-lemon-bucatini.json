@@ -26,7 +26,19 @@
       "Parsley or chives (optional, for finishing)",
       "Olive oil (for searing)"
     ],
-    "callout": "<strong>Key move:</strong> Salt your pasta water more than you're comfortable with. That starchy, salty water is what makes the sauce come together."
+    "callout": "<strong>Key move:</strong> Salt your pasta water more than you're comfortable with. That starchy, salty water is what makes the sauce come together.",
+    "shoppingList": [
+      { "item": "2 salmon fillets (~6 oz each)", "substitutes": ["Arctic char", "Steelhead trout"] },
+      { "item": "Bucatini (8–12 oz)", "substitutes": ["Spaghetti", "Linguine"] },
+      { "item": "Brussels sprouts (1 small bag)", "substitutes": ["Baby spinach"] },
+      { "item": "Crème fraîche (1 tub)", "substitutes": ["Sour cream", "Mascarpone"] },
+      { "item": "Butter (1 stick)" },
+      { "item": "2–3 lemons" },
+      { "item": "Garlic (1 head)", "substitutes": ["Jarred minced garlic"] },
+      { "item": "Parmesan (block or bag, for grating)" },
+      { "item": "Panko breadcrumbs (optional)" },
+      { "item": "Fresh parsley or chives (optional)" }
+    ]
   },
   "slides": [
     {

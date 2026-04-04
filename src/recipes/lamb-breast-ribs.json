@@ -22,7 +22,17 @@
       "<strong>Fresh lemon juice</strong> (2–4 tbsp, for crisp phase + finishing)",
       "<strong>Olive oil</strong> (optional, 1 tbsp for rubbing / crisp assist)"
     ],
-    "callout": "<strong>Pairing:</strong> tzatziki + lamb-fat roasted potatoes. (You already proved this combo is dangerous.)"
+    "callout": "<strong>Pairing:</strong> tzatziki + lamb-fat roasted potatoes. (You already proved this combo is dangerous.)",
+    "shoppingList": [
+      { "item": "1 split lamb breast plate (2.5–3.5 lb)" },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "Dried oregano" },
+      { "item": "Rosemary (fresh preferred)", "substitutes": ["Dried rosemary"] },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste"] },
+      { "item": "2 lemons" },
+      { "item": "Olive oil" }
+    ]
   },
   "slides": [
     {

@@ -25,7 +25,22 @@
       "<strong>~8 oz angel hair pasta</strong>",
       "Parmesan + parsley (optional, for serving)"
     ],
-    "callout": "<strong>Key rule:</strong> Sauce should be light and silky—not heavy. If it's too thick, it's reduced too far."
+    "callout": "<strong>Key rule:</strong> Sauce should be light and silky—not heavy. If it's too thick, it's reduced too far.",
+    "shoppingList": [
+      { "item": "2 lbs chicken tenders", "substitutes": ["Boneless skinless chicken breasts, sliced thin"] },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "All-purpose flour" },
+      { "item": "Olive oil" },
+      { "item": "Butter (1 stick)" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "3 lemons" },
+      { "item": "Chicken broth (1 can/box)", "substitutes": ["Bouillon cubes + water"] },
+      { "item": "Capers (1 jar)" },
+      { "item": "Angel hair pasta (8 oz)", "substitutes": ["Spaghettini", "Linguine"] },
+      { "item": "Parmesan (optional)" },
+      { "item": "Fresh parsley (optional)" }
+    ]
   },
   "slides": [
     {

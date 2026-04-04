@@ -550,6 +550,58 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   line-height:1.45;
 }
 
+/* ── Shopping list ────────────────────────────── */
+.shop-section{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.shop-heading{
+  margin: 0 0 10px;
+  font-size: var(--text-lg);
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+.shop-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.shop-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+}
+.shop-item input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.shop-item label{
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--foreground-primary);
+  line-height: 1.35;
+}
+.shop-item .subs{
+  display: block;
+  font-weight: 400;
+  color: var(--foreground-tertiary);
+  font-size: var(--text-xs);
+  margin-top: 2px;
+}
+
 @media print{
   body{ background:#fff; color:#000; }
   header,.bottombar,.swiper-pagination{ display:none !important; }
@@ -666,10 +718,29 @@ function buildHTML(recipe) {
     ? `<div class="callout">${recipe.ingredients.callout}</div>`
     : "";
 
-  // Collect checkbox IDs for the JS (slides that have a checkboxLabel)
+  const shoppingListHtml = recipe.ingredients.shoppingList?.length
+    ? `<div class="shop-section">
+            <h3 class="shop-heading">Shopping List</h3>
+            <ul class="shop-list">
+              ${recipe.ingredients.shoppingList.map((entry, i) => {
+                const subs = entry.substitutes?.length
+                  ? `<span class="subs">Substitutes: ${entry.substitutes.join(", ")}</span>`
+                  : "";
+                return `<li class="shop-item">
+                <input id="shop${i}" type="checkbox" />
+                <label for="shop${i}">${entry.item}${subs}</label>
+              </li>`;
+              }).join("\n              ")}
+            </ul>
+          </div>`
+    : "";
+
   const checkIds = recipe.slides
     .map((s, i) => s.checkboxLabel ? `"c${i}"` : null)
     .filter(Boolean);
+
+  const shopIds = (recipe.ingredients.shoppingList || [])
+    .map((_, i) => `"shop${i}"`);
 
   return `<!doctype html>
 <html lang="en">
@@ -759,6 +830,7 @@ ${slides}
             ${ingredientItems}
           </ul>
           ${ingredientsCalloutHtml}
+          ${shoppingListHtml}
         </div>
       </div>
     </div>
@@ -784,7 +856,9 @@ ${expandedSlidesHtml}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const CHECK_KEYS = [${checkIds.join(",")}];
+    const SHOP_KEYS = [${shopIds.join(",")}];
     const LS_KEY = ${JSON.stringify(recipe.storageKey)};
+    const LS_SHOP = LS_KEY + "_shop";
 
     function loadChecks(){
       try{
@@ -796,6 +870,21 @@ ${expandedSlidesHtml}
           el.addEventListener("change", () => {
             saved[id] = el.checked;
             localStorage.setItem(LS_KEY, JSON.stringify(saved));
+          });
+        });
+      }catch(e){}
+    }
+
+    function loadShop(){
+      try{
+        const saved = JSON.parse(localStorage.getItem(LS_SHOP) || "{}");
+        SHOP_KEYS.forEach(id => {
+          const el = document.getElementById(id);
+          if(!el) return;
+          el.checked = !!saved[id];
+          el.addEventListener("change", () => {
+            saved[id] = el.checked;
+            localStorage.setItem(LS_SHOP, JSON.stringify(saved));
           });
         });
       }catch(e){}
@@ -824,6 +913,7 @@ ${expandedSlidesHtml}
     swiper.on("slideChange", updateProgress);
     updateProgress();
     loadChecks();
+    loadShop();
 
     document.getElementById("prev").addEventListener("click", () => swiper.slidePrev());
     document.getElementById("next").addEventListener("click", () => swiper.slideNext());

@@ -42,6 +42,31 @@
 | `note` | string | no | Note shown below the heading |
 | `items` | string[] | yes | Each item is an HTML string. Wrap quantity + ingredient name in `<strong>`. |
 | `callout` | string | no | Highlighted callout box at the bottom of the ingredient list |
+| `shoppingList` | array | yes | Simplified grocery list with optional substitutes (see below) |
+
+### Shopping list
+
+The shopping list simplifies the detailed ingredient list into what you actually buy at the store. Consolidate related items (e.g., "lemon zest" and "lemon juice" become "2 lemons"). Include common substitutes where applicable.
+
+```json
+"shoppingList": [
+  { "item": "2 lemons" },
+  { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+  { "item": "Angel hair pasta (8 oz)", "substitutes": ["Spaghettini", "Linguine"] }
+]
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `item` | string | yes | What to buy. Include quantity when relevant. Plain text (no HTML). |
+| `substitutes` | string[] | no | Common substitutions. Only include when there are realistic swaps. |
+
+**Rules for building the shopping list:**
+
+- Consolidate: If a recipe uses lemon zest, lemon juice, and lemon garnish, list "3 lemons" (not three separate entries).
+- Simplify: "4 tbsp butter (divided)" becomes "Butter (1 stick)". Think store packaging.
+- Skip pantry staples that most kitchens already have (salt, pepper, olive oil) only if they appear in trivially small amounts. If the recipe uses a meaningful quantity, include them.
+- Substitutes are for ingredients the shopper might not find or might prefer to swap. Common examples: fresh herb vs dried, specific pasta shape vs alternatives, specialty ingredients vs everyday alternatives.
 
 ## Slides
 
@@ -134,7 +159,22 @@ No `checkboxLabel` on the overview slide.
       "<strong>~8 oz angel hair pasta</strong>",
       "Parmesan + parsley (optional, for serving)"
     ],
-    "callout": "<strong>Key rule:</strong> Sauce should be light and silky—not heavy. If it's too thick, it's reduced too far."
+    "callout": "<strong>Key rule:</strong> Sauce should be light and silky—not heavy. If it's too thick, it's reduced too far.",
+    "shoppingList": [
+      { "item": "2 lbs chicken tenders", "substitutes": ["Boneless skinless chicken breasts, sliced thin"] },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "All-purpose flour" },
+      { "item": "Olive oil" },
+      { "item": "Butter (1 stick)" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "3 lemons" },
+      { "item": "Chicken broth (1 can/box)", "substitutes": ["Bouillon cubes + water"] },
+      { "item": "Capers (1 jar)" },
+      { "item": "Angel hair pasta (8 oz)", "substitutes": ["Spaghettini", "Linguine"] },
+      { "item": "Parmesan (optional)" },
+      { "item": "Fresh parsley (optional)" }
+    ]
   },
   "slides": [
     {

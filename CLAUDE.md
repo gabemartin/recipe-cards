@@ -30,6 +30,7 @@ src/icons/          (PWA icons, referenced in manifest)
 | `ingredients.note` | no | Italicized note below heading |
 | `ingredients.items[]` | yes | HTML strings |
 | `ingredients.callout` | no | Highlighted callout box |
+| `ingredients.shoppingList[]` | yes | Simplified grocery list: `{ "item": "2 lemons", "substitutes": ["Lime"] }` |
 | `slides[]` | yes | Swiper slides |
 
 **Slide fields:** `kicker` (small label), `title`, `checkboxLabel` (optional — renders a persistent checkbox), `body[]`
