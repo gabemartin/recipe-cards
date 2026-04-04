@@ -54,7 +54,7 @@ const CSS = `
 }
 
 *{ box-sizing:border-box; }
-html,body{ height:100%; }
+html,body{ height:100%; overflow-x:hidden; }
 body{
   margin:0;
   font-family: var(--font);
@@ -876,7 +876,7 @@ function buildIndex(entries) {
       --text-xs:12px; --text-sm:14px; --text-base:16px; --text-2xl:24px;
     }
     *{ box-sizing:border-box; }
-    html,body{ height:100%; margin:0; }
+    html,body{ height:100%; margin:0; overflow-x:hidden; }
     body{
       font-family:var(--font); color:var(--text);
       background:
