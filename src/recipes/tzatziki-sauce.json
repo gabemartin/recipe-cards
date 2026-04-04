@@ -1,0 +1,110 @@
+{
+  "title": "Tzatziki Sauce",
+  "subtitle": "Cool yogurt-cucumber sauce—great with lamb and chicken, or as a dip for raw vegetables.",
+  "storageKey": "tzatziki_sauce_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Base", "value": "Greek yogurt + cucumber" },
+    {              "label": "Yield", "value": "~1 cup" },
+    {              "label": "Active", "value": "~15 min + chill" },
+    {              "label": "Serve", "value": "Meats or crudités" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Use thick whole-milk Greek yogurt so the sauce stays spoonable, not watery.",
+    "items": [
+      "<strong>½ cup finely grated cucumber</strong>",
+      "<strong>1 cup thick whole milk Greek yogurt</strong>",
+      "<strong>1 tablespoon lemon juice</strong>",
+      "<strong>½ tablespoon extra-virgin olive oil</strong>",
+      "<strong>1 garlic clove</strong>, grated",
+      "<strong>¼ teaspoon sea salt</strong>",
+      "<strong>1 tablespoon chopped dill</strong>",
+      "<strong>1 tablespoon chopped mint</strong> (optional)"
+    ],
+    "callout": "<strong>Texture:</strong> If the sauce weeps after mixing, next time salt the grated cucumber, let it sit a few minutes, then squeeze out the liquid before combining.",
+    "shoppingList": [
+      { "item": "1 cucumber (small)", "substitutes": ["English cucumber, partial"] },
+      { "item": "Whole-milk Greek yogurt (16 oz tub)", "substitutes": ["Strained regular yogurt"] },
+      { "item": "1 lemon" },
+      { "item": "Extra-virgin olive oil" },
+      { "item": "Garlic (1 head or a few cloves)" },
+      { "item": "Sea salt" },
+      { "item": "Fresh dill (1 small bunch)" },
+      { "item": "Fresh mint (optional, small bunch)", "substitutes": ["More dill"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A <strong>bright, garlicky</strong> yogurt sauce with cucumber and herbs. It comes together fast; chilling lets the flavors meld."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Prep</strong> cucumber, garlic, and herbs",
+            "<strong>Whisk</strong> yogurt with lemon, oil, and salt",
+            "<strong>Fold in</strong> cucumber and herbs, then chill"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Pairing:</strong> Spoon alongside grilled lamb or chicken, or serve in a bowl with cut vegetables for dipping."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Prep Cucumber, Garlic & Herbs",
+      "checkboxLabel": "Grate cucumber; grate garlic; chop dill & mint",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Grate the cucumber</strong> finely until you have about <strong>½ cup</strong>.",
+            "<strong>Grate the garlic</strong> on a microplane or fine holes of a box grater.",
+            "<strong>Chop the dill</strong>. If using mint, <strong>chop it</strong> too."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Optional:</strong> Toss grated cucumber with a pinch of salt, rest a few minutes, then squeeze out excess liquid for a thicker tzatziki."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Mix the Yogurt Base",
+      "checkboxLabel": "Whisk yogurt, lemon, oil, salt, garlic",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a medium bowl, add <strong>Greek yogurt</strong>, <strong>lemon juice</strong>, <strong>olive oil</strong>, <strong>sea salt</strong>, and <strong>grated garlic</strong>.",
+            "Whisk until <strong>smooth</strong> and evenly combined."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Fold In, Chill & Serve",
+      "checkboxLabel": "Add cucumber & herbs; chill before serving",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Fold in the <strong>grated cucumber</strong>, <strong>dill</strong>, and <strong>mint</strong> (if using).",
+            "Taste and adjust <strong>salt</strong> or <strong>lemon</strong> if needed.",
+            "<strong>Cover and chill</strong> before serving so flavors meld.",
+            "Stir before serving with <strong>meat</strong> or <strong>raw vegetables</strong>."
+          ]
+        }
+      ]
+    }
+  ]
+}
