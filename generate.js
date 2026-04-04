@@ -404,15 +404,16 @@ dialog{
   border-radius: var(--radius-xl);
   background:
     radial-gradient(900px 380px at 30% -20%, rgba(255,139,0,.14), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06)),
+    var(--bg);
   color: var(--text);
   box-shadow: var(--shadow-lg);
   padding: 0;
   overflow:hidden;
 }
 dialog::backdrop{
-  background: rgba(0,0,0,.55);
-  backdrop-filter: blur(3px);
+  background: rgba(0,0,0,.4);
+  backdrop-filter: blur(2px);
 }
 dialog.fsdlg{
   inset: 0;
@@ -434,7 +435,7 @@ dialog.fsdlg{
   box-shadow: none;
 }
 dialog.fsdlg:not([open]){ display: none; }
-dialog.fsdlg::backdrop{ background: rgba(0,0,0,.6); backdrop-filter: blur(4px); }
+dialog.fsdlg::backdrop{ background: rgba(0,0,0,.38); backdrop-filter: none; }
 .fstopbar{
   flex: 0 0 auto;
   display: flex;
