@@ -15,29 +15,22 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const CSS = `
 :root{
-  --black-deep:#18130d;
-  --black:#29281f;
-  --darkestgrey:#5c5747;
-  --darkgrey:#b7b2a4;
-  --lightgrey:#ddd8cb;
-  --white:#ffffff;
-  --accent-dark:#ff5800;
+  --background-primary:#18130d;
+  --background-secondary:#221c14;
+  --foreground-primary:rgba(255,255,255,.93);
+  --foreground-secondary:#c2bdb2;
+  --foreground-tertiary:#9a9488;
   --accent:#ff8b00;
-
-  --bg: var(--black-deep);
-  --panel: rgba(255,255,255,.06);
-  --panel-2: rgba(255,255,255,.08);
-  --stroke: rgba(221,216,203,.20);
-  --stroke-2: rgba(221,216,203,.28);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(221,216,203,.82);
+  --accent-dark:#ff5800;
+  --accent-glow:rgba(255,139,0,.18);
+  --border:#3a3328;
+  --border-strong:#504839;
+  --surface-muted:#2a2318;
+  --shadow-elevated:0 8px 24px rgba(0,0,0,.45);
 
   --radius-xl: 26px;
   --radius-lg: 20px;
   --radius-md: 16px;
-
-  --shadow-lg: 0 22px 60px rgba(0,0,0,.55);
-  --shadow-md: 0 14px 36px rgba(0,0,0,.38);
 
   --focus: 0 0 0 3px rgba(255,139,0,.24);
 
@@ -51,6 +44,26 @@ const CSS = `
   --text-xl: 20px;
   --text-2xl: 24px;
   --text-3xl: 30px;
+
+  --chrome-header-bg: rgba(24,19,13,.88);
+  --chrome-footer-fill: linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
+}
+html[data-theme="light"]{
+  --background-primary:#ddd9ce;
+  --background-secondary:#ece9e1;
+  --foreground-primary:#1a1a17;
+  --foreground-secondary:#4a4740;
+  --foreground-tertiary:#7a766d;
+  --accent:#d47400;
+  --accent-dark:#b86200;
+  --accent-glow:rgba(212,116,0,.14);
+  --border:#c4bfb3;
+  --border-strong:#a8a295;
+  --surface-muted:#d5d0c5;
+  --shadow-elevated:0 4px 12px rgba(0,0,0,.08);
+  --focus: 0 0 0 3px rgba(212,116,0,.28);
+  --chrome-header-bg: rgba(221,217,206,.88);
+  --chrome-footer-fill: linear-gradient(to top, rgba(221,217,206,.94), rgba(221,217,206,.65));
 }
 
 *{ box-sizing:border-box; }
@@ -58,12 +71,8 @@ html,body{ height:100%; overflow-x:hidden; }
 body{
   margin:0;
   font-family: var(--font);
-  color: var(--text);
-  background:
-    radial-gradient(900px 540px at 15% -5%, rgba(255,139,0,.14), transparent 55%),
-    radial-gradient(900px 540px at 95% 0%, rgba(255,88,0,.12), transparent 56%),
-    radial-gradient(900px 700px at 50% 120%, rgba(221,216,203,.10), transparent 55%),
-    var(--bg);
+  color: var(--foreground-primary);
+  background: var(--background-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x:hidden;
@@ -87,8 +96,8 @@ header{
   top:0;
   z-index: 10;
   backdrop-filter: blur(12px);
-  background: linear-gradient(to bottom, rgba(24,19,13,.92), rgba(24,19,13,.55));
-  border-bottom: 1px solid var(--stroke);
+  background: var(--chrome-header-bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .topbar{
@@ -104,6 +113,28 @@ header{
   justify-content:space-between;
   gap:10px;
 }
+.brandrow .btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+.titlecluster{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  min-width:0;
+  flex:1;
+}
+.titlestack{
+  min-width:0;
+  flex:1;
+}
+a.btn{ text-decoration:none; color:inherit; }
+.btn-back{
+  flex-shrink:0;
+  align-self:flex-start;
+}
 
 .title{
   margin:0;
@@ -115,7 +146,7 @@ header{
 
 .subtitle{
   margin:6px 0 0;
-  color: var(--muted);
+  color: var(--foreground-secondary);
   font-size: var(--text-sm);
   line-height:1.35;
 }
@@ -125,7 +156,7 @@ header{
   gap:10px;
   flex-wrap:wrap;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
 }
 
 .chips{
@@ -138,51 +169,54 @@ header{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  border:1px solid var(--stroke);
-  background: rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  background: var(--surface-muted);
   border-radius: 999px;
   padding: 8px 10px;
   font-size: var(--text-xs);
-  color: var(--muted);
+  color: var(--foreground-secondary);
   white-space:nowrap;
 }
 
-.chip b{ color: var(--text); font-weight: 800; }
+.chip b{ color: var(--foreground-primary); font-weight: 800; }
 .dot{
   width: 8px; height: 8px; border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(255,139,0,.16);
-}
-
-.actions{
-  display:flex;
-  gap:8px;
-  align-items:center;
+  box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
 .btn{
   appearance:none;
-  border:1px solid var(--stroke);
-  background: rgba(255,255,255,.06);
-  color: var(--text);
+  border:1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--foreground-primary);
   padding: 10px 12px;
   border-radius: 14px;
   font-weight: 800;
   font-size: var(--text-sm);
   letter-spacing:.2px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-elevated);
   cursor:pointer;
   transition: transform .08s ease, background .2s ease, border-color .2s ease;
   user-select:none;
   -webkit-tap-highlight-color: transparent;
 }
-.btn:hover{ background: rgba(255,255,255,.09); border-color: var(--stroke-2); }
+.btn:hover{ border-color: var(--border-strong); }
 .btn:active{ transform: scale(.985); }
-.btn:focus-visible{ outline:none; box-shadow: var(--shadow-md), var(--focus); }
+.btn:focus-visible{ outline:none; box-shadow: var(--shadow-elevated), var(--focus); }
+
+.icon{
+  flex-shrink:0;
+  width:20px;
+  height:20px;
+  display:block;
+}
+.icon-inline{ width:18px; height:18px; }
+.expand-btn .icon-expand{ width:22px; height:22px; }
 
 .btn.primary{
-  background: linear-gradient(180deg, rgba(255,139,0,.22), rgba(255,88,0,.12));
-  border-color: rgba(255,139,0,.35);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent-dark) 12%, transparent));
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .progresswrap{
@@ -196,22 +230,22 @@ header{
   flex:1;
   height: 10px;
   border-radius: 999px;
-  border:1px solid var(--stroke);
-  background: rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  background: var(--surface-muted);
   overflow:hidden;
 }
 .bar{
   height:100%;
   width:0%;
   background: linear-gradient(90deg, var(--accent), var(--accent-dark));
-  box-shadow: 0 10px 30px rgba(255,139,0,.18);
+  box-shadow: 0 10px 30px var(--accent-glow);
   border-radius: 999px;
   transition: width .18s ease;
 }
 .progtext{
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--muted);
+  color: var(--foreground-secondary);
   min-width: 88px;
   text-align:right;
 }
@@ -234,26 +268,15 @@ main{
 .card{
   width:100%;
   border-radius: var(--radius-xl);
-  border: 1px solid var(--stroke);
-  background:
-    radial-gradient(900px 380px at 30% -20%, rgba(255,139,0,.12), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.045));
-  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  background: var(--background-secondary);
+  box-shadow: var(--shadow-elevated);
   padding: 16px 16px 18px;
   display:flex;
   flex-direction:column;
   gap: 12px;
   position:relative;
   overflow:hidden;
-}
-.card::after{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  background: radial-gradient(700px 220px at 90% 0%, rgba(221,216,203,.10), transparent 60%);
-  pointer-events:none;
-  mix-blend-mode: screen;
-  opacity:.6;
 }
 
 .cardhead{
@@ -267,7 +290,7 @@ main{
   margin:0 0 4px;
   text-transform:uppercase;
   letter-spacing:.18em;
-  color: rgba(221,216,203,.72);
+  color: var(--foreground-tertiary);
   font-size: 11px;
   font-weight: 900;
 }
@@ -282,30 +305,30 @@ main{
   flex:0 0 auto;
   width: 46px; height: 46px;
   border-radius: 18px;
-  border:1px solid var(--stroke);
-  background: rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  background: var(--surface-muted);
   display:grid;
   place-items:center;
   cursor:pointer;
-  color: var(--muted);
+  color: var(--foreground-secondary);
   z-index:1;
   appearance:none;
   -webkit-tap-highlight-color: transparent;
   transition: background .15s ease, color .15s ease, transform .08s ease;
 }
-.expand-btn:hover{ background: rgba(255,255,255,.11); color: var(--text); }
+.expand-btn:hover{ border-color: var(--border-strong); color: var(--foreground-primary); }
 .expand-btn:active{ transform: scale(.92); }
 .expand-btn:focus-visible{ outline:none; box-shadow: var(--focus); }
 
 .cardbody{ z-index:1; }
 .p{
   margin:0;
-  color: var(--text);
+  color: var(--foreground-primary);
   font-size: var(--text-base);
   line-height: 1.55;
 }
 .muted{
-  color: var(--muted);
+  color: var(--foreground-secondary);
   font-size: var(--text-sm);
   line-height: 1.5;
 }
@@ -315,22 +338,22 @@ ul{
   padding-left: 18px;
   font-size: var(--text-base);
   line-height: 1.55;
-  color: var(--text);
+  color: var(--foreground-primary);
 }
 li{ margin: 7px 0; }
 
 .callout{
   margin-top:auto;
   border-radius: var(--radius-lg);
-  border:1px solid var(--stroke);
-  background: rgba(24,19,13,.35);
+  border:1px solid var(--border);
+  background: var(--surface-muted);
   padding: 12px 12px;
-  color: var(--muted);
+  color: var(--foreground-secondary);
   font-size: var(--text-sm);
   line-height: 1.45;
   z-index:1;
 }
-.callout strong{ color: var(--text); }
+.callout strong{ color: var(--foreground-primary); }
 
 .checkrow{
   display:flex;
@@ -338,8 +361,8 @@ li{ margin: 7px 0; }
   align-items:center;
   padding: 10px 12px;
   border-radius: var(--radius-lg);
-  border:1px solid var(--stroke);
-  background: rgba(255,255,255,.05);
+  border:1px solid var(--border);
+  background: var(--surface-muted);
 }
 .checkrow input{
   width: 18px; height: 18px;
@@ -350,17 +373,24 @@ li{ margin: 7px 0; }
   cursor:pointer;
   font-weight: 800;
   font-size: var(--text-sm);
-  color: var(--text);
+  color: var(--foreground-primary);
   line-height: 1.25;
 }
 
+.bottombar,
+.expanded-steps-footer{
+  border-top: 1px solid var(--border);
+  background: var(--chrome-footer-fill);
+}
 .bottombar{
   position: sticky;
   bottom:0;
   z-index: 10;
-  border-top: 1px solid var(--stroke);
-  background: linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
   backdrop-filter: blur(12px);
+}
+.expanded-steps-footer{
+  flex: 0 0 auto;
+  backdrop-filter: blur(14px);
 }
 .nav{
   padding: 12px 14px;
@@ -373,41 +403,28 @@ li{ margin: 7px 0; }
   width: 46%;
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:8px;
   align-items:center;
-}
-.kbd{
-  font-family: var(--mono);
-  font-size: 11px;
-  color: rgba(221,216,203,.75);
-  border:1px solid var(--stroke);
-  border-bottom-color: rgba(221,216,203,.10);
-  background: rgba(255,255,255,.04);
-  padding: 3px 7px;
-  border-radius: 10px;
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal{ bottom: 8px; }
 .swiper-pagination-bullet{
   width: 8px; height: 8px;
-  background: rgba(221,216,203,.32);
+  background: var(--border-strong);
   opacity: 1;
 }
 .swiper-pagination-bullet-active{
-  background: rgba(255,139,0,.92);
-  box-shadow: 0 0 0 4px rgba(255,139,0,.14);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
 dialog{
   width: min(520px, calc(100vw - 28px));
-  border: 1px solid var(--stroke);
+  border: 1px solid var(--border);
   border-radius: var(--radius-xl);
-  background:
-    radial-gradient(900px 380px at 30% -20%, rgba(255,139,0,.14), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06)),
-    var(--bg);
-  color: var(--text);
-  box-shadow: var(--shadow-lg);
+  background: var(--background-secondary);
+  color: var(--foreground-primary);
+  box-shadow: var(--shadow-elevated);
   padding: 0;
   overflow:hidden;
 }
@@ -415,7 +432,7 @@ dialog::backdrop{
   background: rgba(0,0,0,.4);
   backdrop-filter: blur(2px);
 }
-dialog.fsdlg{
+dialog.expanded-steps-dialog{
   inset: 0;
   margin: 0;
   padding: 0;
@@ -428,15 +445,12 @@ dialog.fsdlg{
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background:
-    radial-gradient(900px 540px at 15% -5%, rgba(255,139,0,.14), transparent 55%),
-    radial-gradient(900px 540px at 95% 0%, rgba(255,88,0,.10), transparent 56%),
-    var(--bg);
+  background: var(--background-primary);
   box-shadow: none;
 }
-dialog.fsdlg:not([open]){ display: none; }
-dialog.fsdlg::backdrop{ background: rgba(0,0,0,.38); backdrop-filter: none; }
-.fstopbar{
+dialog.expanded-steps-dialog:not([open]){ display: none; }
+dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-filter: none; }
+.expanded-steps-header{
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -444,68 +458,79 @@ dialog.fsdlg::backdrop{ background: rgba(0,0,0,.38); backdrop-filter: none; }
   padding-left: 14px;
   padding-right: 14px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--stroke);
-  background: rgba(24,19,13,.72);
+  border-bottom: 1px solid var(--border);
+  background: var(--chrome-header-bg);
   backdrop-filter: blur(14px);
 }
-.fs-swiper{
+.expanded-steps-swiper{
   flex: 1;
   min-height: 0;
   overflow: hidden;
 }
-.fs-swiper .swiper-slide{
+.expanded-steps-swiper .swiper-slide{
   height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-.fsslide{
+/* Reading scale on pane only (no universal * — compounds nested lists). */
+.expanded-step-pane{
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 14px;
   max-width: 560px;
   margin: 0 auto;
+  font-size: 110%;
 }
-.fsbottombar{
-  flex: 0 0 auto;
-  border-top: 1px solid var(--stroke);
-  background: linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
-  backdrop-filter: blur(14px);
-}
-.modal{
-  padding: 16px;
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-}
-.modalhead{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap: 12px;
-}
-.modal h3{
-  margin:0;
+.expanded-step-pane .h{
+  margin: 0;
   font-size: var(--text-xl);
   font-weight: 900;
-  line-height:1.1;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
 }
-.modal *{
-  font-size: 110%;
+.expanded-step-pane .kicker{
+  font-size: var(--text-xs);
+}
+.expanded-step-pane .p{
+  font-size: 1em;
+}
+.expanded-step-pane ul{
+  font-size: 1em;
+}
+.expanded-step-pane .callout{
+  font-size: 0.875em;
+}
+.expanded-step-pane .printnote{
+  margin: 0;
+  font-size: 0.875em;
+}
+.expanded-step-pane .checkrow label{
+  font-size: 0.875em;
+}
+.expanded-steps-body{
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .x{
   width: 40px; height: 40px;
   border-radius: 14px;
-  border:1px solid var(--stroke);
-  background: rgba(255,255,255,.06);
-  color: var(--text);
-  font-weight: 900;
+  border:1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--foreground-primary);
+  display:flex;
+  align-items:center;
+  justify-content:center;
   cursor:pointer;
+  padding:0;
 }
+.x .icon-close{ width:22px; height:22px; }
 .x:focus-visible{ outline:none; box-shadow: var(--focus); }
 
 .printnote{
-  color: var(--muted);
+  color: var(--foreground-secondary);
   font-size: var(--text-sm);
   line-height:1.45;
 }
@@ -519,6 +544,17 @@ dialog.fsdlg::backdrop{ background: rgba(0,0,0,.38); backdrop-filter: none; }
   .muted,.callout,.chip{ color:#333 !important; }
 }
 `.trim();
+
+// Heroicons v2 outline (MIT) — https://heroicons.com/
+const HI_O =
+  'xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"';
+const HI = {
+  chevronLeft: `<svg class="icon" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>`,
+  chevronRight: `<svg class="icon" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>`,
+  arrowsPointingOut: `<svg class="icon icon-expand" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>`,
+  xMark: `<svg class="icon icon-close" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>`,
+  queueList: `<svg class="icon icon-inline" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 4.5h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 4.5h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>`
+};
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -569,7 +605,7 @@ function renderSlide(slide, index) {
                   <h2 class="h">${slide.title}</h2>
                 </div>
                 <button class="expand-btn" type="button" aria-label="View fullscreen">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  ${HI.arrowsPointingOut}
                 </button>
               </div>
 
@@ -586,7 +622,7 @@ function renderSlide(slide, index) {
 function buildHTML(recipe) {
   const chips = recipe.chips.map(renderChip).join("\n            ");
   const slides = recipe.slides.map((s, i) => renderSlide(s, i)).join("\n");
-  const fsSlides = recipe.slides.map((s, i) => {
+  const expandedSlidesHtml = recipe.slides.map((s, i) => {
     const checkbox = s.checkboxLabel
       ? `<div class="checkrow">
               <input id="fsc${i}" type="checkbox" />
@@ -595,7 +631,7 @@ function buildHTML(recipe) {
       : "";
     const body = s.body.map(renderBodyBlock).join("\n          ");
     return `          <div class="swiper-slide">
-            <div class="fsslide">
+            <div class="expanded-step-pane">
               <p class="kicker">${s.kicker}</p>
               <h2 class="h">${s.title}</h2>
               <div class="cardbody">
@@ -608,6 +644,12 @@ function buildHTML(recipe) {
   const ingredientItems = recipe.ingredients.items
     .map(i => `<li>${i}</li>`)
     .join("\n        ");
+  const ingredientsNoteHtml = recipe.ingredients.note?.trim()
+    ? `<p class="p printnote">${recipe.ingredients.note}</p>\n          `
+    : "";
+  const ingredientsCalloutHtml = recipe.ingredients.callout?.trim()
+    ? `<div class="callout">${recipe.ingredients.callout}</div>`
+    : "";
 
   // Collect checkbox IDs for the JS (slides that have a checkboxLabel)
   const checkIds = recipe.slides
@@ -622,12 +664,15 @@ function buildHTML(recipe) {
   <title>${recipe.title}</title>
   <meta name="description" content="${escapeAttr(recipe.subtitle)}" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#18130d" />
+  <meta name="theme-color" content="#18130d" id="metaTheme" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="${escapeAttr(recipe.title)}" />
   <link rel="apple-touch-icon" href="icons/chef-icon.png" />
+  <script>
+    (function(){var t=localStorage.getItem("recipe_cards_theme_v1");if(t==="light"){document.documentElement.dataset.theme="light";document.getElementById("metaTheme").content="#ddd9ce";}})();
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>${CSS}</style>
 </head>
@@ -637,22 +682,21 @@ function buildHTML(recipe) {
     <header class="safe-top">
       <div class="topbar">
         <div class="brandrow">
-          <div>
-            <h1 class="title">${recipe.title}</h1>
-            <p class="subtitle">${recipe.subtitle}</p>
+          <div class="titlecluster">
+            <a class="btn btn-back" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}<span>Back</span></a>
+            <div class="titlestack">
+              <h1 class="title">${recipe.title}</h1>
+              <p class="subtitle">${recipe.subtitle}</p>
+            </div>
           </div>
           <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
-            Ingredients
+            ${HI.queueList}<span>Ingredients</span>
           </button>
         </div>
 
         <div class="chiprow">
           <div class="chips">
             ${chips}
-          </div>
-          <div class="actions">
-            <button class="btn" id="resetChecks" type="button" aria-label="Reset checkmarks">Reset</button>
-            <button class="btn" id="print" type="button" aria-label="Print recipe">Print</button>
           </div>
         </div>
       </div>
@@ -677,44 +721,45 @@ ${slides}
     <div class="bottombar safe-bot">
       <div class="nav">
         <button class="btn" id="prev" type="button" aria-label="Previous step">
-          ‹ Prev <span class="kbd">←</span>
+          ${HI.chevronLeft}<span>Prev</span>
         </button>
         <button class="btn primary" id="next" type="button" aria-label="Next step">
-          Next › <span class="kbd">→</span>
+          <span>Next</span>${HI.chevronRight}
         </button>
       </div>
     </div>
   </div>
 
-  <dialog id="dlg">
-    <div class="modal">
-      <div class="modalhead">
-        <div>
-          <h3>${recipe.ingredients.heading}</h3>
-          <div class="printnote">${recipe.ingredients.note}</div>
+  <dialog id="dlg" class="expanded-steps-dialog">
+    <div class="expanded-steps-header safe-top">
+      <button class="x" id="closeDlg" type="button" aria-label="Close">${HI.xMark}</button>
+    </div>
+    <div class="expanded-steps-body">
+      <div class="expanded-step-pane">
+        <h2 class="h">${recipe.ingredients.heading}</h2>
+        <div class="cardbody">
+          ${ingredientsNoteHtml}<ul>
+            ${ingredientItems}
+          </ul>
+          ${ingredientsCalloutHtml}
         </div>
-        <button class="x" id="closeDlg" type="button" aria-label="Close">✕</button>
       </div>
-      <ul>
-        ${ingredientItems}
-      </ul>
-      <div class="callout">${recipe.ingredients.callout}</div>
     </div>
   </dialog>
 
-  <dialog id="fsDlg" class="fsdlg">
-    <div class="fstopbar safe-top">
-      <button class="x" id="closeFsDlg" type="button" aria-label="Close fullscreen">✕</button>
+  <dialog id="expandedStepsDialog" class="expanded-steps-dialog">
+    <div class="expanded-steps-header safe-top">
+      <button class="x" id="closeExpandedStepsDialog" type="button" aria-label="Close fullscreen">${HI.xMark}</button>
     </div>
-    <div class="swiper fs-swiper">
+    <div class="swiper expanded-steps-swiper">
       <div class="swiper-wrapper">
-${fsSlides}
+${expandedSlidesHtml}
       </div>
     </div>
-    <div class="fsbottombar safe-bot">
+    <div class="expanded-steps-footer safe-bot">
       <div class="nav">
-        <button class="btn" id="fsPrev" type="button" aria-label="Previous step">‹ Prev</button>
-        <button class="btn primary" id="fsNext" type="button" aria-label="Next step">Next ›</button>
+        <button class="btn" id="expandedStepsPrev" type="button" aria-label="Previous step">${HI.chevronLeft}<span>Prev</span></button>
+        <button class="btn primary" id="expandedStepsNext" type="button" aria-label="Next step"><span>Next</span>${HI.chevronRight}</button>
       </div>
     </div>
   </dialog>
@@ -737,14 +782,6 @@ ${fsSlides}
           });
         });
       }catch(e){}
-    }
-
-    function resetChecks(){
-      CHECK_KEYS.forEach(id => {
-        const el = document.getElementById(id);
-        if(el) el.checked = false;
-      });
-      localStorage.setItem(LS_KEY, JSON.stringify({}));
     }
 
     const swiper = new Swiper(".main-swiper", {
@@ -775,17 +812,21 @@ ${fsSlides}
     document.getElementById("next").addEventListener("click", () => swiper.slideNext());
 
     const dlg = document.getElementById("dlg");
-    document.getElementById("openIngredients").addEventListener("click", () => dlg.showModal());
+    document.getElementById("openIngredients").addEventListener("click", () => {
+      document.documentElement.style.overflow = "hidden";
+      dlg.showModal();
+    });
     document.getElementById("closeDlg").addEventListener("click", () => dlg.close());
+    dlg.addEventListener("close", () => {
+      document.documentElement.style.overflow = "";
+    });
     dlg.addEventListener("click", (e) => {
-      const rect = dlg.getBoundingClientRect();
-      const inside = rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
-                     rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
-      if(!inside) dlg.close();
+      if (e.target !== dlg) return;
+      dlg.close();
     });
 
-    const fsDlg = document.getElementById("fsDlg");
-    const fsSwiper = new Swiper(".fs-swiper", {
+    const expandedStepsDialog = document.getElementById("expandedStepsDialog");
+    const expandedStepsSwiper = new Swiper(".expanded-steps-swiper", {
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 260,
@@ -795,36 +836,33 @@ ${fsSlides}
       a11y: { enabled: true }
     });
 
-    function updateFsNav() {
-      document.getElementById("fsPrev").disabled = fsSwiper.isBeginning;
-      document.getElementById("fsNext").disabled = fsSwiper.isEnd;
+    function updateExpandedStepsNav() {
+      document.getElementById("expandedStepsPrev").disabled = expandedStepsSwiper.isBeginning;
+      document.getElementById("expandedStepsNext").disabled = expandedStepsSwiper.isEnd;
     }
-    fsSwiper.on("slideChange", () => {
-      swiper.slideTo(fsSwiper.activeIndex, 0);
-      updateFsNav();
+    expandedStepsSwiper.on("slideChange", () => {
+      swiper.slideTo(expandedStepsSwiper.activeIndex, 0);
+      updateExpandedStepsNav();
     });
-    updateFsNav();
+    updateExpandedStepsNav();
 
-    function openFs(idx) {
-      fsSwiper.slideTo(idx, 0);
-      updateFsNav();
+    function openExpandedSteps(idx) {
+      expandedStepsSwiper.slideTo(idx, 0);
+      updateExpandedStepsNav();
       document.documentElement.style.overflow = "hidden";
-      fsDlg.showModal();
+      expandedStepsDialog.showModal();
     }
-    function closeFs() {
-      fsDlg.close();
+    function closeExpandedSteps() {
+      expandedStepsDialog.close();
       document.documentElement.style.overflow = "";
     }
 
     document.querySelectorAll(".expand-btn").forEach(btn => {
-      btn.addEventListener("click", () => openFs(swiper.activeIndex));
+      btn.addEventListener("click", () => openExpandedSteps(swiper.activeIndex));
     });
-    document.getElementById("closeFsDlg").addEventListener("click", closeFs);
-    document.getElementById("fsPrev").addEventListener("click", () => fsSwiper.slidePrev());
-    document.getElementById("fsNext").addEventListener("click", () => fsSwiper.slideNext());
-
-    document.getElementById("resetChecks").addEventListener("click", () => resetChecks());
-    document.getElementById("print").addEventListener("click", () => window.print());
+    document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
+    document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
+    document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
   </script>
 </body>
 </html>`;
@@ -845,7 +883,7 @@ function buildIndex(entries) {
           <h2 class="h">${recipe.title}</h2>
           <p class="muted">${recipe.subtitle}</p>
         </div>
-        <div class="arrow">›</div>
+        <div class="arrow" aria-hidden="true">${HI.chevronRight}</div>
       </div>
       <div class="chips">
         ${chips}
@@ -861,89 +899,148 @@ function buildIndex(entries) {
   <title>Recipe Cards</title>
   <meta name="description" content="Phone-optimized step-by-step recipe cards." />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#18130d" />
+  <meta name="theme-color" content="#18130d" id="metaTheme" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Recipe Cards" />
   <link rel="apple-touch-icon" href="icons/chef-icon.png" />
+  <script>
+    (function(){var t=localStorage.getItem("recipe_cards_theme_v1");if(t==="light"){document.documentElement.dataset.theme="light";document.getElementById("metaTheme").content="#ddd9ce";}})();
+  </script>
   <style>
     :root{
-      --black-deep:#18130d; --accent:#ff8b00; --accent-dark:#ff5800;
-      --stroke:rgba(221,216,203,.20); --stroke-2:rgba(221,216,203,.28);
-      --text:rgba(255,255,255,.92); --muted:rgba(221,216,203,.82);
+      --background-primary:#18130d;
+      --background-secondary:#221c14;
+      --foreground-primary:rgba(255,255,255,.93);
+      --foreground-secondary:#c2bdb2;
+      --foreground-tertiary:#9a9488;
+      --accent:#ff8b00;
+      --accent-glow:rgba(255,139,0,.18);
+      --border:#3a3328;
+      --border-strong:#504839;
+      --surface-muted:#2a2318;
+      --shadow-elevated:0 8px 24px rgba(0,0,0,.45);
       --radius-xl:26px; --radius-lg:20px;
-      --shadow-lg:0 22px 60px rgba(0,0,0,.55);
-      --shadow-md:0 14px 36px rgba(0,0,0,.38);
       --font:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
       --text-xs:12px; --text-sm:14px; --text-base:16px; --text-2xl:24px;
+    }
+    html[data-theme="light"]{
+      --background-primary:#ddd9ce;
+      --background-secondary:#ece9e1;
+      --foreground-primary:#1a1a17;
+      --foreground-secondary:#4a4740;
+      --foreground-tertiary:#7a766d;
+      --accent:#d47400;
+      --accent-glow:rgba(212,116,0,.14);
+      --border:#c4bfb3;
+      --border-strong:#a8a295;
+      --surface-muted:#d5d0c5;
+      --shadow-elevated:0 4px 12px rgba(0,0,0,.08);
     }
     *{ box-sizing:border-box; }
     html,body{ height:100%; margin:0; overflow-x:hidden; }
     body{
-      font-family:var(--font); color:var(--text);
-      background:
-        radial-gradient(900px 540px at 15% -5%, rgba(255,139,0,.14), transparent 55%),
-        radial-gradient(900px 540px at 95% 0%, rgba(255,88,0,.12), transparent 56%),
-        var(--black-deep);
+      font-family:var(--font); color:var(--foreground-primary);
+      background:var(--background-primary);
       -webkit-font-smoothing:antialiased;
       min-height:100%;
     }
     .wrap{ max-width:560px; margin:0 auto; padding:24px 14px 40px; padding-top:max(24px,env(safe-area-inset-top)); }
+    .page-header{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+      margin-bottom:24px;
+    }
     .page-title{
       font-size:28px; font-weight:900; margin:0 0 4px;
       letter-spacing:.2px; line-height:1.1;
     }
-    .page-sub{ color:var(--muted); font-size:var(--text-sm); margin:0 0 24px; line-height:1.4; }
+    .page-sub{ color:var(--foreground-secondary); font-size:var(--text-sm); margin:0; line-height:1.4; }
+    .theme-toggle{
+      flex:0 0 auto; position:relative;
+      width:44px; height:24px; border-radius:999px; border:none; padding:0;
+      background:var(--border); cursor:pointer;
+      transition:background .2s ease;
+    }
+    .theme-toggle[aria-checked="true"]{ background:var(--accent); }
+    .theme-toggle::after{
+      content:""; position:absolute; top:2px; left:2px;
+      width:20px; height:20px; border-radius:999px;
+      background:var(--foreground-primary);
+      transition:transform .2s ease;
+    }
+    .theme-toggle[aria-checked="true"]::after{
+      transform:translateX(20px);
+      background:#fff;
+    }
     .list{ display:flex; flex-direction:column; gap:12px; }
     .icard{
       display:flex; flex-direction:column; gap:12px;
-      border-radius:var(--radius-xl); border:1px solid var(--stroke);
-      background:
-        radial-gradient(900px 380px at 30% -20%, rgba(255,139,0,.10), transparent 55%),
-        linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045));
-      box-shadow:var(--shadow-lg);
+      border-radius:var(--radius-xl); border:1px solid var(--border);
+      background:var(--background-secondary);
+      box-shadow:var(--shadow-elevated);
       padding:16px 16px 14px;
       text-decoration:none; color:inherit;
       transition:border-color .18s ease, transform .08s ease;
     }
-    .icard:hover{ border-color:var(--stroke-2); transform:translateY(-1px); }
+    .icard:hover{ border-color:var(--border-strong); transform:translateY(-1px); }
     .icard:active{ transform:scale(.99); }
     .icard-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
     .kicker{
       margin:0 0 4px; text-transform:uppercase; letter-spacing:.18em;
-      color:rgba(221,216,203,.72); font-size:11px; font-weight:900;
+      color:var(--foreground-tertiary); font-size:11px; font-weight:900;
     }
     .h{ margin:0; font-size:var(--text-2xl); font-weight:900; line-height:1.1; }
-    .muted{ margin:6px 0 0; color:var(--muted); font-size:var(--text-sm); line-height:1.35; }
+    .muted{ margin:6px 0 0; color:var(--foreground-secondary); font-size:var(--text-sm); line-height:1.35; }
     .arrow{
       flex:0 0 auto; width:40px; height:40px; border-radius:16px;
-      border:1px solid var(--stroke); background:rgba(255,255,255,.06);
-      display:grid; place-items:center; font-size:22px; color:var(--text);
+      border:1px solid var(--border); background:var(--surface-muted);
+      display:flex; align-items:center; justify-content:center; color:var(--foreground-primary);
     }
+    .arrow .icon{ width:22px; height:22px; }
     .chips{ display:flex; gap:8px; flex-wrap:wrap; }
     .chip{
       display:inline-flex; align-items:center; gap:8px;
-      border:1px solid var(--stroke); background:rgba(255,255,255,.05);
+      border:1px solid var(--border); background:var(--surface-muted);
       border-radius:999px; padding:6px 10px;
-      font-size:var(--text-xs); color:var(--muted); white-space:nowrap;
+      font-size:var(--text-xs); color:var(--foreground-secondary); white-space:nowrap;
     }
-    .chip b{ color:var(--text); font-weight:800; }
+    .chip b{ color:var(--foreground-primary); font-weight:800; }
     .dot{
       width:8px; height:8px; border-radius:999px;
-      background:var(--accent); box-shadow:0 0 0 4px rgba(255,139,0,.16);
+      background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
-    .empty{ color:var(--muted); font-size:var(--text-sm); text-align:center; padding:40px 0; }
+    .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1 class="page-title">Recipe Cards</h1>
-    <p class="page-sub">Tap a recipe to open the step-by-step card view.</p>
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Recipe Cards</h1>
+        <p class="page-sub">Tap a recipe to open the step-by-step card view.</p>
+      </div>
+      <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Use light theme" id="themeToggle"></button>
+    </div>
     <div class="list">
 ${cards || '      <p class="empty">No recipes yet.</p>'}
     </div>
   </div>
+  <script>
+    (function(){
+      var KEY="recipe_cards_theme_v1",DARK_BG="#18130d",LIGHT_BG="#ddd9ce";
+      var html=document.documentElement,btn=document.getElementById("themeToggle"),meta=document.getElementById("metaTheme");
+      function isLight(){return html.dataset.theme==="light";}
+      btn.setAttribute("aria-checked",String(isLight()));
+      btn.addEventListener("click",function(){
+        var next=isLight()?"dark":"light";
+        if(next==="light"){html.dataset.theme="light";}else{delete html.dataset.theme;}
+        localStorage.setItem(KEY,next);
+        btn.setAttribute("aria-checked",String(next==="light"));
+        meta.content=next==="light"?LIGHT_BG:DARK_BG;
+      });
+    })();
+  </script>
 </body>
 </html>`;
 }

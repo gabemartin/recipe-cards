@@ -97,4 +97,4 @@ Existing recipes for style reference:
 Build commands:
 - `node generate.js` -- full build (all recipes + index + manifest)
 - `node generate.js src/recipes/foo.json` -- single recipe only (no index update)
-- `npm run dev` -- dev server with live reload at localhost:4000
+- `npm run dev` -- dev server at localhost:4000 (rebuilds when recipe JSON / icons / generate.js change; refresh browser manually)

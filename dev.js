@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * Zero-dependency dev server with live reload.
- * Serves dist/, watches src/ and generate.js, rebuilds + reloads on change.
+ * Zero-dependency dev server.
+ * Serves dist/, watches recipe JSON + icons + generate.js, rebuilds on change (refresh the browser manually).
  */
 
 import { createServer } from "http";
-import { readFileSync, watch, statSync, existsSync } from "fs";
+import { readFileSync, watchFile, readdirSync, statSync, existsSync } from "fs";
 import { join, extname } from "path";
 import { execFile } from "child_process";
 import { fileURLToPath } from "url";
@@ -26,17 +26,9 @@ const MIME = {
   ".webmanifest": "application/manifest+json",
 };
 
-const RELOAD_SNIPPET = `<script>new EventSource("/__reload").addEventListener("reload",()=>location.reload())</script>`;
-
-// ─── SSE clients ─────────────────────────────────────────────────────────────
-
-const clients = new Set();
-
-function broadcast() {
-  for (const res of clients) {
-    res.write("event: reload\ndata: ok\n\n");
-  }
-}
+const RECIPES_DIR = join(__dirname, "src", "recipes");
+const ICONS_DIR = join(__dirname, "src", "icons");
+const GENERATE_JS = join(__dirname, "generate.js");
 
 // ─── Rebuild ─────────────────────────────────────────────────────────────────
 
@@ -45,7 +37,7 @@ let building = false;
 function rebuild() {
   if (building) return;
   building = true;
-  execFile(process.execPath, [join(__dirname, "generate.js")], (err, stdout, stderr) => {
+  execFile(process.execPath, [GENERATE_JS], (err, stdout, stderr) => {
     building = false;
     if (err) {
       console.error("\x1b[31m✗ Build failed\x1b[0m");
@@ -53,37 +45,56 @@ function rebuild() {
       return;
     }
     if (stdout) process.stdout.write(stdout);
-    console.log("\x1b[32m↻ Reloading…\x1b[0m");
-    broadcast();
+    console.log("\x1b[32m✓ Build done — refresh the browser to see changes\x1b[0m");
   });
 }
 
 // ─── File watcher ────────────────────────────────────────────────────────────
+// fs.watch on directories (especially recursive src/) can fire on macOS when generate.js
+// only reads recipe/icon files, causing rebuild loops. watchFile uses mtime and ignores reads.
 
+const watchedPaths = new Set();
 let debounce;
-function onChange() {
+
+function scheduleRebuild() {
   clearTimeout(debounce);
-  debounce = setTimeout(rebuild, 150);
+  debounce = setTimeout(() => {
+    if (!building) rebuild();
+  }, 250);
 }
 
-watch(join(__dirname, "src"), { recursive: true }, onChange);
-watch(join(__dirname, "generate.js"), onChange);
+function watchPathWhenEdited(absPath) {
+  if (watchedPaths.has(absPath)) return;
+  watchedPaths.add(absPath);
+  watchFile(absPath, { interval: 500 }, (curr, prev) => {
+    if (curr.mtimeMs === prev.mtimeMs) return;
+    scheduleRebuild();
+  });
+}
+
+function attachSourceWatchers() {
+  if (existsSync(RECIPES_DIR)) {
+    for (const name of readdirSync(RECIPES_DIR)) {
+      if (name.endsWith(".json")) watchPathWhenEdited(join(RECIPES_DIR, name));
+    }
+  }
+  if (existsSync(ICONS_DIR)) {
+    for (const name of readdirSync(ICONS_DIR)) {
+      if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(name)) {
+        watchPathWhenEdited(join(ICONS_DIR, name));
+      }
+    }
+  }
+  watchPathWhenEdited(GENERATE_JS);
+}
+
+attachSourceWatchers();
+// Pick up newly added recipe JSON / icons without restarting dev (light scan).
+setInterval(attachSourceWatchers, 4000);
 
 // ─── HTTP server ─────────────────────────────────────────────────────────────
 
 const server = createServer((req, res) => {
-  if (req.url === "/__reload") {
-    res.writeHead(200, {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      Connection: "keep-alive",
-    });
-    res.write(":\n\n");
-    clients.add(res);
-    req.on("close", () => clients.delete(res));
-    return;
-  }
-
   let pathname = req.url.split("?")[0];
   if (pathname === "/") pathname = "/index.html";
 
@@ -103,13 +114,12 @@ const server = createServer((req, res) => {
 
   const ext = extname(filePath);
   const contentType = MIME[ext] || "application/octet-stream";
-  let body = readFileSync(filePath);
+  const body = readFileSync(filePath);
 
-  if (ext === ".html") {
-    body = body.toString().replace("</body>", RELOAD_SNIPPET + "</body>");
-  }
-
-  res.writeHead(200, { "Content-Type": contentType });
+  res.writeHead(200, {
+    "Content-Type": contentType,
+    "Cache-Control": "no-store",
+  });
   res.end(body);
 });
 
