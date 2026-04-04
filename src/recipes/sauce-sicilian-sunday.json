@@ -1,0 +1,181 @@
+{
+  "title": "Sauce Sicilian Sunday",
+  "subtitle": "Long-simmered tomato sauce with seared pork, Italian sausage, and meatballs—family-style with pasta, ricotta, and cheese on the side.",
+  "storageKey": "sauce_sicilian_sunday_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Sauce", "value": "Pork + sausage + meatballs" },
+    {              "label": "Time", "value": "~3 hr simmer" },
+    {              "label": "Vessel", "value": "Dutch oven" },
+    {              "label": "Serve", "value": "Pasta + ricotta" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Use pork chops, ribs, neck bones, or a mix—whatever gives you enough bone and collagen for a rich Sunday sauce.",
+    "items": [
+      "<strong>2 tbsp extra virgin olive oil</strong>",
+      "<strong>2–3 lbs pork</strong> (loin, chops, ribs, and/or neck bones)",
+      "<strong>Kosher salt and black pepper</strong> (to taste)",
+      "<strong>1 small yellow or sweet onion</strong>, finely diced",
+      "<strong>5 cloves garlic</strong>, very thinly sliced",
+      "<strong>Pinch red chili flakes</strong>",
+      "<strong>3 tbsp tomato paste</strong>",
+      "<strong>Two 28-oz cans</strong> whole peeled tomatoes <em>or</em> crushed tomatoes",
+      "<strong>2 bay leaves</strong>",
+      "<strong>Fresh parsley</strong> (handful, chopped)",
+      "<strong>Pinch sugar</strong> (optional)",
+      "<strong>1½ lbs Italian sausage</strong> (hot, sweet, or a mix)",
+      "<strong>1 bag premade meatballs</strong> (frozen is fine)",
+      "<strong>Pasta</strong> (shape you like—cook al dente)",
+      "<strong>Ricotta</strong> (for passing at the table)",
+      "<strong>Grated Parmesan or Pecorino</strong> (for passing at the table)"
+    ],
+    "callout": "<strong>Texture:</strong> Break whole tomatoes with a wooden spoon for a chunkier sauce, or buzz briefly with an immersion blender if you want it smoother before the long simmer.",
+    "shoppingList": [
+      { "item": "Extra virgin olive oil" },
+      { "item": "Pork (2–3 lbs: loin, chops, ribs, and/or neck bones)" },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "1 yellow or sweet onion" },
+      { "item": "Garlic (1 head)", "substitutes": ["Jarred minced garlic"] },
+      { "item": "Red chili flakes" },
+      { "item": "Tomato paste (1 small can)" },
+      { "item": "Canned tomatoes (2 × 28 oz)", "substitutes": ["Crushed tomatoes"] },
+      { "item": "Bay leaves" },
+      { "item": "Fresh parsley (1 bunch)" },
+      { "item": "Italian sausage (1½ lbs)", "substitutes": ["Sweet or hot links"] },
+      { "item": "Frozen premade meatballs (1 bag)" },
+      { "item": "Dried pasta (1–2 lb, as needed)" },
+      { "item": "Ricotta (1 tub)" },
+      { "item": "Parmesan or Pecorino (wedge or grated)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A <strong>low-and-slow</strong> Sicilian-style Sunday gravy: brown pork first, build a tomato base, then load in sausage and meatballs and let everything collapse into a rich sauce while you barely tend the pot."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Sear pork</strong> in a hot Dutch oven, then set aside",
+            "<strong>Sweat aromatics</strong>, toast tomato paste, add tomatoes + water",
+            "<strong>Simmer meats</strong> covered (lid ajar) ~3 hours, stirring occasionally",
+            "<strong>Plate</strong> meats separately; toss pasta in a little sauce; pass ricotta + cheese"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Stir every ~20 minutes</strong> so the bottom doesn't scorch—especially on the lowest burner you can manage."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Sear the Pork",
+      "checkboxLabel": "Brown pork on all sides, set aside",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a <strong>Dutch oven</strong> over <strong>high</strong> heat. Add <strong>olive oil</strong>.",
+            "Season pork on all sides with <strong>salt and pepper</strong>.",
+            "Sear until <strong>deeply browned</strong> on all sides. Remove and set aside."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Color = flavor.</strong> Don't rush the sear; you're building fond for the whole sauce."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Onions",
+      "checkboxLabel": "Sauté onion until soft (~5 min)",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Lower heat to <strong>medium</strong>.",
+            "Add <strong>diced onion</strong> and sauté until soft, about <strong>5 minutes</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Garlic, Chili, Tomato Paste",
+      "checkboxLabel": "Garlic + flakes, then toast paste",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>garlic</strong> and <strong>chili flakes</strong>; cook <strong>2 minutes</strong> more.",
+            "Stir in <strong>tomato paste</strong>; cook <strong>1–2 minutes</strong> until it darkens slightly."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Tomatoes + Liquid",
+      "checkboxLabel": "Tomatoes, bay, parsley, water; bring to boil",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>tomatoes</strong>, <strong>bay leaves</strong>, and <strong>parsley</strong>. Season with <strong>salt and pepper</strong>.",
+            "Fill one empty tomato can <strong>½–¾</strong> with water, add to the pot, and stir.",
+            "If using <strong>whole peeled tomatoes</strong>, crush them with a wooden spoon—or use an <strong>immersion blender</strong> for a smoother sauce.",
+            "Optional: add a <strong>pinch of sugar</strong> if the tomatoes taste sharp.",
+            "Bring the sauce to a <strong>boil</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Long Simmer",
+      "checkboxLabel": "Add all meats; simmer ~3 hr, stir often",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>seared pork</strong>, <strong>sausage</strong>, and <strong>meatballs</strong>.",
+            "Reduce heat to <strong>low</strong>.",
+            "Cover with the lid <strong>slightly ajar</strong>.",
+            "Simmer on the <strong>lowest</strong> heat you can hold, stirring about every <strong>20 minutes</strong>, for ~<strong>3 hours</strong> until pork is falling-apart tender.",
+            "Turn off heat and let meats rest in the sauce until you're ready to eat."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Low and lazy wins.</strong> The goal is gentle bubbles, not a rolling boil—otherwise the bottom can catch."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Finish + Serve",
+      "checkboxLabel": "Plate meats; pasta; pass cheese & ricotta",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Taste and adjust <strong>salt</strong>.",
+            "Remove <strong>bay leaves</strong> and any <strong>bones</strong> from the pork.",
+            "Use a <strong>slotted spoon</strong> to transfer meats to a large platter.",
+            "Toss <strong>al dente pasta</strong> with a little sauce.",
+            "Pour remaining sauce into <strong>gravy boats</strong> or a serving bowl.",
+            "Serve pasta with the <strong>platter of meats</strong> and sauce on the side, plus bowls of <strong>grated cheese</strong> and <strong>ricotta</strong> for the table."
+          ]
+        }
+      ]
+    }
+  ]
+}

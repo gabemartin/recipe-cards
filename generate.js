@@ -476,6 +476,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   background: var(--chrome-header-bg);
   backdrop-filter: blur(14px);
 }
+#dlg .expanded-steps-header{ justify-content: space-between; }
 .expanded-steps-swiper{
   flex: 1;
   min-height: 0;
@@ -550,46 +551,65 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   line-height:1.45;
 }
 
+/* ── Dialog toggle ────────────────────────────── */
+.dlg-toggle{
+  display: flex;
+  background: var(--surface-muted);
+  border-radius: var(--radius-md);
+  padding: 3px;
+  gap: 2px;
+}
+.dlg-toggle-btn{
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: var(--font);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--foreground-tertiary);
+  padding: 6px 14px;
+  border-radius: calc(var(--radius-md) - 3px);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+.dlg-toggle-btn.active{
+  background: var(--accent);
+  color: #1a1200;
+  box-shadow: 0 1px 4px rgba(0,0,0,.18);
+}
+.hidden-view{ display: none; }
+
 /* ── Shopping list ────────────────────────────── */
-.shop-section{
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-}
-.shop-heading{
-  margin: 0 0 10px;
-  font-size: var(--text-lg);
-  font-weight: 900;
-  letter-spacing: .2px;
-}
 .shop-list{
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0;
 }
 .shop-item{
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 8px 10px;
-  border-radius: var(--radius-md);
+  padding: 12px;
+  margin: 0; 
+  margin-top: -1px;
   border: 1px solid var(--border);
   background: var(--surface-muted);
 }
 .shop-item input[type="checkbox"]{
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
+  width: 24px;
+  height: 24px;
+  margin-top: 6px;
   accent-color: var(--accent);
   cursor: pointer;
   flex-shrink: 0;
 }
 .shop-item label{
   cursor: pointer;
-  font-size: var(--text-sm);
+  font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--foreground-primary);
   line-height: 1.35;
@@ -719,9 +739,7 @@ function buildHTML(recipe) {
     : "";
 
   const shoppingListHtml = recipe.ingredients.shoppingList?.length
-    ? `<div class="shop-section">
-            <h3 class="shop-heading">Shopping List</h3>
-            <ul class="shop-list">
+    ? `<ul class="shop-list">
               ${recipe.ingredients.shoppingList.map((entry, i) => {
                 const subs = entry.substitutes?.length
                   ? `<span class="subs">Substitutes: ${entry.substitutes.join(", ")}</span>`
@@ -731,8 +749,7 @@ function buildHTML(recipe) {
                 <label for="shop${i}">${entry.item}${subs}</label>
               </li>`;
               }).join("\n              ")}
-            </ul>
-          </div>`
+            </ul>`
     : "";
 
   const checkIds = recipe.slides
@@ -820,17 +837,24 @@ ${slides}
 
   <dialog id="dlg" class="expanded-steps-dialog">
     <div class="expanded-steps-header safe-top">
+      <div class="dlg-toggle" id="dlgToggle">
+        <button class="dlg-toggle-btn active" data-mode="ingredients" type="button">Ingredients</button>
+        <button class="dlg-toggle-btn" data-mode="shopping" type="button">Shopping List</button>
+      </div>
       <button class="x" id="closeDlg" type="button" aria-label="Close">${HI.xMark}</button>
     </div>
     <div class="expanded-steps-body">
       <div class="expanded-step-pane">
-        <h2 class="h">${recipe.ingredients.heading}</h2>
         <div class="cardbody">
-          ${ingredientsNoteHtml}<ul>
-            ${ingredientItems}
-          </ul>
-          ${ingredientsCalloutHtml}
-          ${shoppingListHtml}
+          <div id="ingredientsView">
+            ${ingredientsNoteHtml}<ul>
+              ${ingredientItems}
+            </ul>
+            ${ingredientsCalloutHtml}
+          </div>
+          <div id="shoppingView" class="hidden-view">
+            ${shoppingListHtml}
+          </div>
         </div>
       </div>
     </div>
@@ -919,7 +943,24 @@ ${expandedSlidesHtml}
     document.getElementById("next").addEventListener("click", () => swiper.slideNext());
 
     const dlg = document.getElementById("dlg");
+    const ingredientsView = document.getElementById("ingredientsView");
+    const shoppingView = document.getElementById("shoppingView");
+    const toggleBtns = document.querySelectorAll("#dlgToggle .dlg-toggle-btn");
+    const LS_MODE = LS_KEY + "_mode";
+
+    function setDlgMode(mode){
+      toggleBtns.forEach(b => b.classList.toggle("active", b.dataset.mode === mode));
+      ingredientsView.classList.toggle("hidden-view", mode !== "ingredients");
+      shoppingView.classList.toggle("hidden-view", mode !== "shopping");
+      try{ localStorage.setItem(LS_MODE, mode); }catch(e){}
+    }
+
+    toggleBtns.forEach(b => b.addEventListener("click", () => setDlgMode(b.dataset.mode)));
+
     document.getElementById("openIngredients").addEventListener("click", () => {
+      var saved = "ingredients";
+      try{ saved = localStorage.getItem(LS_MODE) || "ingredients"; }catch(e){}
+      setDlgMode(saved);
       document.documentElement.style.overflow = "hidden";
       dlg.showModal();
     });
