@@ -1,0 +1,165 @@
+{
+  "title": "Lamb Loin Chops (Cast Iron)",
+  "subtitle": "Hot cast-iron sear with optional herb butter: deep crust, warm pink center around 130–135°F.",
+  "storageKey": "lamb_loin_chops_cast_iron_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Lamb loin chops" },
+    {              "label": "Pan",     "value": "Cast iron" },
+    {              "label": "Target",  "value": "~130–135°F" },
+    {              "label": "Time",    "value": "~5–6 min sear + 5 min rest" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Render trimmed fat to season the pan before the chops hit the metal.",
+    "items": [
+      "<strong>Lamb loin chops</strong> (as many as fit in the pan without crowding)",
+      "<strong>Kosher salt</strong>",
+      "<strong>Black pepper</strong>",
+      "<strong>Lamb fat</strong> (trimmed from the chops, for rendering in the pan)",
+      "<strong>1 tbsp butter</strong> (optional)",
+      "<strong>Fresh rosemary</strong> (optional, a few sprigs)",
+      "<strong>Fresh thyme</strong> (optional, a few sprigs)"
+    ],
+    "callout": "<strong>Done when:</strong> deep brown crust, warm pink center, internal temp ~130–135°F.",
+    "shoppingList": [
+      { "item": "Lamb loin chops" },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "Butter (optional)" },
+      { "item": "Fresh rosemary (optional)", "substitutes": ["Dried rosemary"] },
+      { "item": "Fresh thyme (optional)", "substitutes": ["Dried thyme"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A straight cast-iron sear: <strong>dry surface + hot fat</strong> builds a real crust. Optional butter and herbs at the flip add richness without stealing the lamb flavor."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season</strong> and rest so the surface isn't wet",
+            "<strong>Heat the pan</strong> on trimmed lamb fat until it's seriously hot",
+            "<strong>Sear side 1</strong> without moving",
+            "<strong>Flip</strong>, optional butter + herbs, quick baste",
+            "<strong>Finish side 2</strong>, then <strong>rest</strong>"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't crowd.</strong> Moisture steams instead of sears—cook in batches if needed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season",
+      "checkboxLabel": "Pat dry, salt & pepper, rest 10–15 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat chops <strong>dry</strong> with paper towels.",
+            "Season with <strong>kosher salt + black pepper</strong> on both sides.",
+            "Rest <strong>10–15 minutes</strong> at room temperature."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why rest here:</strong> salt draws surface moisture; a short sit helps you sear instead of steam."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Heat the Pan",
+      "checkboxLabel": "Render lamb fat until pan is hot, lightly smoking",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Set cast iron over <strong>medium-high</strong>.",
+            "Add the <strong>trimmed lamb fat</strong> and let it render until the pan is <strong>hot</strong> and <strong>lightly smoking</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>No usable trim?</strong> Use a thin film of neutral oil with high smoke point, then proceed the same way."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Sear (Side 1)",
+      "checkboxLabel": "Add chops; cook 3 min without moving",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Lay chops in the pan in a <strong>single layer</strong>.",
+            "Cook <strong>3 minutes</strong>—<strong>don't move them</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Color = flavor.</strong> Moving too early tears the crust."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Flip + Flavor",
+      "checkboxLabel": "Flip; add butter & herbs; baste 30–60 sec",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Flip</strong> the chops.",
+            "Add <strong>butter</strong> and <strong>rosemary / thyme</strong> if using.",
+            "<strong>Baste</strong> the meat with the foaming butter <strong>30–60 seconds</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Finish (Side 2)",
+      "checkboxLabel": "Cook second side 2–3 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Continue cooking <strong>2–3 minutes</strong> on the second side until crust and doneness look right."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Check temp:</strong> pull around <strong>130–135°F</strong> for warm pink center (carryover happens)."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Rest",
+      "checkboxLabel": "Plate and rest 5 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Transfer chops to a plate.",
+            "Rest <strong>5 minutes</strong> before slicing or serving."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>You're aiming for:</strong> deep brown crust outside, <strong>warm pink</strong> inside, ~<strong>130–135°F</strong>."
+        }
+      ]
+    }
+  ]
+}
