@@ -1,0 +1,107 @@
+{
+  "title": "Italian Spinach",
+  "subtitle": "A quick sautéed spinach with sweet pepper, onion, garlic, and tomato—ready in about 10 minutes.",
+  "storageKey": "italian_spinach_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Base", "value": "Spinach + tomato" },
+    {              "label": "Yield", "value": "2–3 servings" },
+    {              "label": "Active", "value": "~10 min" },
+    {              "label": "Serve", "value": "Side dish" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Garlic paste works great here in place of sliced fresh garlic.",
+    "items": [
+      "<strong>1 lb spinach</strong>",
+      "<strong>1 tbsp butter</strong>",
+      "<strong>1 tbsp olive oil</strong>",
+      "<strong>½ sweet red pepper</strong>, diced",
+      "<strong>1 tsp sliced garlic</strong> (or garlic paste)",
+      "<strong>½ cup onion</strong>, diced",
+      "<strong>½ cup tomato paste</strong> or 1 small tomato, diced"
+    ],
+    "callout": "<strong>Sicilian variation:</strong> Add 2 chopped anchovies along with the other ingredients for a deeper, savory flavor.",
+    "shoppingList": [
+      { "item": "1 lb fresh spinach" },
+      { "item": "Butter" },
+      { "item": "Olive oil" },
+      { "item": "1 sweet red pepper" },
+      { "item": "Garlic (cloves or paste)" },
+      { "item": "1 onion" },
+      { "item": "Tomato paste (small can)", "substitutes": ["1 small tomato, diced"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A <strong>simple Italian-style sautéed spinach</strong> cooked with butter, olive oil, sweet red pepper, onion, garlic, and tomato. Everything goes in the pan at once."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Heat</strong> butter and olive oil in a skillet",
+            "<strong>Add</strong> spinach and all remaining ingredients",
+            "<strong>Cover and steam</strong> over high heat, then simmer until tender"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Tip:</strong> Add 2 chopped anchovies to turn this into Sicilian spinach."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Heat the Fat",
+      "checkboxLabel": "Butter and olive oil heated in skillet",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a <strong>large skillet</strong> over medium-high heat.",
+            "Add <strong>1 tbsp butter</strong> and <strong>1 tbsp olive oil</strong>.",
+            "Wait until the butter is melted and the fat is <strong>hot</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Add Everything & Steam",
+      "checkboxLabel": "All ingredients in; covered until steam appears",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>spinach</strong>, <strong>diced red pepper</strong>, <strong>garlic</strong>, <strong>diced onion</strong>, and <strong>tomato paste or diced tomato</strong> all at once.",
+            "<strong>Cover the skillet</strong> and cook over <strong>high heat</strong> until steam appears."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Sicilian spinach:</strong> Add <strong>2 chopped anchovies</strong> at this stage."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Simmer Until Tender",
+      "checkboxLabel": "Reduced heat; simmered 5–6 minutes",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Reduce the heat</strong> to medium-low.",
+            "<strong>Simmer</strong>, covered, until the spinach is fully tender, about <strong>5–6 minutes</strong>.",
+            "Taste and adjust seasoning before serving."
+          ]
+        }
+      ]
+    }
+  ]
+}
