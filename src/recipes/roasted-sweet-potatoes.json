@@ -1,0 +1,149 @@
+{
+  "title": "Roasted Sweet Potatoes",
+  "subtitle": "Crispy outside, soft inside, and easy to make plain or with a warm spice blend that keeps the natural sweetness front and center.",
+  "storageKey": "roasted_sweet_potatoes_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Main",   "value": "1 lb sweet potatoes" },
+    {              "label": "Serves", "value": "~3 as a side" },
+    {              "label": "Roast",  "value": "425F" },
+    {              "label": "Style",  "value": "Plain or seasoned" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Choose one version per batch. Red Garnet or Jewel sweet potatoes roast especially well here.",
+    "items": [
+      "<strong>Plain version: 1 lb sweet potatoes</strong>, about 3 large, peeled and cut into 1/2-inch pieces",
+      "<strong>1 tbsp melted coconut oil</strong>",
+      "<strong>3/8 tsp fine sea salt</strong> (use less if using table salt)",
+      "<strong>1/2 tbsp light brown sugar</strong>, firmly packed",
+      "<strong>Seasoned version: 1 lb sweet potatoes</strong>, about 3 large, peeled and cut into 1/2-inch pieces",
+      "<strong>1 tbsp olive oil</strong>",
+      "<strong>3/8 tsp fine sea salt</strong> (use less if using table salt)",
+      "<strong>1/8 tsp black pepper</strong>",
+      "<strong>1/4 tsp ground chili powder</strong>",
+      "<strong>1/4 tsp paprika</strong>",
+      "<strong>1/4 tsp ground cumin</strong>",
+      "<strong>1/4 tsp garlic powder</strong>"
+    ],
+    "callout": "<strong>Best texture tip:</strong> Use your largest sheet pan and keep the potatoes in a single layer. Overlap = steaming instead of roasting.",
+    "shoppingList": [
+      { "item": "Sweet potatoes (1 lb, about 3 medium-large)", "substitutes": ["Red Garnet sweet potatoes", "Jewel sweet potatoes"] },
+      { "item": "Coconut oil", "substitutes": ["Butter"] },
+      { "item": "Light brown sugar" },
+      { "item": "Olive oil" },
+      { "item": "Fine sea salt" },
+      { "item": "Black pepper" },
+      { "item": "Ground chili powder", "substitutes": ["Chipotle chili powder"] },
+      { "item": "Paprika", "substitutes": ["Smoked paprika"] },
+      { "item": "Ground cumin" },
+      { "item": "Garlic powder" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Roasted sweet potato cubes with caramelized edges and creamy centers. You can keep them <strong>plain</strong> for meal prep or go <strong>seasoned</strong> with chili powder, paprika, cumin, and garlic."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Peel and cube</strong> the potatoes into even 1/2-inch pieces",
+            "<strong>Choose a flavor path</strong>: plain-sweet or warm-spiced",
+            "<strong>Spread out on a large sheet pan</strong> with no overlap",
+            "<strong>Flip every 10-15 minutes</strong> for even browning",
+            "<strong>Roast 27-35 minutes</strong> until crisp outside and tender inside"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Key rule:</strong> Space matters. Crowded sweet potatoes steam and soften; well-spaced potatoes caramelize."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Preheat + Prep",
+      "checkboxLabel": "Heat oven and cube potatoes evenly",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>425F</strong>.",
+            "Peel the sweet potatoes.",
+            "Cut into <strong>1/2-inch pieces</strong> so everything roasts at the same pace.",
+            "Set out your <strong>largest sheet pan</strong> so the potatoes can roast in one layer."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Even cuts matter:</strong> Smaller pieces can burn before larger pieces finish, so aim for a consistent dice."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Choose the Plain Version",
+      "checkboxLabel": "Toss with coconut oil, salt, and brown sugar",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the sweet potatoes to the sheet pan.",
+            "Top with <strong>melted coconut oil</strong>, <strong>fine sea salt</strong>, and <strong>light brown sugar</strong>.",
+            "Toss until every piece is coated.",
+            "Spread into an <strong>even layer</strong> with no overlap."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why this works:</strong> A touch of brown sugar helps the edges caramelize without overpowering the sweet potato flavor."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Or Make the Seasoned Version",
+      "checkboxLabel": "Toss with oil and spice blend",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the sweet potatoes to the sheet pan.",
+            "Top with <strong>olive oil</strong>, <strong>fine sea salt</strong>, <strong>black pepper</strong>, <strong>chili powder</strong>, <strong>paprika</strong>, <strong>cumin</strong>, and <strong>garlic powder</strong>.",
+            "Toss until the spice blend is evenly distributed.",
+            "Spread into an <strong>even layer</strong> with space between pieces."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Flavor option:</strong> Use chipotle chili powder and/or smoked paprika for a smokier roast. Add 1/4 to 1/2 tsp cayenne if you want real heat."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Roast Until Caramelized",
+      "checkboxLabel": "Flip every 10-15 minutes until tender",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Roast for <strong>27-35 minutes</strong> total.",
+            "Flip the potatoes <strong>every 10-15 minutes</strong> so they brown evenly and do not scorch on one side.",
+            "Aim for edges that are <strong>crispy and caramelized</strong> with centers that are soft and creamy.",
+            "A total bake time of <strong>about 30 minutes</strong> is common, but judge by color and tenderness."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Storage:</strong> Cool leftovers, then refrigerate in an airtight container up to 4 days. Reheat in the oven or air fryer to bring back the crisp edges."
+        }
+      ]
+    }
+  ]
+}
