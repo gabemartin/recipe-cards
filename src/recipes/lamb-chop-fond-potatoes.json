@@ -1,36 +1,37 @@
 {
   "title": "Lamb Chop Fond Potatoes (Cast Iron)",
-  "subtitle": "Par-cooked Yukon Golds crisped in leftover lamb fat and fond, then finished with garlic, parsley, and a little lemon.",
+  "subtitle": "Crowd-size Honey Gold potatoes par-cooked, then crisped in batches with lamb drippings and fond before a garlic-parsley-lemon finish.",
   "storageKey": "lamb_chop_fond_potatoes_checks_v1",
   "chips": [
-    { "dot": true, "label": "Main",   "value": "Yukon Gold potatoes" },
-    {              "label": "Serves", "value": "~4" },
+    { "dot": true, "label": "Main",   "value": "240 oz Honey Gold potatoes" },
+    {              "label": "Serves", "value": "~20-24" },
     {              "label": "Pan",    "value": "Cast iron" },
-    {              "label": "Finish", "value": "Garlic + parsley" }
+    {              "label": "Finish", "value": "Batch crisp + herb finish" }
   ],
   "ingredients": {
     "heading": "Ingredients",
-    "note": "Best made right after lamb chops, using the same skillet. Keep the good brown fond; ditch any bitter black bits.",
+    "note": "This is a large batch: plan to crisp in rounds. Keep the good brown fond; ditch any bitter black bits.",
     "items": [
-      "<strong>1 1/2-2 lb Yukon Gold potatoes</strong>, halved if small or cut into 1 1/2-inch chunks",
-      "<strong>Kosher salt</strong>",
-      "<strong>1/2 tsp baking soda</strong> (optional, but helps create rough crisp edges)",
-      "<strong>2-3 tbsp lamb fat + fond</strong> left in the skillet after cooking lamb chops",
-      "<strong>1 tbsp butter</strong> (optional, for the finish)",
-      "<strong>1 small garlic clove</strong>, very finely minced or grated",
-      "<strong>2-3 tbsp flat-leaf parsley</strong>, finely chopped",
-      "<strong>1-2 tsp fresh lemon juice</strong>",
+      "<strong>240 oz small Honey Gold potatoes</strong> (15 lb), halved if tiny or quartered if on the larger side",
+      "<strong>Kosher salt</strong> (about 2 tbsp for the potatoes, plus more for the boiling water)",
+      "<strong>1 tbsp baking soda</strong> (optional, but helps create rough crisp edges)",
+      "<strong>1-1 1/2 cups lamb fat + fond</strong> total, collected from cooking lamb chops and supplemented with rendered lamb fat or olive oil as needed",
+      "<strong>4 tbsp butter</strong> (optional, divided for the finish)",
+      "<strong>6-8 garlic cloves</strong>, very finely minced or grated",
+      "<strong>1 cup flat-leaf parsley</strong>, finely chopped",
+      "<strong>3-4 tbsp fresh lemon juice</strong>",
       "<strong>Black pepper</strong> (optional)"
     ],
-    "callout": "<strong>Fallback:</strong> If you don't have enough drippings in the pan, add a spoonful of rendered lamb fat or olive oil so the potatoes fry instead of sticking.",
+    "callout": "<strong>Fallback:</strong> One skillet of lamb chops usually will not yield enough fat for 15 lb of potatoes. Save drippings from multiple batches, or supplement with rendered lamb fat or olive oil so the potatoes fry instead of sticking.",
     "shoppingList": [
-      { "item": "Yukon Gold potatoes (1.5-2 lb)", "substitutes": ["Baby gold potatoes", "Fingerlings"] },
+      { "item": "Honey Gold potatoes (15 lb)", "substitutes": ["Baby gold potatoes", "Fingerlings"] },
       { "item": "Kosher salt" },
-      { "item": "Baking soda (optional)" },
-      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
-      { "item": "Fresh parsley (1 bunch)", "substitutes": ["Fresh dill", "Fresh mint"] },
-      { "item": "1 lemon" },
-      { "item": "Butter (optional)" },
+      { "item": "Baking soda" },
+      { "item": "Rendered lamb fat or olive oil", "substitutes": ["Beef tallow", "Duck fat"] },
+      { "item": "Garlic (2 heads)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "Fresh parsley (2 large bunches)", "substitutes": ["Fresh dill", "Fresh mint"] },
+      { "item": "3 lemons" },
+      { "item": "Butter (optional, 1 stick)" },
       { "item": "Black pepper (optional)" }
     ]
   },
@@ -41,22 +42,22 @@
       "body": [
         {
           "type": "p",
-          "html": "This is the best use of the skillet after lamb chops come out to rest: keep a thin layer of fat, preserve the tasty brown fond, and crisp par-cooked potatoes until the edges turn deep golden and shaggy."
+          "html": "This version is built for a crowd: par-cook the Honey Golds, then crisp them in <strong>batches</strong> using the lamb-chop skillet so each round picks up a little lamb fat and fond without steaming."
         },
         { "type": "spacer" },
         {
           "type": "ul",
           "items": [
-            "<strong>Par-cook</strong> potatoes in well-salted water",
+            "<strong>Par-cook</strong> 15 lb of potatoes in well-salted water",
             "<strong>Drain + rough up</strong> the surfaces for extra crisp edges",
-            "<strong>Leave 2-3 tbsp fat + fond</strong> in the lamb-chop skillet",
-            "<strong>Sear, then oven-finish</strong> the potatoes in a single layer",
-            "<strong>Finish with garlic, parsley, and lemon</strong> right at the end"
+            "<strong>Work in batches</strong> with the lamb-chop skillet",
+            "<strong>Hold finished rounds</strong> on sheet pans in a hot oven",
+            "<strong>Finish everything together</strong> with garlic, parsley, and lemon"
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Important:</strong> Brown fond is flavor. Burned black bits are bitterness. If the pan smells acrid, wipe out the worst of it and keep only the clean browned drippings."
+          "html": "<strong>Important:</strong> Brown fond is flavor. Burned black bits are bitterness. For a batch this large, refresh the pan as needed and keep only the clean browned drippings."
         }
       ]
     },
@@ -68,29 +69,29 @@
         {
           "type": "ul",
           "items": [
-            "Bring a pot of water to a boil and season it until it tastes <strong>lightly salty</strong>.",
+            "Bring a large pot or two pots of water to a boil and season it until it tastes <strong>lightly salty</strong>.",
             "Add potatoes and the <strong>baking soda</strong> if using.",
             "Simmer <strong>10-14 minutes</strong>, until a knife slides in easily but the pieces still hold together.",
-            "Drain well and let the potatoes steam off for <strong>2-3 minutes</strong>."
+            "Drain well and let the potatoes steam off for <strong>5 minutes</strong> so excess moisture disappears."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Why par-cook first:</strong> you get fluffy centers without having to steam the skillet later, which keeps the fond from washing away."
+          "html": "<strong>Why par-cook first:</strong> you get fluffy centers without having to steam the skillet later, which keeps the fond from washing away and lets each batch crisp faster."
         }
       ]
     },
     {
       "kicker": "Step 2",
       "title": "Rough Up + Preheat",
-      "checkboxLabel": "Toss to rough the edges; heat oven to 425F",
+      "checkboxLabel": "Rough up the edges; heat oven to 425F",
       "body": [
         {
           "type": "ul",
           "items": [
             "Shake the drained potatoes in the colander or toss them in a bowl until the outsides look a little <strong>scruffy</strong>.",
-            "Season with <strong>1/2 tsp kosher salt</strong> to start.",
-            "Preheat the oven to <strong>425F</strong> while the potatoes dry a bit more."
+            "Season with <strong>about 2 tbsp kosher salt</strong> to start; use less if your lamb drippings are already salty.",
+            "Preheat the oven to <strong>425F</strong> and set out <strong>2-3 sheet pans</strong> for holding finished batches."
           ]
         },
         {
@@ -101,61 +102,61 @@
     },
     {
       "kicker": "Step 3",
-      "title": "Set Up the Lamb-Chop Skillet",
-      "checkboxLabel": "Leave 2-3 tbsp drippings and scrape up the good fond",
+      "title": "Set Up for Batch Cooking",
+      "checkboxLabel": "Hold 1/4 cup drippings per batch and scrape up the good fond",
       "body": [
         {
           "type": "ul",
           "items": [
             "Cook your lamb chops first, then transfer them to a plate to <strong>rest</strong>.",
-            "Pour off excess fat, but leave <strong>2-3 tbsp drippings</strong> plus the browned bits in the skillet.",
-            "Set the pan over <strong>medium-high</strong> for a minute or two.",
-            "If the fond looks stuck and dry, add <strong>1 tbsp water</strong> around the edge and scrape just enough to loosen the browned bits into the fat."
+            "For each round, leave or add about <strong>1/4 cup drippings</strong> plus some browned fond to the skillet.",
+            "Set the pan over <strong>medium-high</strong> for a minute or two before each batch.",
+            "If the fond looks stuck and dry, add <strong>1-2 tbsp water</strong> around the edge and scrape just enough to loosen the browned bits into the fat."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>You want a thin glossy film</strong> in the skillet, not a pool. Too much fat makes the potatoes greasy instead of crisp."
+          "html": "<strong>You want a thin glossy film</strong> in the skillet, not a pool. For 15 lb of potatoes, expect roughly <strong>5-6 batches</strong> unless you're using multiple skillets."
         }
       ]
     },
     {
       "kicker": "Step 4",
-      "title": "Crisp in the Skillet, Then the Oven",
-      "checkboxLabel": "Sear cut-side down, then roast until deeply golden",
+      "title": "Crisp in Batches",
+      "checkboxLabel": "Sear each batch, then oven-finish and hold warm",
       "body": [
         {
           "type": "ul",
           "items": [
-            "Add potatoes in a <strong>single layer</strong> and press the cut sides into the pan.",
+            "Add only enough potatoes for a <strong>single layer</strong> and press the cut sides into the pan.",
             "Cook <strong>4-6 minutes</strong> without fussing until the first side picks up real color.",
-            "Turn the potatoes once, then transfer the skillet to the oven.",
-            "Roast <strong>12-18 minutes</strong>, tossing once or twice, until the edges are deeply browned and crisp."
+            "Turn the potatoes once, then transfer the skillet to the oven for <strong>12-18 minutes</strong> until deeply browned and crisp.",
+            "Move the finished batch to a sheet pan, hold warm in the oven, and repeat with the remaining potatoes."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Don't crowd the pan.</strong> If the skillet is packed tight, work in batches. Space is what gives you crust."
+          "html": "<strong>Don't crowd the pan.</strong> Space is what gives you crust. If the pan is packed, the potatoes steam and the fond turns muddy."
         }
       ]
     },
     {
       "kicker": "Step 5",
-      "title": "Finish With Garlic + Herbs",
+      "title": "Finish the Full Batch",
       "checkboxLabel": "Bloom garlic briefly, then toss with parsley and lemon",
       "body": [
         {
           "type": "ul",
           "items": [
-            "Return the skillet to the stove over <strong>medium-low</strong> if needed.",
-            "Push potatoes to the edges, add <strong>butter</strong> in the center if using, then add the garlic and stir <strong>10-15 seconds</strong> until fragrant.",
-            "Toss the garlic through the potatoes, turn off the heat, then add <strong>parsley + lemon juice</strong>.",
+            "Return one finished batch to the skillet over <strong>medium-low</strong>, or use a large roasting pan for the final toss.",
+            "Add <strong>1 tbsp butter</strong> at a time if using, then add the garlic and stir <strong>10-15 seconds</strong> until fragrant.",
+            "Toss in the remaining potatoes, then turn off the heat and add <strong>parsley + lemon juice</strong>.",
             "Taste and adjust with <strong>more salt</strong> and a little black pepper if you want."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Finish off heat:</strong> garlic should smell sweet and fragrant, not brown; lemon wakes up the lamb richness without making the potatoes taste sharp."
+          "html": "<strong>Finish off heat:</strong> garlic should smell sweet and fragrant, not brown; lemon wakes up the lamb richness without making the potatoes taste sharp. Toss gently so the crisp edges survive."
         }
       ]
     }
