@@ -1,0 +1,172 @@
+{
+  "title": "Salmon and Farro Grain Bowls",
+  "subtitle": "Hearty farro, crisp raw vegetables, and skillet salmon with a honey-lemon vinaigrette and crunchy pistachios.",
+  "storageKey": "salmon_farro_grain_bowls_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Salmon + farro" },
+    { "label": "Serves", "value": "2" },
+    { "label": "Time", "value": "~30 min" },
+    { "label": "Dressing", "value": "Honey + lemon" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Quick-cooking farro (e.g. Trader Joe’s 10-minute) cuts prep time. Cook any farro per package.",
+    "items": [
+      "<strong>1 cup dry farro</strong>",
+      "<strong>2 salmon fillets</strong> (about 12 oz total; scale up if you prefer larger portions)",
+      "<strong>2 tbsp olive oil</strong> (for the skillet)",
+      "<strong>1 tsp kosher salt</strong> (for salmon; plus ½ tsp in dressing)",
+      "<strong>½ tsp black pepper</strong> (+ more for dressing)",
+      "<strong>½ tsp onion powder</strong>",
+      "<strong>½ tsp garlic powder</strong>",
+      "<strong>1 cup snap peas</strong>, halved crosswise",
+      "<strong>1 cup mini sweet peppers</strong>, sliced",
+      "<strong>½ cup radish</strong>, thinly sliced",
+      "<strong>1 ripe avocado</strong>, diced",
+      "<strong>½ English cucumber</strong>, chopped",
+      "<strong>¼ cup cilantro</strong>, chopped",
+      "<strong>⅓ cup pistachios</strong>, chopped (for topping)",
+      "<strong><em>Dressing</em></strong>",
+      "<strong>4 tbsp olive oil</strong>",
+      "<strong>2 tbsp white wine vinegar</strong>",
+      "<strong>1 tbsp honey</strong>",
+      "<strong>Juice of ½ lemon</strong>"
+    ],
+    "callout": "<strong>Salmon doneness:</strong> Flesh should flake easily but still look moist—not dry. Original method: ~4 min flesh-down, ~4 min skin-down over medium heat (adjust for thickness).",
+    "shoppingList": [
+      { "item": "Farro (1 cup dry)", "substitutes": ["Pearl barley", "Wheat berries (longer cook)"] },
+      { "item": "Salmon fillets (~12 oz)" },
+      { "item": "Olive oil" },
+      { "item": "White wine vinegar", "substitutes": ["Champagne vinegar", "Apple cider vinegar"] },
+      { "item": "Honey" },
+      { "item": "1 lemon" },
+      { "item": "Snap peas" },
+      { "item": "Mini sweet peppers" },
+      { "item": "Radishes" },
+      { "item": "Avocado" },
+      { "item": "English cucumber" },
+      { "item": "Cilantro", "substitutes": ["Flat-leaf parsley"] },
+      { "item": "Shelled pistachios" },
+      { "item": "Onion powder + garlic powder" },
+      { "item": "Kosher salt + black pepper" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Cook farro while you sear seasoned salmon in a hot skillet. Toss the warm grain with raw vegetables and a bright vinaigrette, then top with salmon and pistachios—substantial enough for dinner in under half an hour."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Simmer farro</strong> until tender, then drain",
+            "<strong>Sear salmon</strong> flesh side first, then flip to skin side",
+            "<strong>Combine</strong> farro with prepped vegetables and cilantro",
+            "<strong>Whisk dressing</strong>, toss through the bowl",
+            "<strong>Plate</strong> in shallow bowls → salmon → pistachios"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Prep window:</strong> While farro and salmon cook, chop vegetables so everything lands in the bowl at once."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Cook the Farro",
+      "checkboxLabel": "Farro tender, drained",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Cook farro <strong>according to package directions</strong> (volume of water and time vary by brand).",
+            "<strong>Drain</strong> well and set aside."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>10-minute farro</strong> is handy here; whole farro takes longer but works the same way."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Sear the Salmon",
+      "checkboxLabel": "Salmon cooked, flaky, moist",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat <strong>2 tbsp olive oil</strong> in a large skillet over <strong>medium</strong> heat.",
+            "<strong>Pat salmon dry.</strong> Season with <strong>salt, pepper, onion powder, and garlic powder</strong>.",
+            "Place <strong>flesh-side down</strong> → cook <strong>~4 minutes</strong>.",
+            "Flip to <strong>skin side</strong> → cook <strong>~4 minutes more</strong> until it flakes easily but doesn’t look dry.",
+            "Transfer to a plate and keep warm if needed."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Skinless fillets:</strong> Cook the second side the same way; reduce time slightly if the fish is thin."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Build the Bowl Base",
+      "checkboxLabel": "Farro + veg + cilantro combined",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a <strong>large bowl</strong>, add the warm farro.",
+            "Add <strong>snap peas, peppers, radish, avocado, cucumber,</strong> and <strong>cilantro</strong>.",
+            "Toss gently—the avocado will break a little; that’s fine."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Dress and Toss",
+      "checkboxLabel": "Vinaigrette whisked and mixed in",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a small bowl, whisk <strong>4 tbsp olive oil, white wine vinegar, honey, lemon juice, ½ tsp salt,</strong> and <strong>pepper</strong>.",
+            "Pour over the farro mixture and <strong>toss to coat</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Taste:</strong> Add a pinch more salt, a squeeze of lemon, or a drizzle of vinegar if it reads flat."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Plate and Finish",
+      "checkboxLabel": "Bowls assembled with pistachios",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spoon the farro–vegetable mixture into <strong>shallow bowls</strong>.",
+            "Top each with a <strong>salmon fillet</strong>.",
+            "Sprinkle with <strong>chopped pistachios</strong> and serve right away."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Avocado note:</strong> Best eaten immediately; dressed avocado dulls after sitting."
+        }
+      ]
+    }
+  ]
+}
