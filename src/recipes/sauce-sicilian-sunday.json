@@ -150,7 +150,7 @@
         }
       ],
       "measurements": [
-        { "item": "Canned tomatoes", "qty": "2 × 28 oz" },
+        { "item": "Canned tomatoes", "qty": "2 × 28 oz", "alts": ["Crushed tomatoes"] },
         { "item": "Bay leaves", "qty": "2" },
         { "item": "Parsley", "qty": "a handful" },
         { "item": "Sugar", "qty": "a pinch (optional)" }
@@ -177,7 +177,7 @@
         }
       ],
       "measurements": [
-        { "item": "Sausage", "qty": "1½ lbs" },
+        { "item": "Sausage", "qty": "1½ lbs", "alts": ["Sweet or hot links"] },
         { "item": "Meatballs", "qty": "1 bag" }
       ]
     },

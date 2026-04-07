@@ -657,10 +657,24 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   color: var(--foreground-primary);
   font-weight: 600;
 }
+.measures-alts{
+  display: block;
+  font-weight: 400;
+  font-size: var(--text-xs);
+  color: var(--foreground-tertiary);
+  margin-top: 1px;
+}
 .measures-qty{
   color: var(--foreground-secondary);
   text-align: right;
   white-space: nowrap;
+}
+
+.body-list {
+  background: var(--background-secondary);
+  padding: 24px 44px;
+  border-radius: var(--radius-md);
+  margin: 10px 0 10px 0;
 }
 
 @media print{
@@ -695,7 +709,7 @@ function renderBodyBlock(block) {
     case "p":
       return `<p class="p">${block.html}</p>`;
     case "ul":
-      return `<ul>${block.items.map(i => `<li>${i}</li>`).join("\n")}</ul>`;
+      return `<ul class="body-list">${block.items.map(i => `<li>${i}</li>`).join("\n")}</ul>`;
     case "callout":
       return `<div class="callout">${block.html}</div>`;
     case "spacer":
@@ -707,9 +721,12 @@ function renderBodyBlock(block) {
 
 function renderMeasurements(measurements) {
   if (!measurements?.length) return "";
-  const rows = measurements.map(m =>
-    `<span class="measures-row"><span class="measures-item">${m.item}</span><span class="measures-qty">${m.qty}</span></span>`
-  ).join("\n");
+  const rows = measurements.map(m => {
+    const alts = m.alts?.length
+      ? `<span class="measures-alts">Alternatives: ${m.alts.join(", ")}</span>`
+      : "";
+    return `<span class="measures-row"><span class="measures-item">${m.item}${alts}</span><span class="measures-qty">${m.qty}</span></span>`;
+  }).join("\n");
   return `<div class="measures">
           <p class="measures-heading">Measurements</p>
           <div class="measures-grid">${rows}</div>
@@ -903,7 +920,8 @@ ${slides}
       <div class="expanded-step-pane">
         <div class="cardbody">
           <div id="ingredientsView">
-            ${ingredientsNoteHtml}<ul>
+            ${ingredientsNoteHtml}
+            <ul>
               ${ingredientItems}
             </ul>
             ${ingredientsCalloutHtml}

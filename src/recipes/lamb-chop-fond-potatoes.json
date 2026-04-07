@@ -66,7 +66,7 @@
       "title": "Par-Cook the Potatoes",
       "checkboxLabel": "Boil until just tender, then drain well",
       "measurements": [
-        { "item": "Potatoes", "qty": "15 lb" },
+        { "item": "Potatoes", "qty": "15 lb", "alts": ["Baby gold potatoes", "Fingerlings"] },
         { "item": "Baking soda", "qty": "1 tbsp" }
       ],
       "body": [
@@ -157,7 +157,7 @@
       "measurements": [
         { "item": "Butter", "qty": "4 tbsp" },
         { "item": "Garlic", "qty": "6–8 cloves" },
-        { "item": "Parsley", "qty": "1 cup" },
+        { "item": "Parsley", "qty": "1 cup", "alts": ["Fresh dill", "Fresh mint"] },
         { "item": "Lemon juice", "qty": "3–4 tbsp" }
       ],
       "body": [

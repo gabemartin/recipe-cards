@@ -94,9 +94,9 @@
       "measurements": [
         { "item": "Spinach", "qty": "1 lb" },
         { "item": "Red pepper", "qty": "½" },
-        { "item": "Garlic", "qty": "1 tsp" },
+        { "item": "Garlic", "qty": "1 tsp", "alts": ["Garlic paste"] },
         { "item": "Onion", "qty": "½ cup diced" },
-        { "item": "Tomato paste", "qty": "½ cup" }
+        { "item": "Tomato paste", "qty": "½ cup", "alts": ["1 small diced tomato"] }
       ]
     },
     {

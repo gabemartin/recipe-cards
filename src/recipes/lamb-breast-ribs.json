@@ -70,7 +70,7 @@
         { "item": "Kosher salt", "qty": "~1½ tbsp" },
         { "item": "Black pepper", "qty": "~1 tsp" },
         { "item": "Dried oregano", "qty": "~1 tsp" },
-        { "item": "Rosemary", "qty": "1 tbsp fresh" },
+        { "item": "Rosemary", "qty": "1 tbsp fresh", "alts": ["Dried rosemary"] },
         { "item": "Garlic", "qty": "3–5 cloves" },
         { "item": "Lemon zest", "qty": "from 1 lemon" }
       ],

@@ -130,8 +130,8 @@
       ],
       "measurements": [
         { "item": "Butter", "qty": "1 tbsp" },
-        { "item": "Rosemary", "qty": "a few sprigs" },
-        { "item": "Thyme", "qty": "a few sprigs" }
+        { "item": "Rosemary", "qty": "a few sprigs", "alts": ["Dried rosemary"] },
+        { "item": "Thyme", "qty": "a few sprigs", "alts": ["Dried thyme"] }
       ]
     },
     {

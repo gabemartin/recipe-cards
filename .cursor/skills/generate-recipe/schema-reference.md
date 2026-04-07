@@ -93,8 +93,8 @@ No `checkboxLabel` on the overview slide.
     { "item": "Kosher salt", "qty": "~1½ tbsp" },
     { "item": "Black pepper", "qty": "~1 tsp" },
     { "item": "Oregano", "qty": "~1 tsp" },
-    { "item": "Rosemary", "qty": "1 tbsp fresh" },
-    { "item": "Garlic", "qty": "3–5 cloves" },
+    { "item": "Rosemary", "qty": "1 tbsp fresh", "alts": ["Dried rosemary (1 tsp)"] },
+    { "item": "Garlic", "qty": "3–5 cloves", "alts": ["Garlic paste"] },
     { "item": "Lemon zest", "qty": "from 1 lemon" }
   ],
   "body": [...]
@@ -114,13 +114,14 @@ No `checkboxLabel` on the overview slide.
 Each entry in `measurements` shows the quantity of an ingredient used in that specific step:
 
 ```json
-{ "item": "Garlic", "qty": "3–5 cloves" }
+{ "item": "Jalapeño", "qty": "1", "alts": ["Serrano", "Cayenne"] }
 ```
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `item` | string | yes | Ingredient name. Plain text (no HTML). |
 | `qty` | string | yes | Quantity used in this step specifically. |
+| `alts` | string[] | no | Alternative ingredients (1-3 entries). Shown below the item name in the measurements table. |
 
 **Rules:**
 
@@ -128,6 +129,7 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
 - If an ingredient is split across steps (e.g., "4 tbsp butter, divided"), show the per-step amount (e.g., "2 tbsp" in one step, "2 tbsp" in another).
 - Skip trivial amounts like "salt and pepper to taste" unless the recipe specifies a precise measurement.
 - The Overview slide never gets measurements.
+- Add `alts` for ingredients with genuine common swaps: fresh herbs (dried), specific peppers (other peppers), specific pasta shapes, specialty dairy, etc. Do not add alts for basic staples (salt, pepper, oil, butter, flour).
 
 ## Body block types
 

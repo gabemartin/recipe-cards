@@ -78,8 +78,8 @@
       "measurements": [
         { "item": "Cucumber", "qty": "½ cup grated" },
         { "item": "Garlic", "qty": "1 clove" },
-        { "item": "Dill", "qty": "1 tbsp" },
-        { "item": "Mint", "qty": "1 tbsp (optional)" }
+        { "item": "Dill", "qty": "1 tbsp", "alts": ["Dried dill"] },
+        { "item": "Mint", "qty": "1 tbsp (optional)", "alts": ["More dill"] }
       ]
     },
     {
@@ -96,7 +96,7 @@
         }
       ],
       "measurements": [
-        { "item": "Greek yogurt", "qty": "1 cup" },
+        { "item": "Greek yogurt", "qty": "1 cup", "alts": ["Strained regular yogurt"] },
         { "item": "Lemon juice", "qty": "1 tbsp" },
         { "item": "Olive oil", "qty": "½ tbsp" },
         { "item": "Sea salt", "qty": "¼ tsp" }

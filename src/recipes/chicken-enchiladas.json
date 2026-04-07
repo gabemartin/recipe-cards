@@ -97,7 +97,7 @@
         { "item": "Salt", "qty": "¼ tsp" },
         { "item": "Cayenne", "qty": "a pinch" },
         { "item": "Tomato sauce", "qty": "15 oz can" },
-        { "item": "Chicken broth", "qty": "½ cup" }
+        { "item": "Chicken broth", "qty": "½ cup", "alts": ["Water"] }
       ],
       "body": [
         {
@@ -124,7 +124,7 @@
         { "item": "Olive oil", "qty": "1 tbsp" },
         { "item": "Onion", "qty": "½ medium" },
         { "item": "Garlic", "qty": "2 cloves" },
-        { "item": "Chicken", "qty": "2 cups shredded" },
+        { "item": "Chicken", "qty": "2 cups shredded", "alts": ["Rotisserie chicken"] },
         { "item": "Black beans", "qty": "15 oz can" },
         { "item": "Green chiles", "qty": "4 oz can" },
         { "item": "Chili powder", "qty": "1 tsp" },
@@ -152,8 +152,8 @@
       "title": "Assemble",
       "checkboxLabel": "Enchiladas rolled and in the dish",
       "measurements": [
-        { "item": "Tortillas", "qty": "8" },
-        { "item": "Cheese", "qty": "3 cups" },
+        { "item": "Tortillas", "qty": "8", "alts": ["Corn tortillas"] },
+        { "item": "Cheese", "qty": "3 cups", "alts": ["Mexican blend"] },
         { "item": "Enchilada sauce", "qty": "remaining" }
       ],
       "body": [

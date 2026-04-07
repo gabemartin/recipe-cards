@@ -93,7 +93,7 @@
       "title": "Choose the Plain Version",
       "checkboxLabel": "Toss with coconut oil, salt, and brown sugar",
       "measurements": [
-        { "item": "Coconut oil", "qty": "1 tbsp" },
+        { "item": "Coconut oil", "qty": "1 tbsp", "alts": ["Butter"] },
         { "item": "Sea salt", "qty": "⅜ tsp" },
         { "item": "Brown sugar", "qty": "½ tbsp" }
       ],
@@ -121,8 +121,8 @@
         { "item": "Olive oil", "qty": "1 tbsp" },
         { "item": "Sea salt", "qty": "⅜ tsp" },
         { "item": "Black pepper", "qty": "⅛ tsp" },
-        { "item": "Chili powder", "qty": "¼ tsp" },
-        { "item": "Paprika", "qty": "¼ tsp" },
+        { "item": "Chili powder", "qty": "¼ tsp", "alts": ["Chipotle chili powder"] },
+        { "item": "Paprika", "qty": "¼ tsp", "alts": ["Smoked paprika"] },
         { "item": "Cumin", "qty": "¼ tsp" },
         { "item": "Garlic powder", "qty": "¼ tsp" }
       ],

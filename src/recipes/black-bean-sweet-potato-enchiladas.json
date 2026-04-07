@@ -99,13 +99,13 @@
         { "item": "Garlic", "qty": "2 tsp" },
         { "item": "Lime juice", "qty": "of 1 lime" },
         { "item": "Sweet potato", "qty": "2 cups cubed" },
-        { "item": "Goat cheese", "qty": "⅓ cup" },
+        { "item": "Goat cheese", "qty": "⅓ cup", "alts": ["Feta"] },
         { "item": "Roasted green chiles", "qty": "½ cup" },
         { "item": "Cumin", "qty": "½ tsp" },
         { "item": "Chili powder", "qty": "½ tsp" },
         { "item": "Cayenne", "qty": "½ tsp" },
-        { "item": "Jalapeño", "qty": "1" },
-        { "item": "Fresno pepper", "qty": "1" }
+        { "item": "Jalapeño", "qty": "1", "alts": ["Serrano", "Cayenne"] },
+        { "item": "Fresno pepper", "qty": "1", "alts": ["Red jalapeño", "Serrano"] }
       ],
       "body": [
         {
@@ -122,8 +122,8 @@
       "title": "Warm, fill & roll",
       "checkboxLabel": "Warm tortillas, fill eighths, roll in dish",
       "measurements": [
-        { "item": "Corn tortillas", "qty": "8" },
-        { "item": "Monterey Jack", "qty": "for sprinkling" }
+        { "item": "Corn tortillas", "qty": "8", "alts": ["Flour tortillas"] },
+        { "item": "Monterey Jack", "qty": "for sprinkling", "alts": ["Pepper Jack", "Oaxaca"] }
       ],
       "body": [
         {
@@ -146,7 +146,7 @@
       "checkboxLabel": "More salsa + Jack; bake 20–25 min",
       "measurements": [
         { "item": "Salsa verde", "qty": "remaining" },
-        { "item": "Monterey Jack", "qty": "remaining" }
+        { "item": "Monterey Jack", "qty": "remaining", "alts": ["Pepper Jack", "Oaxaca"] }
       ],
       "body": [
         {

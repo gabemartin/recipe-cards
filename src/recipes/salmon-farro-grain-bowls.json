@@ -153,7 +153,8 @@
       "measurements": [
         {
           "item": "Farro",
-          "qty": "1 cup dry"
+          "qty": "1 cup dry",
+          "alts": ["Pearl barley", "Freekeh"]
         }
       ]
     },
@@ -180,7 +181,8 @@
       "measurements": [
         {
           "item": "Salmon",
-          "qty": "2 fillets (~12 oz)"
+          "qty": "2 fillets (~12 oz)",
+          "alts": ["Arctic char", "Steelhead trout"]
         },
         {
           "item": "Olive oil",
@@ -241,7 +243,8 @@
         },
         {
           "item": "Cilantro",
-          "qty": "¼ cup"
+          "qty": "¼ cup",
+          "alts": ["Flat-leaf parsley"]
         }
       ]
     },
@@ -269,7 +272,8 @@
         },
         {
           "item": "White wine vinegar",
-          "qty": "2 tbsp"
+          "qty": "2 tbsp",
+          "alts": ["Champagne vinegar", "Apple cider vinegar"]
         },
         {
           "item": "Honey",
@@ -306,7 +310,8 @@
       "measurements": [
         {
           "item": "Pistachios",
-          "qty": "⅓ cup"
+          "qty": "⅓ cup",
+          "alts": ["Toasted almonds", "Pine nuts"]
         }
       ]
     }

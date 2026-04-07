@@ -127,7 +127,7 @@
       "title": "Build the Sauce",
       "checkboxLabel": "Garlic → lemon → broth → capers",
       "measurements": [
-        { "item": "Garlic", "qty": "1–1½ tsp" },
+        { "item": "Garlic", "qty": "1–1½ tsp", "alts": ["Garlic paste"] },
         { "item": "Lemon juice", "qty": "½ cup" },
         { "item": "Chicken broth", "qty": "1½ cups" },
         { "item": "Capers", "qty": "3–4 tbsp" }
@@ -177,7 +177,7 @@
       "title": "Combine + Serve",
       "checkboxLabel": "Pasta in sauce, chicken on top",
       "measurements": [
-        { "item": "Angel hair pasta", "qty": "~8 oz" }
+        { "item": "Angel hair pasta", "qty": "~8 oz", "alts": ["Spaghettini", "Linguine"] }
       ],
       "body": [
         {

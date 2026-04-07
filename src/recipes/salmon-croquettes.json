@@ -74,14 +74,14 @@
       "measurements": [
         { "item": "Salmon", "qty": "14 oz" },
         { "item": "Eggs", "qty": "2" },
-        { "item": "Mayonnaise", "qty": "3 tbsp" },
-        { "item": "Dijon mustard", "qty": "1 tbsp" },
-        { "item": "Old Bay", "qty": "½ tsp" },
+        { "item": "Mayonnaise", "qty": "3 tbsp", "alts": ["Greek yogurt"] },
+        { "item": "Dijon mustard", "qty": "1 tbsp", "alts": ["Whole-grain mustard"] },
+        { "item": "Old Bay", "qty": "½ tsp", "alts": ["Worcestershire sauce"] },
         { "item": "Lemon zest", "qty": "from 1 lemon" },
         { "item": "Black pepper", "qty": "½ tsp" },
-        { "item": "Panko breadcrumbs", "qty": "½ cup" },
+        { "item": "Panko breadcrumbs", "qty": "½ cup", "alts": ["Crushed saltines"] },
         { "item": "Capers", "qty": "1 tbsp" },
-        { "item": "Dill or parsley", "qty": "2 tbsp" }
+        { "item": "Dill or parsley", "qty": "2 tbsp", "alts": ["Dried dill"] }
       ],
       "body": [
         {
@@ -104,7 +104,7 @@
       "title": "Form and Coat",
       "checkboxLabel": "Shape into 4–6 patties and coat in panko",
       "measurements": [
-        { "item": "Panko breadcrumbs", "qty": "½ cup" }
+        { "item": "Panko breadcrumbs", "qty": "½ cup", "alts": ["Crushed saltines"] }
       ],
       "body": [
         {
