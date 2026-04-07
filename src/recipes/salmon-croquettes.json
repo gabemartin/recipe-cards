@@ -1,0 +1,181 @@
+{
+  "title": "Crispy Salmon Croquettes",
+  "subtitle": "Pan-fried, golden patties packed with bright lemon and briny capers, served with a zesty yogurt sauce.",
+  "storageKey": "salmon_croquettes_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "14 oz canned salmon" },
+    { "label": "Prep Time", "value": "15 min (plus chill)" },
+    { "label": "Cook Time", "value": "10 min" },
+    { "label": "Sauce", "value": "Lemon Caper" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "We prefer panko for an ultra-crisp, light crust, but crushed saltines offer a dense, nostalgic Southern texture if that's your jam.",
+    "items": [
+      "<strong>14 oz canned wild salmon</strong> (drained, skin removed, bones mashed)",
+      "<strong>1 cup panko breadcrumbs</strong> (divided: ½ cup in mix, ½ cup for coating. <em>Sub: saltines</em>)",
+      "<strong>2 large eggs</strong> (lightly beaten)",
+      "<strong>3 tbsp mayonnaise</strong> (or Greek yogurt)",
+      "<strong>1 tbsp Dijon mustard</strong>",
+      "<strong>2 tbsp fresh dill or parsley</strong> (chopped)",
+      "<strong>3 tbsp capers</strong> (drained and chopped, divided)",
+      "<strong>1 large lemon</strong> (zested and juiced, divided)",
+      "<strong>½ tsp Old Bay or Worcestershire sauce</strong>",
+      "<strong>½ tsp black pepper</strong>",
+      "<strong>3–4 tbsp oil + 1 tbsp butter</strong> (for frying)",
+      "<em>Sauce:</em> <strong>⅓ cup mayo or yogurt</strong>, mixed with lemon juice, capers, and dill."
+    ],
+    "callout": "<strong>Cracker vs. Panko:</strong> Panko absorbs less oil and yields a light, modern crunch. Saltines are saltier and yield a denser, classic Southern-style patty.",
+    "shoppingList": [
+      { "item": "Canned wild salmon (14 oz)", "substitutes": ["Leftover cooked salmon"] },
+      { "item": "Panko breadcrumbs", "substitutes": ["Saltine crackers"] },
+      { "item": "Eggs (1 dozen)" },
+      { "item": "Mayonnaise", "substitutes": ["Greek yogurt"] },
+      { "item": "Dijon mustard" },
+      { "item": "Fresh dill or parsley" },
+      { "item": "Capers (1 jar)" },
+      { "item": "1 large lemon" },
+      { "item": "Old Bay seasoning", "substitutes": ["Worcestershire sauce"] },
+      { "item": "Black pepper" },
+      { "item": "Neutral frying oil (canola, vegetable)" },
+      { "item": "Butter (1 stick)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A classic pantry staple elevated with bright, punchy flavors. The trick is a brief chill in the fridge so they hold together, followed by a hot sear in a mix of oil and butter for maximum crust."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mix</strong> the salmon base with half the panko",
+            "<strong>Form patties</strong> and coat in the remaining panko",
+            "<strong>Chill</strong> for 20 minutes to firm up",
+            "<strong>Pan-fry</strong> until deeply golden",
+            "<strong>Mix the sauce</strong> while they cook"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Lesson learned:</strong> If your mixture feels too dry or crumbly before chilling, add another spoonful of mayo. It should hold its shape when squeezed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mix the Base",
+      "checkboxLabel": "Combine salmon, wet ingredients, and seasonings",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Drain the <strong>salmon</strong> well. Remove the skin, but you can crush the soft bones in for extra calcium.",
+            "In a large bowl, whisk the <strong>eggs, mayo, Dijon, Old Bay, lemon zest</strong> (reserve juice for sauce), and <strong>pepper</strong>.",
+            "Stir in <strong>½ cup of the panko</strong>, <strong>1 tbsp of the capers</strong>, and the <strong>dill</strong>.",
+            "Fold in the salmon, mixing gently so you keep some texture."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't overmix.</strong> You want flakes of salmon, not salmon paste."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Form and Coat",
+      "checkboxLabel": "Shape into 4–6 patties and coat in panko",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place the remaining <strong>½ cup panko</strong> on a shallow plate.",
+            "Divide the salmon mixture into 4 to 6 equal portions.",
+            "Form each portion into a patty about <strong>¾-inch thick</strong>.",
+            "Gently press each patty into the dry panko to coat both sides."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Panko vs. Saltines:</strong> We love panko for a lighter, shattered-glass crunch. If using saltines, crush them fine—they'll yield a denser, saltier, classic Southern bite."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "The Crucial Chill",
+      "checkboxLabel": "Refrigerate patties for 20 mins",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place the coated patties on a plate or small sheet pan.",
+            "Transfer to the <strong>fridge for 20 to 30 minutes</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why chill?</strong> This hydrates the breadcrumbs and solidifies the fats, gluing the patties together so they don't fall apart in the skillet."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Make the Sauce",
+      "checkboxLabel": "Mix mayo, lemon juice, and remaining capers",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "While the patties chill, combine <strong>⅓ cup mayo</strong> (or Greek yogurt) in a small bowl.",
+            "Stir in the <strong>lemon juice</strong> (about 1–2 tbsp) and the remaining <strong>2 tbsp capers</strong>.",
+            "Taste and adjust with a pinch of salt or pepper if needed."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Pan-Fry",
+      "checkboxLabel": "Fry 3–4 mins per side until golden brown",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a large skillet over <strong>medium-high heat</strong>.",
+            "Add <strong>3–4 tbsp oil</strong> and <strong>1 tbsp butter</strong> (the oil prevents the butter from burning; the butter adds flavor and browning).",
+            "When the butter foam subsides, carefully add the patties.",
+            "Cook undisturbed for <strong>3 to 4 minutes</strong> until the bottom is a deep golden brown.",
+            "Carefully flip with a thin spatula and cook another <strong>3 minutes</strong>.",
+            "Transfer to a paper towel-lined plate."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't crowd the pan.</strong> If you're making 6 patties, fry them in two batches so they sear instead of steam."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Serve",
+      "checkboxLabel": "Serve hot with lemon caper sauce",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Serve the croquettes immediately while still crispy.",
+            "Top with a generous dollop of the <strong>lemon caper sauce</strong>.",
+            "Serve alongside a bright green salad or roasted asparagus."
+          ]
+        }
+      ]
+    }
+  ]
+}
