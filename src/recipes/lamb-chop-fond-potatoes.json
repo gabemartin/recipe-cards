@@ -65,6 +65,10 @@
       "kicker": "Step 1",
       "title": "Par-Cook the Potatoes",
       "checkboxLabel": "Boil until just tender, then drain well",
+      "measurements": [
+        { "item": "Potatoes", "qty": "15 lb" },
+        { "item": "Baking soda", "qty": "1 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -85,6 +89,9 @@
       "kicker": "Step 2",
       "title": "Rough Up + Preheat",
       "checkboxLabel": "Rough up the edges; heat oven to 425F",
+      "measurements": [
+        { "item": "Kosher salt", "qty": "~2 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -104,6 +111,9 @@
       "kicker": "Step 3",
       "title": "Set Up for Batch Cooking",
       "checkboxLabel": "Hold 1/4 cup drippings per batch and scrape up the good fond",
+      "measurements": [
+        { "item": "Lamb drippings", "qty": "~¼ cup per batch" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -144,6 +154,12 @@
       "kicker": "Step 5",
       "title": "Finish the Full Batch",
       "checkboxLabel": "Bloom garlic briefly, then toss with parsley and lemon",
+      "measurements": [
+        { "item": "Butter", "qty": "4 tbsp" },
+        { "item": "Garlic", "qty": "6–8 cloves" },
+        { "item": "Parsley", "qty": "1 cup" },
+        { "item": "Lemon juice", "qty": "3–4 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",

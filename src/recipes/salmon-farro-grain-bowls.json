@@ -3,10 +3,23 @@
   "subtitle": "Hearty farro, crisp raw vegetables, and skillet salmon with a honey-lemon vinaigrette and crunchy pistachios.",
   "storageKey": "salmon_farro_grain_bowls_checks_v1",
   "chips": [
-    { "dot": true, "label": "Protein", "value": "Salmon + farro" },
-    { "label": "Serves", "value": "2" },
-    { "label": "Time", "value": "~30 min" },
-    { "label": "Dressing", "value": "Honey + lemon" }
+    {
+      "dot": true,
+      "label": "Protein",
+      "value": "Salmon + farro"
+    },
+    {
+      "label": "Serves",
+      "value": "2"
+    },
+    {
+      "label": "Time",
+      "value": "~30 min"
+    },
+    {
+      "label": "Dressing",
+      "value": "Honey + lemon"
+    }
   ],
   "ingredients": {
     "heading": "Ingredients",
@@ -34,21 +47,62 @@
     ],
     "callout": "<strong>Salmon doneness:</strong> Flesh should flake easily but still look moist—not dry. Original method: ~4 min flesh-down, ~4 min skin-down over medium heat (adjust for thickness).",
     "shoppingList": [
-      { "item": "Farro (1 cup dry)", "substitutes": ["Pearl barley", "Wheat berries (longer cook)"] },
-      { "item": "Salmon fillets (~12 oz)" },
-      { "item": "Olive oil" },
-      { "item": "White wine vinegar", "substitutes": ["Champagne vinegar", "Apple cider vinegar"] },
-      { "item": "Honey" },
-      { "item": "1 lemon" },
-      { "item": "Snap peas" },
-      { "item": "Mini sweet peppers" },
-      { "item": "Radishes" },
-      { "item": "Avocado" },
-      { "item": "English cucumber" },
-      { "item": "Cilantro", "substitutes": ["Flat-leaf parsley"] },
-      { "item": "Shelled pistachios" },
-      { "item": "Onion powder + garlic powder" },
-      { "item": "Kosher salt + black pepper" }
+      {
+        "item": "Farro (1 cup dry)",
+        "substitutes": [
+          "Pearl barley",
+          "Wheat berries (longer cook)"
+        ]
+      },
+      {
+        "item": "Salmon fillets (~12 oz)"
+      },
+      {
+        "item": "Olive oil"
+      },
+      {
+        "item": "White wine vinegar",
+        "substitutes": [
+          "Champagne vinegar",
+          "Apple cider vinegar"
+        ]
+      },
+      {
+        "item": "Honey"
+      },
+      {
+        "item": "1 lemon"
+      },
+      {
+        "item": "Snap peas"
+      },
+      {
+        "item": "Mini sweet peppers"
+      },
+      {
+        "item": "Radishes"
+      },
+      {
+        "item": "Avocado"
+      },
+      {
+        "item": "English cucumber"
+      },
+      {
+        "item": "Cilantro",
+        "substitutes": [
+          "Flat-leaf parsley"
+        ]
+      },
+      {
+        "item": "Shelled pistachios"
+      },
+      {
+        "item": "Onion powder + garlic powder"
+      },
+      {
+        "item": "Kosher salt + black pepper"
+      }
     ]
   },
   "slides": [
@@ -60,7 +114,9 @@
           "type": "p",
           "html": "Cook farro while you sear seasoned salmon in a hot skillet. Toss the warm grain with raw vegetables and a bright vinaigrette, then top with salmon and pistachios—substantial enough for dinner in under half an hour."
         },
-        { "type": "spacer" },
+        {
+          "type": "spacer"
+        },
         {
           "type": "ul",
           "items": [
@@ -93,6 +149,12 @@
           "type": "callout",
           "html": "<strong>10-minute farro</strong> is handy here; whole farro takes longer but works the same way."
         }
+      ],
+      "measurements": [
+        {
+          "item": "Farro",
+          "qty": "1 cup dry"
+        }
       ]
     },
     {
@@ -114,6 +176,32 @@
           "type": "callout",
           "html": "<strong>Skinless fillets:</strong> Cook the second side the same way; reduce time slightly if the fish is thin."
         }
+      ],
+      "measurements": [
+        {
+          "item": "Salmon",
+          "qty": "2 fillets (~12 oz)"
+        },
+        {
+          "item": "Olive oil",
+          "qty": "2 tbsp"
+        },
+        {
+          "item": "Salt",
+          "qty": "1 tsp"
+        },
+        {
+          "item": "Black pepper",
+          "qty": "½ tsp"
+        },
+        {
+          "item": "Onion powder",
+          "qty": "½ tsp"
+        },
+        {
+          "item": "Garlic powder",
+          "qty": "½ tsp"
+        }
       ]
     },
     {
@@ -128,6 +216,32 @@
             "Add <strong>snap peas, peppers, radish, avocado, cucumber,</strong> and <strong>cilantro</strong>.",
             "Toss gently—the avocado will break a little; that’s fine."
           ]
+        }
+      ],
+      "measurements": [
+        {
+          "item": "Snap peas",
+          "qty": "1 cup"
+        },
+        {
+          "item": "Mini sweet peppers",
+          "qty": "1 cup"
+        },
+        {
+          "item": "Radish",
+          "qty": "½ cup"
+        },
+        {
+          "item": "Avocado",
+          "qty": "1"
+        },
+        {
+          "item": "Cucumber",
+          "qty": "½"
+        },
+        {
+          "item": "Cilantro",
+          "qty": "¼ cup"
         }
       ]
     },
@@ -147,6 +261,28 @@
           "type": "callout",
           "html": "<strong>Taste:</strong> Add a pinch more salt, a squeeze of lemon, or a drizzle of vinegar if it reads flat."
         }
+      ],
+      "measurements": [
+        {
+          "item": "Olive oil",
+          "qty": "4 tbsp"
+        },
+        {
+          "item": "White wine vinegar",
+          "qty": "2 tbsp"
+        },
+        {
+          "item": "Honey",
+          "qty": "1 tbsp"
+        },
+        {
+          "item": "Lemon juice",
+          "qty": "from ½ lemon"
+        },
+        {
+          "item": "Salt",
+          "qty": "½ tsp"
+        }
       ]
     },
     {
@@ -165,6 +301,12 @@
         {
           "type": "callout",
           "html": "<strong>Avocado note:</strong> Best eaten immediately; dressed avocado dulls after sitting."
+        }
+      ],
+      "measurements": [
+        {
+          "item": "Pistachios",
+          "qty": "⅓ cup"
         }
       ]
     }

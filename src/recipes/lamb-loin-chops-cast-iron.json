@@ -91,6 +91,9 @@
           "type": "callout",
           "html": "<strong>No usable trim?</strong> Use a thin film of neutral oil with high smoke point, then proceed the same way."
         }
+      ],
+      "measurements": [
+        { "item": "Lamb fat", "qty": "trimmed from chops" }
       ]
     },
     {
@@ -124,6 +127,11 @@
             "<strong>Baste</strong> the meat with the foaming butter <strong>30–60 seconds</strong>."
           ]
         }
+      ],
+      "measurements": [
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Rosemary", "qty": "a few sprigs" },
+        { "item": "Thyme", "qty": "a few sprigs" }
       ]
     },
     {

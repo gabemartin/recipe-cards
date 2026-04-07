@@ -33,7 +33,7 @@ src/icons/          (PWA icons, referenced in manifest)
 | `ingredients.shoppingList[]` | yes | Simplified grocery list: `{ "item": "2 lemons", "substitutes": ["Lime"] }` |
 | `slides[]` | yes | Swiper slides |
 
-**Slide fields:** `kicker` (small label), `title`, `checkboxLabel` (optional — renders a persistent checkbox), `body[]`
+**Slide fields:** `kicker` (small label), `title`, `checkboxLabel` (optional — renders a persistent checkbox), `measurements[]` (optional — per-step quantities: `{ "item": "Garlic", "qty": "3 cloves" }`), `body[]`
 
 **Body block types:**
 - `{ "type": "p", "html": "..." }` — paragraph

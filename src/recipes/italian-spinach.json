@@ -68,6 +68,10 @@
             "Wait until the butter is melted and the fat is <strong>hot</strong>."
           ]
         }
+      ],
+      "measurements": [
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Olive oil", "qty": "1 tbsp" }
       ]
     },
     {
@@ -86,6 +90,13 @@
           "type": "callout",
           "html": "<strong>Sicilian spinach:</strong> Add <strong>2 chopped anchovies</strong> at this stage."
         }
+      ],
+      "measurements": [
+        { "item": "Spinach", "qty": "1 lb" },
+        { "item": "Red pepper", "qty": "½" },
+        { "item": "Garlic", "qty": "1 tsp" },
+        { "item": "Onion", "qty": "½ cup diced" },
+        { "item": "Tomato paste", "qty": "½ cup" }
       ]
     },
     {

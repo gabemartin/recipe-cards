@@ -66,6 +66,14 @@
       "kicker": "Step 1",
       "title": "Season + Score",
       "checkboxLabel": "Pat dry, score fat, season heavily",
+      "measurements": [
+        { "item": "Kosher salt", "qty": "~1½ tbsp" },
+        { "item": "Black pepper", "qty": "~1 tsp" },
+        { "item": "Dried oregano", "qty": "~1 tsp" },
+        { "item": "Rosemary", "qty": "1 tbsp fresh" },
+        { "item": "Garlic", "qty": "3–5 cloves" },
+        { "item": "Lemon zest", "qty": "from 1 lemon" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -153,6 +161,10 @@
       "kicker": "Step 6",
       "title": "Blast for Crisp",
       "checkboxLabel": "475°F for 15–20 minutes",
+      "measurements": [
+        { "item": "Lemon juice", "qty": "1–2 tbsp" },
+        { "item": "Olive oil", "qty": "1 tbsp (optional)" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -172,6 +184,9 @@
       "kicker": "Step 7",
       "title": "Finish + Serve",
       "checkboxLabel": "Lemon + salt + cilantro, serve hot",
+      "measurements": [
+        { "item": "Lemon juice", "qty": "1–2 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",

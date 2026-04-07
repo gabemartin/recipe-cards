@@ -74,6 +74,12 @@
       "kicker": "Step 1",
       "title": "Prep Chicken",
       "checkboxLabel": "Pat dry, season, dredge in flour",
+      "measurements": [
+        { "item": "Chicken tenders", "qty": "2 lbs" },
+        { "item": "Kosher salt", "qty": "1½–2 tsp" },
+        { "item": "Black pepper", "qty": "1–1½ tsp" },
+        { "item": "All-purpose flour", "qty": "~¾ cup" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -93,6 +99,10 @@
       "kicker": "Step 2",
       "title": "Sear Chicken (in Batches)",
       "checkboxLabel": "Sear all chicken, set aside",
+      "measurements": [
+        { "item": "Olive oil", "qty": "1 tbsp/batch" },
+        { "item": "Butter", "qty": "1 tbsp/batch" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -116,6 +126,12 @@
       "kicker": "Step 3",
       "title": "Build the Sauce",
       "checkboxLabel": "Garlic → lemon → broth → capers",
+      "measurements": [
+        { "item": "Garlic", "qty": "1–1½ tsp" },
+        { "item": "Lemon juice", "qty": "½ cup" },
+        { "item": "Chicken broth", "qty": "1½ cups" },
+        { "item": "Capers", "qty": "3–4 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -138,6 +154,9 @@
       "kicker": "Step 4",
       "title": "Butter Finish",
       "checkboxLabel": "Swirl in 2 tbsp butter until glossy",
+      "measurements": [
+        { "item": "Butter", "qty": "2 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -157,6 +176,9 @@
       "kicker": "Step 5",
       "title": "Combine + Serve",
       "checkboxLabel": "Pasta in sauce, chicken on top",
+      "measurements": [
+        { "item": "Angel hair pasta", "qty": "~8 oz" }
+      ],
       "body": [
         {
           "type": "ul",

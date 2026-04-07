@@ -89,6 +89,14 @@ No `checkboxLabel` on the overview slide.
   "kicker": "Step 1",
   "title": "Season + Score",
   "checkboxLabel": "Pat dry, score fat, season heavily",
+  "measurements": [
+    { "item": "Kosher salt", "qty": "~1½ tbsp" },
+    { "item": "Black pepper", "qty": "~1 tsp" },
+    { "item": "Oregano", "qty": "~1 tsp" },
+    { "item": "Rosemary", "qty": "1 tbsp fresh" },
+    { "item": "Garlic", "qty": "3–5 cloves" },
+    { "item": "Lemon zest", "qty": "from 1 lemon" }
+  ],
   "body": [...]
 }
 ```
@@ -98,7 +106,28 @@ No `checkboxLabel` on the overview slide.
 | `kicker` | string | yes | Small uppercase label. `"Overview"` or `"Step N"`. |
 | `title` | string | yes | Step title. Short and descriptive. |
 | `checkboxLabel` | string | no | If set, renders a persistent checkbox. Required on all step slides. Short imperative phrase. |
+| `measurements` | array | no | Per-step ingredient quantities. Renders as a compact reference table below the step body. |
 | `body` | array | yes | Array of body blocks (see below) |
+
+### Measurements
+
+Each entry in `measurements` shows the quantity of an ingredient used in that specific step:
+
+```json
+{ "item": "Garlic", "qty": "3–5 cloves" }
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `item` | string | yes | Ingredient name. Plain text (no HTML). |
+| `qty` | string | yes | Quantity used in this step specifically. |
+
+**Rules:**
+
+- Only add measurements to steps that use measured ingredients. Skip technique-only steps (rest, slice, plate).
+- If an ingredient is split across steps (e.g., "4 tbsp butter, divided"), show the per-step amount (e.g., "2 tbsp" in one step, "2 tbsp" in another).
+- Skip trivial amounts like "salt and pepper to taste" unless the recipe specifies a precise measurement.
+- The Overview slide never gets measurements.
 
 ## Body block types
 
@@ -206,6 +235,12 @@ No `checkboxLabel` on the overview slide.
       "kicker": "Step 1",
       "title": "Prep Chicken",
       "checkboxLabel": "Pat dry, season, dredge in flour",
+      "measurements": [
+        { "item": "Chicken tenders", "qty": "2 lbs" },
+        { "item": "Kosher salt", "qty": "1½–2 tsp" },
+        { "item": "Black pepper", "qty": "1–1½ tsp" },
+        { "item": "All-purpose flour", "qty": "~¾ cup" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -225,6 +260,10 @@ No `checkboxLabel` on the overview slide.
       "kicker": "Step 2",
       "title": "Sear Chicken (in Batches)",
       "checkboxLabel": "Sear all chicken, set aside",
+      "measurements": [
+        { "item": "Olive oil", "qty": "1 tbsp per batch" },
+        { "item": "Butter", "qty": "1 tbsp per batch" }
+      ],
       "body": [
         {
           "type": "ul",

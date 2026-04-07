@@ -77,6 +77,9 @@
       "kicker": "Step 1",
       "title": "Heat & prep the dish",
       "checkboxLabel": "Preheat 350°F, salsa in dish",
+      "measurements": [
+        { "item": "Salsa verde", "qty": "thin layer" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -91,6 +94,19 @@
       "kicker": "Step 2",
       "title": "Make the filling",
       "checkboxLabel": "Stir beans, potato, aromatics, spices",
+      "measurements": [
+        { "item": "Black beans", "qty": "1 can (15 oz)" },
+        { "item": "Garlic", "qty": "2 tsp" },
+        { "item": "Lime juice", "qty": "of 1 lime" },
+        { "item": "Sweet potato", "qty": "2 cups cubed" },
+        { "item": "Goat cheese", "qty": "⅓ cup" },
+        { "item": "Roasted green chiles", "qty": "½ cup" },
+        { "item": "Cumin", "qty": "½ tsp" },
+        { "item": "Chili powder", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "½ tsp" },
+        { "item": "Jalapeño", "qty": "1" },
+        { "item": "Fresno pepper", "qty": "1" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -105,6 +121,10 @@
       "kicker": "Step 3",
       "title": "Warm, fill & roll",
       "checkboxLabel": "Warm tortillas, fill eighths, roll in dish",
+      "measurements": [
+        { "item": "Corn tortillas", "qty": "8" },
+        { "item": "Monterey Jack", "qty": "for sprinkling" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -124,6 +144,10 @@
       "kicker": "Step 4",
       "title": "Bake",
       "checkboxLabel": "More salsa + Jack; bake 20–25 min",
+      "measurements": [
+        { "item": "Salsa verde", "qty": "remaining" },
+        { "item": "Monterey Jack", "qty": "remaining" }
+      ],
       "body": [
         {
           "type": "ul",

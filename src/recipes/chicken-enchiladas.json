@@ -87,6 +87,18 @@
       "kicker": "Step 1",
       "title": "Make the Enchilada Sauce",
       "checkboxLabel": "Sauce simmered and ready",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tsp" },
+        { "item": "Garlic", "qty": "2 cloves" },
+        { "item": "Chili powder", "qty": "1½ tbsp" },
+        { "item": "Cumin", "qty": "1½ tsp" },
+        { "item": "Onion powder", "qty": "½ tsp" },
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "¼ tsp" },
+        { "item": "Cayenne", "qty": "a pinch" },
+        { "item": "Tomato sauce", "qty": "15 oz can" },
+        { "item": "Chicken broth", "qty": "½ cup" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -108,6 +120,19 @@
       "kicker": "Step 2",
       "title": "Make the Filling",
       "checkboxLabel": "Filling cooked and ready",
+      "measurements": [
+        { "item": "Olive oil", "qty": "1 tbsp" },
+        { "item": "Onion", "qty": "½ medium" },
+        { "item": "Garlic", "qty": "2 cloves" },
+        { "item": "Chicken", "qty": "2 cups shredded" },
+        { "item": "Black beans", "qty": "15 oz can" },
+        { "item": "Green chiles", "qty": "4 oz can" },
+        { "item": "Chili powder", "qty": "1 tsp" },
+        { "item": "Cumin", "qty": "1 tsp" },
+        { "item": "Oregano", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "½ tsp" },
+        { "item": "Enchilada sauce", "qty": "½ cup" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -126,6 +151,11 @@
       "kicker": "Step 3",
       "title": "Assemble",
       "checkboxLabel": "Enchiladas rolled and in the dish",
+      "measurements": [
+        { "item": "Tortillas", "qty": "8" },
+        { "item": "Cheese", "qty": "3 cups" },
+        { "item": "Enchilada sauce", "qty": "remaining" }
+      ],
       "body": [
         {
           "type": "ul",
