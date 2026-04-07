@@ -1,0 +1,168 @@
+{
+  "title": "Chicken Enchiladas",
+  "subtitle": "Shredded chicken and black bean filling with homemade enchilada sauce, baked until bubbly.",
+  "storageKey": "chicken_enchiladas_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Shredded chicken" },
+    {              "label": "Serves",  "value": "4–5" },
+    {              "label": "Bake",    "value": "350°F, 20–25 min" },
+    {              "label": "Makes",   "value": "8 enchiladas" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "The homemade enchilada sauce is what makes these. It takes about 10 minutes and is worth it.",
+    "items": [
+      "<strong>Enchilada Sauce</strong>",
+      "<strong>2 tsp olive oil</strong>",
+      "<strong>2 cloves garlic</strong>, minced",
+      "<strong>1½ tbsp chili powder</strong>",
+      "<strong>1½ tsp ground cumin</strong>",
+      "<strong>½ tsp onion powder</strong>",
+      "<strong>½ tsp garlic powder</strong>",
+      "<strong>¼ tsp salt</strong>",
+      "<strong>Pinch cayenne pepper</strong> (optional)",
+      "<strong>15 oz can tomato sauce</strong>",
+      "<strong>½ cup chicken broth</strong> (or water)",
+      "<strong>Filling</strong>",
+      "<strong>1 tbsp olive oil</strong>",
+      "<strong>½ medium onion</strong>, diced",
+      "<strong>2 cloves garlic</strong>, minced",
+      "<strong>2 cups shredded cooked chicken</strong>",
+      "<strong>15 oz can black beans</strong>, drained and rinsed",
+      "<strong>4 oz can diced green chiles</strong>",
+      "<strong>1 tsp chili powder</strong>",
+      "<strong>1 tsp ground cumin</strong>",
+      "<strong>½ tsp dried oregano</strong>",
+      "<strong>½ tsp salt</strong>",
+      "<strong>Assembly</strong>",
+      "<strong>8 large flour tortillas</strong> (8-inch)",
+      "<strong>3 cups shredded cheese</strong> (cheddar, Monterey jack, or Mexican blend)"
+    ],
+    "callout": "<strong>Make-ahead:</strong> Assemble up to 1 day ahead and refrigerate unbaked. Can also freeze unbaked for up to 3 months.",
+    "shoppingList": [
+      { "item": "Olive oil" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste"] },
+      { "item": "Chili powder" },
+      { "item": "Ground cumin" },
+      { "item": "Onion powder" },
+      { "item": "Garlic powder" },
+      { "item": "Cayenne pepper (optional)" },
+      { "item": "15 oz can tomato sauce" },
+      { "item": "Chicken broth (small carton)", "substitutes": ["Water"] },
+      { "item": "1 medium onion" },
+      { "item": "2 cups shredded cooked chicken", "substitutes": ["Rotisserie chicken"] },
+      { "item": "15 oz can black beans" },
+      { "item": "4 oz can diced green chiles" },
+      { "item": "Dried oregano" },
+      { "item": "8 large flour tortillas (8-inch)" },
+      { "item": "12 oz shredded cheese (cheddar, Monterey jack, or Mexican blend)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Rolled enchiladas filled with seasoned shredded chicken, black beans, and green chiles—topped with homemade red sauce and melted cheese."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Make the sauce</strong> — 10 min on the stovetop",
+            "<strong>Cook the filling</strong> — sauté onion, garlic, then combine",
+            "<strong>Assemble</strong> — fill, roll, arrange in baking dish",
+            "<strong>Bake</strong> at 350°F for 20–25 minutes"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Tip:</strong> Rotisserie chicken is the fastest path to 2 cups of shredded chicken."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Make the Enchilada Sauce",
+      "checkboxLabel": "Sauce simmered and ready",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat <strong>2 tsp olive oil</strong> in a small saucepan over medium heat.",
+            "Add <strong>minced garlic</strong>, cook stirring for <strong>30 seconds</strong> until fragrant.",
+            "Add <strong>chili powder, cumin, onion powder, garlic powder, salt, and cayenne</strong>. Stir 30 seconds.",
+            "Pour in <strong>tomato sauce</strong> and <strong>chicken broth</strong>. Stir to combine.",
+            "Simmer on low for <strong>5–7 minutes</strong>, stirring occasionally."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Yield:</strong> About 2 cups of sauce. You'll use ½ cup in the filling and the rest for topping."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Make the Filling",
+      "checkboxLabel": "Filling cooked and ready",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>350°F</strong>.",
+            "Heat <strong>1 tbsp olive oil</strong> in a large skillet over medium heat.",
+            "Add <strong>diced onion</strong>, cook <strong>3–4 minutes</strong> until softened.",
+            "Add <strong>garlic</strong>, cook <strong>30 seconds</strong>.",
+            "Add <strong>shredded chicken, black beans, green chiles, chili powder, cumin, oregano, and salt</strong>. Stir to combine.",
+            "Add <strong>½ cup enchilada sauce</strong>, stir and cook 1–2 minutes. Remove from heat."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Assemble",
+      "checkboxLabel": "Enchiladas rolled and in the dish",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spread a thin layer of <strong>enchilada sauce</strong> on the bottom of a 9×13 baking dish.",
+            "Lay a <strong>tortilla</strong> flat. Spoon filling down the center, top with a little <strong>cheese</strong>.",
+            "<strong>Roll up</strong> and place <strong>seam-side down</strong> in the dish.",
+            "Repeat for all <strong>8 tortillas</strong>.",
+            "Pour remaining <strong>enchilada sauce</strong> over the top, then sprinkle with remaining <strong>cheese</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Make-ahead:</strong> Cover and refrigerate at this point for up to 1 day. Add 5–10 min to bake time if cold."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Bake & Serve",
+      "checkboxLabel": "Baked, cheese melted and bubbly",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Bake <strong>uncovered</strong> at 350°F for <strong>20–25 minutes</strong>, until cheese is melted and sauce is bubbling.",
+            "Let rest <strong>5 minutes</strong> before serving."
+          ]
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Optional toppings:</strong> sour cream, avocado, pico de gallo, fresh cilantro, chopped green onion"
+          ]
+        }
+      ]
+    }
+  ]
+}
