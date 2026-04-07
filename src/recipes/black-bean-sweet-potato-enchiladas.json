@@ -1,0 +1,152 @@
+{
+  "title": "Black Bean Sweet Potato Enchiladas",
+  "subtitle": "Vegetarian enchiladas with spiced black bean–sweet potato filling, salsa verde, and melted Jack.",
+  "storageKey": "black_bean_sweet_potato_enchiladas_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Main", "value": "Black beans & sweet potato" },
+    { "label": "Serves", "value": "~4 (8 rolls)" },
+    { "label": "Bake", "value": "350°F · 20–25 min" },
+    { "label": "Sauce", "value": "Salsa verde" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Bake sweet potatoes until tender, then cube; you need about 2 cups for the filling.",
+    "items": [
+      "<strong>1 (15-oz) can black beans</strong>, rinsed and drained",
+      "<strong>2 tsp minced garlic</strong>",
+      "<strong>Juice of 1 lime</strong>",
+      "<strong>2 cups cubed baked sweet potato</strong> (1 very large or 2 smaller)",
+      "<strong>⅓ cup crumbled goat cheese</strong> (optional)",
+      "<strong>½ cup chopped roasted green chiles</strong>",
+      "<strong>½ tsp ground cumin</strong>",
+      "<strong>½ tsp chili powder</strong>",
+      "<strong>½ tsp cayenne pepper</strong> (optional, for heat)",
+      "<strong>1 jalapeño</strong>, diced",
+      "<strong>1 Fresno pepper</strong>, diced",
+      "Sea salt and black pepper, to taste",
+      "<strong>1 jar salsa verde</strong>",
+      "<strong>8 corn tortillas</strong>",
+      "<strong>Monterey Jack cheese</strong>, shredded (for filling + topping)",
+      "Chopped fresh cilantro (for serving)",
+      "Sliced avocado (for serving)"
+    ],
+    "callout": "<strong>Warm the tortillas first</strong>—cold corn tortillas crack when you roll them. A quick pass in a dry skillet or a short stack in the microwave saves the roll.",
+    "shoppingList": [
+      { "item": "Black beans (15 oz can)" },
+      { "item": "Garlic" },
+      { "item": "1 lime" },
+      { "item": "Sweet potatoes (2–3 medium)", "substitutes": ["Pre-cubed frozen sweet potato"] },
+      { "item": "Goat cheese (small log)", "substitutes": ["Feta", "Omit for vegan"] },
+      { "item": "Canned roasted green chiles" },
+      { "item": "Cumin, chili powder, cayenne" },
+      { "item": "Jalapeño + Fresno pepper", "substitutes": ["More jalapeño only"] },
+      { "item": "Jar salsa verde" },
+      { "item": "Corn tortillas (8+)" },
+      { "item": "Monterey Jack cheese", "substitutes": ["Pepper Jack", "Oaxaca"] },
+      { "item": "Fresh cilantro" },
+      { "item": "Ripe avocados" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Corn tortillas wrapped around a smoky bean-and–sweet potato filling, sauced with salsa verde and baked until bubbling. Finish with cilantro and avocado."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Preheat</strong> the oven and line the baking dish with salsa verde",
+            "<strong>Mix</strong> filling: beans, sweet potato, aromatics, spices, optional goat cheese",
+            "<strong>Warm tortillas</strong>, fill, sprinkle Jack, roll, and pack the dish",
+            "<strong>Top</strong> with more salsa and cheese; <strong>bake</strong> until golden and bubbling",
+            "<strong>Garnish</strong> with cilantro and avocado"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>From the notes:</strong> Don’t skip warming tortillas—cold ones shatter when rolled. Quality salsa verde and tortillas make a big difference."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Heat & prep the dish",
+      "checkboxLabel": "Preheat 350°F, salsa in dish",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>350°F</strong>.",
+            "Pour enough <strong>salsa verde</strong> into a baking dish to <strong>lightly coat the bottom</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Make the filling",
+      "checkboxLabel": "Stir beans, potato, aromatics, spices",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a large bowl, combine <strong>black beans</strong>, <strong>garlic</strong>, <strong>lime juice</strong>, <strong>cubed sweet potato</strong>, <strong>goat cheese</strong> (if using), <strong>roasted green chiles</strong>, <strong>cumin</strong>, <strong>chili powder</strong>, <strong>cayenne</strong> (if using), <strong>jalapeño</strong>, and <strong>Fresno pepper</strong>.",
+            "Season with <strong>salt and pepper</strong>; taste and adjust heat or acid with more lime."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Warm, fill & roll",
+      "checkboxLabel": "Warm tortillas, fill eighths, roll in dish",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Warm tortillas</strong> one by one in a dry skillet <strong>or</strong> all at once in the microwave until pliable (they should bend without cracking).",
+            "Spread about <strong>⅛ of the filling</strong> on each tortilla.",
+            "Sprinkle with <strong>Monterey Jack</strong>, roll, and place <strong>seam-down</strong> in the baking dish. Repeat for all <strong>8</strong> tortillas."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Roll tight but gently</strong>—overfilling makes splits more likely than the tortilla quality."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Bake",
+      "checkboxLabel": "More salsa + Jack; bake 20–25 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spoon <strong>more salsa verde</strong> over the enchiladas and cover with <strong>extra cheese</strong>.",
+            "Bake <strong>20–25 minutes</strong> until the sauce is bubbling and tortillas are <strong>lightly golden</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Serve",
+      "checkboxLabel": "Cilantro + avocado on top",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Sprinkle with <strong>chopped cilantro</strong>.",
+            "Serve with <strong>sliced avocado</strong> on the side or on top."
+          ]
+        }
+      ]
+    }
+  ]
+}
