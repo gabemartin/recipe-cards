@@ -91,6 +91,10 @@
           "type": "callout",
           "html": "<strong>Color = flavor.</strong> Don't rush the sear; you're building fond for the whole sauce."
         }
+      ],
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" },
+        { "item": "Pork", "qty": "2–3 lbs" }
       ]
     },
     {
@@ -105,6 +109,9 @@
             "Add <strong>diced onion</strong> and sauté until soft, about <strong>5 minutes</strong>."
           ]
         }
+      ],
+      "measurements": [
+        { "item": "Onion", "qty": "1 small, diced" }
       ]
     },
     {
@@ -119,6 +126,11 @@
             "Stir in <strong>tomato paste</strong>; cook <strong>1–2 minutes</strong> until it darkens slightly."
           ]
         }
+      ],
+      "measurements": [
+        { "item": "Garlic", "qty": "5 cloves" },
+        { "item": "Chili flakes", "qty": "a pinch" },
+        { "item": "Tomato paste", "qty": "3 tbsp" }
       ]
     },
     {
@@ -136,6 +148,12 @@
             "Bring the sauce to a <strong>boil</strong>."
           ]
         }
+      ],
+      "measurements": [
+        { "item": "Canned tomatoes", "qty": "2 × 28 oz" },
+        { "item": "Bay leaves", "qty": "2" },
+        { "item": "Parsley", "qty": "a handful" },
+        { "item": "Sugar", "qty": "a pinch (optional)" }
       ]
     },
     {
@@ -157,6 +175,10 @@
           "type": "callout",
           "html": "<strong>Low and lazy wins.</strong> The goal is gentle bubbles, not a rolling boil—otherwise the bottom can catch."
         }
+      ],
+      "measurements": [
+        { "item": "Sausage", "qty": "1½ lbs" },
+        { "item": "Meatballs", "qty": "1 bag" }
       ]
     },
     {

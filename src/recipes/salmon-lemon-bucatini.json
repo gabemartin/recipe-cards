@@ -70,6 +70,10 @@
       "kicker": "Step 1",
       "title": "Sear the Salmon",
       "checkboxLabel": "Sear salmon, flake, set aside",
+      "measurements": [
+        { "item": "Salmon fillets", "qty": "2" },
+        { "item": "Olive oil", "qty": "a drizzle" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -92,6 +96,9 @@
       "kicker": "Step 2",
       "title": "Cook the Pasta",
       "checkboxLabel": "Boil bucatini, reserve 1 cup water",
+      "measurements": [
+        { "item": "Bucatini", "qty": "8–12 oz" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -113,6 +120,10 @@
       "kicker": "Step 3",
       "title": "Cook the Brussels Sprouts",
       "checkboxLabel": "Sauté sprout leaves until tender",
+      "measurements": [
+        { "item": "Brussels sprouts", "qty": "a big handful" },
+        { "item": "Olive oil", "qty": "a little" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -133,6 +144,12 @@
       "kicker": "Step 4",
       "title": "Build the Sauce &amp; Combine",
       "checkboxLabel": "Crème fraîche + butter + lemon + pasta water",
+      "measurements": [
+        { "item": "Crème fraîche", "qty": "3–4 tbsp" },
+        { "item": "Butter", "qty": "3–4 tbsp" },
+        { "item": "Lemon juice", "qty": "2–3 lemons' worth" },
+        { "item": "Lemon zest", "qty": "from 1 lemon" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -156,6 +173,9 @@
       "kicker": "Step 5",
       "title": "Finish &amp; Serve",
       "checkboxLabel": "Top with breadcrumbs (optional) and serve",
+      "measurements": [
+        { "item": "Panko breadcrumbs", "qty": "optional" }
+      ],
       "body": [
         {
           "type": "ul",

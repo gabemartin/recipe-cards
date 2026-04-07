@@ -71,6 +71,18 @@
       "kicker": "Step 1",
       "title": "Mix the Base",
       "checkboxLabel": "Combine salmon, wet ingredients, and seasonings",
+      "measurements": [
+        { "item": "Salmon", "qty": "14 oz" },
+        { "item": "Eggs", "qty": "2" },
+        { "item": "Mayonnaise", "qty": "3 tbsp" },
+        { "item": "Dijon mustard", "qty": "1 tbsp" },
+        { "item": "Old Bay", "qty": "½ tsp" },
+        { "item": "Lemon zest", "qty": "from 1 lemon" },
+        { "item": "Black pepper", "qty": "½ tsp" },
+        { "item": "Panko breadcrumbs", "qty": "½ cup" },
+        { "item": "Capers", "qty": "1 tbsp" },
+        { "item": "Dill or parsley", "qty": "2 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -91,6 +103,9 @@
       "kicker": "Step 2",
       "title": "Form and Coat",
       "checkboxLabel": "Shape into 4–6 patties and coat in panko",
+      "measurements": [
+        { "item": "Panko breadcrumbs", "qty": "½ cup" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -129,6 +144,11 @@
       "kicker": "Step 4",
       "title": "Make the Sauce",
       "checkboxLabel": "Mix mayo, lemon juice, and remaining capers",
+      "measurements": [
+        { "item": "Mayo or yogurt", "qty": "⅓ cup" },
+        { "item": "Lemon juice", "qty": "1–2 tbsp" },
+        { "item": "Capers", "qty": "2 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",
@@ -144,6 +164,10 @@
       "kicker": "Step 5",
       "title": "Pan-Fry",
       "checkboxLabel": "Fry 3–4 mins per side until golden brown",
+      "measurements": [
+        { "item": "Oil", "qty": "3–4 tbsp" },
+        { "item": "Butter", "qty": "1 tbsp" }
+      ],
       "body": [
         {
           "type": "ul",

@@ -74,6 +74,12 @@
           "type": "callout",
           "html": "<strong>Optional:</strong> Toss grated cucumber with a pinch of salt, rest a few minutes, then squeeze out excess liquid for a thicker tzatziki."
         }
+      ],
+      "measurements": [
+        { "item": "Cucumber", "qty": "½ cup grated" },
+        { "item": "Garlic", "qty": "1 clove" },
+        { "item": "Dill", "qty": "1 tbsp" },
+        { "item": "Mint", "qty": "1 tbsp (optional)" }
       ]
     },
     {
@@ -88,6 +94,12 @@
             "Whisk until <strong>smooth</strong> and evenly combined."
           ]
         }
+      ],
+      "measurements": [
+        { "item": "Greek yogurt", "qty": "1 cup" },
+        { "item": "Lemon juice", "qty": "1 tbsp" },
+        { "item": "Olive oil", "qty": "½ tbsp" },
+        { "item": "Sea salt", "qty": "¼ tsp" }
       ]
     },
     {

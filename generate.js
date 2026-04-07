@@ -622,6 +622,47 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   margin-top: 2px;
 }
 
+/* ── Per-step measurements ────────────────────── */
+.measures{
+  margin-top: 8px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  overflow: hidden;
+}
+.measures-heading{
+  margin: 0;
+  padding: 8px 12px 6px;
+  font-size: var(--text-xs);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--foreground-tertiary);
+}
+.measures-grid{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0;
+}
+.measures-row{
+  display: contents;
+}
+.measures-row > span{
+  padding: 6px 12px;
+  font-size: var(--text-sm);
+  line-height: 1.35;
+  border-top: 1px solid var(--border);
+}
+.measures-item{
+  color: var(--foreground-primary);
+  font-weight: 600;
+}
+.measures-qty{
+  color: var(--foreground-secondary);
+  text-align: right;
+  white-space: nowrap;
+}
+
 @media print{
   body{ background:#fff; color:#000; }
   header,.bottombar,.swiper-pagination{ display:none !important; }
@@ -664,6 +705,17 @@ function renderBodyBlock(block) {
   }
 }
 
+function renderMeasurements(measurements) {
+  if (!measurements?.length) return "";
+  const rows = measurements.map(m =>
+    `<span class="measures-row"><span class="measures-item">${m.item}</span><span class="measures-qty">${m.qty}</span></span>`
+  ).join("\n");
+  return `<div class="measures">
+          <p class="measures-heading">Measurements</p>
+          <div class="measures-grid">${rows}</div>
+        </div>`;
+}
+
 function renderChip({ dot, label, value }) {
   const inner = dot
     ? `<span class="dot"></span><b>${label}:</b> ${value}`
@@ -682,6 +734,7 @@ function renderSlide(slide, index) {
     : "";
 
   const body = slide.body.map(renderBodyBlock).join("\n        ");
+  const measures = renderMeasurements(slide.measurements);
 
   return `
           <section class="swiper-slide">
@@ -699,6 +752,7 @@ function renderSlide(slide, index) {
               <div class="cardbody">
                 ${checkbox}
         ${body}
+        ${measures}
               </div>
             </article>
           </section>`.trimStart();
@@ -717,6 +771,7 @@ function buildHTML(recipe) {
             </div>`
       : "";
     const body = s.body.map(renderBodyBlock).join("\n          ");
+    const measures = renderMeasurements(s.measurements);
     return `          <div class="swiper-slide">
             <div class="expanded-step-pane">
               <p class="kicker">${s.kicker}</p>
@@ -724,6 +779,7 @@ function buildHTML(recipe) {
               <div class="cardbody">
                 ${checkbox}
           ${body}
+          ${measures}
               </div>
             </div>
           </div>`;
