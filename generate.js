@@ -216,6 +216,21 @@ a.btn{ text-decoration:none; color:inherit; }
 .btn:hover{ border-color: var(--border-strong); }
 .btn:active{ transform: scale(.985); }
 .btn:focus-visible{ outline:none; box-shadow: var(--shadow-elevated), var(--focus); }
+.copy-prompt-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+.copy-prompt-label{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.copy-prompt-btn[data-copied="true"]{
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
 
 .icon{
   flex-shrink:0;
@@ -335,6 +350,10 @@ main{
 .expand-btn:focus-visible{ outline:none; box-shadow: var(--focus); }
 
 .cardbody{ z-index:1; }
+.step-actions{
+  margin-top: 14px;
+  display:flex;
+}
 .p{
   margin:0;
   color: var(--foreground-primary);
@@ -684,6 +703,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   main{ padding: 0; }
   .card{ box-shadow:none; border:1px solid #ccc; background:#fff; color:#000; page-break-inside: avoid; }
   .muted,.callout,.chip{ color:#333 !important; }
+  .expand-btn,.step-actions{ display:none !important; }
 }
 `.trim();
 
@@ -740,6 +760,21 @@ function renderChip({ dot, label, value }) {
   return `<span class="chip">${inner}</span>`;
 }
 
+function renderPromptButton({ label, kind, id = "", stepIndex = null, extraClass = "" }) {
+  const className = ["btn", "copy-prompt-btn", extraClass].filter(Boolean).join(" ");
+  const attrs = [
+    `class="${className}"`,
+    `type="button"`,
+    `data-prompt-kind="${kind}"`,
+    `data-default-label="${escapeAttr(label)}"`
+  ];
+
+  if (id) attrs.push(`id="${id}"`);
+  if (stepIndex !== null) attrs.push(`data-step-index="${stepIndex}"`);
+
+  return `<button ${attrs.join(" ")}><span class="copy-prompt-label">${label}</span></button>`;
+}
+
 function renderSlide(slide, index) {
   const stepLabel = index === 0 ? "0" : String(index);
 
@@ -752,6 +787,11 @@ function renderSlide(slide, index) {
 
   const body = slide.body.map(renderBodyBlock).join("\n        ");
   const measures = renderMeasurements(slide.measurements);
+  const promptButton = renderPromptButton({
+    label: index === 0 ? "Copy Recipe Prompt" : "Copy Prompt",
+    kind: index === 0 ? "start" : "step",
+    stepIndex: index
+  });
 
   return `
           <section class="swiper-slide">
@@ -770,6 +810,7 @@ function renderSlide(slide, index) {
                 ${checkbox}
         ${body}
         ${measures}
+                <div class="step-actions">${promptButton}</div>
               </div>
             </article>
           </section>`.trimStart();
@@ -789,6 +830,11 @@ function buildHTML(recipe) {
       : "";
     const body = s.body.map(renderBodyBlock).join("\n          ");
     const measures = renderMeasurements(s.measurements);
+    const promptButton = renderPromptButton({
+      label: i === 0 ? "Copy Recipe Prompt" : "Copy Prompt",
+      kind: i === 0 ? "start" : "step",
+      stepIndex: i
+    });
     return `          <div class="swiper-slide">
             <div class="expanded-step-pane">
               <p class="kicker">${s.kicker}</p>
@@ -797,6 +843,7 @@ function buildHTML(recipe) {
                 ${checkbox}
           ${body}
           ${measures}
+                <div class="step-actions">${promptButton}</div>
               </div>
             </div>
           </div>`;
@@ -831,6 +878,7 @@ function buildHTML(recipe) {
 
   const shopIds = (recipe.ingredients.shoppingList || [])
     .map((_, i) => `"shop${i}"`);
+  const recipeJson = JSON.stringify(recipe).replace(/</g, "\\u003c");
 
   return `<!doctype html>
 <html lang="en">
@@ -953,6 +1001,7 @@ ${expandedSlidesHtml}
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    const RECIPE = ${recipeJson};
     const CHECK_KEYS = [${checkIds.join(",")}];
     const SHOP_KEYS = [${shopIds.join(",")}];
     const LS_KEY = ${JSON.stringify(recipe.storageKey)};
@@ -986,6 +1035,219 @@ ${expandedSlidesHtml}
           });
         });
       }catch(e){}
+    }
+
+    function cleanText(value){
+      return String(value || "")
+        .replace(/\\r/g, "")
+        .replace(/\\u00a0/g, " ")
+        .replace(/[ \\t]+\\n/g, "\\n")
+        .replace(/\\n[ \\t]+/g, "\\n")
+        .replace(/[ \\t]{2,}/g, " ")
+        .replace(/\\n{3,}/g, "\\n\\n")
+        .trim();
+    }
+
+    function htmlToText(html){
+      const temp = document.createElement("div");
+      temp.innerHTML = html || "";
+      return cleanText(temp.textContent || temp.innerText || "");
+    }
+
+    function loadSavedState(key){
+      try{
+        return JSON.parse(localStorage.getItem(key) || "{}") || {};
+      }catch(e){
+        return {};
+      }
+    }
+
+    function formatMeasurement(measurement){
+      const alts = measurement.alts?.length ? " (alternatives: " + measurement.alts.join(", ") + ")" : "";
+      return measurement.item + ": " + measurement.qty + alts;
+    }
+
+    function getBlockLines(block){
+      switch(block.type){
+        case "p":
+          return [htmlToText(block.html)];
+        case "ul":
+          return block.items.map(item => htmlToText(item));
+        case "callout":
+          return ["Callout: " + htmlToText(block.html)];
+        default:
+          return [];
+      }
+    }
+
+    function getIngredientsLines(){
+      const lines = [];
+      if (RECIPE.ingredients.heading) lines.push("Heading: " + RECIPE.ingredients.heading);
+      if (RECIPE.ingredients.note) lines.push("Note: " + htmlToText(RECIPE.ingredients.note));
+      RECIPE.ingredients.items.forEach(item => {
+        lines.push("- " + htmlToText(item));
+      });
+      if (RECIPE.ingredients.callout) lines.push("- Callout: " + htmlToText(RECIPE.ingredients.callout));
+      return lines;
+    }
+
+    function getShoppingLines(shopState){
+      return (RECIPE.ingredients.shoppingList || []).map((entry, index) => {
+        const checked = shopState["shop" + index] ? "[x]" : "[ ]";
+        const subs = entry.substitutes?.length ? " (substitutes: " + entry.substitutes.join(", ") + ")" : "";
+        return checked + " " + entry.item + subs;
+      });
+    }
+
+    function getCheckpointLines(checkState){
+      return RECIPE.slides
+        .map((slide, index) => {
+          if (!slide.checkboxLabel) return "";
+          const checked = checkState["c" + index] ? "[x]" : "[ ]";
+          return checked + " " + slide.kicker + " - " + slide.title + ": " + slide.checkboxLabel;
+        })
+        .filter(Boolean);
+    }
+
+    function getStepsLines(currentIndex, checkState){
+      return RECIPE.slides.map((slide, index) => {
+        const lines = [];
+        const current = index === currentIndex ? " [CURRENT]" : "";
+
+        lines.push((index + 1) + ". " + slide.kicker + " - " + slide.title + current);
+
+        if (slide.checkboxLabel) {
+          const checked = checkState["c" + index] ? "done" : "not done";
+          lines.push("   Checkpoint: " + slide.checkboxLabel + " (" + checked + ")");
+        }
+
+        if (slide.measurements?.length) {
+          lines.push("   Measurements:");
+          slide.measurements.forEach(measurement => {
+            lines.push("   - " + formatMeasurement(measurement));
+          });
+        }
+
+        const blockLines = slide.body.flatMap(getBlockLines);
+        if (blockLines.length) {
+          lines.push("   Instructions:");
+          blockLines.forEach(line => {
+            lines.push("   - " + line);
+          });
+        }
+
+        return lines.join("\\n");
+      }).join("\\n\\n");
+    }
+
+    function buildPrompt(kind, stepIndex){
+      const checkState = loadSavedState(LS_KEY);
+      const shopState = loadSavedState(LS_SHOP);
+      const safeStepIndex = Math.max(0, Math.min(stepIndex ?? 0, RECIPE.slides.length - 1));
+      const currentSlide = RECIPE.slides[safeStepIndex];
+      const nextSlide = RECIPE.slides[safeStepIndex + 1];
+      const lines = [];
+
+      if (kind === "start") {
+        lines.push("You are helping me start cooking this recipe.");
+        lines.push("Use the recipe below as the source of truth unless I tell you I changed something.");
+        lines.push("I have not started cooking yet, so help me prep, sequence the work, and answer questions as I go.");
+      } else {
+        lines.push("You are helping me cook this recipe and answer questions about my current step.");
+        lines.push("Use the full recipe and my current position below as the source of truth unless I tell you I changed something.");
+        lines.push("");
+        lines.push("Current position:");
+        lines.push("- I am on slide " + (safeStepIndex + 1) + " of " + RECIPE.slides.length + ".");
+        lines.push("- Current step: " + currentSlide.kicker + " - " + currentSlide.title + ".");
+        if (currentSlide.checkboxLabel) {
+          lines.push("- Current checkpoint: " + currentSlide.checkboxLabel + " (" + (checkState["c" + safeStepIndex] ? "done" : "not done yet") + ").");
+        }
+        if (nextSlide) {
+          lines.push("- Next step after this: " + nextSlide.kicker + " - " + nextSlide.title + ".");
+        }
+      }
+
+      lines.push("");
+      lines.push("Recipe: " + RECIPE.title);
+      lines.push("Subtitle: " + RECIPE.subtitle);
+      lines.push("");
+      lines.push("Quick facts:");
+      RECIPE.chips.forEach(chip => lines.push("- " + chip.label + ": " + chip.value));
+      lines.push("");
+      lines.push("Ingredients:");
+      lines.push(...getIngredientsLines());
+
+      const shoppingLines = getShoppingLines(shopState);
+      if (shoppingLines.length) {
+        lines.push("");
+        lines.push("Shopping list status:");
+        lines.push(...shoppingLines);
+      }
+
+      const checkpointLines = getCheckpointLines(checkState);
+      if (checkpointLines.length) {
+        lines.push("");
+        lines.push("Checkpoint status:");
+        lines.push(...checkpointLines);
+      }
+
+      lines.push("");
+      lines.push("Recipe steps:");
+      lines.push(getStepsLines(kind === "start" ? -1 : safeStepIndex, checkState));
+      lines.push("");
+
+      if (kind === "start") {
+        lines.push('When I ask "what\\'s next?", tell me the first actions to take.');
+        lines.push("If I share a photo later, judge it against the relevant step in this recipe.");
+      } else {
+        lines.push('When I ask "what\\'s next?", tell me the next actions from my current step.');
+        lines.push("If I share a photo, judge whether it looks ready for this step and tell me whether to keep going or stop.");
+      }
+
+      return cleanText(lines.join("\\n"));
+    }
+
+    async function copyText(text){
+      if (navigator.clipboard?.writeText) {
+        try{
+          await navigator.clipboard.writeText(text);
+          return;
+        }catch(e){}
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      textarea.style.top = "0";
+      textarea.style.opacity = "0";
+      textarea.style.pointerEvents = "none";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      textarea.setSelectionRange(0, textarea.value.length);
+
+      let copied = false;
+      try{
+        copied = document.execCommand("copy");
+      }catch(e){}
+
+      textarea.remove();
+      if (!copied) throw new Error("Copy failed");
+    }
+
+    function setButtonFeedback(button, label){
+      const text = button.querySelector(".copy-prompt-label");
+      if (!text) return;
+
+      window.clearTimeout(button._copyTimer);
+      button.dataset.copied = label === "Copied" ? "true" : "false";
+      text.textContent = label;
+      button._copyTimer = window.setTimeout(() => {
+        text.textContent = button.dataset.defaultLabel || "Copy Prompt";
+        button.dataset.copied = "false";
+      }, 1800);
     }
 
     const swiper = new Swiper(".main-swiper", {
@@ -1085,6 +1347,22 @@ ${expandedSlidesHtml}
     document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
     document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
     document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
+
+    document.querySelectorAll(".copy-prompt-btn").forEach(button => {
+      button.addEventListener("click", async () => {
+        const kind = button.dataset.promptKind;
+        const stepIndex = kind === "step"
+          ? Number(button.dataset.stepIndex || (expandedStepsDialog.open ? expandedStepsSwiper.activeIndex : swiper.activeIndex))
+          : null;
+
+        try{
+          await copyText(buildPrompt(kind, stepIndex));
+          setButtonFeedback(button, "Copied");
+        }catch(e){
+          setButtonFeedback(button, "Copy failed");
+        }
+      });
+    });
   </script>
 </body>
 </html>`;

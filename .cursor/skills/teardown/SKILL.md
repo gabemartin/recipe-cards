@@ -117,6 +117,15 @@ Track recurring teardown patterns here. Update this section when new patterns em
 - **JS deleted**: `resetChecks()` function, two `addEventListener` calls
 - **Kept**: `.btn` / `.btn.primary` (shared with nav, ingredients, expanded dialog), `@media print` (browser print shortcut still works), `loadChecks()` (checkbox persistence still needed)
 
+### Header `Get Started` button
+
+- **Archive tag**: none -- user declined
+- **Removed**: header `Get Started` button markup and its `.top-nav-center` wrapper
+- **CSS deleted**: `.top-nav-center` and `.top-nav-center .btn`
+- **CSS kept**: `.copy-prompt-btn` and `.copy-prompt-label` because the overview slide and step buttons still use them
+- **JS updated**: no event listeners removed; the overview slide button now uses `data-prompt-kind="start"` and label `Get Started`
+- **Kept**: `buildPrompt(kind, stepIndex)` start-mode branch because the overview slide still needs startup-context prompt generation
+
 ## Self-update rule
 
 After each teardown, append a new entry under **Known patterns** documenting what was removed, what was kept and why, the archive tag name (or "none -- user declined"), and any non-obvious decisions. This builds a project-specific reference for future removals and restorations.
