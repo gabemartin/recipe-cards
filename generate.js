@@ -465,6 +465,48 @@ dialog::backdrop{
   background: rgba(0,0,0,.4);
   backdrop-filter: blur(2px);
 }
+.copy-fallback-dialog{
+  padding: 0;
+}
+.copy-fallback-dialog .copy-fallback-body{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.copy-fallback-dialog .copy-fallback-title{
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 900;
+}
+.copy-fallback-dialog .copy-fallback-note{
+  margin: 0;
+  color: var(--foreground-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+.copy-fallback-dialog textarea{
+  width: 100%;
+  min-height: 280px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-muted);
+  color: var(--foreground-primary);
+  padding: 12px;
+  font: 16px/1.45 var(--mono);
+}
+.copy-fallback-actions{
+  display: flex;
+  gap: 10px;
+}
+.copy-fallback-actions .btn{
+  flex: 1;
+  justify-content: center;
+}
+.copy-fallback-actions .hidden-view{
+  display: none;
+}
 dialog.expanded-steps-dialog{
   inset: 0;
   margin: 0;
@@ -999,6 +1041,18 @@ ${expandedSlidesHtml}
     </div>
   </dialog>
 
+  <dialog id="copyPromptDialog" class="copy-fallback-dialog">
+    <div class="copy-fallback-body">
+      <h2 class="copy-fallback-title">Copy Prompt</h2>
+      <p class="copy-fallback-note">iPhone may block silent clipboard writes here. Your prompt is ready below. Tap Share / Copy, or press and hold in the text box to copy it manually.</p>
+      <textarea id="copyPromptText" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+      <div class="copy-fallback-actions">
+        <button class="btn primary" id="sharePromptText" type="button">Share / Copy</button>
+        <button class="btn" id="closeCopyPromptDialog" type="button">Done</button>
+      </div>
+    </div>
+  </dialog>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const RECIPE = ${recipeJson};
@@ -1207,34 +1261,62 @@ ${expandedSlidesHtml}
       return cleanText(lines.join("\\n"));
     }
 
-    async function copyText(text){
-      if (navigator.clipboard?.writeText) {
-        try{
-          await navigator.clipboard.writeText(text);
-          return;
-        }catch(e){}
-      }
+    function shouldPreferLegacyCopy(){
+      const ua = navigator.userAgent || "";
+      const isIOS = /iPad|iPhone|iPod/.test(ua);
+      const isTouchMac = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+      return isIOS || isTouchMac;
+    }
 
+    function legacyCopyText(text){
       const textarea = document.createElement("textarea");
+      const previousFocus = document.activeElement;
+      const preferIOSSelection = shouldPreferLegacyCopy();
+
       textarea.value = text;
-      textarea.setAttribute("readonly", "");
       textarea.style.position = "fixed";
       textarea.style.left = "-9999px";
       textarea.style.top = "0";
       textarea.style.opacity = "0";
+      textarea.style.fontSize = "16px";
       textarea.style.pointerEvents = "none";
+      textarea.setAttribute("aria-hidden", "true");
+
       document.body.appendChild(textarea);
-      textarea.focus();
-      textarea.select();
-      textarea.setSelectionRange(0, textarea.value.length);
+      if (preferIOSSelection) {
+        const range = document.createRange();
+        range.selectNodeContents(textarea);
+
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textarea.setSelectionRange(0, 999999);
+      } else {
+        textarea.focus();
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+      }
 
       let copied = false;
       try{
         copied = document.execCommand("copy");
       }catch(e){}
 
+      window.getSelection()?.removeAllRanges();
       textarea.remove();
+      if (previousFocus?.focus) previousFocus.focus();
       if (!copied) throw new Error("Copy failed");
+    }
+
+    async function copyText(text){
+      if (navigator.clipboard?.writeText && window.isSecureContext) {
+        try{
+          await navigator.clipboard.writeText(text);
+          return;
+        }catch(e){}
+      }
+
+      legacyCopyText(text);
     }
 
     function setButtonFeedback(button, label){
@@ -1248,6 +1330,28 @@ ${expandedSlidesHtml}
         text.textContent = button.dataset.defaultLabel || "Copy Prompt";
         button.dataset.copied = "false";
       }, 1800);
+    }
+
+    const copyPromptDialog = document.getElementById("copyPromptDialog");
+    const copyPromptText = document.getElementById("copyPromptText");
+    const sharePromptTextBtn = document.getElementById("sharePromptText");
+    const closeCopyPromptDialogBtn = document.getElementById("closeCopyPromptDialog");
+    let activePromptText = "";
+
+    function openCopyPromptDialog(text){
+      activePromptText = text;
+      copyPromptText.value = text;
+      sharePromptTextBtn.classList.toggle("hidden-view", typeof navigator.share !== "function");
+      document.documentElement.style.overflow = "hidden";
+      copyPromptDialog.showModal();
+      copyPromptText.focus();
+      copyPromptText.select();
+      copyPromptText.setSelectionRange(0, copyPromptText.value.length);
+    }
+
+    function closeCopyPromptDialog(){
+      copyPromptDialog.close();
+      document.documentElement.style.overflow = "";
     }
 
     const swiper = new Swiper(".main-swiper", {
@@ -1347,6 +1451,17 @@ ${expandedSlidesHtml}
     document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
     document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
     document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
+    closeCopyPromptDialogBtn.addEventListener("click", closeCopyPromptDialog);
+    copyPromptDialog.addEventListener("click", (e) => {
+      if (e.target !== copyPromptDialog) return;
+      closeCopyPromptDialog();
+    });
+    sharePromptTextBtn.addEventListener("click", async () => {
+      if (typeof navigator.share !== "function") return;
+      try{
+        await navigator.share({ title: RECIPE.title, text: activePromptText });
+      }catch(e){}
+    });
 
     document.querySelectorAll(".copy-prompt-btn").forEach(button => {
       button.addEventListener("click", async () => {
@@ -1354,12 +1469,18 @@ ${expandedSlidesHtml}
         const stepIndex = kind === "step"
           ? Number(button.dataset.stepIndex || (expandedStepsDialog.open ? expandedStepsSwiper.activeIndex : swiper.activeIndex))
           : null;
+        const promptText = buildPrompt(kind, stepIndex);
+
+        if (shouldPreferLegacyCopy()) {
+          openCopyPromptDialog(promptText);
+          return;
+        }
 
         try{
-          await copyText(buildPrompt(kind, stepIndex));
+          await copyText(promptText);
           setButtonFeedback(button, "Copied");
         }catch(e){
-          setButtonFeedback(button, "Copy failed");
+          openCopyPromptDialog(promptText);
         }
       });
     });
