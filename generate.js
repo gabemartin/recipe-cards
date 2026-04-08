@@ -164,17 +164,19 @@ a.btn{ text-decoration:none; color:inherit; }
 }
 
 .chiprow{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:flex-start;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  overscroll-behavior-x:contain;
 }
+.chiprow::-webkit-scrollbar{ display:none; }
 
 .chips{
   display:flex;
   gap:8px;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
 
 .chip{
@@ -1619,7 +1621,8 @@ function buildIndex(entries) {
       display:flex; align-items:center; justify-content:center; color:var(--foreground-primary);
     }
     .arrow .icon{ width:22px; height:22px; }
-    .chips{ display:flex; gap:8px; flex-wrap:wrap; }
+    .chips{ display:flex; gap:8px; flex-wrap:nowrap; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none; overscroll-behavior-x:contain; }
+    .chips::-webkit-scrollbar{ display:none; }
     .chip{
       display:inline-flex; align-items:center; gap:8px;
       border:1px solid var(--border); background:var(--surface-muted);
