@@ -1,0 +1,217 @@
+{
+  "title": "Fish Tacos",
+  "subtitle": "Baked seasoned tilapia with crunchy cabbage, avocado, and a tangy lime crema. Ready in under an hour.",
+  "storageKey": "fish_tacos_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "1½ lb tilapia" },
+    {              "label": "Serves",  "value": "24 tacos" },
+    {              "label": "Sauce",   "value": "Lime crema" },
+    {              "label": "Temp",    "value": "375°F" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Makes 24 small tacos. Scale down by half for a weeknight dinner for 4.",
+    "items": [
+      "<strong>1½ lb tilapia</strong> (or salmon or shrimp)",
+      "<strong>24 small white corn tortillas</strong>",
+      "<strong>½ tsp ground cumin</strong>",
+      "<strong>½ tsp cayenne pepper</strong>",
+      "<strong>1 tsp salt</strong>",
+      "<strong>¼ tsp black pepper</strong>",
+      "<strong>1 Tbsp olive oil</strong>",
+      "<strong>1 Tbsp unsalted butter</strong>",
+      "<strong>½ small purple cabbage</strong>, shredded",
+      "<strong>2 medium avocados</strong>, sliced",
+      "<strong>2 roma tomatoes</strong>, diced (optional)",
+      "<strong>½ red onion</strong>, finely diced",
+      "<strong>½ bunch cilantro</strong>, stems removed",
+      "<strong>4 oz (1 cup) cotija cheese</strong>, grated",
+      "<strong>1 lime</strong>, cut into wedges",
+      "<strong>½ cup sour cream</strong>",
+      "<strong>⅓ cup mayonnaise</strong>",
+      "<strong>2 Tbsp fresh lime juice</strong>",
+      "<strong>1 tsp garlic powder</strong>",
+      "<strong>1 tsp sriracha</strong>, or more to taste"
+    ],
+    "callout": "<strong>Tip:</strong> The lime crema recipe makes extra on purpose — it goes fast. Make it ahead and refrigerate until ready to serve.",
+    "shoppingList": [
+      { "item": "1½ lb tilapia", "substitutes": ["Salmon fillets", "Shrimp (peeled &amp; deveined)"] },
+      { "item": "24 small corn tortillas" },
+      { "item": "Ground cumin" },
+      { "item": "Cayenne pepper" },
+      { "item": "Olive oil" },
+      { "item": "Butter" },
+      { "item": "Purple cabbage (½ head)", "substitutes": ["Green cabbage", "Pre-shredded coleslaw mix"] },
+      { "item": "2 avocados" },
+      { "item": "2 roma tomatoes" },
+      { "item": "1 red onion" },
+      { "item": "Fresh cilantro (1 bunch)", "substitutes": ["Omit if sensitive"] },
+      { "item": "Cotija cheese (4 oz)", "substitutes": ["Feta cheese", "Queso fresco"] },
+      { "item": "2 limes" },
+      { "item": "Sour cream" },
+      { "item": "Mayonnaise" },
+      { "item": "Garlic powder" },
+      { "item": "Sriracha", "substitutes": ["Hot sauce", "Chili garlic sauce"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Tilapia seasoned with cumin and cayenne, baked at 375°F until flaky. Served in toasted corn tortillas loaded with cabbage, avocado, tomato, and a creamy lime crema that ties it all together."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season + bake</strong> the fish at 375°F",
+            "<strong>Make the lime crema</strong> while the fish cooks",
+            "<strong>Prep toppings</strong> — shred, slice, dice",
+            "<strong>Toast tortillas</strong> in a dry skillet",
+            "<strong>Assemble</strong> and serve immediately"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Crowd-pleaser tip:</strong> Set up a topping bar so guests build their own tacos. Everything can be prepped while the fish bakes."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season the Fish",
+      "checkboxLabel": "Season fish, drizzle oil, dot with butter",
+      "measurements": [
+        { "item": "Tilapia", "qty": "1½ lb", "alts": ["Salmon", "Shrimp"] },
+        { "item": "Ground cumin", "qty": "½ tsp" },
+        { "item": "Cayenne pepper", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "1 tsp" },
+        { "item": "Black pepper", "qty": "¼ tsp" },
+        { "item": "Olive oil", "qty": "1 Tbsp" },
+        { "item": "Unsalted butter", "qty": "1 Tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>375°F</strong>. Line a baking sheet with parchment.",
+            "Mix cumin, cayenne, salt, and pepper in a small bowl.",
+            "Lay fish on the baking sheet and <strong>season both sides</strong> with the spice mix.",
+            "Drizzle with olive oil and <strong>dot the top with butter</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Even seasoning:</strong> Sprinkle from a height for more uniform coverage — don't dump it all in one spot."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Bake the Fish",
+      "checkboxLabel": "Bake 20–25 min until flaky",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Bake at <strong>375°F for 20–25 minutes</strong> until the fish flakes easily with a fork.",
+            "<strong>Optional:</strong> Broil for 3–5 minutes at the end for lightly browned edges.",
+            "Remove from oven and break fish into <strong>large chunks</strong> with a fork — don't over-shred."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Doneness:</strong> Fish is done when it flakes easily and is opaque all the way through. Thicker fillets may need the full 25 minutes."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Make the Lime Crema",
+      "checkboxLabel": "Whisk sauce, refrigerate until ready",
+      "measurements": [
+        { "item": "Sour cream", "qty": "½ cup" },
+        { "item": "Mayonnaise", "qty": "⅓ cup" },
+        { "item": "Fresh lime juice", "qty": "2 Tbsp" },
+        { "item": "Garlic powder", "qty": "1 tsp" },
+        { "item": "Sriracha", "qty": "1 tsp", "alts": ["Hot sauce", "Chili garlic sauce"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Combine sour cream, mayo, lime juice, garlic powder, and sriracha in a bowl.",
+            "<strong>Whisk until completely smooth.</strong>",
+            "Taste and adjust sriracha for heat. Refrigerate until ready to use.",
+            "Can be made <strong>1–2 days ahead</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Prep the Toppings",
+      "checkboxLabel": "Shred, slice, and dice all toppings",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Cabbage:</strong> Shred thinly with a knife or mandoline.",
+            "<strong>Avocados:</strong> Halve, pit, and slice just before serving to avoid browning.",
+            "<strong>Tomatoes:</strong> Dice finely (optional).",
+            "<strong>Red onion:</strong> Dice finely.",
+            "<strong>Cilantro:</strong> Remove thick stems, roughly chop or leave as leaves.",
+            "<strong>Cotija:</strong> Grate if not pre-crumbled.",
+            "<strong>Lime:</strong> Cut into wedges."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Toast the Tortillas",
+      "checkboxLabel": "Toast tortillas 30 sec per side",
+      "measurements": [
+        { "item": "Corn tortillas", "qty": "24 small" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a <strong>dry skillet</strong> over medium-high heat.",
+            "Toast tortillas one or two at a time, <strong>30 seconds per side</strong>, until lightly charred and pliable.",
+            "Stack in a clean towel or tortilla warmer to keep warm."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't skip toasting:</strong> It adds flavor and makes tortillas pliable enough to fold without cracking."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Assemble + Serve",
+      "checkboxLabel": "Build tacos, drizzle crema, squeeze lime",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place <strong>fish chunks</strong> in the center of each tortilla.",
+            "Top with <strong>cabbage, avocado, tomato, red onion, and cilantro</strong>.",
+            "Sprinkle with <strong>cotija cheese</strong>.",
+            "Drizzle generously with <strong>lime crema</strong>.",
+            "Serve with a <strong>lime wedge</strong> for squeezing."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Serving tip:</strong> Lay out all toppings as a build-your-own bar — faster for crowds and everyone gets exactly what they want."
+        }
+      ]
+    }
+  ]
+}
