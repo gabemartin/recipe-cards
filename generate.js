@@ -531,7 +531,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-left: 14px;
   padding-right: 14px;
   padding-bottom: 10px;
@@ -607,6 +607,40 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
 }
 .x .icon-close{ width:22px; height:22px; }
 .x:focus-visible{ outline:none; box-shadow: var(--focus); }
+
+.cook-timer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cook-timer-display{
+  font-size: var(--text-lg);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--foreground-primary);
+  min-width: 48px;
+}
+.cook-timer-btn{
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--foreground-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.cook-timer-btn:focus-visible{ outline: none; box-shadow: var(--focus); }
+.cook-timer-btn[data-state="running"]{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
 
 .printnote{
   color: var(--foreground-secondary);
@@ -1028,6 +1062,10 @@ ${slides}
 
   <dialog id="expandedStepsDialog" class="expanded-steps-dialog">
     <div class="expanded-steps-header safe-top">
+      <div class="cook-timer" id="cookTimer">
+        <span class="cook-timer-display" id="cookTimerDisplay">0:00</span>
+        <button class="cook-timer-btn" id="cookTimerBtn" data-state="idle" type="button" aria-label="Start timer">Start</button>
+      </div>
       <button class="x" id="closeExpandedStepsDialog" type="button" aria-label="Close fullscreen">${HI.xMark}</button>
     </div>
     <div class="swiper expanded-steps-swiper">
@@ -1415,6 +1453,71 @@ ${expandedSlidesHtml}
       dlg.close();
     });
 
+    // ── Stopwatch timer ─────────────────────────────────────────────────────
+    const LS_TIMER = "cook_timer_v1";
+    const TIMER_MAX_MS = 3600000;
+    const cookTimerDisplay = document.getElementById("cookTimerDisplay");
+    const cookTimerBtn = document.getElementById("cookTimerBtn");
+    let timerRAF = null;
+
+    function loadTimerState() {
+      try { return JSON.parse(localStorage.getItem(LS_TIMER) || "null"); } catch(e) { return null; }
+    }
+    function saveTimerState(obj) {
+      try { localStorage.setItem(LS_TIMER, JSON.stringify(obj)); } catch(e) {}
+    }
+    function clearTimerState() {
+      try { localStorage.removeItem(LS_TIMER); } catch(e) {}
+    }
+    function fmtTimer(ms) {
+      const s = Math.floor(Math.min(ms, TIMER_MAX_MS) / 1000);
+      return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+    }
+    function tickTimer() {
+      const t = loadTimerState();
+      if (!t || t.state !== "running") return;
+      const elapsed = Date.now() - t.startEpoch;
+      cookTimerDisplay.textContent = fmtTimer(elapsed);
+      if (elapsed >= TIMER_MAX_MS) {
+        saveTimerState({ state: "stopped", elapsed: TIMER_MAX_MS });
+        applyTimerUI();
+        return;
+      }
+      timerRAF = requestAnimationFrame(tickTimer);
+    }
+    function applyTimerUI() {
+      cancelAnimationFrame(timerRAF);
+      const t = loadTimerState();
+      const state = t?.state || "idle";
+      if (state === "running") {
+        cookTimerDisplay.textContent = fmtTimer(Date.now() - t.startEpoch);
+        cookTimerBtn.textContent = "Stop";
+        cookTimerBtn.dataset.state = "running";
+        timerRAF = requestAnimationFrame(tickTimer);
+      } else if (state === "stopped") {
+        cookTimerDisplay.textContent = fmtTimer(t.elapsed);
+        cookTimerBtn.textContent = "Reset";
+        cookTimerBtn.dataset.state = "stopped";
+      } else {
+        cookTimerDisplay.textContent = "0:00";
+        cookTimerBtn.textContent = "Start";
+        cookTimerBtn.dataset.state = "idle";
+      }
+    }
+    cookTimerBtn.addEventListener("click", () => {
+      const t = loadTimerState();
+      const state = t?.state || "idle";
+      if (state === "idle") {
+        saveTimerState({ state: "running", startEpoch: Date.now() });
+      } else if (state === "running") {
+        saveTimerState({ state: "stopped", elapsed: Date.now() - t.startEpoch });
+      } else {
+        clearTimerState();
+      }
+      applyTimerUI();
+    });
+    // ────────────────────────────────────────────────────────────────────────
+
     const expandedStepsDialog = document.getElementById("expandedStepsDialog");
     const expandedStepsSwiper = new Swiper(".expanded-steps-swiper", {
       slidesPerView: 1,
@@ -1441,8 +1544,10 @@ ${expandedSlidesHtml}
       updateExpandedStepsNav();
       document.documentElement.style.overflow = "hidden";
       expandedStepsDialog.showModal();
+      applyTimerUI();
     }
     function closeExpandedSteps() {
+      cancelAnimationFrame(timerRAF);
       expandedStepsDialog.close();
       document.documentElement.style.overflow = "";
     }
