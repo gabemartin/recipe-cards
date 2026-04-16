@@ -959,21 +959,21 @@ function buildHTML(recipe) {
   const recipeJson = JSON.stringify(recipe).replace(/</g, "\\u003c");
 
   return `<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>${recipe.title}</title>
   <meta name="description" content="${escapeAttr(recipe.subtitle)}" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#18130d" id="metaTheme" />
+  <meta name="theme-color" content="#ddd9ce" id="metaTheme" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="${escapeAttr(recipe.title)}" />
   <link rel="apple-touch-icon" href="icons/chef-icon.png" />
   <script>
-    (function(){var t=localStorage.getItem("recipe_cards_theme_v1");if(t==="light"){document.documentElement.dataset.theme="light";document.getElementById("metaTheme").content="#ddd9ce";}})();
+    (function(){var t=localStorage.getItem("recipe_cards_theme_v1"),m=document.getElementById("metaTheme");if(t==="dark"){document.documentElement.removeAttribute("data-theme");m.content="#18130d";}else{document.documentElement.dataset.theme="light";m.content="#ddd9ce";}})();
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>${CSS}</style>
@@ -1620,21 +1620,21 @@ function buildIndex(entries) {
   }).join("\n");
 
   return `<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>Recipe Cards</title>
   <meta name="description" content="Phone-optimized step-by-step recipe cards." />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#18130d" id="metaTheme" />
+  <meta name="theme-color" content="#ddd9ce" id="metaTheme" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Recipe Cards" />
   <link rel="apple-touch-icon" href="icons/chef-icon.png" />
   <script>
-    (function(){var t=localStorage.getItem("recipe_cards_theme_v1");if(t==="light"){document.documentElement.dataset.theme="light";document.getElementById("metaTheme").content="#ddd9ce";}})();
+    (function(){var t=localStorage.getItem("recipe_cards_theme_v1"),m=document.getElementById("metaTheme");if(t==="dark"){document.documentElement.removeAttribute("data-theme");m.content="#18130d";}else{document.documentElement.dataset.theme="light";m.content="#ddd9ce";}})();
   </script>
   <style>
     :root{
@@ -1749,7 +1749,7 @@ function buildIndex(entries) {
         <h1 class="page-title">Recipe Cards</h1>
         <p class="page-sub">Tap a recipe to open the step-by-step card view.</p>
       </div>
-      <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Use light theme" id="themeToggle"></button>
+      <button class="theme-toggle" type="button" role="switch" aria-checked="true" aria-label="Switch between light and dark theme" id="themeToggle"></button>
     </div>
     <div class="list">
 ${cards || '      <p class="empty">No recipes yet.</p>'}
@@ -1811,8 +1811,8 @@ if (args.length > 0) {
       description: "Phone-optimized step-by-step recipe cards.",
       start_url: "./index.html",
       display: "standalone",
-      background_color: "#18130d",
-      theme_color: "#18130d",
+      background_color: "#ddd9ce",
+      theme_color: "#ddd9ce",
       icons: [
         { src: "icons/chef-icon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
         { src: "icons/chef-icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
