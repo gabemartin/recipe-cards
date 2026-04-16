@@ -1,0 +1,211 @@
+{
+  "title": "Skillet Creamy Chicken and Parmesan Gnocchi",
+  "subtitle": "Pan-seared chicken in a white wine cream sauce with kale and gnocchi, finished in the oven.",
+  "storageKey": "chicken_parmesan_gnocchi_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "4–6 chicken breasts or thighs" },
+    {              "label": "Serves",  "value": "4–6" },
+    {              "label": "Method",  "value": "Skillet + oven" },
+    {              "label": "Sauce",   "value": "White wine cream" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "One oven-safe skillet from stovetop to oven. Bacon goes on top at the end for crunch.",
+    "items": [
+      "<strong>4–6 boneless chicken breasts or thighs</strong>",
+      "<strong>Kosher salt and black pepper</strong>",
+      "<strong>¼ cup all-purpose flour</strong> (for dredging)",
+      "<strong>½ tsp paprika</strong>",
+      "<strong>Pinch of cayenne</strong>",
+      "<strong>2 tbsp fresh thyme leaves</strong>, divided",
+      "<strong>4 slices thick-cut bacon</strong>, chopped",
+      "<strong>1 tbsp fresh rosemary</strong>, chopped",
+      "<strong>3 tbsp salted butter</strong>, divided",
+      "<strong>2 shallots</strong>, chopped",
+      "<strong>4 cloves garlic</strong>, chopped",
+      "<strong>1 cup dry white wine</strong>",
+      "<strong>½ cup chicken bone broth</strong>",
+      "<strong>½–1 cup heavy cream</strong>",
+      "<strong>2 cups roughly chopped kale</strong>",
+      "<strong>1 lb potato gnocchi</strong>",
+      "<strong>½ cup grated parmesan</strong>, plus more for serving"
+    ],
+    "callout": "<strong>Key tip:</strong> Gnocchi cooks raw right in the sauce—no boiling needed. Add it in, cook until the pieces float, then bake.",
+    "shoppingList": [
+      { "item": "4–6 boneless chicken breasts or thighs", "substitutes": ["Bone-in chicken thighs"] },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "All-purpose flour" },
+      { "item": "Paprika" },
+      { "item": "Cayenne pepper" },
+      { "item": "Fresh thyme (1 bunch)", "substitutes": ["Dried thyme (use ½ tsp)"] },
+      { "item": "Thick-cut bacon (4 slices)" },
+      { "item": "Fresh rosemary (1 sprig)", "substitutes": ["Dried rosemary (¼ tsp)"] },
+      { "item": "Butter (1 stick)" },
+      { "item": "2 shallots", "substitutes": ["½ small yellow onion"] },
+      { "item": "Garlic (1 head)", "substitutes": ["Jarred minced garlic"] },
+      { "item": "Dry white wine (1 cup)", "substitutes": ["Extra chicken broth"] },
+      { "item": "Chicken bone broth (small carton)" },
+      { "item": "Heavy cream (½–1 cup)" },
+      { "item": "Kale (1 bunch)", "substitutes": ["Baby spinach"] },
+      { "item": "Potato gnocchi (1 lb)", "substitutes": ["Fresh or shelf-stable gnocchi"] },
+      { "item": "Parmesan (wedge or pre-grated)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Dredged chicken seared in a bacon-fat skillet, then a white wine cream sauce built in the same pan—kale and raw gnocchi cook directly in the sauce. Everything goes into the oven together for a bubbling, parmesan-crusted finish."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season + dredge</strong> chicken in seasoned flour",
+            "<strong>Crisp bacon</strong> with rosemary in the skillet, set aside",
+            "<strong>Sear chicken</strong> in butter until golden, set aside",
+            "<strong>Build sauce</strong>—shallots, garlic, wine, broth, cream",
+            "<strong>Add kale + raw gnocchi</strong>, cook until gnocchi float",
+            "<strong>Nestle chicken back in</strong>, top with parmesan, bake 10 min",
+            "<strong>Top with bacon</strong> and serve"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Key move:</strong> Use an oven-safe skillet (cast iron or stainless). The gnocchi goes in raw—it cooks in the sauce and finishes in the oven."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season + Dredge Chicken",
+      "checkboxLabel": "Season chicken, dredge in flour mixture",
+      "measurements": [
+        { "item": "Chicken breasts or thighs", "qty": "4–6 pieces" },
+        { "item": "All-purpose flour", "qty": "¼ cup" },
+        { "item": "Paprika", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "pinch" },
+        { "item": "Fresh thyme", "qty": "1 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>400°F</strong>.",
+            "Season chicken all over with <strong>salt and pepper</strong>.",
+            "In a shallow bowl, combine <strong>flour, paprika, cayenne, and 1 tbsp thyme</strong>.",
+            "<strong>Dredge each piece</strong> through the flour mixture and toss to coat."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Shake off excess:</strong> A thin, even coating is what you want—too much flour will clump in the sauce later."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Crisp the Bacon",
+      "checkboxLabel": "Bacon crisp, rosemary bloomed, set aside",
+      "measurements": [
+        { "item": "Thick-cut bacon", "qty": "4 slices, chopped" },
+        { "item": "Fresh rosemary", "qty": "1 tbsp, chopped" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In an <strong>oven-safe skillet</strong>, cook bacon over medium heat until crisp, <strong>~5 minutes</strong>.",
+            "During the last minute, add the <strong>rosemary</strong>—it will sizzle and crisp in the fat.",
+            "Remove bacon to a plate. <strong>Leave the fat in the pan.</strong>"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't drain the fat:</strong> It carries the rosemary flavor and helps sear the chicken. The sauce absorbs it."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Sear the Chicken",
+      "checkboxLabel": "Chicken golden on both sides, set aside",
+      "measurements": [
+        { "item": "Salted butter", "qty": "2 tbsp (1 + 1)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>1 tbsp butter</strong> to the skillet over medium-high heat.",
+            "Add the dredged chicken. Sear <strong>3–5 minutes per side</strong> until golden.",
+            "Add <strong>another 1 tbsp butter</strong> and let it brown around the chicken, <strong>~2 minutes</strong>.",
+            "Remove chicken to a plate. It won't be fully cooked yet—that's fine."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't cook through:</strong> Chicken finishes in the oven. You're just building the crust and flavor here."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Build Sauce + Bake",
+      "checkboxLabel": "Sauce built, gnocchi floating, baked 10 min",
+      "measurements": [
+        { "item": "Salted butter", "qty": "1 tbsp" },
+        { "item": "Shallots", "qty": "2, chopped" },
+        { "item": "Garlic", "qty": "4 cloves, chopped" },
+        { "item": "Fresh thyme", "qty": "1 tbsp" },
+        { "item": "Dry white wine", "qty": "1 cup" },
+        { "item": "Chicken bone broth", "qty": "½ cup" },
+        { "item": "Heavy cream", "qty": "½–1 cup" },
+        { "item": "Kale", "qty": "2 cups, roughly chopped", "alts": ["Baby spinach"] },
+        { "item": "Potato gnocchi", "qty": "1 lb (raw)" },
+        { "item": "Parmesan", "qty": "½ cup, grated" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>1 tbsp butter</strong> to the skillet. Add <strong>shallots, garlic, 1 tbsp thyme</strong>, and a pinch each of salt and pepper. Cook briefly.",
+            "Add the <strong>wine</strong>, then the <strong>broth</strong>. Simmer <strong>5 minutes</strong>.",
+            "Pour in the <strong>cream</strong>.",
+            "Add <strong>kale and raw gnocchi</strong>. Cook <strong>~5 minutes</strong>, stirring gently, until gnocchi float.",
+            "Slide the <strong>chicken</strong> back into the skillet.",
+            "Sprinkle the <strong>parmesan</strong> over everything.",
+            "Transfer to the oven. Cook uncovered <strong>10 minutes</strong>, until sauce is bubbling around the chicken."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Gnocchi cue:</strong> Floating = done. Don't let them sit in the sauce too long before the oven or they'll get mushy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Serve",
+      "checkboxLabel": "Top with bacon and serve",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spoon chicken, gnocchi, and sauce into bowls or onto plates.",
+            "Top with the <strong>crispy bacon and rosemary</strong>.",
+            "Add extra <strong>parmesan</strong> if desired."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>YUM.</strong> The sauce should be creamy and cling to the gnocchi—not watery. The oven time tightens it up perfectly."
+        }
+      ]
+    }
+  ]
+}
