@@ -1,0 +1,214 @@
+{
+  "title": "Triple Pork Mazemen",
+  "subtitle": "with Roasted Garlic & Pea Tips",
+  "storageKey": "triple_pork_mazemen_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Ground Pork" },
+    {              "label": "Serves",  "value": "3" },
+    {              "label": "Cook",    "value": "30–40 min" },
+    {              "label": "Calories", "value": "~560/serving" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Brothless mazemen—three forms of pork tossed with fresh ramen noodles in a savory roasted-garlic sauce, finished with pea tips and a sesame-nori spice blend.",
+    "items": [
+      "<strong>10 oz ground pork</strong>",
+      "<strong>1 slice bacon</strong>",
+      "<strong>¾ lb fresh ramen noodles</strong>",
+      "<strong>1 oz pea tips</strong>",
+      "<strong>1 bunch garlic chives</strong>",
+      "<strong>2 tbsp pork demi-glace</strong>",
+      "<strong>2 tbsp soy sauce</strong>",
+      "<strong>2 tbsp mirin</strong>",
+      "<strong>1 head garlic</strong>",
+      "<strong>1-inch piece fresh ginger</strong>",
+      "<strong>½ tsp Mazemen spice blend</strong> (black &amp; white sesame, kibbled nori, smoked paprika)",
+      "<strong>Olive oil, salt &amp; pepper</strong>"
+    ],
+    "callout": "<strong>Mazemen = brothless ramen.</strong> The sauce is thick and clinging rather than soupy—make sure to drain the noodles very well before tossing them.",
+    "shoppingList": [
+      { "item": "10 oz ground pork", "substitutes": ["Ground chicken", "Ground turkey"] },
+      { "item": "1 slice bacon" },
+      { "item": "¾ lb fresh ramen noodles", "substitutes": ["Dried ramen noodles", "Lo mein noodles"] },
+      { "item": "1 oz pea tips", "substitutes": ["Baby spinach", "Pea shoots"] },
+      { "item": "1 bunch garlic chives", "substitutes": ["Green onions / scallions"] },
+      { "item": "1 head garlic" },
+      { "item": "Fresh ginger (1-inch piece)" },
+      { "item": "Pork demi-glace (2 tbsp)", "substitutes": ["Beef demi-glace", "1 tsp soy sauce + 1 tsp miso"] },
+      { "item": "Soy sauce" },
+      { "item": "Mirin", "substitutes": ["Dry sherry + pinch of sugar"] },
+      { "item": "Sesame seeds, nori, smoked paprika (for spice blend)" },
+      { "item": "Olive oil" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A Blue Apron classic: brothless Japanese mazemen loaded with three forms of pork—ground pork, crispy bacon, and pork demi-glace—tossed with fresh ramen noodles in a deeply savory roasted-garlic sauce. Pea tips add freshness; a sesame-nori spice blend finishes the bowl."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Roast the garlic</strong> — whole head at 475°F, 28–30 min",
+            "<strong>Prep ingredients</strong> — dice bacon, mince ginger, slice chives",
+            "<strong>Cook the pork trio</strong> — bacon first, then aromatics, then ground pork",
+            "<strong>Build &amp; simmer the sauce</strong> — squeeze in roasted garlic, add liquids",
+            "<strong>Boil &amp; toss noodles</strong> — drain well, coat in sauce, stir in pea tips"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Makes 3 servings.</strong> The recipe divides ⅔ into 2 bowls for dinner—you'll have one serving left over."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Roast the Garlic",
+      "checkboxLabel": "Garlic roasted and set aside to cool",
+      "measurements": [
+        { "item": "Garlic", "qty": "1 whole head" },
+        { "item": "Olive oil", "qty": "drizzle" },
+        { "item": "Oven temp", "qty": "475°F" },
+        { "item": "Roast time", "qty": "28–30 min" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>475°F</strong>.",
+            "Cut off and discard the <strong>top of the garlic head</strong> to expose the cloves, keeping the rest of the head intact.",
+            "Place on a piece of aluminum foil. <strong>Drizzle with olive oil</strong> and season with salt and pepper.",
+            "Tightly wrap in foil. Place on a sheet pan and <strong>roast 28–30 minutes</strong>, until cloves are browned and very tender.",
+            "Remove from oven, carefully unwrap, and <strong>set aside to cool slightly</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why whole-head roasting?</strong> Slow heat turns sharp garlic mellow, sweet, and almost buttery—the flavor foundation of the sauce."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Prepare the Ingredients",
+      "checkboxLabel": "All ingredients prepped and water boiling",
+      "body": [
+        {
+          "type": "p",
+          "html": "While the garlic roasts, get everything else ready."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Wash and dry all fresh produce.",
+            "<strong>Heat a medium pot of salted water to boiling on high</strong> (for the noodles later).",
+            "Peel and <strong>mince the ginger</strong>.",
+            "<strong>Thinly slice the garlic chives</strong>.",
+            "<strong>Roughly chop any large pea tips.</strong>",
+            "<strong>Small dice the bacon.</strong>"
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Cook the Bacon",
+      "checkboxLabel": "Bacon browned and crispy",
+      "measurements": [
+        { "item": "Olive oil", "qty": "1 tsp" },
+        { "item": "Bacon", "qty": "1 slice, small dice" },
+        { "item": "Cook time", "qty": "3–4 min" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a <strong>large pot</strong>, heat <strong>1 tsp olive oil</strong> on medium until hot.",
+            "Add the <strong>diced bacon</strong> and cook, stirring occasionally, <strong>3–4 minutes</strong>, or until browned and crispy.",
+            "Do not drain—the rendered fat flavors the entire dish."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Add the Aromatics & Ground Pork",
+      "checkboxLabel": "Pork cooked through and heat off",
+      "measurements": [
+        { "item": "Ginger", "qty": "1-inch piece, minced" },
+        { "item": "Garlic chives", "qty": "all but a big pinch" },
+        { "item": "Ground pork", "qty": "10 oz" },
+        { "item": "Cook time", "qty": "4–5 min" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>minced ginger</strong> and <strong>all but a big pinch of the garlic chives</strong> to the pot of bacon.",
+            "Cook, stirring frequently, <strong>2–3 minutes</strong>, until softened and fragrant.",
+            "Add the <strong>ground pork</strong>; season with <strong>salt and pepper</strong>.",
+            "Cook, <strong>frequently breaking the meat apart</strong> with a spoon, <strong>4–5 minutes</strong>, until lightly browned and cooked through.",
+            "Season again with salt and pepper. <strong>Turn off the heat.</strong>"
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Make the Sauce",
+      "checkboxLabel": "Sauce simmered and slightly reduced",
+      "measurements": [
+        { "item": "Roasted garlic cloves", "qty": "whole head, squeezed out" },
+        { "item": "Soy sauce", "qty": "2 tbsp" },
+        { "item": "Mirin", "qty": "2 tbsp" },
+        { "item": "Pork demi-glace", "qty": "2 tbsp" },
+        { "item": "Water", "qty": "1 cup" },
+        { "item": "Simmer time", "qty": "2–3 min" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "When the garlic is cool enough to handle, <strong>gently squeeze the individual cloves out of the head</strong> into the pot; discard the skins.",
+            "Add the <strong>soy sauce, mirin, demi-glace, and 1 cup water</strong>; stir to thoroughly combine.",
+            "Heat to <strong>boiling on high</strong>.",
+            "Reduce heat to medium; simmer, stirring occasionally, <strong>2–3 minutes</strong>, until the liquid is slightly reduced in volume."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Finish & Plate",
+      "checkboxLabel": "Mazemen plated and garnished",
+      "measurements": [
+        { "item": "Fresh ramen noodles", "qty": "¾ lb" },
+        { "item": "Pea tips", "qty": "1 oz" },
+        { "item": "Spice blend", "qty": "to taste" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "While the sauce simmers, add the <strong>noodles</strong> to the pot of boiling water, gently stirring to separate. Cook <strong>2–3 minutes</strong>, until tender.",
+            "<strong>Drain thoroughly</strong> and transfer to the pot of sauce.",
+            "Cook, <strong>stirring constantly, 1–2 minutes</strong>, until the noodles are thoroughly coated.",
+            "Turn off the heat. <strong>Stir in the pea tips</strong>; season with salt and pepper to taste.",
+            "Divide <strong>⅔ of the finished mazemen</strong> between 2 bowls (you'll have one serving extra).",
+            "Garnish with the <strong>remaining garlic chives</strong> and as much of the <strong>spice blend</strong> as you like."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Spice blend:</strong> Black sesame seeds, white sesame seeds, kibbled nori &amp; smoked paprika—sprinkle generously for crunch and umami."
+        }
+      ]
+    }
+  ]
+}
