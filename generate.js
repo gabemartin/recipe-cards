@@ -5,7 +5,7 @@
  *        node generate.js          (builds all recipes in src/recipes/)
  */
 
-import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, statSync } from "fs";
 import { join, basename, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -277,6 +277,57 @@ a.btn{ text-decoration:none; color:inherit; }
   color: var(--foreground-secondary);
   min-width: 88px;
   text-align:right;
+}
+
+.hero-wrap{
+  padding: 0 14px 12px;
+}
+.hero-img{
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  max-height: 220px;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+}
+.hero-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-fallback{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--hero-seed) 55% 38%),
+    hsl(calc(var(--hero-seed) + 40) 52% 24%)
+  );
+}
+.hero-fallback::before{
+  content: attr(data-initial);
+  font-size: clamp(44px, 16vw, 80px);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.22);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+html[data-theme="light"] .hero-fallback{
+  background: linear-gradient(
+    135deg,
+    hsl(var(--hero-seed) 42% 52%),
+    hsl(calc(var(--hero-seed) + 40) 38% 40%)
+  );
+}
+html[data-theme="light"] .hero-fallback::before{
+  color: rgba(0, 0, 0, 0.12);
 }
 
 main{
@@ -802,6 +853,52 @@ function escapeAttr(str) {
   return String(str).replace(/"/g, "&quot;");
 }
 
+/** Deterministic hue 0–359 for gradient placeholders from slug. */
+function slugHash(slug) {
+  let h = 0;
+  for (const c of String(slug || "")) h = (h * 31 + c.charCodeAt(0)) | 0;
+  return Math.abs(h) % 360;
+}
+
+function titleInitial(title) {
+  const t = String(title || "").trim();
+  if (!t) return "?";
+  try {
+    const m = t.match(/\p{L}/u);
+    if (m) return m[0].toUpperCase();
+  } catch (_) {
+    /* \p{L} unsupported — fall through */
+  }
+  const ch = t[0];
+  return /[a-zA-Z]/.test(ch) ? ch.toUpperCase() : ch;
+}
+
+function renderRecipeHero(recipe, slug, imageFile) {
+  if (imageFile) {
+    return `<div class="hero-wrap">
+      <div class="hero-img">
+        <img src="images/${escapeAttr(imageFile)}" alt="${escapeAttr(recipe.title)}" loading="lazy" decoding="async" />
+      </div>
+    </div>`;
+  }
+  const initial = escapeAttr(titleInitial(recipe.title));
+  const seed = slugHash(slug);
+  return `<div class="hero-wrap">
+    <div class="hero-img hero-fallback" data-initial="${initial}" style="--hero-seed:${seed}" role="img" aria-label="${escapeAttr(recipe.title)} — placeholder"></div>
+  </div>`;
+}
+
+function renderIndexThumb(recipe, slug, imageFile) {
+  if (imageFile) {
+    return `<div class="icard-thumb">
+      <img src="images/${escapeAttr(imageFile)}" alt="" loading="lazy" decoding="async" />
+    </div>`;
+  }
+  const initial = escapeAttr(titleInitial(recipe.title));
+  const seed = slugHash(slug);
+  return `<div class="icard-thumb icard-thumb--fallback" data-initial="${initial}" style="--thumb-seed:${seed}" role="img" aria-label="${escapeAttr(recipe.title)} — placeholder"></div>`;
+}
+
 function renderBodyBlock(block) {
   switch (block.type) {
     case "p":
@@ -896,7 +993,7 @@ function renderSlide(slide, index) {
 
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
-function buildHTML(recipe) {
+function buildHTML(recipe, slug, imageFile) {
   const chips = recipe.chips.map(renderChip).join("\n            ");
   const slides = recipe.slides.map((s, i) => renderSlide(s, i)).join("\n");
   const expandedSlidesHtml = recipe.slides.map((s, i) => {
@@ -957,6 +1054,7 @@ function buildHTML(recipe) {
   const shopIds = (recipe.ingredients.shoppingList || [])
     .map((_, i) => `"shop${i}"`);
   const recipeJson = JSON.stringify(recipe).replace(/</g, "\\u003c");
+  const heroHtml = renderRecipeHero(recipe, slug, imageFile);
 
   return `<!doctype html>
 <html lang="en" data-theme="light">
@@ -1012,6 +1110,7 @@ function buildHTML(recipe) {
         <div class="progtext" id="progtext">1 / ${recipe.slides.length}</div>
       </div>
     </header>
+${heroHtml}
 
     <main>
       <div class="swiper main-swiper" aria-label="Recipe steps carousel">
@@ -1599,12 +1698,14 @@ ${expandedSlidesHtml}
 // ─── Index page ───────────────────────────────────────────────────────────────
 
 function buildIndex(entries) {
-  // entries: [{ name, recipe }]
-  const cards = entries.map(({ name, recipe }) => {
+  // entries: [{ name, recipe, imageFile }]
+  const cards = entries.map(({ name, recipe, imageFile }) => {
     const stepCount = recipe.slides.filter(s => s.checkboxLabel).length;
     const chips = recipe.chips.slice(0, 3).map(renderChip).join("\n          ");
+    const thumb = renderIndexThumb(recipe, name, imageFile);
     return `
     <a class="icard" href="${name}.html">
+      ${thumb}
       <div class="icard-head">
         <div>
           <p class="kicker">${stepCount} steps</p>
@@ -1713,6 +1814,43 @@ function buildIndex(entries) {
     }
     .icard:hover{ border-color:var(--border-strong); transform:translateY(-1px); }
     .icard:active{ transform:scale(.99); }
+    .icard-thumb{
+      aspect-ratio:16/10;
+      width:100%;
+      max-height:140px;
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:var(--surface-muted);
+    }
+    .icard-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .icard-thumb--fallback{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,hsl(var(--thumb-seed) 55% 38%),hsl(calc(var(--thumb-seed) + 40) 52% 24%));
+    }
+    .icard-thumb--fallback::before{
+      content:attr(data-initial);
+      font-size:clamp(28px,10vw,48px);
+      font-weight:900;
+      color:rgba(255,255,255,.22);
+      letter-spacing:-.03em;
+      line-height:1;
+      user-select:none;
+    }
+    html[data-theme="light"] .icard-thumb--fallback{
+      background:linear-gradient(135deg,hsl(var(--thumb-seed) 42% 52%),hsl(calc(var(--thumb-seed) + 40) 38% 40%));
+    }
+    html[data-theme="light"] .icard-thumb--fallback::before{
+      color:rgba(0,0,0,.12);
+    }
     .icard-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
     .kicker{
       margin:0 0 4px; text-transform:uppercase; letter-spacing:.18em;
@@ -1776,61 +1914,160 @@ ${cards || '      <p class="empty">No recipes yet.</p>'}
 
 // ─── CLI ──────────────────────────────────────────────────────────────────────
 
-function processFile(src) {
+const CACHED_IMAGE_EXTS = [".jpg", ".jpeg", ".png", ".webp", ".avif"];
+
+function findLocalCachedImage(slug) {
+  const dir = join(__dirname, "src", "images");
+  if (!existsSync(dir)) return null;
+  for (const ext of CACHED_IMAGE_EXTS) {
+    const filename = `${slug}${ext}`;
+    if (existsSync(join(dir, filename))) return filename;
+  }
+  return null;
+}
+
+function extFromContentType(ct) {
+  const base = (ct || "").split(";")[0].trim().toLowerCase();
+  const map = {
+    "image/jpeg": ".jpg",
+    "image/jpg": ".jpg",
+    "image/png": ".png",
+    "image/webp": ".webp",
+    "image/avif": ".avif",
+    "image/gif": ".gif"
+  };
+  return map[base] || null;
+}
+
+function extFromImageUrl(url) {
+  try {
+    const pathname = new URL(url).pathname.toLowerCase();
+    const m = pathname.match(/\.(jpe?g|png|webp|avif|gif)(?:\?|$)/);
+    if (!m) return ".jpg";
+    const e = m[1];
+    return e === "jpeg" || e === "jpg" ? ".jpg" : `.${e}`;
+  } catch (_) {
+    return ".jpg";
+  }
+}
+
+/** Resolve `src/images/<slug>.<ext>`: use existing cache, else fetch `recipe.image` once into the repo. */
+async function resolveImage(slug, recipe) {
+  const existing = findLocalCachedImage(slug);
+  if (existing) return existing;
+
+  const raw = recipe?.image;
+  const url = typeof raw === "string" ? raw.trim() : "";
+  if (!url || !/^https?:\/\//i.test(url)) return null;
+
+  const imagesDir = join(__dirname, "src", "images");
+  mkdirSync(imagesDir, { recursive: true });
+
+  let res;
+  try {
+    res = await fetch(url, { redirect: "follow" });
+  } catch (e) {
+    console.warn(`  ⚠ Could not fetch image for "${slug}": ${e.message || e}`);
+    return null;
+  }
+  if (!res.ok) {
+    console.warn(`  ⚠ Could not fetch image for "${slug}": HTTP ${res.status}`);
+    return null;
+  }
+
+  const ct = res.headers.get("content-type") || "";
+  const ext = extFromContentType(ct) || extFromImageUrl(url);
+  const buffer = Buffer.from(await res.arrayBuffer());
+  const filename = `${slug}${ext}`;
+  writeFileSync(join(imagesDir, filename), buffer);
+  console.log(`  ✓ cached image → src/images/${filename}`);
+  return filename;
+}
+
+function copyImagesToDist(outDir) {
+  const srcImagesDir = join(__dirname, "src", "images");
+  if (!existsSync(srcImagesDir)) return;
+  const outImagesDir = join(outDir, "images");
+  mkdirSync(outImagesDir, { recursive: true });
+  for (const f of readdirSync(srcImagesDir)) {
+    if (f === ".gitkeep" || f.startsWith(".")) continue;
+    const abs = join(srcImagesDir, f);
+    if (!statSync(abs).isFile()) continue;
+    writeFileSync(join(outImagesDir, f), readFileSync(abs));
+  }
+  console.log("  ✓ images/");
+}
+
+async function processFile(src) {
   const recipe = JSON.parse(readFileSync(src, "utf8"));
   const name = basename(src, ".json");
+  const imageFile = await resolveImage(name, recipe);
   const outDir = join(__dirname, "dist");
   mkdirSync(outDir, { recursive: true });
   const out = join(outDir, `${name}.html`);
-  writeFileSync(out, buildHTML(recipe), "utf8");
+  writeFileSync(out, buildHTML(recipe, name, imageFile), "utf8");
   console.log(`  ✓ ${src} → dist/${name}.html`);
-  return { name, recipe };
+  return { name, recipe, imageFile };
 }
 
-const args = process.argv.slice(2);
+async function main() {
+  const args = process.argv.slice(2);
+  const outDir = join(__dirname, "dist");
 
-if (args.length > 0) {
-  // Build specific files (no index update)
-  args.forEach(processFile);
-} else {
-  // Build all recipes + regenerate index
+  if (args.length > 0) {
+    for (const src of args) {
+      await processFile(src);
+    }
+    copyImagesToDist(outDir);
+    return;
+  }
+
   const recipesDir = join(__dirname, "src", "recipes");
   const files = readdirSync(recipesDir).filter(f => f.endsWith(".json"));
   if (files.length === 0) {
     console.log("No recipe JSON files found in src/recipes/");
-  } else {
-    const entries = files.map(f => processFile(join(recipesDir, f)));
-    const outDir = join(__dirname, "dist");
-    writeFileSync(join(outDir, "index.html"), buildIndex(entries), "utf8");
-    console.log(`  ✓ index → dist/index.html (${entries.length} recipe${entries.length === 1 ? "" : "s"})`);
-
-    // Generate web app manifest
-    const manifest = {
-      name: "Recipe Cards",
-      short_name: "Recipes",
-      description: "Phone-optimized step-by-step recipe cards.",
-      start_url: "./index.html",
-      display: "standalone",
-      background_color: "#ddd9ce",
-      theme_color: "#ddd9ce",
-      icons: [
-        { src: "icons/chef-icon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
-        { src: "icons/chef-icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
-        { src: "icons/chef-icon.png",     sizes: "512x512", type: "image/png", purpose: "any maskable" }
-      ]
-    };
-    writeFileSync(join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2), "utf8");
-    console.log("  ✓ manifest.json");
-
-    // Copy icons from src/icons/ → dist/icons/ if present
-    const srcIconsDir = join(__dirname, "src", "icons");
-    if (existsSync(srcIconsDir)) {
-      const outIconsDir = join(outDir, "icons");
-      mkdirSync(outIconsDir, { recursive: true });
-      readdirSync(srcIconsDir).forEach(f => {
-        writeFileSync(join(outIconsDir, f), readFileSync(join(srcIconsDir, f)));
-      });
-      console.log("  ✓ icons/");
-    }
+    return;
   }
+
+  const entries = [];
+  for (const f of files) {
+    entries.push(await processFile(join(recipesDir, f)));
+  }
+
+  writeFileSync(join(outDir, "index.html"), buildIndex(entries), "utf8");
+  console.log(`  ✓ index → dist/index.html (${entries.length} recipe${entries.length === 1 ? "" : "s"})`);
+
+  const manifest = {
+    name: "Recipe Cards",
+    short_name: "Recipes",
+    description: "Phone-optimized step-by-step recipe cards.",
+    start_url: "./index.html",
+    display: "standalone",
+    background_color: "#ddd9ce",
+    theme_color: "#ddd9ce",
+    icons: [
+      { src: "icons/chef-icon-192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+      { src: "icons/chef-icon-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+      { src: "icons/chef-icon.png", sizes: "512x512", type: "image/png", purpose: "any maskable" }
+    ]
+  };
+  writeFileSync(join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2), "utf8");
+  console.log("  ✓ manifest.json");
+
+  const srcIconsDir = join(__dirname, "src", "icons");
+  if (existsSync(srcIconsDir)) {
+    const outIconsDir = join(outDir, "icons");
+    mkdirSync(outIconsDir, { recursive: true });
+    readdirSync(srcIconsDir).forEach(f => {
+      writeFileSync(join(outIconsDir, f), readFileSync(join(srcIconsDir, f)));
+    });
+    console.log("  ✓ icons/");
+  }
+
+  copyImagesToDist(outDir);
 }
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

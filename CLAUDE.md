@@ -11,11 +11,12 @@ node generate.js src/recipes/foo.json  # Build a single recipe
 
 ```
 src/recipes/*.json  →  generate.js  →  dist/*.html
-src/icons/          (PWA icons, referenced in manifest)
+src/icons/          →  dist/icons/   (PWA icons, referenced in manifest)
+src/images/         →  dist/images/ (recipe hero + index thumbnails, named `<slug>.<ext>`)
 ```
 
 - `generate.js` — sole build artifact; inlines all CSS, Swiper CDN JS, and wires up localStorage checkboxes into each HTML file
-- `dev.js` — zero-dep HTTP server bound to `0.0.0.0` (accessible from other devices on the network); polls mtimes on recipe JSON, icons, and `generate.js`, rebuilds on real edits (no auto browser reload; avoids macOS `fs.watch` rebuild loops)
+- `dev.js` — zero-dep HTTP server bound to `0.0.0.0` (accessible from other devices on the network); polls mtimes on recipe JSON, icons, recipe images, and `generate.js`, rebuilds on real edits (no auto browser reload; avoids macOS `fs.watch` rebuild loops)
 - `dist/` is gitignored; GitHub Actions deploys it
 
 ## Recipe JSON Schema
@@ -25,6 +26,7 @@ src/icons/          (PWA icons, referenced in manifest)
 | `title` | yes | Card heading |
 | `subtitle` | yes | One-liner below title |
 | `storageKey` | yes | localStorage key for checkbox state (use `recipename_checks_v1`) |
+| `image` | no | HTTPS URL of a hero photo; on first full build, `generate.js` downloads and saves `src/images/<slug>.<ext>`. Omit or drop a file manually there — if missing, a gradient placeholder is shown |
 | `chips[]` | yes | Quick-info pills; first chip can have `"dot": true` |
 | `ingredients.heading` | yes | |
 | `ingredients.note` | no | Italicized note below heading |

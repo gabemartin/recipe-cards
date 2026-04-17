@@ -7,6 +7,7 @@
 | `title` | string | yes | Recipe name, used as page `<title>` and H1 |
 | `subtitle` | string | yes | One-line description shown in the header and meta description |
 | `storageKey` | string | yes | `localStorage` key for checkbox persistence. Format: `snake_case_checks_v1` |
+| `image` | string | no | Optional `https://` URL for the recipe photo. On build, if `src/images/<slug>.{jpg,png,webp,…}` does not exist yet, the generator fetches once and caches the file in `src/images/` (filename = slug + extension). Same file is used for the index thumbnail. If omitted and no cached file, a gradient + initial placeholder is rendered |
 | `chips` | array | yes | 3-4 quick-info pills shown in the header |
 | `ingredients` | object | yes | Ingredients modal content |
 | `slides` | array | yes | Swiper carousel slides (overview + steps) |

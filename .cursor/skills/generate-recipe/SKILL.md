@@ -58,6 +58,8 @@ Read [schema-reference.md](schema-reference.md) for the complete field reference
 
 **HTML in strings:** `<strong>`, `<em>`, `<br/>`, and HTML entities like `&amp;` are valid. Content is rendered as-is -- no escaping in body/ingredient fields.
 
+**Hero image (optional):** When the source is a URL, set `"image": "https://..."` to the main finished-dish photo or the page’s `og:image` URL if that’s all that’s available. On the first `node generate.js` run, the build downloads it once into `src/images/<slug>.<ext>` (same kebab-case stem as the JSON filename, predictable extension from `Content-Type` or URL). That file is committed as the cache and is reused for both the recipe hero and the index thumbnail. If you omit `image` and there is no `src/images/<slug>.*` yet, the site shows a deterministic gradient + initial-letter placeholder until you add a URL or drop in an image file manually.
+
 ### 3. Write the file
 
 ```bash
@@ -75,7 +77,7 @@ Run a full build to regenerate all HTML, the index page, and the manifest:
 node generate.js
 ```
 
-This produces `dist/{slug}.html` plus an updated `dist/index.html`.
+This produces `dist/{slug}.html` plus an updated `dist/index.html`, copies `src/images/` to `dist/images/`, and may create a new cached file under `src/images/` when `image` is set.
 
 ### 5. Verify
 
@@ -99,4 +101,4 @@ Existing recipes for style reference:
 Build commands:
 - `node generate.js` -- full build (all recipes + index + manifest)
 - `node generate.js src/recipes/foo.json` -- single recipe only (no index update)
-- `npm run dev` -- dev server at localhost:4000 (rebuilds when recipe JSON / icons / generate.js change; refresh browser manually)
+- `npm run dev` -- dev server at localhost:4000 (rebuilds when recipe JSON / icons / recipe images / generate.js change; refresh browser manually)

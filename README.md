@@ -7,6 +7,7 @@ Phone-optimized swipeable step-by-step recipe cards. Each recipe is a JSON file 
 ## How it works
 
 - `src/recipes/*.json` — recipe data files
+- `src/images/` — cached recipe photos (`<slug>.jpg` etc.); copied to `dist/images/` on build. Optional `"image"` URL in JSON is downloaded here on first build, or add files manually
 - `generate.js` — reads JSON, outputs standalone HTML to `dist/`
 - `dist/` — generated output (not committed; built by CI)
 
@@ -38,7 +39,7 @@ Starts a local server at `http://localhost:4000` that:
 - Serves the `dist/` directory
 - Watches `src/` and `generate.js` for changes
 - Rebuilds automatically on save
-- Live-reloads the browser (no manual refresh needed)
+- Refresh the browser manually to see changes
 
 Override the port with `PORT=8080 npm run dev`.
 
@@ -78,6 +79,7 @@ A Cursor skill is included at `.cursor/skills/generate-recipe/`. Say "create a n
   "title": "Recipe Title",
   "subtitle": "One-line description shown in the header.",
   "storageKey": "unique_key_v1",       // localStorage key for checkboxes
+  "image": "https://example.com/photo.jpg",  // optional — cached to src/images/<slug>.<ext> on first build
 
   "chips": [
     { "dot": true, "label": "Cut",    "value": "Lamb breast" },  // dot = accent dot

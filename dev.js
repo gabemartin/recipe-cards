@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Zero-dependency dev server.
- * Serves dist/, watches recipe JSON + icons + generate.js, rebuilds on change (refresh the browser manually).
+ * Serves dist/, watches recipe JSON + icons + recipe images + generate.js, rebuilds on change (refresh the browser manually).
  */
 
 import { createServer } from "http";
@@ -22,6 +22,9 @@ const MIME = {
   ".json": "application/json",
   ".png": "image/png",
   ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp",
+  ".avif": "image/avif",
   ".svg": "image/svg+xml",
   ".ico": "image/x-icon",
   ".webmanifest": "application/manifest+json",
@@ -29,6 +32,7 @@ const MIME = {
 
 const RECIPES_DIR = join(__dirname, "src", "recipes");
 const ICONS_DIR = join(__dirname, "src", "icons");
+const IMAGES_DIR = join(__dirname, "src", "images");
 const GENERATE_JS = join(__dirname, "generate.js");
 
 // ─── Rebuild ─────────────────────────────────────────────────────────────────
@@ -83,6 +87,13 @@ function attachSourceWatchers() {
     for (const name of readdirSync(ICONS_DIR)) {
       if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(name)) {
         watchPathWhenEdited(join(ICONS_DIR, name));
+      }
+    }
+  }
+  if (existsSync(IMAGES_DIR)) {
+    for (const name of readdirSync(IMAGES_DIR)) {
+      if (/\.(png|jpe?g|gif|svg|webp|avif|ico)$/i.test(name)) {
+        watchPathWhenEdited(join(IMAGES_DIR, name));
       }
     }
   }
