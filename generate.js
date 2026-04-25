@@ -1183,7 +1183,7 @@ ${expandedSlidesHtml}
   <dialog id="copyPromptDialog" class="copy-fallback-dialog">
     <div class="copy-fallback-body">
       <h2 class="copy-fallback-title">Copy Prompt</h2>
-      <p class="copy-fallback-note">iPhone may block silent clipboard writes here. Your prompt is ready below. Tap Share / Copy, or press and hold in the text box to copy it manually.</p>
+      <p class="copy-fallback-note">Automatic copy didn't work in this context. Tap Share / Copy, or press and hold in the text box to copy manually.</p>
       <textarea id="copyPromptText" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
       <div class="copy-fallback-actions">
         <button class="btn primary" id="sharePromptText" type="button">Share / Copy</button>
@@ -1448,13 +1448,25 @@ ${expandedSlidesHtml}
     }
 
     async function copyText(text){
-      if (navigator.clipboard?.writeText && window.isSecureContext) {
+      // Tier 1: ClipboardItem API — preserves Safari's user-gesture context even with a Promise
+      if (window.isSecureContext && typeof ClipboardItem !== "undefined" && navigator.clipboard?.write) {
+        try{
+          await navigator.clipboard.write([
+            new ClipboardItem({ "text/plain": Promise.resolve(new Blob([text], { type: "text/plain" })) })
+          ]);
+          return;
+        }catch(e){ console.warn("[copy] ClipboardItem failed:", e); }
+      }
+
+      // Tier 2: writeText — simpler, works in most secure contexts
+      if (window.isSecureContext && navigator.clipboard?.writeText) {
         try{
           await navigator.clipboard.writeText(text);
           return;
-        }catch(e){}
+        }catch(e){ console.warn("[copy] writeText failed:", e); }
       }
 
+      // Tier 3: execCommand — legacy; throws if it returns false
       legacyCopyText(text);
     }
 
@@ -1677,15 +1689,11 @@ ${expandedSlidesHtml}
           : null;
         const promptText = buildPrompt(kind, stepIndex);
 
-        if (shouldPreferLegacyCopy()) {
-          openCopyPromptDialog(promptText);
-          return;
-        }
-
         try{
           await copyText(promptText);
           setButtonFeedback(button, "Copied");
         }catch(e){
+          console.warn("[copy] All clipboard methods failed, opening dialog:", e);
           openCopyPromptDialog(promptText);
         }
       });
