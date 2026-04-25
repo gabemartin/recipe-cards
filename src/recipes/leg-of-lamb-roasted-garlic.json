@@ -1,0 +1,163 @@
+{
+  "title": "Leg of Lamb with Roasted Garlic",
+  "subtitle": "Herb-studded boneless leg seared hot then slow-roasted to rare, served with whole heads of sweet, spreadable roasted garlic.",
+  "storageKey": "leg_of_lamb_roasted_garlic_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Cut",    "value": "Boneless leg of lamb" },
+    {              "label": "Serves", "value": "8" },
+    {              "label": "Temp",   "value": "425° → 350°F" },
+    {              "label": "Target", "value": "125°F rare" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Simple pantry herbs let the quality of the lamb and sweet roasted garlic shine.",
+    "items": [
+      "<strong>1 boneless leg of lamb, 4–4½ lb (2–2.25 kg)</strong>",
+      "<strong>8 large heads garlic</strong>, plus <strong>2 large cloves</strong>",
+      "<strong>Olive oil</strong> for coating",
+      "<strong>2 tsp finely chopped fresh rosemary</strong> or 1 tsp dried",
+      "<strong>1 tsp finely chopped fresh thyme</strong> or ½ tsp dried"
+    ],
+    "callout": "<strong>Roasted garlic tip:</strong> Roasting tames garlic's pungency and brings out its sweetness. Simply squeeze each clove so the soft pulp slips out — serve alongside for diners to spread on the lamb.",
+    "shoppingList": [
+      { "item": "1 boneless leg of lamb, 4–4½ lb" },
+      { "item": "8 large heads garlic + 2 cloves" },
+      { "item": "Olive oil" },
+      { "item": "Fresh rosemary", "substitutes": ["Dried rosemary (use ½ the amount)"] },
+      { "item": "Fresh thyme", "substitutes": ["Dried thyme (use ½ the amount)"] },
+      { "item": "Aluminum foil" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A <strong>classic Sunday roast</strong>: boneless leg of lamb studded with garlic slivers, rubbed with rosemary and thyme, and roasted to a blushing rare. Eight whole garlic heads go in the oven alongside — wrapped in foil, they turn sweet and spreadable for each diner to slather on every slice."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Prep the lamb</strong> — flatten, stud with garlic slivers, coat with herbs and oil",
+            "<strong>Sear at 425°F</strong> for 15 minutes to build a crust",
+            "<strong>Reduce to 350°F</strong> and roast ~1½ hrs to 125°F internal",
+            "<strong>Start garlic heads</strong> 40–50 min before the lamb is due out",
+            "<strong>Rest, carve, and serve</strong> with pan juices and roasted garlic"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Plan ahead:</strong> Garlic needs 40–50 minutes — start it at the right time so it finishes with the lamb."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Prep &amp; Season the Lamb",
+      "checkboxLabel": "Stud with garlic, coat with oil and herbs",
+      "measurements": [
+        { "item": "Garlic (2 large cloves)", "qty": "10 slivers" },
+        { "item": "Olive oil", "qty": "to coat" },
+        { "item": "Fresh rosemary", "qty": "2 tsp chopped", "alts": ["1 tsp dried"] },
+        { "item": "Fresh thyme", "qty": "1 tsp chopped", "alts": ["½ tsp dried"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place an oven rack in the <strong>lower third</strong> of the oven and preheat to <strong>425°F (220°C)</strong>.",
+            "Trim any loose fat from the lamb. Open it flat, <strong>cut side down</strong>, and tuck thin pieces under to create a roast of <strong>uniform thickness</strong>.",
+            "Place the lamb in an oiled heavy roasting pan just large enough to hold it comfortably.",
+            "Peel the <strong>2 garlic cloves</strong> and cut into 10 slivers. Make 10 small cuts in the lamb and insert a garlic sliver in each.",
+            "Coat the lamb with <strong>olive oil</strong> and sprinkle evenly with <strong>rosemary</strong> and <strong>thyme</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Uniform thickness matters:</strong> tucking thin flaps under ensures even cooking and prevents overcooked edges."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Roast the Lamb",
+      "checkboxLabel": "425°F for 15 min, then reduce to 350°F",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Roast at <strong>425°F for 15 minutes</strong> to develop a crust.",
+            "Reduce heat to <strong>350°F (180°C)</strong> and continue roasting until an instant-read thermometer inserted into the thickest part reads <strong>125°F (52°C)</strong> for rare — about <strong>1½ hours</strong> total."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Doneness guide:</strong> 125°F = rare. For medium-rare pull at 130–135°F. Carry-over cooking adds ~5°F during rest."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Roast the Garlic Heads",
+      "checkboxLabel": "Foil-wrap 8 heads, roast until very soft",
+      "measurements": [
+        { "item": "Garlic heads", "qty": "8 large" },
+        { "item": "Olive oil", "qty": "to coat" }
+      ],
+      "body": [
+        {
+          "type": "p",
+          "html": "Start this step <strong>40–50 minutes before the lamb is due to finish</strong>."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Remove the outermost papery skin layer from each garlic head.",
+            "Cut off the <strong>top of each head</strong> to expose the cloves.",
+            "Coat each head generously with <strong>olive oil</strong> and wrap <strong>individually in foil</strong>.",
+            "Arrange cut-side up in a baking dish and place in the oven.",
+            "Roast until <strong>very soft when pressed</strong>, about 40–50 minutes."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Roasting magic:</strong> High heat converts harsh raw garlic into sweet, jammy, spreadable cloves. Press from the base to pop them out of their skins."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Rest the Lamb",
+      "checkboxLabel": "Tent with foil and rest 5–10 minutes",
+      "body": [
+        {
+          "type": "p",
+          "html": "Transfer the lamb to a carving board, cover loosely with <strong>aluminum foil</strong>, and let stand for <strong>5–10 minutes</strong>. This allows the juices to redistribute for a juicier slice."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Carve &amp; Serve",
+      "checkboxLabel": "Slice across grain, spoon juices, serve with garlic",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Slice the lamb <strong>across the grain</strong> and arrange on a warmed platter.",
+            "Skim surface fat from the pan juices and <strong>spoon the juices</strong> over the sliced lamb.",
+            "Unwrap the garlic heads and discard the foil.",
+            "Serve the roasted garlic alongside — each diner squeezes cloves directly onto their lamb slices."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Bonus:</strong> Serve extra roasted garlic with country bread or toast as an appetizer while the lamb rests."
+        }
+      ]
+    }
+  ]
+}
