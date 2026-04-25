@@ -1,0 +1,184 @@
+{
+  "title": "Butterflied Lamb Leg with Rice & Tzatziki",
+  "subtitle": "Seasoned butterflied lamb leg slow-roasted for control, then finished hard in cast iron for browned edges. Built for rice, tzatziki, and lemon.",
+  "storageKey": "butterflied_lamb_leg_rice_tzatziki_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Cut", "value": "Butterflied lamb leg" },
+    { "label": "Weight", "value": "~2.5 lb" },
+    { "label": "Oven", "value": "325°F" },
+    { "label": "Finish", "value": "Cast iron sear" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "This assumes a pre-seasoned lamb leg. The key is drying the surface, cooking gently, then finishing hot.",
+    "items": [
+      "1 seasoned butterflied lamb leg, about 2.5 lb",
+      "1–2 tbsp neutral oil or olive oil, for searing",
+      "1 tbsp butter, optional",
+      "1 lemon, for finishing",
+      "Cooked rice, for serving",
+      "Tzatziki, for serving",
+      "Chopped parsley, dill, or cilantro, optional"
+    ],
+    "callout": "Doneness target: pull from the oven around 125–130°F, then sear to finish around 135–140°F.",
+    "shoppingList": [
+      { "item": "1 seasoned butterflied lamb leg, about 2.5 lb" },
+      { "item": "Neutral oil or olive oil" },
+      { "item": "Butter", "substitutes": ["Skip it"] },
+      { "item": "1 lemon" },
+      { "item": "Rice" },
+      { "item": "Tzatziki" },
+      { "item": "Fresh herbs", "substitutes": ["Parsley", "Dill", "Cilantro"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A juicy, seasoned butterflied lamb leg with browned skillet edges, served over rice with cool tzatziki and lemon."
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Pat the lamb dry so it browns instead of steams",
+            "Roast gently at 325°F until mostly cooked",
+            "Rest briefly so juices settle",
+            "Sear hard in cast iron for crust",
+            "Slice thin against the grain and finish with lemon"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Serving vibe: rice underneath, sliced lamb on top, tzatziki on the side, lemon over everything."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Dry & Temper the Lamb",
+      "checkboxLabel": "Remove from package, pat dry, rest 30–45 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Remove lamb from the package and discard excess marinade liquid.",
+            "Pat the surface lightly dry with paper towels, but do not scrape off the seasoning.",
+            "Let sit at room temperature 30–45 minutes while the oven heats."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Drying matters: wet marinade will steam in the skillet and block browning."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Slow Roast",
+      "checkboxLabel": "Roast at 325°F to 125–130°F internal",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to 325°F.",
+            "Place lamb on a rack over a sheet pan, or directly in a shallow roasting pan.",
+            "Roast until the thickest part reaches 125–130°F."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Expect roughly 25–45 minutes depending on thickness. Use temperature, not the clock."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Rest Before Searing",
+      "checkboxLabel": "Rest 5–10 minutes",
+      "body": [
+        {
+          "type": "p",
+          "html": "Move the lamb to a plate or board and rest 5–10 minutes before the skillet finish."
+        },
+        {
+          "type": "callout",
+          "html": "This short rest helps prevent a flood of juices when the meat hits the hot pan."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Cast Iron Finish",
+      "checkboxLabel": "Sear hard 1–2 min per side",
+      "measurements": [
+        { "item": "Oil", "qty": "1–2 tbsp" },
+        { "item": "Butter", "qty": "1 tbsp optional" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat cast iron over medium-high to high until very hot.",
+            "Add a thin film of oil.",
+            "Sear lamb 1–2 minutes per side without moving it.",
+            "If using butter, add it near the end and baste for 30 seconds."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "You are not trying to cook it much more here — just build browned edges and a little char."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Final Temp & Rest",
+      "checkboxLabel": "Finish around 135–140°F, rest 5 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Check the thickest part after searing.",
+            "Aim for 135–140°F for a juicy medium finish.",
+            "Rest 5 minutes before slicing."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "If it is already at temp after the oven, sear faster and harder — crust only."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Slice & Serve",
+      "checkboxLabel": "Slice against grain, serve with rice + tzatziki",
+      "measurements": [
+        { "item": "Lemon", "qty": "to finish" },
+        { "item": "Rice", "qty": "for serving" },
+        { "item": "Tzatziki", "qty": "for serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Slice lamb thinly against the grain.",
+            "Spoon over rice.",
+            "Add tzatziki on the side or drizzle lightly.",
+            "Finish with fresh lemon and herbs if using."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Balance rule: if the lamb tastes heavy, add lemon. If it tastes flat, add a tiny pinch of salt."
+        }
+      ]
+    }
+  ]
+}
