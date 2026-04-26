@@ -1,0 +1,182 @@
+{
+  "title": "Steakhouse Sirloin Tips",
+  "subtitle": "Marinated sirloin tips with a hard sear and butter finish.",
+  "storageKey": "steakhouse_sirloin_tips_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein",   "value": "Beef sirloin tips" },
+    {              "label": "Pan",        "value": "Cast iron" },
+    {              "label": "Marinade",   "value": "2–4 hrs" },
+    {              "label": "Target",     "value": "Medium-rare to medium" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Dale's is salty — go light on added salt and heavy on black pepper.",
+    "items": [
+      "<strong>2 lbs beef sirloin tips</strong>",
+      "<strong>¼ cup Dale's marinade</strong>",
+      "<strong>1–2 tbsp olive oil</strong>",
+      "<strong>2–3 cloves garlic</strong>, minced or paste",
+      "<strong>Black pepper</strong>, heavy",
+      "<strong>Salt</strong>, light (optional)",
+      "<strong>2 tbsp butter</strong>, for finishing"
+    ],
+    "callout": "<strong>Done when:</strong> deep brown crust, slightly under desired doneness when pulled — carryover finishes it.",
+    "shoppingList": [
+      { "item": "2 lbs beef sirloin tips" },
+      { "item": "Dale's marinade" },
+      { "item": "Olive oil" },
+      { "item": "2–3 cloves garlic", "substitutes": ["Garlic paste"] },
+      { "item": "Black pepper" },
+      { "item": "Butter" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Sirloin tips marinated in Dale's, olive oil, and garlic, then hit with a <strong>high-heat cast-iron sear</strong> and finished with a butter baste. Simple process — the marinade and crust do the work."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Marinate</strong> 2–4 hours in the fridge",
+            "<strong>Temper</strong> 15–20 min before cooking",
+            "<strong>Pat dry</strong> — dry surface = real crust",
+            "<strong>Sear</strong> hard on both sides without moving",
+            "<strong>Butter baste</strong> with garlic at the end",
+            "<strong>Rest</strong> briefly before serving"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't crowd the pan.</strong> Crowding drops temp and steams instead of sears — cook in batches if needed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Marinate",
+      "checkboxLabel": "Bag, coat, refrigerate 2–4 hrs",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add sirloin tips to a <strong>zip bag</strong>.",
+            "Pour in Dale's marinade, olive oil, garlic, and a heavy hit of black pepper.",
+            "Seal with some air trapped and <strong>massage</strong> until evenly coated.",
+            "Refrigerate <strong>2–4 hours</strong>, flipping once if you can."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Skip added salt</strong> — Dale's brings plenty. Taste after cooking if needed."
+        }
+      ],
+      "measurements": [
+        { "item": "Beef sirloin tips", "qty": "2 lbs" },
+        { "item": "Dale's marinade",   "qty": "¼ cup" },
+        { "item": "Olive oil",         "qty": "1–2 tbsp" },
+        { "item": "Garlic",            "qty": "2–3 cloves", "alts": ["Garlic paste"] },
+        { "item": "Black pepper",      "qty": "heavy" }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Temper & Dry",
+      "checkboxLabel": "Remove from fridge 15–20 min; pat dry",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pull meat from the fridge <strong>15–20 minutes</strong> before cooking.",
+            "Remove from the bag and <strong>pat dry</strong> with paper towels — leave just a slight sheen.",
+            "Heat cast iron over <strong>high heat</strong> until very hot."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Dry = crust.</strong> Wet meat steams in the pan and won't brown properly."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Sear — Side 1",
+      "checkboxLabel": "Add oil, sear 2–3 min without moving",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add a small amount of <strong>oil</strong> to the hot pan.",
+            "Add meat in a <strong>single layer</strong>.",
+            "Sear <strong>2–3 minutes without moving</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't touch it.</strong> Moving early tears the crust before it sets."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Sear — Side 2",
+      "checkboxLabel": "Flip, sear another 2–3 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Flip</strong> the pieces.",
+            "Sear the second side <strong>2–3 minutes</strong>.",
+            "If pieces are uneven, <strong>remove smaller ones early</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Butter Finish",
+      "checkboxLabel": "Reduce heat; add butter + garlic; baste 30–60 sec",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Reduce heat</strong> slightly.",
+            "Add <strong>butter and garlic</strong> to the pan.",
+            "Spoon the melted butter over the meat for <strong>30–60 seconds</strong>.",
+            "Pull meat <strong>slightly under</strong> your target doneness — it keeps cooking off heat."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Best at medium-rare to medium</strong> — don't push past medium or the texture suffers."
+        }
+      ],
+      "measurements": [
+        { "item": "Butter", "qty": "2 tbsp" }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Rest & Serve",
+      "checkboxLabel": "Rest briefly and serve",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Transfer to a plate and <strong>rest briefly</strong> before serving.",
+            "Serve as-is or slice against the grain."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Built for high heat and a strong sear.</strong> Don't overthink it."
+        }
+      ]
+    }
+  ]
+}
