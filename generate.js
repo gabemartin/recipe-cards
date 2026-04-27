@@ -638,6 +638,45 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
 .expanded-step-pane .checkrow label{
   font-size: 0.875em;
 }
+.pane-main{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pane-sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .expanded-step-pane{
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 1100px;
+    gap: clamp(20px, 3vw, 40px);
+    padding: clamp(16px, 2.5vw, 32px);
+    font-size: clamp(100%, 1.8vw, 135%);
+  }
+  .expanded-step-pane .h{ font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl)); }
+  .expanded-step-pane .kicker{ font-size: var(--text-sm); }
+  .pane-main{
+    flex: 1;
+    min-width: 0;
+  }
+  .pane-sidebar{
+    width: clamp(260px, 32%, 380px);
+    flex-shrink: 0;
+    position: sticky;
+    top: clamp(16px, 2.5vw, 32px);
+    align-self: flex-start;
+  }
+  .pane-sidebar .measures-qty{
+    white-space: normal;
+  }
+}
+.pane-sidebar .callout{ margin-top: 0; }
+.pane-sidebar .step-actions{ margin-top: 0; }
+.pane-sidebar .measures{ margin-top: 0; }
 .expanded-steps-body{
   flex: 1;
   min-height: 0;
@@ -825,6 +864,13 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   margin: 10px 0 10px 0;
 }
 
+@media (min-width: 640px) {
+  .app{ max-width: 780px; }
+  .title{ font-size: clamp(22px,3.5vw,30px); }
+  .hero-img{ max-height: clamp(220px,28vw,360px); }
+  .h{ font-size: clamp(24px,3.5vw,32px); }
+  .p, ul{ font-size: var(--text-lg); }
+}
 @media print{
   body{ background:#fff; color:#000; }
   header,.bottombar,.swiper-pagination{ display:none !important; }
@@ -1003,7 +1049,8 @@ function buildHTML(recipe, slug, imageFile) {
               <label for="fsc${i}">${s.checkboxLabel}</label>
             </div>`
       : "";
-    const body = s.body.map(renderBodyBlock).join("\n          ");
+    const mainBody = s.body.filter(b => b.type !== "callout").map(renderBodyBlock).join("\n          ");
+    const sidebarCallouts = s.body.filter(b => b.type === "callout").map(renderBodyBlock).join("\n          ");
     const measures = renderMeasurements(s.measurements);
     const promptButton = renderPromptButton({
       label: i === 0 ? "Copy Recipe Prompt" : "Copy Prompt",
@@ -1012,13 +1059,18 @@ function buildHTML(recipe, slug, imageFile) {
     });
     return `          <div class="swiper-slide">
             <div class="expanded-step-pane">
-              <p class="kicker">${s.kicker}</p>
-              <h2 class="h">${s.title}</h2>
-              <div class="cardbody">
-                ${checkbox}
-          ${body}
-          ${measures}
+              <div class="pane-main">
+                <p class="kicker">${s.kicker}</p>
+                <h2 class="h">${s.title}</h2>
+                <div class="cardbody">
+                  ${checkbox}
+          ${mainBody}
+                </div>
+              </div>
+              <div class="pane-sidebar">
                 <div class="step-actions">${promptButton}</div>
+          ${measures}
+          ${sidebarCallouts}
               </div>
             </div>
           </div>`;
@@ -1783,13 +1835,13 @@ function buildIndex(entries) {
       -webkit-font-smoothing:antialiased;
       min-height:100%;
     }
-    .wrap{ max-width:560px; margin:0 auto; padding:24px 14px 40px; padding-top:max(24px,env(safe-area-inset-top)); }
+    .wrap{ max-width:1200px; margin:0 auto; padding:clamp(20px,5vw,48px); padding-top:max(clamp(20px,5vw,48px),env(safe-area-inset-top)); padding-bottom:clamp(40px,6vw,64px); }
     .page-header{
       display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
       margin-bottom:24px;
     }
     .page-title{
-      font-size:28px; font-weight:900; margin:0 0 4px;
+      font-size:clamp(24px,4vw,42px); font-weight:900; margin:0 0 4px;
       letter-spacing:.2px; line-height:1.1;
     }
     .page-sub{ color:var(--foreground-secondary); font-size:var(--text-sm); margin:0; line-height:1.4; }
@@ -1810,7 +1862,7 @@ function buildIndex(entries) {
       transform:translateX(20px);
       background:#fff;
     }
-    .list{ display:flex; flex-direction:column; gap:12px; }
+    .list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr)); gap:clamp(10px,2vw,18px); }
     .icard{
       display:flex; flex-direction:column; gap:12px;
       border-radius:var(--radius-xl); border:1px solid var(--border);
@@ -1825,7 +1877,7 @@ function buildIndex(entries) {
     .icard-thumb{
       aspect-ratio:16/10;
       width:100%;
-      max-height:140px;
+      max-height:clamp(140px,22vw,260px);
       border-radius:var(--radius-lg);
       overflow:hidden;
       border:1px solid var(--border);
