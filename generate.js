@@ -880,6 +880,26 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   .muted,.callout,.chip{ color:#333 !important; }
   .expand-btn,.step-actions{ display:none !important; }
 }
+/* ── Pull-to-refresh ──────────────────────────────── */
+#ptr{
+  position:fixed;top:0;left:50%;z-index:200;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--surface-muted);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-elevated);
+  display:grid;place-items:center;
+  pointer-events:none;
+  transform:translate(-50%,-56px);
+  color:var(--foreground-tertiary);
+  transition:border-color .15s,color .15s;
+}
+#ptr.armed{
+  border-color:color-mix(in srgb,var(--accent) 55%,transparent);
+  color:var(--accent);
+}
+.ptr-icon{width:22px;height:22px;display:block;}
+#ptr.refreshing .ptr-icon{animation:ptr-spin .7s linear infinite;}
+@keyframes ptr-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 `.trim();
 
 // Heroicons v2 outline (MIT) — https://heroicons.com/
@@ -1130,6 +1150,7 @@ function buildHTML(recipe, slug, imageFile) {
 </head>
 
 <body>
+  <div id="ptr" aria-hidden="true"><svg class="ptr-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" /></svg></div>
   <div class="app">
     <header class="safe-top">
       <nav class="top-nav">
@@ -1750,6 +1771,47 @@ ${expandedSlidesHtml}
         }
       });
     });
+
+    // Pull to refresh
+    (function(){
+      var THRESHOLD=72,MAX_EXTRA=40;
+      var ptr=document.getElementById("ptr");
+      var startY=0,dragging=false,armed=false;
+      function setY(dy){
+        var extra=dy>THRESHOLD?Math.min(dy-THRESHOLD,MAX_EXTRA)*0.25:0;
+        var t=Math.min(dy/THRESHOLD,1);
+        ptr.style.transform="translate(-50%,"+(-56+68*t+extra)+"px)";
+        armed=dy>=THRESHOLD;
+        ptr.classList.toggle("armed",armed);
+      }
+      function reset(){
+        ptr.style.transition="transform .25s ease";
+        ptr.style.transform="translate(-50%,-56px)";
+        ptr.classList.remove("armed");
+        armed=false;
+        setTimeout(function(){ptr.style.transition="";},250);
+      }
+      document.addEventListener("touchstart",function(e){
+        if(window.scrollY>0)return;
+        if(document.querySelector("dialog[open]"))return;
+        startY=e.touches[0].clientY;
+        dragging=false;
+      },{passive:true});
+      document.addEventListener("touchmove",function(e){
+        if(document.querySelector("dialog[open]"))return;
+        if(window.scrollY>0){dragging=false;return;}
+        var dy=e.touches[0].clientY-startY;
+        if(dy<=2){dragging=false;return;}
+        dragging=true;
+        setY(dy);
+      },{passive:true});
+      document.addEventListener("touchend",function(){
+        if(!dragging)return;
+        dragging=false;
+        if(armed){ptr.classList.add("refreshing");setTimeout(function(){window.location.reload();},300);}
+        else reset();
+      });
+    })();
   </script>
 </body>
 </html>`;
@@ -1938,9 +2000,15 @@ function buildIndex(entries) {
       background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
     .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
+    #ptr{position:fixed;top:0;left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,-56px);color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
+    #ptr.armed{border-color:color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent);}
+    .ptr-icon{width:22px;height:22px;display:block;}
+    #ptr.refreshing .ptr-icon{animation:ptr-spin .7s linear infinite;}
+    @keyframes ptr-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
   </style>
 </head>
 <body>
+  <div id="ptr" aria-hidden="true"><svg class="ptr-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" /></svg></div>
   <div class="wrap">
     <div class="page-header">
       <div>
@@ -1965,6 +2033,43 @@ ${cards || '      <p class="empty">No recipes yet.</p>'}
         localStorage.setItem(KEY,next);
         btn.setAttribute("aria-checked",String(next==="light"));
         meta.content=next==="light"?LIGHT_BG:DARK_BG;
+      });
+    })();
+    (function(){
+      var THRESHOLD=72,MAX_EXTRA=40;
+      var ptr=document.getElementById("ptr");
+      var startY=0,dragging=false,armed=false;
+      function setY(dy){
+        var extra=dy>THRESHOLD?Math.min(dy-THRESHOLD,MAX_EXTRA)*0.25:0;
+        var t=Math.min(dy/THRESHOLD,1);
+        ptr.style.transform="translate(-50%,"+(-56+68*t+extra)+"px)";
+        armed=dy>=THRESHOLD;
+        ptr.classList.toggle("armed",armed);
+      }
+      function reset(){
+        ptr.style.transition="transform .25s ease";
+        ptr.style.transform="translate(-50%,-56px)";
+        ptr.classList.remove("armed");
+        armed=false;
+        setTimeout(function(){ptr.style.transition="";},250);
+      }
+      document.addEventListener("touchstart",function(e){
+        if(window.scrollY>0)return;
+        startY=e.touches[0].clientY;
+        dragging=false;
+      },{passive:true});
+      document.addEventListener("touchmove",function(e){
+        if(window.scrollY>0){dragging=false;return;}
+        var dy=e.touches[0].clientY-startY;
+        if(dy<=2){dragging=false;return;}
+        dragging=true;
+        setY(dy);
+      },{passive:true});
+      document.addEventListener("touchend",function(){
+        if(!dragging)return;
+        dragging=false;
+        if(armed){ptr.classList.add("refreshing");setTimeout(function(){window.location.reload();},300);}
+        else reset();
       });
     })();
   </script>
