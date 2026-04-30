@@ -881,6 +881,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   .expand-btn,.step-actions{ display:none !important; }
 }
 /* ── Pull-to-refresh ──────────────────────────────── */
+/* Visible slot clears notch; idle translate lifts entire circle above the viewport */
 #ptr{
   position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;
   width:44px;height:44px;border-radius:50%;
@@ -889,7 +890,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   box-shadow:var(--shadow-elevated);
   display:grid;place-items:center;
   pointer-events:none;
-  transform:translate(-50%,calc(-56px - env(safe-area-inset-top, 0px) - 2em));
+  transform:translate(-50%,calc(-100% - env(safe-area-inset-top, 0px) - 2em - 16px));
   color:var(--foreground-tertiary);
   transition:border-color .15s,color .15s;
 }
@@ -1772,19 +1773,21 @@ ${expandedSlidesHtml}
       });
     });
 
-    // Pull to refresh (hidden Y matches CSS: top edge at -56px when idle)
+    // Pull to refresh — rests below notch when shown; slides up fully off-screen when idle
     (function(){
-      var THRESHOLD=72,MAX_EXTRA=40;
+      var THRESHOLD=72,MAX_EXTRA=40,GAP=16;
       var ptr=document.getElementById("ptr");
       var startY=0,dragging=false,armed=false;
       function hiddenY(){
-        var topPx=parseFloat(getComputedStyle(ptr).top);
-        return -(56+(isNaN(topPx)?0:topPx));
+        var topPx=parseFloat(getComputedStyle(ptr).top)||0;
+        var h=ptr.offsetHeight||44;
+        return -(topPx+h+GAP);
       }
       function setY(dy){
+        var hid=hiddenY();
         var extra=dy>THRESHOLD?Math.min(dy-THRESHOLD,MAX_EXTRA)*0.25:0;
         var t=Math.min(dy/THRESHOLD,1);
-        ptr.style.transform="translate(-50%,"+(hiddenY()+68*t+extra)+"px)";
+        ptr.style.transform="translate(-50%,"+(hid*(1-t)+extra)+"px)";
         armed=dy>=THRESHOLD;
         ptr.classList.toggle("armed",armed);
       }
@@ -1815,7 +1818,12 @@ ${expandedSlidesHtml}
       document.addEventListener("touchend",function(){
         if(!dragging)return;
         dragging=false;
-        if(armed){ptr.classList.add("refreshing");setTimeout(function(){window.location.reload();},300);}
+        if(armed){
+          ptr.style.transition="";
+          ptr.style.transform="translate(-50%,0)";
+          ptr.classList.add("refreshing");
+          setTimeout(function(){window.location.reload();},300);
+        }
         else reset();
       });
     })();
@@ -2007,7 +2015,7 @@ function buildIndex(entries) {
       background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
     .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
-    #ptr{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,calc(-56px - env(safe-area-inset-top, 0px) - 2em));color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
+    #ptr{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,calc(-100% - env(safe-area-inset-top, 0px) - 2em - 16px));color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
     #ptr.armed{border-color:color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent);}
     .ptr-icon{width:22px;height:22px;display:block;}
     #ptr.refreshing .ptr-icon{animation:ptr-spin .7s linear infinite;}
@@ -2043,17 +2051,19 @@ ${cards || '      <p class="empty">No recipes yet.</p>'}
       });
     })();
     (function(){
-      var THRESHOLD=72,MAX_EXTRA=40;
+      var THRESHOLD=72,MAX_EXTRA=40,GAP=16;
       var ptr=document.getElementById("ptr");
       var startY=0,dragging=false,armed=false;
       function hiddenY(){
-        var topPx=parseFloat(getComputedStyle(ptr).top);
-        return -(56+(isNaN(topPx)?0:topPx));
+        var topPx=parseFloat(getComputedStyle(ptr).top)||0;
+        var h=ptr.offsetHeight||44;
+        return -(topPx+h+GAP);
       }
       function setY(dy){
+        var hid=hiddenY();
         var extra=dy>THRESHOLD?Math.min(dy-THRESHOLD,MAX_EXTRA)*0.25:0;
         var t=Math.min(dy/THRESHOLD,1);
-        ptr.style.transform="translate(-50%,"+(hiddenY()+68*t+extra)+"px)";
+        ptr.style.transform="translate(-50%,"+(hid*(1-t)+extra)+"px)";
         armed=dy>=THRESHOLD;
         ptr.classList.toggle("armed",armed);
       }
@@ -2084,7 +2094,12 @@ ${cards || '      <p class="empty">No recipes yet.</p>'}
       document.addEventListener("touchend",function(){
         if(!dragging)return;
         dragging=false;
-        if(armed){ptr.classList.add("refreshing");setTimeout(function(){window.location.reload();},300);}
+        if(armed){
+          ptr.style.transition="";
+          ptr.style.transform="translate(-50%,0)";
+          ptr.classList.add("refreshing");
+          setTimeout(function(){window.location.reload();},300);
+        }
         else reset();
       });
     })();
