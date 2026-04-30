@@ -882,7 +882,7 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
 }
 /* ── Pull-to-refresh ──────────────────────────────── */
 #ptr{
-  position:fixed;top:0;left:50%;z-index:200;
+  position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;
   width:44px;height:44px;border-radius:50%;
   background:var(--surface-muted);
   border:1px solid var(--border);
@@ -1791,15 +1791,18 @@ ${expandedSlidesHtml}
         armed=false;
         setTimeout(function(){ptr.style.transition="";},250);
       }
+      function atScrollTop(){
+        return (window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0) <= 0;
+      }
       document.addEventListener("touchstart",function(e){
-        if(window.scrollY>0)return;
+        if(!atScrollTop())return;
         if(document.querySelector("dialog[open]"))return;
         startY=e.touches[0].clientY;
         dragging=false;
       },{passive:true});
       document.addEventListener("touchmove",function(e){
         if(document.querySelector("dialog[open]"))return;
-        if(window.scrollY>0){dragging=false;return;}
+        if(!atScrollTop()){dragging=false;return;}
         var dy=e.touches[0].clientY-startY;
         if(dy<=2){dragging=false;return;}
         dragging=true;
@@ -2000,7 +2003,7 @@ function buildIndex(entries) {
       background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
     .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
-    #ptr{position:fixed;top:0;left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,-56px);color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
+    #ptr{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,-56px);color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
     #ptr.armed{border-color:color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent);}
     .ptr-icon{width:22px;height:22px;display:block;}
     #ptr.refreshing .ptr-icon{animation:ptr-spin .7s linear infinite;}
@@ -2053,13 +2056,18 @@ ${cards || '      <p class="empty">No recipes yet.</p>'}
         armed=false;
         setTimeout(function(){ptr.style.transition="";},250);
       }
+      function atScrollTop(){
+        return (window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0) <= 0;
+      }
       document.addEventListener("touchstart",function(e){
-        if(window.scrollY>0)return;
+        if(!atScrollTop())return;
+        if(document.querySelector("dialog[open]"))return;
         startY=e.touches[0].clientY;
         dragging=false;
       },{passive:true});
       document.addEventListener("touchmove",function(e){
-        if(window.scrollY>0){dragging=false;return;}
+        if(document.querySelector("dialog[open]"))return;
+        if(!atScrollTop()){dragging=false;return;}
         var dy=e.touches[0].clientY-startY;
         if(dy<=2){dragging=false;return;}
         dragging=true;
