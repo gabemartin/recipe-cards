@@ -1,0 +1,207 @@
+{
+  "title": "Lemon Herb Rice",
+  "subtitle": "Fluffy rice finished with lemon, olive oil, and fresh herbs — built for lamb, tzatziki, and grilled meats.",
+  "storageKey": "lemon_herb_rice_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Style", "value": "Mediterranean-inspired" },
+    { "label": "Texture", "value": "Fluffy, separate grains" },
+    { "label": "Best Rice", "value": "Basmati or long grain" },
+    { "label": "Cook Time", "value": "~15 min + 10 min rest" },
+    { "label": "Serves", "value": "3–4" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Two phases: a simple base cooked with salt and fat, then a bright finish added off heat.",
+    "items": [
+      "<strong>Base</strong>",
+      "1 cup long grain white rice (basmati preferred)",
+      "1¾–2 cups water or chicken broth",
+      "1 tbsp olive oil or butter",
+      "1 tsp kosher salt (adjust to taste)",
+      "<strong>Finish</strong>",
+      "Zest of ½ lemon",
+      "1–2 tsp lemon juice",
+      "1 tbsp chopped parsley or dill",
+      "Small drizzle olive oil (optional)"
+    ],
+    "shoppingList": [
+      { "item": "1 cup long grain white rice (basmati preferred)" },
+      { "item": "Chicken broth or water", "substitutes": ["Water"] },
+      { "item": "Olive oil or butter" },
+      { "item": "Kosher salt" },
+      { "item": "1 lemon" },
+      { "item": "Fresh parsley or dill", "substitutes": ["Parsley", "Dill"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Light, fluffy rice cooked in salted liquid and finished off heat with lemon zest, juice, and fresh herbs. Simple technique, clean result."
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Rinse rice to remove excess starch",
+            "Toast briefly in fat for better texture",
+            "Cook covered at low heat for 15 minutes",
+            "Rest off heat for 10 minutes — don't skip this",
+            "Finish with lemon and herbs after fluffing"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Serving vibe: rice underneath, lamb or chicken on top, tzatziki on the side, lemon over everything."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Rinse the Rice",
+      "checkboxLabel": "Rinse until water runs clear, drain thoroughly",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place rice in a bowl or fine-mesh strainer.",
+            "Rinse under cold water until the water runs mostly clear.",
+            "Drain thoroughly before adding to the pot."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Rinsing removes excess surface starch and keeps the rice fluffy instead of gummy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Toast the Rice",
+      "checkboxLabel": "Toast in oil 1–2 min until lightly steamy",
+      "measurements": [
+        { "item": "Olive oil or butter", "qty": "1 tbsp" },
+        { "item": "Drained rice", "qty": "1 cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat olive oil or butter in a pot over medium heat.",
+            "Add the drained rice.",
+            "Stir for 1–2 minutes until lightly steamy and slightly nutty smelling."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "You are not deeply browning the rice — just drying the surface slightly and coating the grains with fat."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Cook",
+      "checkboxLabel": "Covered at low heat for 15 min — do not open lid",
+      "measurements": [
+        { "item": "Water or broth", "qty": "1¾–2 cups" },
+        { "item": "Kosher salt", "qty": "1 tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add water or broth and salt to the pot.",
+            "Bring to a boil.",
+            "Immediately cover and reduce heat to LOW.",
+            "Cook covered for 15 minutes."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Do not open the lid while cooking. Lifting it releases steam and disrupts the cook."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Rest",
+      "checkboxLabel": "Heat off, lid on — rest 10 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Turn the heat OFF.",
+            "Leave the lid on undisturbed for 10 minutes."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "This resting phase finishes the rice gently and allows remaining moisture to absorb evenly. Don't rush it."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Finish",
+      "checkboxLabel": "Fluff, add lemon and herbs, taste and adjust",
+      "measurements": [
+        { "item": "Lemon zest", "qty": "½ lemon" },
+        { "item": "Lemon juice", "qty": "1–2 tsp" },
+        { "item": "Parsley or dill", "qty": "1 tbsp chopped" },
+        { "item": "Olive oil", "qty": "small drizzle, optional" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Remove the lid.",
+            "Fluff gently with a fork — don't stir or mash.",
+            "Add lemon zest, lemon juice, herbs, and a small drizzle of olive oil if desired."
+          ]
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "More lemon → brighter",
+            "More salt → fuller flavor"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "Target: separate grains, light and fluffy, bright citrusy finish. Not sticky or wet."
+        }
+      ]
+    },
+    {
+      "kicker": "Serving",
+      "title": "Serving Suggestions",
+      "body": [
+        {
+          "type": "p",
+          "html": "This rice is built to pair with bold, savory mains and cool sauces."
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Butterflied lamb leg",
+            "Tzatziki",
+            "Chicken skewers",
+            "Salmon",
+            "Roasted vegetables"
+          ]
+        }
+      ]
+    }
+  ]
+}
