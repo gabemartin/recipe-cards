@@ -1,0 +1,168 @@
+{
+  "title": "Clams on Toast",
+  "subtitle": "In Herbed White Wine",
+  "storageKey": "clams_on_toast_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein",     "value": "Manila Clams" },
+    {              "label": "Bread",       "value": "Sourdough" },
+    {              "label": "Serves",      "value": "2" },
+    {              "label": "Total Time",  "value": "30 min" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Manila clams are ideal — smaller and more tender. Littleneck clams work but need ~5 extra minutes.",
+    "items": [
+      "<strong>2 tbsp extra-virgin olive oil</strong>, plus more for serving",
+      "<strong>4 slices thick-cut sourdough bread</strong>",
+      "<strong>4 garlic cloves</strong> — 2 halved, 2 smashed",
+      "<strong>3 oz thinly sliced prosciutto</strong>, torn",
+      "<strong>2 tbsp fresh thyme leaves</strong>",
+      "<strong>1 tbsp chopped fresh oregano</strong>",
+      "<strong>1 cup dry white wine</strong> (pinot grigio or Sauvignon Blanc)",
+      "<strong>Kosher salt &amp; freshly ground pepper</strong>",
+      "<strong>2 lbs Manila clams</strong> (see note above)",
+      "<strong>Crushed red pepper flakes</strong>, for serving",
+      "<strong>Fresh basil leaves</strong>, for serving"
+    ],
+    "callout": "<strong>No wine?</strong> Substitute an equal amount of chicken broth. The broth still carries the garlic and herb flavor beautifully.",
+    "shoppingList": [
+      { "item": "2 lbs Manila clams",          "substitutes": ["Littleneck clams (cook ~5 min longer)"] },
+      { "item": "4 slices thick-cut sourdough", "substitutes": ["Ciabatta", "Country bread"] },
+      { "item": "3 oz prosciutto",              "substitutes": ["Pancetta", "Crispy bacon"] },
+      { "item": "1 cup dry white wine",         "substitutes": ["Chicken broth"] },
+      { "item": "Fresh thyme (small bunch)" },
+      { "item": "Fresh oregano (small bunch)" },
+      { "item": "Fresh basil (small bunch)" },
+      { "item": "Garlic (1 head)" },
+      { "item": "Extra-virgin olive oil" },
+      { "item": "Crushed red pepper flakes" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Garlicky toasted sourdough piled high with Manila clams steamed open in a white wine broth with thyme, oregano, and crispy prosciutto. Fancy-looking, 30-minute weeknight dinner."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Toast sourdough</strong> in olive oil, rub with raw garlic",
+            "<strong>Crisp prosciutto</strong> in the same skillet",
+            "<strong>Build the broth</strong> — smashed garlic, thyme, oregano, wine",
+            "<strong>Steam clams</strong> until open and broth reduces by a third",
+            "<strong>Spoon over toast</strong>, crumble prosciutto on top, finish with basil"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>One skillet, one pan.</strong> The prosciutto crisps in olive oil, then the broth builds right in the same skillet — all that rendered fat goes into the sauce."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Toast the Bread",
+      "checkboxLabel": "Bread toasted and rubbed with garlic",
+      "measurements": [
+        { "item": "Extra-virgin olive oil", "qty": "2 tbsp" },
+        { "item": "Sourdough bread",        "qty": "4 thick slices" },
+        { "item": "Garlic cloves (halved)", "qty": "2" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat <strong>2 tbsp olive oil</strong> in a large skillet over <strong>medium heat</strong>.",
+            "When the oil shimmers, add the bread slices.",
+            "Cook until <strong>golden and toasted</strong>, <strong>1–2 minutes per side</strong>.",
+            "Remove the bread from the skillet.",
+            "Immediately rub each slice with the <strong>cut side of a halved garlic clove</strong>.",
+            "Set toast aside on plates."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Garlic rub trick:</strong> The raw cut garlic melts into the hot, oily toast — no need to mince. Do it while the bread is still hot."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Crisp the Prosciutto",
+      "checkboxLabel": "Prosciutto crisped and set aside",
+      "measurements": [
+        { "item": "Prosciutto", "qty": "3 oz, torn" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Using the <strong>same skillet</strong> over <strong>medium heat</strong>, lay in the prosciutto.",
+            "Cook <strong>without moving</strong> until crisp, <strong>2–3 minutes per side</strong>.",
+            "Remove and set aside — it will crisp up further as it cools.",
+            "Leave the rendered fat in the skillet — it's flavor."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't rush it:</strong> Resist the urge to move the prosciutto. Let it sit flat so it crisps evenly rather than curling and steaming."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Build the Broth &amp; Steam Clams",
+      "checkboxLabel": "Clams open and broth reduced",
+      "measurements": [
+        { "item": "Garlic cloves (smashed)", "qty": "2" },
+        { "item": "Fresh thyme leaves",      "qty": "2 tbsp" },
+        { "item": "Fresh oregano, chopped",  "qty": "1 tbsp" },
+        { "item": "Dry white wine",          "qty": "1 cup", "alts": ["Chicken broth"] },
+        { "item": "Manila clams",            "qty": "2 lbs", "alts": ["Littleneck clams"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In the same skillet, add <strong>smashed garlic, thyme, and oregano</strong>.",
+            "Cook over medium heat until <strong>fragrant, about 1 minute</strong>.",
+            "Pour in the <strong>wine</strong>, season with <strong>salt and pepper</strong>.",
+            "Bring to a <strong>simmer over high heat</strong>.",
+            "Add the <strong>clams</strong>, cover, and cook until clams open and sauce reduces by one-third — <strong>8–10 minutes</strong>.",
+            "<strong>Discard any clams that don't open</strong> after 10 minutes."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Littleneck clams:</strong> Need about 5 extra minutes to open up. Keep the heat steady and lid on."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Serve",
+      "checkboxLabel": "Plated and on the table",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Divide the <strong>garlic toast</strong> between two wide bowls or plates.",
+            "Spoon the <strong>clams and wine broth</strong> generously over the top.",
+            "<strong>Crumble the crisped prosciutto</strong> over the clams.",
+            "Finish with <strong>crushed red pepper flakes</strong>, <strong>fresh basil</strong>, and a drizzle of olive oil.",
+            "Serve immediately with extra bread to sop up the broth."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Leftovers:</strong> Store any remaining sauce (without the toast) refrigerated in an airtight container for 1–2 days. The clams don't reheat well — eat those fresh."
+        }
+      ]
+    }
+  ]
+}
