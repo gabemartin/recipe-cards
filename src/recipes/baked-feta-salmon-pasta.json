@@ -1,0 +1,193 @@
+{
+  "title": "Baked Feta Salmon Pasta",
+  "subtitle": "Salmon and feta bake together with cherry tomatoes, spinach, and pesto into a silky one-dish sauce.",
+  "storageKey": "baked_feta_salmon_pasta_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "2 salmon fillets" },
+    {              "label": "Serves",  "value": "2" },
+    {              "label": "Temp",    "value": "375°F — 30 min" },
+    {              "label": "Style",   "value": "One-pan bake" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Everything bakes together—the feta melts into a creamy sauce with the tomato juices.",
+    "items": [
+      "<strong>2 salmon fillets</strong> (skin-on or skinless)",
+      "<strong>1 block feta</strong> (~7 oz)",
+      "<strong>2 cups cherry tomatoes</strong>, halved",
+      "<strong>4 cups fresh spinach</strong>",
+      "<strong>1 head garlic</strong>, cloves separated (unpeeled)",
+      "<strong>2 tbsp pesto</strong>",
+      "<strong>Juice of 1 lemon</strong>",
+      "<strong>½ tsp onion powder</strong>",
+      "<strong>½ tsp garlic powder</strong>",
+      "<strong>½ tsp paprika</strong>",
+      "<strong>Salt + black pepper</strong> to taste",
+      "<strong>2–3 tbsp olive oil</strong>",
+      "<strong>8 oz pasta</strong> (any short shape)",
+      "<strong>¼–½ cup pasta water</strong> (reserved before draining)"
+    ],
+    "callout": "<strong>Key tip:</strong> Reserve pasta water before draining—the starch emulsifies the feta sauce.",
+    "shoppingList": [
+      { "item": "2 salmon fillets", "substitutes": ["Cod", "Tilapia"] },
+      { "item": "Feta block (7 oz)", "substitutes": ["Crumbled feta (won't melt as smoothly)"] },
+      { "item": "Cherry tomatoes (1 pint)" },
+      { "item": "Fresh spinach (5 oz bag)", "substitutes": ["Baby arugula", "Chopped kale"] },
+      { "item": "Garlic (1 head)" },
+      { "item": "Pesto (1 jar)", "substitutes": ["Homemade basil pesto"] },
+      { "item": "1 lemon" },
+      { "item": "Olive oil" },
+      { "item": "Pasta (8 oz)", "substitutes": ["Penne", "Rigatoni", "Farfalle", "Spaghetti"] },
+      { "item": "Onion powder" },
+      { "item": "Garlic powder" },
+      { "item": "Paprika" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Salmon fillets bake alongside a block of feta, cherry tomatoes, garlic, and spinach. Everything melds in the oven, then gets stirred together with pesto and pasta water into a rich, creamy sauce. Toss with pasta, flake the salmon on top."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season salmon</strong> with spices + lemon",
+            "<strong>Assemble baking dish</strong> with feta, tomatoes, garlic, spinach",
+            "<strong>Bake at 375°F</strong> for 30 minutes",
+            "<strong>Build the sauce</strong>—mash feta, squeeze roasted garlic, stir",
+            "<strong>Toss pasta</strong> in sauce, top with flaked salmon"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>One pan:</strong> Everything bakes in a single dish. Minimal cleanup."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season the Salmon",
+      "checkboxLabel": "Season salmon, set aside",
+      "measurements": [
+        { "item": "Salmon fillets", "qty": "2" },
+        { "item": "Lemon juice", "qty": "from 1 lemon" },
+        { "item": "Olive oil", "qty": "1 tbsp" },
+        { "item": "Onion powder", "qty": "½ tsp" },
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Paprika", "qty": "½ tsp" },
+        { "item": "Salt + pepper", "qty": "to taste" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat salmon <strong>dry</strong> with paper towels.",
+            "Drizzle with <strong>lemon juice + olive oil</strong>.",
+            "Season with <strong>onion powder, garlic powder, paprika, salt, and pepper</strong>.",
+            "Set aside while you assemble the baking dish."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Assemble the Baking Dish",
+      "checkboxLabel": "Feta, tomatoes, garlic, spinach in dish",
+      "measurements": [
+        { "item": "Feta block", "qty": "~7 oz" },
+        { "item": "Cherry tomatoes", "qty": "2 cups, halved" },
+        { "item": "Garlic", "qty": "1 head, cloves separated" },
+        { "item": "Fresh spinach", "qty": "4 cups" },
+        { "item": "Pesto", "qty": "2 tbsp" },
+        { "item": "Olive oil", "qty": "1–2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place <strong>feta block in the center</strong> of a large baking dish.",
+            "Scatter <strong>cherry tomatoes and garlic cloves</strong> (unpeeled) around the feta.",
+            "Add <strong>spinach</strong> around the edges.",
+            "Dollop <strong>pesto</strong> over everything.",
+            "Drizzle with <strong>olive oil</strong>.",
+            "Nestle the <strong>seasoned salmon fillets</strong> in the dish alongside the feta."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Leave garlic unpeeled:</strong> The cloves roast in their skins and turn sweet and soft. Squeeze them out after baking."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Bake",
+      "checkboxLabel": "Bake 30 min at 375°F",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Bake at <strong>375°F (190°C)</strong> for <strong>30 minutes</strong>.",
+            "Salmon should be <strong>cooked through and flaking</strong> at the edges.",
+            "Feta should be <strong>soft and lightly golden</strong>.",
+            "While it bakes, <strong>cook pasta</strong> in well-salted water.",
+            "<strong>Reserve ½ cup pasta water</strong> before draining."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't skip the pasta water:</strong> The starch is what turns the baked feta into a pourable, creamy sauce."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Build the Sauce",
+      "checkboxLabel": "Mash feta, stir everything together",
+      "measurements": [
+        { "item": "Pasta water", "qty": "¼–½ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Remove dish from oven.",
+            "<strong>Squeeze garlic cloves</strong> out of their skins—discard skins.",
+            "<strong>Mash the feta</strong> and stir it together with the tomatoes, roasted garlic, and spinach.",
+            "Add <strong>pasta water a splash at a time</strong> until the sauce is loose and creamy.",
+            "Taste and adjust <strong>salt + pepper</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Texture check:</strong> Sauce should be creamy and pourable, not thick like a dip. Keep adding pasta water until it coats a spoon."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Combine + Serve",
+      "checkboxLabel": "Toss pasta in sauce, top with salmon",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>drained pasta</strong> directly into the baking dish.",
+            "Toss to coat in the feta sauce.",
+            "<strong>Flake the salmon</strong> into large chunks and lay on top.",
+            "Serve immediately."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Option:</strong> Keep salmon whole on top for presentation, or fold it in for a more mixed dish."
+        }
+      ]
+    }
+  ]
+}
