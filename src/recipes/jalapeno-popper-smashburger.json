@@ -1,0 +1,193 @@
+{
+  "title": "Jalapeño Popper Smashburger",
+  "subtitle": "Smashed beef patties with jalapeños, Havarti, whipped cream cheese, and raspberry bacon jam on a pretzel bun.",
+  "storageKey": "jalapeno_popper_smashburger_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "4 oz beef patties" },
+    { "label": "Serves", "value": "~2–4" },
+    { "label": "Style", "value": "Smashburger" },
+    { "label": "Bun", "value": "Pretzel" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Jam takes 45–50 min to reduce — start it well before the burgers.",
+    "items": [
+      "<strong>1 lb bacon</strong>, diced",
+      "<strong>1 white onion</strong>, diced",
+      "<strong>1 double shot espresso</strong> (or ¼ cup black coffee)",
+      "<strong>2–3 tbsp apple cider vinegar</strong>",
+      "<strong>¼ cup brown sugar</strong>",
+      "<strong>1 cup fresh raspberries</strong>",
+      "<strong>Salt &amp; pepper</strong> to taste",
+      "<strong>1–1½ lbs ground beef</strong>, formed into 4 oz balls",
+      "<strong>2–3 jalapeños</strong>, thinly sliced",
+      "<strong>Texas Jalapeño Salt</strong> (or jalapeño seasoning + kosher salt)",
+      "<strong>4–8 slices Havarti cheese</strong>",
+      "<strong>2–4 pretzel buns</strong>",
+      "<strong>4 oz whipped cream cheese</strong>"
+    ],
+    "callout": "<strong>Make the jam first:</strong> It needs 45–50 minutes to reduce. Get it going, then prep everything else.",
+    "shoppingList": [
+      { "item": "1 lb bacon" },
+      { "item": "1 white onion" },
+      { "item": "Apple cider vinegar" },
+      { "item": "Brown sugar" },
+      { "item": "Espresso or black coffee" },
+      { "item": "Fresh raspberries (1 cup)", "substitutes": ["Frozen raspberries, thawed"] },
+      { "item": "Ground beef (1–1½ lbs)" },
+      { "item": "Jalapeños (2–3)", "substitutes": ["Pickled jalapeños"] },
+      { "item": "Texas Jalapeño Salt", "substitutes": ["Jalapeño seasoning + kosher salt", "Tajín"] },
+      { "item": "Havarti cheese (4–8 slices)", "substitutes": ["Pepper jack", "Monterey Jack"] },
+      { "item": "Pretzel buns (2–4)", "substitutes": ["Brioche buns"] },
+      { "item": "Whipped cream cheese (4 oz)", "substitutes": ["Regular cream cheese, softened"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A jalapeño popper-inspired smashburger: two crispy-edged beef patties with fresh jalapeños smashed right in, melted Havarti, whipped cream cheese, and a slow-cooked raspberry bacon jam that's sweet, smoky, and tangy."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Cook the bacon</strong> for the jam",
+            "<strong>Build the raspberry bacon jam</strong> — simmer 45–50 min",
+            "<strong>Smash patties</strong> with jalapeños pressed in before flipping",
+            "<strong>Melt the Havarti</strong> and pull the burgers",
+            "<strong>Assemble</strong> with cream cheese on the bottom, jam on top"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Timing tip:</strong> Start the jam first — it's mostly hands-off but needs time. The burgers take under 5 minutes total."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Cook the Bacon",
+      "checkboxLabel": "Bacon crispy with slight chew, drippings reserved",
+      "measurements": [
+        { "item": "Bacon", "qty": "1 lb, diced" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a heavy skillet over <strong>medium-high</strong>.",
+            "Add diced bacon; cook <strong>10–15 minutes</strong> until crispy with a slight chew.",
+            "<strong>Drain and remove</strong> the bacon — leave the drippings in the pan.",
+            "Set cooked bacon aside to return in the next step."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the drippings.</strong> The onions and jam build directly in that fat — don't wipe the pan."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Build the Raspberry Bacon Jam",
+      "checkboxLabel": "Jam reduced and thickened, set aside",
+      "measurements": [
+        { "item": "White onion", "qty": "1, diced" },
+        { "item": "Espresso", "qty": "1 double shot", "alts": ["¼ cup black coffee"] },
+        { "item": "Apple cider vinegar", "qty": "2–3 tbsp" },
+        { "item": "Brown sugar", "qty": "¼ cup" },
+        { "item": "Fresh raspberries", "qty": "1 cup", "alts": ["Frozen raspberries, thawed"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In the same pan with drippings, sauté <strong>diced onion for 3 minutes</strong>.",
+            "Add <strong>espresso, apple cider vinegar, brown sugar, and raspberries</strong>.",
+            "Return <strong>cooked bacon</strong> to the pan; season with salt &amp; pepper.",
+            "Reduce heat to <strong>medium-low</strong>; simmer <strong>45–50 minutes</strong> until jam thickens.",
+            "Set aside — holds well at room temp while you cook the burgers."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Done when:</strong> Jam coats a spoon and looks sticky and spreadable. It tightens more as it cools."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Smash the Patties",
+      "checkboxLabel": "Patties smashed with jalapeños, dark crust formed",
+      "measurements": [
+        { "item": "Ground beef", "qty": "4 oz per patty (2 per burger)" },
+        { "item": "Jalapeños", "qty": "several thin slices per patty" },
+        { "item": "Texas Jalapeño Salt", "qty": "generous pinch per patty", "alts": ["Jalapeño seasoning + kosher salt"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat griddle or cast-iron over <strong>medium-high</strong> until very hot.",
+            "Place a <strong>4 oz beef ball</strong> on the griddle.",
+            "Lay <strong>jalapeño slices on top</strong> before smashing — they press into the meat.",
+            "<strong>Smash flat immediately</strong> with a burger press or spatula — hard and firm, one motion.",
+            "Season the top with <strong>Jalapeño Salt</strong>.",
+            "Cook <strong>~90 seconds</strong> without moving — you want a dark crust."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Smash with confidence:</strong> One firm press all the way down. Hesitating or re-pressing kills the crust."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Cheese & Finish",
+      "checkboxLabel": "Flipped, Havarti melted, burgers pulled",
+      "measurements": [
+        { "item": "Havarti cheese", "qty": "1–2 slices per patty", "alts": ["Pepper jack", "Monterey Jack"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Flip patties</strong> after ~90 seconds.",
+            "Immediately <strong>top with Havarti</strong>.",
+            "Cook <strong>30 more seconds</strong> as cheese melts.",
+            "Pull and <strong>stack two patties</strong> per burger."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Havarti melts fast.</strong> 30 seconds is enough — pull before it runs off the edge."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Assemble",
+      "checkboxLabel": "Cream cheese bottom, patties stacked, jam on top bun",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spread <strong>whipped cream cheese</strong> generously on the bottom bun.",
+            "Stack <strong>two patties</strong> on the cream cheese.",
+            "Spoon <strong>raspberry bacon jam</strong> on the top bun.",
+            "Press together and serve immediately."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Order matters:</strong> Cream cheese on the bottom anchors the patties; jam on the top bun coats every bite evenly."
+        }
+      ]
+    }
+  ]
+}
