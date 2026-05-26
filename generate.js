@@ -474,6 +474,102 @@ li{ margin: 7px 0; }
   z-index: 10;
   backdrop-filter: blur(12px);
 }
+
+.tabbar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding: 8px 12px 0;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  overscroll-behavior-x:contain;
+}
+.tabbar::-webkit-scrollbar{ display:none; }
+.tabbar:empty{ display:none; }
+.tabbar[data-has-pins="false"] .pin-toggle{ margin-right:0; }
+.pin-toggle{
+  appearance:none;
+  flex-shrink:0;
+  width:34px;
+  height:30px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--foreground-secondary);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding:0;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.pin-toggle:hover{ color: var(--foreground-primary); border-color: var(--border-strong); }
+.pin-toggle:focus-visible{ outline:none; box-shadow: var(--focus); }
+.pin-toggle.pinned{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1200;
+}
+.pin-toggle .icon-pin{ width:16px; height:16px; }
+.tab{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding: 6px 4px 6px 10px;
+  border-radius: 10px;
+  border:1px solid var(--border);
+  background: var(--surface-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--foreground-secondary);
+  text-decoration:none;
+  max-width: 180px;
+  white-space:nowrap;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.tab:hover{ color: var(--foreground-primary); border-color: var(--border-strong); }
+.tab.tab-active{
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent-dark) 12%, transparent));
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--foreground-primary);
+}
+.tab-label{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width: 140px;
+}
+.tab-close{
+  appearance:none;
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  border:none;
+  background:transparent;
+  color: var(--foreground-tertiary);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding:0;
+  flex-shrink:0;
+  -webkit-tap-highlight-color: transparent;
+}
+.tab-close:hover{ color: var(--foreground-primary); background: var(--border); }
+.tab-close:focus-visible{ outline:none; box-shadow: var(--focus); }
+.tab-close .icon-tab-close{ width:13px; height:13px; }
+.tabbar-divider{
+  flex-shrink:0;
+  width:1px;
+  height:20px;
+  background: var(--border);
+  margin: 0 2px;
+}
+.tabbar-divider:last-child{ display:none; }
+
 .expanded-steps-footer{
   flex: 0 0 auto;
   backdrop-filter: blur(14px);
@@ -911,7 +1007,10 @@ const HI = {
   chevronRight: `<svg class="icon" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>`,
   arrowsPointingOut: `<svg class="icon icon-expand" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>`,
   xMark: `<svg class="icon icon-close" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>`,
-  queueList: `<svg class="icon icon-inline" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 4.5h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 4.5h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>`
+  queueList: `<svg class="icon icon-inline" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 4.5h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 4.5h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>`,
+  bookmarkOutline: `<svg class="icon icon-pin" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /></svg>`,
+  bookmarkSolid: `<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clip-rule="evenodd" /></svg>`,
+  xMarkSmall: `<svg class="icon icon-tab-close" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>`
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -1196,6 +1295,12 @@ ${slides}
     </main>
 
     <div class="bottombar safe-bot">
+      <div class="tabbar" id="tabbar" role="tablist" aria-label="Pinned recipes">
+        <button class="pin-toggle" id="pinToggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
+          ${HI.bookmarkOutline}
+        </button>
+        <span class="tabbar-divider" aria-hidden="true"></span>
+      </div>
       <div class="nav">
         <button class="btn" id="prev" type="button" aria-label="Previous step">
           ${HI.chevronLeft}<span>Prev</span>
@@ -1269,10 +1374,93 @@ ${expandedSlidesHtml}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const RECIPE = ${recipeJson};
+    const CURRENT_SLUG = ${JSON.stringify(slug)};
     const CHECK_KEYS = [${checkIds.join(",")}];
     const SHOP_KEYS = [${shopIds.join(",")}];
     const LS_KEY = ${JSON.stringify(recipe.storageKey)};
     const LS_SHOP = LS_KEY + "_shop";
+    const LS_PINS = "recipe_cards_pins_v1";
+
+    function loadPins(){
+      try{
+        const arr = JSON.parse(localStorage.getItem(LS_PINS) || "[]");
+        if (!Array.isArray(arr)) return [];
+        return arr.filter(p => p && typeof p.slug === "string" && typeof p.title === "string");
+      }catch(e){ return []; }
+    }
+    function savePins(pins){
+      try{ localStorage.setItem(LS_PINS, JSON.stringify(pins)); }catch(e){}
+    }
+    function isPinned(slug, pins){
+      return pins.some(p => p.slug === slug);
+    }
+    function setPinned(pinned){
+      const pins = loadPins();
+      const idx = pins.findIndex(p => p.slug === CURRENT_SLUG);
+      if (pinned && idx < 0) pins.push({ slug: CURRENT_SLUG, title: RECIPE.title });
+      else if (!pinned && idx >= 0) pins.splice(idx, 1);
+      savePins(pins);
+      renderTabs();
+    }
+    function unpin(slug){
+      const pins = loadPins().filter(p => p.slug !== slug);
+      savePins(pins);
+      renderTabs();
+    }
+
+    const TAB_CLOSE_ICON = ${JSON.stringify(HI.xMarkSmall)};
+    const PIN_OUTLINE_ICON = ${JSON.stringify(HI.bookmarkOutline)};
+    const PIN_SOLID_ICON = ${JSON.stringify(HI.bookmarkSolid)};
+
+    function renderTabs(){
+      const tabbar = document.getElementById("tabbar");
+      if (!tabbar) return;
+      const pins = loadPins();
+      const pinned = isPinned(CURRENT_SLUG, pins);
+
+      const pinBtn = document.getElementById("pinToggle");
+      pinBtn.classList.toggle("pinned", pinned);
+      pinBtn.setAttribute("aria-pressed", String(pinned));
+      pinBtn.setAttribute("aria-label", pinned ? "Unpin this recipe" : "Pin this recipe");
+      pinBtn.innerHTML = pinned ? PIN_SOLID_ICON : PIN_OUTLINE_ICON;
+
+      tabbar.querySelectorAll(".tab, .tabbar-divider").forEach(el => el.remove());
+      tabbar.dataset.hasPins = String(pins.length > 0);
+      if (pins.length === 0) return;
+
+      const divider = document.createElement("span");
+      divider.className = "tabbar-divider";
+      divider.setAttribute("aria-hidden", "true");
+      tabbar.appendChild(divider);
+
+      pins.forEach(pin => {
+        const isCurrent = pin.slug === CURRENT_SLUG;
+        const tab = document.createElement(isCurrent ? "span" : "a");
+        tab.className = "tab" + (isCurrent ? " tab-active" : "");
+        tab.setAttribute("role", "tab");
+        tab.setAttribute("aria-selected", String(isCurrent));
+        if (!isCurrent) tab.href = pin.slug + ".html";
+
+        const label = document.createElement("span");
+        label.className = "tab-label";
+        label.textContent = pin.title;
+        tab.appendChild(label);
+
+        const close = document.createElement("button");
+        close.className = "tab-close";
+        close.type = "button";
+        close.setAttribute("aria-label", "Unpin " + pin.title);
+        close.innerHTML = TAB_CLOSE_ICON;
+        close.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          unpin(pin.slug);
+        });
+        tab.appendChild(close);
+
+        tabbar.appendChild(tab);
+      });
+    }
 
     function loadChecks(){
       try{
@@ -1603,6 +1791,14 @@ ${expandedSlidesHtml}
     updateProgress();
     loadChecks();
     loadShop();
+    renderTabs();
+
+    document.getElementById("pinToggle").addEventListener("click", () => {
+      setPinned(!isPinned(CURRENT_SLUG, loadPins()));
+    });
+    window.addEventListener("storage", (e) => {
+      if (e.key === LS_PINS) renderTabs();
+    });
 
     document.getElementById("prev").addEventListener("click", () => swiper.slidePrev());
     document.getElementById("next").addEventListener("click", () => swiper.slideNext());
