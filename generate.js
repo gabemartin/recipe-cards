@@ -81,6 +81,10 @@ body{
 @supports (padding: max(0px)) {
   .safe-top{ padding-top: max(14px, env(safe-area-inset-top)); }
   .safe-bot{ padding-bottom: max(14px, env(safe-area-inset-bottom)); }
+  .bottombar.safe-bot,
+  .expanded-steps-footer.safe-bot{
+    padding-bottom: max(8px, calc(env(safe-area-inset-bottom) - 14px));
+  }
 }
 
 .app{
@@ -1383,7 +1387,19 @@ ${expandedSlidesHtml}
     const SHOP_KEYS = [${shopIds.join(",")}];
     const LS_KEY = ${JSON.stringify(recipe.storageKey)};
     const LS_SHOP = LS_KEY + "_shop";
+    const LS_SLIDE = LS_KEY + "_slide";
     const LS_PINS = "recipe_cards_pins_v1";
+
+    function loadSlide(){
+      try{
+        const n = parseInt(localStorage.getItem(LS_SLIDE) || "0", 10);
+        if (!Number.isFinite(n) || n < 0) return 0;
+        return Math.min(n, RECIPE.slides.length - 1);
+      }catch(e){ return 0; }
+    }
+    function saveSlide(idx){
+      try{ localStorage.setItem(LS_SLIDE, String(idx)); }catch(e){}
+    }
 
     function loadPins(){
       try{
@@ -1779,6 +1795,7 @@ ${expandedSlidesHtml}
       spaceBetween: 14,
       speed: 260,
       grabCursor: true,
+      initialSlide: loadSlide(),
       pagination: { el: ".swiper-pagination", clickable: true },
       keyboard: { enabled: true },
       a11y: { enabled: true }
@@ -1794,7 +1811,10 @@ ${expandedSlidesHtml}
       progtext.textContent = idx + " / " + total;
     }
 
-    swiper.on("slideChange", updateProgress);
+    swiper.on("slideChange", () => {
+      updateProgress();
+      saveSlide(swiper.activeIndex);
+    });
     updateProgress();
     loadChecks();
     loadShop();
@@ -2225,13 +2245,13 @@ function buildIndex(entries) {
       border-top:1px solid var(--border);
       background:linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
       backdrop-filter:blur(12px);
-      padding-bottom:max(14px, env(safe-area-inset-bottom));
+      padding-bottom:max(8px, calc(env(safe-area-inset-bottom) - 14px));
     }
     html[data-theme="light"] .index-bottombar{
       background:linear-gradient(to top, rgba(221,217,206,.94), rgba(221,217,206,.65));
     }
     .index-bottombar[hidden]{ display:none; }
-    body.has-tabbar{ padding-bottom:calc(56px + max(14px, env(safe-area-inset-bottom))); }
+    body.has-tabbar{ padding-bottom:calc(50px + max(8px, calc(env(safe-area-inset-bottom) - 14px))); }
     .tabbar{
       display:flex; align-items:center; gap:6px;
       padding:8px 12px;
