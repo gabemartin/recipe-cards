@@ -1295,18 +1295,17 @@ ${slides}
     </main>
 
     <div class="bottombar safe-bot">
-      <div class="tabbar" id="tabbar" role="tablist" aria-label="Pinned recipes">
-        <button class="pin-toggle" id="pinToggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
-          ${HI.bookmarkOutline}
-        </button>
-        <span class="tabbar-divider" aria-hidden="true"></span>
-      </div>
       <div class="nav">
         <button class="btn" id="prev" type="button" aria-label="Previous step">
           ${HI.chevronLeft}<span>Prev</span>
         </button>
         <button class="btn primary" id="next" type="button" aria-label="Next step">
           <span>Next</span>${HI.chevronRight}
+        </button>
+      </div>
+      <div class="tabbar" role="tablist" aria-label="Pinned recipes">
+        <button class="pin-toggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
+          ${HI.bookmarkOutline}
         </button>
       </div>
     </div>
@@ -1355,6 +1354,11 @@ ${expandedSlidesHtml}
       <div class="nav">
         <button class="btn" id="expandedStepsPrev" type="button" aria-label="Previous step">${HI.chevronLeft}<span>Prev</span></button>
         <button class="btn primary" id="expandedStepsNext" type="button" aria-label="Next step"><span>Next</span>${HI.chevronRight}</button>
+      </div>
+      <div class="tabbar" role="tablist" aria-label="Pinned recipes">
+        <button class="pin-toggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
+          ${HI.bookmarkOutline}
+        </button>
       </div>
     </div>
   </dialog>
@@ -1412,53 +1416,56 @@ ${expandedSlidesHtml}
     const PIN_OUTLINE_ICON = ${JSON.stringify(HI.bookmarkOutline)};
     const PIN_SOLID_ICON = ${JSON.stringify(HI.bookmarkSolid)};
 
+    function buildTabElement(pin){
+      const isCurrent = pin.slug === CURRENT_SLUG;
+      const tab = document.createElement(isCurrent ? "span" : "a");
+      tab.className = "tab" + (isCurrent ? " tab-active" : "");
+      tab.setAttribute("role", "tab");
+      tab.setAttribute("aria-selected", String(isCurrent));
+      if (!isCurrent) tab.href = pin.slug + ".html";
+
+      const label = document.createElement("span");
+      label.className = "tab-label";
+      label.textContent = pin.title;
+      tab.appendChild(label);
+
+      const close = document.createElement("button");
+      close.className = "tab-close";
+      close.type = "button";
+      close.setAttribute("aria-label", "Unpin " + pin.title);
+      close.innerHTML = TAB_CLOSE_ICON;
+      close.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        unpin(pin.slug);
+      });
+      tab.appendChild(close);
+      return tab;
+    }
+
     function renderTabs(){
-      const tabbar = document.getElementById("tabbar");
-      if (!tabbar) return;
       const pins = loadPins();
       const pinned = isPinned(CURRENT_SLUG, pins);
 
-      const pinBtn = document.getElementById("pinToggle");
-      pinBtn.classList.toggle("pinned", pinned);
-      pinBtn.setAttribute("aria-pressed", String(pinned));
-      pinBtn.setAttribute("aria-label", pinned ? "Unpin this recipe" : "Pin this recipe");
-      pinBtn.innerHTML = pinned ? PIN_SOLID_ICON : PIN_OUTLINE_ICON;
+      document.querySelectorAll(".pin-toggle").forEach(pinBtn => {
+        pinBtn.classList.toggle("pinned", pinned);
+        pinBtn.setAttribute("aria-pressed", String(pinned));
+        pinBtn.setAttribute("aria-label", pinned ? "Unpin this recipe" : "Pin this recipe");
+        pinBtn.innerHTML = pinned ? PIN_SOLID_ICON : PIN_OUTLINE_ICON;
+      });
 
-      tabbar.querySelectorAll(".tab, .tabbar-divider").forEach(el => el.remove());
-      tabbar.dataset.hasPins = String(pins.length > 0);
-      if (pins.length === 0) return;
+      document.querySelectorAll(".tabbar").forEach(tabbar => {
+        tabbar.querySelectorAll(".tab, .tabbar-divider").forEach(el => el.remove());
+        tabbar.dataset.hasPins = String(pins.length > 0);
+        if (pins.length === 0) return;
 
-      const divider = document.createElement("span");
-      divider.className = "tabbar-divider";
-      divider.setAttribute("aria-hidden", "true");
-      tabbar.appendChild(divider);
-
-      pins.forEach(pin => {
-        const isCurrent = pin.slug === CURRENT_SLUG;
-        const tab = document.createElement(isCurrent ? "span" : "a");
-        tab.className = "tab" + (isCurrent ? " tab-active" : "");
-        tab.setAttribute("role", "tab");
-        tab.setAttribute("aria-selected", String(isCurrent));
-        if (!isCurrent) tab.href = pin.slug + ".html";
-
-        const label = document.createElement("span");
-        label.className = "tab-label";
-        label.textContent = pin.title;
-        tab.appendChild(label);
-
-        const close = document.createElement("button");
-        close.className = "tab-close";
-        close.type = "button";
-        close.setAttribute("aria-label", "Unpin " + pin.title);
-        close.innerHTML = TAB_CLOSE_ICON;
-        close.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          unpin(pin.slug);
-        });
-        tab.appendChild(close);
-
-        tabbar.appendChild(tab);
+        if (tabbar.querySelector(".pin-toggle")) {
+          const divider = document.createElement("span");
+          divider.className = "tabbar-divider";
+          divider.setAttribute("aria-hidden", "true");
+          tabbar.appendChild(divider);
+        }
+        pins.forEach(pin => tabbar.appendChild(buildTabElement(pin)));
       });
     }
 
@@ -1793,8 +1800,10 @@ ${expandedSlidesHtml}
     loadShop();
     renderTabs();
 
-    document.getElementById("pinToggle").addEventListener("click", () => {
-      setPinned(!isPinned(CURRENT_SLUG, loadPins()));
+    document.querySelectorAll(".pin-toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        setPinned(!isPinned(CURRENT_SLUG, loadPins()));
+      });
     });
     window.addEventListener("storage", (e) => {
       if (e.key === LS_PINS) renderTabs();
@@ -2211,6 +2220,56 @@ function buildIndex(entries) {
       background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
     .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
+    .index-bottombar{
+      position:fixed; left:0; right:0; bottom:0; z-index:10;
+      border-top:1px solid var(--border);
+      background:linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
+      backdrop-filter:blur(12px);
+      padding-bottom:max(14px, env(safe-area-inset-bottom));
+    }
+    html[data-theme="light"] .index-bottombar{
+      background:linear-gradient(to top, rgba(221,217,206,.94), rgba(221,217,206,.65));
+    }
+    .index-bottombar[hidden]{ display:none; }
+    body.has-tabbar{ padding-bottom:calc(56px + max(14px, env(safe-area-inset-bottom))); }
+    .tabbar{
+      display:flex; align-items:center; gap:6px;
+      padding:8px 12px;
+      overflow-x:auto; overflow-y:hidden;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      overscroll-behavior-x:contain;
+    }
+    .tabbar::-webkit-scrollbar{ display:none; }
+    .tab{
+      flex-shrink:0;
+      display:inline-flex; align-items:center; gap:4px;
+      padding:6px 4px 6px 10px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:var(--surface-muted);
+      font-size:var(--text-xs); font-weight:700;
+      color:var(--foreground-secondary);
+      text-decoration:none;
+      max-width:180px;
+      white-space:nowrap;
+    }
+    .tab:hover{ color:var(--foreground-primary); border-color:var(--border-strong); }
+    .tab-label{
+      overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+      max-width:140px;
+    }
+    .tab-close{
+      appearance:none;
+      width:22px; height:22px; border-radius:7px;
+      border:none; background:transparent;
+      color:var(--foreground-tertiary);
+      display:grid; place-items:center;
+      cursor:pointer; padding:0; flex-shrink:0;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .tab-close:hover{ color:var(--foreground-primary); background:var(--border); }
+    .tab-close svg{ width:13px; height:13px; }
     #ptr{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,calc(-100% - env(safe-area-inset-top, 0px) - 2em - 16px));color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
     #ptr.armed{border-color:color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent);}
     .ptr-icon{width:22px;height:22px;display:block;}
@@ -2232,7 +2291,70 @@ function buildIndex(entries) {
 ${cards || '      <p class="empty">No recipes yet.</p>'}
     </div>
   </div>
+  <div class="index-bottombar" id="indexBottombar" hidden>
+    <div class="tabbar" role="tablist" aria-label="Pinned recipes"></div>
+  </div>
   <script>
+    (function(){
+      var LS_PINS = "recipe_cards_pins_v1";
+      var TAB_CLOSE_ICON = ${JSON.stringify(HI.xMarkSmall)};
+      var bottombar = document.getElementById("indexBottombar");
+      var tabbar = bottombar.querySelector(".tabbar");
+
+      function loadPins(){
+        try{
+          var arr = JSON.parse(localStorage.getItem(LS_PINS) || "[]");
+          if (!Array.isArray(arr)) return [];
+          return arr.filter(function(p){
+            return p && typeof p.slug === "string" && typeof p.title === "string";
+          });
+        }catch(e){ return []; }
+      }
+      function savePins(pins){
+        try{ localStorage.setItem(LS_PINS, JSON.stringify(pins)); }catch(e){}
+      }
+      function unpin(slug){
+        savePins(loadPins().filter(function(p){ return p.slug !== slug; }));
+        renderTabs();
+      }
+      function renderTabs(){
+        var pins = loadPins();
+        tabbar.innerHTML = "";
+        var hasPins = pins.length > 0;
+        bottombar.hidden = !hasPins;
+        document.body.classList.toggle("has-tabbar", hasPins);
+        pins.forEach(function(pin){
+          var a = document.createElement("a");
+          a.className = "tab";
+          a.href = pin.slug + ".html";
+          a.setAttribute("role", "tab");
+
+          var label = document.createElement("span");
+          label.className = "tab-label";
+          label.textContent = pin.title;
+          a.appendChild(label);
+
+          var close = document.createElement("button");
+          close.className = "tab-close";
+          close.type = "button";
+          close.setAttribute("aria-label", "Unpin " + pin.title);
+          close.innerHTML = TAB_CLOSE_ICON;
+          close.addEventListener("click", function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            unpin(pin.slug);
+          });
+          a.appendChild(close);
+
+          tabbar.appendChild(a);
+        });
+      }
+
+      renderTabs();
+      window.addEventListener("storage", function(e){
+        if (e.key === LS_PINS) renderTabs();
+      });
+    })();
     (function(){
       var KEY="recipe_cards_theme_v1",DARK_BG="#18130d",LIGHT_BG="#ddd9ce";
       var html=document.documentElement,btn=document.getElementById("themeToggle"),meta=document.getElementById("metaTheme");
