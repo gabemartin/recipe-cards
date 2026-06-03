@@ -1,0 +1,226 @@
+{
+  "title": "Dirty Spaghetti",
+  "subtitle": "Ground beef and turkey sausage in a rich, roux-thickened sauce with Cajun spice. One-pot or classic.",
+  "storageKey": "dirty_spaghetti_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Beef + turkey sausage" },
+    {              "label": "Serves",  "value": "4–6" },
+    {              "label": "Style",   "value": "One-pot" },
+    {              "label": "Pasta",   "value": "16 oz spaghetti" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "The roux (flour step) is what makes it \"dirty\"—it thickens the sauce without jarred tomato sauce.",
+    "items": [
+      "<strong>1 lb ground beef</strong>",
+      "<strong>1 lb ground Italian turkey sausage</strong>",
+      "<strong>1 red bell pepper</strong>, diced",
+      "<strong>1 green bell pepper</strong>, diced",
+      "<strong>1 yellow onion</strong>, diced",
+      "<strong>4–6 cloves garlic</strong> (or 1 tbsp garlic paste)",
+      "<strong>2 tbsp tomato paste</strong>",
+      "<strong>4 tbsp all-purpose flour</strong>",
+      "<strong>3–4 cups beef broth</strong>",
+      "<strong>16 oz spaghetti noodles</strong>",
+      "<strong>½–1 cup pasta water</strong> (as needed)",
+      "<strong>1 tsp Nature's seasoning</strong>",
+      "<strong>1–2 tsp Cajun seasoning</strong>",
+      "<strong>1 tsp Italian seasoning</strong>"
+    ],
+    "callout": "<strong>Key tip:</strong> Don't skip the flour step—cooking it into the fat creates the thick, glossy sauce that defines this dish.",
+    "shoppingList": [
+      { "item": "1 lb ground beef" },
+      { "item": "1 lb ground Italian turkey sausage", "substitutes": ["Ground pork Italian sausage", "Regular ground turkey"] },
+      { "item": "Red bell pepper (1)" },
+      { "item": "Green bell pepper (1)" },
+      { "item": "Yellow onion (1)" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "Tomato paste (small can)" },
+      { "item": "All-purpose flour" },
+      { "item": "Beef broth (32 oz carton)" },
+      { "item": "Spaghetti noodles (16 oz)" },
+      { "item": "Nature's seasoning" },
+      { "item": "Cajun seasoning", "substitutes": ["Creole seasoning", "Old Bay"] },
+      { "item": "Italian seasoning" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Dirty Spaghetti is a Southern-style one-pot pasta where the sauce is built from scratch in the same pot as the meat. A flour roux gives it body, Cajun seasoning gives it depth, and the pasta absorbs everything as it cooks."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Brown</strong> beef and turkey sausage together",
+            "<strong>Build</strong> flavor base with peppers, onion, and garlic",
+            "<strong>Cook tomato paste</strong> and add seasonings",
+            "<strong>Make the roux</strong>—flour + fat thickens the sauce",
+            "<strong>Add beef broth</strong> and simmer until thick",
+            "<strong>Cook pasta</strong> right in the pot (or separately)"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>What makes it \"dirty\":</strong> The roux—flour cooked into the meat fat—thickens the broth into something rich and glossy. No jarred sauce needed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Brown the Meat",
+      "checkboxLabel": "Beef + sausage browned, grease drained",
+      "measurements": [
+        { "item": "Ground beef", "qty": "1 lb" },
+        { "item": "Italian turkey sausage", "qty": "1 lb", "alts": ["Ground pork sausage"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a <strong>large pot</strong>, combine ground beef and turkey sausage.",
+            "Cook over <strong>medium-high heat</strong>, breaking up the meat as it cooks.",
+            "Cook until fully browned with <strong>no pink remaining</strong>.",
+            "Drain excess grease if needed—leave a little behind for flavor."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Use a big pot:</strong> You'll be adding broth, pasta, and sauce later. Don't start in a skillet."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Build the Flavor Base",
+      "checkboxLabel": "Peppers, onion, and garlic softened",
+      "measurements": [
+        { "item": "Red bell pepper", "qty": "1, diced" },
+        { "item": "Green bell pepper", "qty": "1, diced" },
+        { "item": "Yellow onion", "qty": "1, diced" },
+        { "item": "Garlic", "qty": "4–6 cloves", "alts": ["1 tbsp garlic paste"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add diced onion and bell peppers to the pot.",
+            "Cook <strong>4–5 minutes</strong> until softened, stirring occasionally.",
+            "Stir in garlic and cook <strong>1 minute</strong>—don't let it brown."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Tomato Paste + Seasoning",
+      "checkboxLabel": "Tomato paste caramelized, seasoned",
+      "measurements": [
+        { "item": "Tomato paste", "qty": "2 tbsp" },
+        { "item": "Nature's seasoning", "qty": "1 tsp" },
+        { "item": "Cajun seasoning", "qty": "1–2 tsp", "alts": ["Creole seasoning", "Old Bay"] },
+        { "item": "Italian seasoning", "qty": "1 tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add tomato paste and stir to coat the meat and vegetables.",
+            "Cook <strong>2–3 minutes</strong> until the paste darkens slightly—this removes the raw tomato taste.",
+            "Season with Nature's, Cajun, and Italian seasoning. Stir well to combine."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Cook the paste:</strong> Letting tomato paste caramelize for a few minutes builds a deeper, richer base than adding it with the broth."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Make the Roux",
+      "checkboxLabel": "Flour stirred in and cooked 1–2 min",
+      "measurements": [
+        { "item": "All-purpose flour", "qty": "4 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Sprinkle flour evenly over the meat mixture.",
+            "Stir <strong>well</strong> to coat everything—no dry flour pockets.",
+            "Cook <strong>1–2 minutes</strong>, stirring constantly, until the flour smells slightly nutty."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>This is the \"dirty\" step.</strong> The flour-fat roux is what transforms beef broth into a thick, glossy sauce. Don't rush it."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Create the Sauce",
+      "checkboxLabel": "Broth added, sauce simmered and thickened",
+      "measurements": [
+        { "item": "Beef broth", "qty": "3–4 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Slowly pour in beef broth <strong>while stirring</strong>—adding gradually prevents lumps.",
+            "Scrape up any browned bits from the bottom of the pot.",
+            "Bring to a simmer and cook until the sauce <strong>thickens noticeably</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Target consistency:</strong> Sauce should coat a spoon. It'll loosen slightly when pasta is added, so err thicker rather than thinner."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Cook the Pasta",
+      "checkboxLabel": "Pasta cooked and tossed in sauce",
+      "measurements": [
+        { "item": "Spaghetti noodles", "qty": "16 oz" },
+        { "item": "Pasta water", "qty": "½–1 cup (if needed)" }
+      ],
+      "body": [
+        {
+          "type": "p",
+          "html": "<strong>Option 1 — One-Pot (Original Way):</strong>"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Add dry spaghetti directly into the pot (break in half if needed).",
+            "Cover and cook until tender, <strong>stirring occasionally</strong> to prevent sticking.",
+            "Add a splash of water to loosen the sauce if needed."
+          ]
+        },
+        { "type": "spacer" },
+        {
+          "type": "p",
+          "html": "<strong>Option 2 — Boil Separately (Classic Way):</strong>"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Boil spaghetti in <strong>salted water</strong> until al dente.",
+            "Reserve <strong>½–1 cup pasta water</strong> before draining.",
+            "Add drained pasta to the meat sauce and toss well.",
+            "Add reserved pasta water as needed to bring everything together into a silky sauce."
+          ]
+        }
+      ]
+    }
+  ]
+}
