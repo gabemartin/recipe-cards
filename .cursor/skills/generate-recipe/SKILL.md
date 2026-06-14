@@ -88,7 +88,22 @@ After the build, confirm:
 - [ ] `storageKey` doesn't duplicate an existing recipe's key
 - [ ] Ingredients list is non-empty
 
-### 6. README
+### 6. Image prompt
+
+After every new recipe, generate a detailed image prompt for the finished dish and output it in the chat so it can be copied and pasted into an image generator.
+
+**Style rules (apply to every prompt):**
+- **Background**: Dark surface — weathered dark walnut wood, charcoal slate, or dark brown leather/stone
+- **Lighting**: Dramatic single-source natural or window light from the upper left, casting deep organic shadows; no fill flash
+- **Angle**: Overhead flat lay or slight 3/4 overhead; choose whichever suits the dish's shape
+- **Props**: Vintage silverware resting naturally, fresh herbs (rosemary, thyme, parsley) tucked in without fussiness, one or two supporting elements (cast iron pan, small sauce vessel, halved garlic head) — nothing that doesn't belong on the table
+- **Color palette**: Deep jewel tones and dark neutrals — charcoal, burgundy, forest green, golden brown; avoid bright whites or clinical backgrounds
+- **Food styling**: Honest, generous portions; natural drips and pooled sauce are good; no artificial height-stacking or tweezered garnishes
+- **Rendering**: Editorial food photography; shot at f/2.0–f/2.8; tack-sharp on the hero element with shallow depth of field; no HDR
+
+**Prompt format:** One dense paragraph describing the scene. No bullet points in the output. End with the shooting spec (focal length, aperture, mood keyword).
+
+### 7. README
 
 If the new recipe introduces any changes to the project structure or conventions, update `README.md` accordingly.
 
