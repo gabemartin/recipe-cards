@@ -14,11 +14,11 @@ What we *do* control: where the light comes from, what surface it sits on, what 
 
 Every image prompt for this project is two pieces that combine:
 
-**Layer 1 — Subject** (`imagePrompt` field in recipe JSON)
-Describes the dish itself: real colors, real textures, honest doneness, how sauces actually pool, what a garnish looks like after it's been in a hot pan. Written as if a journalist is describing what they see in front of them. No photography language.
+**Layer 1 — Subject + Per-Recipe Style** (`imagePrompt` field in recipe JSON)
+Describes the dish itself: real colors, real textures, honest doneness, how sauces actually pool, what a garnish looks like after it's been in a hot pan. Also includes per-recipe photography direction: the surface, light quality, camera angle, and mood appropriate to *this specific dish*. Written first as if a journalist is describing what they see, then as a precise photographic brief for the shoot.
 
-**Layer 2 — Style** (`IMAGE_STYLE` constant in `generate.js`)
-Describes everything outside the food: surface, light direction, camera angle, props, color palette, mood, shooting spec. Global. Applies to all recipes equally. Update this string and rebuild to evolve the entire collection at once.
+**Layer 2 — Quality Principles + Technical Spec** (`IMAGE_STYLE` constant in `generate.js`)
+Universal quality standards that apply to every image in the collection: honest food, earned props, technical camera spec. Does not prescribe a surface or lighting style — those live in the per-recipe `imagePrompt` so each dish gets photography that fits its character.
 
 When used together, they produce a complete, ready-to-paste image generation prompt.
 
@@ -29,71 +29,109 @@ When used together, they produce a complete, ready-to-paste image generation pro
 The current global style string, stored in `generate.js` as `IMAGE_STYLE` and embedded in every recipe card's HTML:
 
 ```
-Shot on a dark, weathered walnut or charcoal slate surface — deep grain, imperfect texture, no fill light or reflectors. Single-source natural light from the upper left, angled low to rake across surfaces and cast deep organic shadows. Overhead flat lay or slight ¾ overhead — choose whichever reveals the dish's best silhouette and texture. Props are earned, not decorative: one vintage knife or fork, a small sauce vessel if the dish has one, a sprig of the herb actually used in the recipe, coarse salt where salt was used. Color palette: deep jewel tones — charcoal, burgundy, forest green, ochre, dark gold. No bright whites, no clinical backgrounds. Food is styled honestly: genuine doneness, real pooling and drips, no tweezered perfect garnish. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element, natural depth falloff. Mood: moody editorial. Honest food, beautiful light.
+Honest food photography: real doneness, natural sauce behavior, no artificial food styling, no added ingredients not in the recipe, no digital manipulation. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element with natural depth falloff. Props are earned — only objects actually used in the recipe or found at a dinner table. Food is photographed as it comes out of the pan: genuine crust texture, real pooling and drips, natural imperfection.
 ```
 
-To update the style for all 28+ recipe cards: edit this string in `generate.js` and run `node generate.js`. Every card rebuilds with the new style embedded.
+To update quality standards across all 28+ recipe cards: edit this string in `generate.js` and run `node generate.js`. Every card rebuilds with the new style embedded.
+
+---
+
+## Photography Style Categories
+
+The collection uses a range of surfaces, lighting, and moods — matched to each recipe's character. The dark walnut / charcoal slate treatment is one tool, used when the dish earns it. Recipes are grouped below by their visual treatment:
+
+### Dark & Dramatic (charcoal slate, raking warm light)
+Earns deep shadow and a dark backdrop because the food's richness, rendered fat, or mahogany crust is the point. A light background would undercut the drama.
+- Lamb breast ribs — crackling rendered fat, mahogany crust
+- Steakhouse sirloin tips — butter-basted sear, pink interior
+- Lamb loin chops (cast iron) — mahogany sear, melting herb butter
+- Jalapeño popper smashburger — cheese pull, jam smear, pub energy
+- Honey garlic Cajun chicken thighs — cast iron, glazed dark skin, cream sauce
+
+### Cast Iron Warm (medium oak table, golden light)
+Cast iron skillet presented directly on worn oak, warm golden side light. Not dark but substantial — the skillet is the hero vessel.
+- Chicken parmesan gnocchi — parmesan crust, cream sauce
+- Rotisserie chicken spinach mushroom gnocchi — cream sauce, golden crust
+- Lamb chop fond potatoes — glistening fond, dark slate variation
+
+### Mediterranean Warm (rough wood, golden raking light, earned props)
+Rustic, sun-drenched, like the olive oil / vine tomato / bread still life in IMG_0187. Props earn their place; light comes in from the side at a generous angle.
+- Clams on toast — broth, shells, white wine
+- Baked feta salmon pasta — terracotta dish, afternoon light
+- Chicken piccata — pale terracotta surface, lemon warmth
+- Italian spinach — earthenware bowl, family kitchen feel
+- Sauce Sicilian Sunday — kitchen wood, parmesan, wine glass
+- Leg of lamb with roasted garlic — walnut board, dramatic occasion
+
+### Bright & Airy (marble/stone, daylight, overhead)
+Clean, fresh, ingredient-forward. Inspired by the granola bowl and fig tart photos (IMG_0185, IMG_0184). Light surface, no dramatic shadow.
+- Salmon farro grain bowls — white marble, vivid colors overhead
+- Fish tacos — pale weathered wood, coastal colors
+- Potato pancake brunch plate — white marble, morning light
+- Butterflied lamb leg with rice & tzatziki — off-white platter, Mediterranean clean
+- Salmon lemon bucatini — pale stone, pale elegant palette
+- Salmon croquettes — linen or coastal wood, coastal cool
+- Lemon herb rice — cream stone, supporting-cast simplicity
+- Tzatziki sauce — white ceramic, cool pale stone
+- Roasted sweet potatoes — linen or warm wood, orange color as star
+
+### Comforting Home Kitchen (warm wood, soft light)
+Baked dishes in their pans, warm table, soft light. Less dramatic than moody, more inviting.
+- Chicken enchiladas — ceramic dish, kitchen table, red sauce hero
+- Black bean sweet potato enchiladas — terracotta surface, bright and airy
+- Country fried steak — warm aged pine, ivory gravy contrast
+
+### Bold Editorial (non-neutral background)
+Background color chosen to amplify the dish's dominant tone rather than recede to neutral.
+- Caramelized banana milkshake — warm amber/butterscotch background
+- Korean tteok & spicy pork ragù — dark charcoal bowl on grey stone, rust-red pop
 
 ---
 
 ## Surface & Background
 
-- **Primary:** Dark weathered walnut — deep grain, imperfect, warm brown with black veining
-- **Secondary:** Charcoal slate — cool grey, matte, fine texture
-- **Avoid:** White marble, bright light surfaces, seamless paper backgrounds, anything that reads as a photo studio
-
-The surface is always visible — it's a character in the image, not a backdrop to eliminate.
+- **No single required surface.** Match the surface to the dish category above.
+- **Avoid:** White marble for dark, hearty meat dishes. Dark slate for delicate, bright dishes. Anything that fights with the food's natural palette.
+- The surface is always visible — it's a character in the image, not a backdrop to eliminate.
 
 ---
 
 ## Lighting
 
-- **Source:** Single natural or natural-looking window light, upper left
-- **Angle:** Low and raking — light skims across surfaces, not floods them. Creates deep shadows in wood grain, sauce pools, crust texture
+- **Direction:** Single natural or natural-looking window light, usually upper left
+- **Angle:** Choose based on the dish — raking low for textured surfaces (rendered fat, crust), more overhead for flat dishes (grain bowls, enchiladas)
 - **No fill:** No reflectors, no bounce cards, no second light source. Shadow is information
-- **Color temp:** Warm (3200–4500K). The scene should feel like late afternoon or morning kitchen light
+- **Color temp:** Warm (3200–4500K) for most. Neutral-to-cool for Korean, grain bowls, tzatziki
 - **Avoid:** Ring lights, overhead studio panels, blown highlights, HDR, artificial food styling gloss
 
 ---
 
 ## Angle & Composition
 
-- **Overhead (flat lay):** Best for dishes with flat geometry — enchiladas, pizza, grain bowls, smashburgers. Camera is directly above.
-- **¾ overhead (45°–70°):** Best for dishes with height — steak, roast lamb, tacos stacked. Shows both the surface and the side of the food.
-- **Never:** Eye-level product shots, extremely shallow angles that hide the top of the dish, or rotating the camera to an artificial diagonal just for visual interest.
-
-Choose the angle that answers the question: *What does this dish look like when I'm about to eat it?*
+- **Overhead (flat lay):** Best for dishes with flat geometry — enchiladas, grain bowls, breakfast plates
+- **¾ overhead (45°–70°):** Best for dishes with height — steak, roast lamb, pasta
+- **Low ¾ angle:** Best for burgers and stacked dishes where height and drip are the story
+- **Never:** Eye-level product shots, extremely shallow angles that hide the top of the dish
 
 ---
 
 ## Props Doctrine
 
-Props are earned. Every object in the frame must belong there — it was used in the recipe or it lives on a dinner table.
+Props are earned. Every object in the frame must belong there.
 
 **Allowed:**
 - The knife or fork you'd actually eat this with (vintage, one piece)
 - A small sauce vessel (gravy boat, ramekin) if the recipe has a sauce served separately
 - A sprig of the fresh herb actually called for in the recipe
 - Coarse salt in a small pinch if salt is a key ingredient
-- An empty wine glass or a full one if the recipe explicitly pairs with wine
+- A wine glass (empty or filled) if wine is in the recipe
+- Earned condiment jars (gochujang for Korean ragu, olive oil for Mediterranean dishes)
 
 **Not allowed:**
-- Decorative items not related to the dish (pine cones, eucalyptus, etc. — unless they appeared in a specific seasonal session)
-- Multiple props of the same type (not three forks arranged artfully)
-- Fresh herbs that aren't in the recipe
+- Decorative items not related to the dish
+- Multiple props of the same type
+- Fresh herbs not in the recipe
 - Color-pop vegetables added purely for visual contrast
-- Anything that would confuse what dish is being photographed
-
----
-
-## Color Palette
-
-**Primary tones:** Charcoal, deep walnut brown, matte slate grey
-**Accent tones:** Burgundy, forest green, ochre, dark gold
-**Food tones:** Real — not enhanced. A medium-rare steak is rosy-red, not artificially pink. A cream gravy is ivory-white, not magazine-white.
-**Avoid:** Bright whites, electric blues, clinical teals, neon accents
-
-The overall image should feel like you could hang it on a wall without it looking like an ad.
 
 ---
 
@@ -106,6 +144,7 @@ The overall image should feel like you could hang it on a wall without it lookin
 - Show real doneness (medium-rare means medium-rare, not raw)
 - Let the crust have texture — not perfectly uniform
 - Allow realistic imperfection: a slightly uneven sear, a herb leaf that wilted in the pan
+- Cut or pull apart one piece to show the interior where that's the dish's visual payoff
 
 ### What We Don't Do
 
@@ -120,33 +159,35 @@ The overall image should feel like you could hang it on a wall without it lookin
 
 ## Subject Writing Rules (for `imagePrompt` field)
 
-When writing the per-recipe subject paragraph:
+Each recipe's `imagePrompt` is a complete photographic brief in two parts:
 
-**Include:**
-- The dominant visual color of the dish (the sauce, the crust, the protein)
-- Key textures: is the crust shattered or soft? Is the sauce glossy or matte? Is the interior revealed?
-- How the dish is naturally plated by the recipe (plate, board, skillet, bowl)
-- Any contrasting elements that make the dish visually interesting (dark crust / pale interior, red sauce / ivory cream)
-- Natural behavior of sauces, glazes, broths (pooling, dripping, soaking into starch)
+**Part 1 — Dish description (2–3 sentences):**
+- Journalist voice: describe what's in front of you
+- The dominant visual color, key textures, real doneness
+- How sauces, glazes, and broths naturally behave
+- Any contrasting elements (dark crust / pale interior, red sauce / ivory cream)
+- The vessel or plating format the recipe produces
+
+**Part 2 — Photography direction (1–2 sentences):**
+- Surface choice (dark slate, pale marble, warm wood, etc.)
+- Light quality and direction
+- Camera angle (overhead, ¾, low ¾)
+- Mood word if helpful (bold, airy, rustic, editorial)
+- One or two earned props specific to the recipe
 
 **Never include:**
-- Lighting descriptions (`dramatic light`, `golden hour`)
-- Surface/background descriptions (`on a dark wood board`)
-- Camera/angle language (`overhead shot`, `shallow depth of field`)
-- Prop language (`with a vintage knife`)
-- Any language that implies staging or photography
+- Artificial food styling (sprayed oil, glycerin, undercooked meat)
+- Props not in the recipe
+- Post-processing language (HDR, heavy editing)
 
-**Length:** 2–4 sentences. Enough to describe the dish unambiguously but not so long it dilutes the style block.
+**Length:** 4–6 sentences total across both parts.
 
 ---
 
-## Evolution Path
+## Evolution Notes
 
-This is v1 of the style. Future passes may refine:
+- v1: Single global surface/light prescription (dark walnut / charcoal slate for all recipes)
+- v2 (current): Per-recipe photography direction in `imagePrompt`; `IMAGE_STYLE` holds quality principles + tech spec only. Surface and light are matched to each dish's character — dark moody for rich meat dishes, bright airy for grain bowls and coastal seafood, Mediterranean warm for Italian and Greek, bold editorial for desserts with dominant color.
 
-- **Seasonal variation:** Swap pine cone props for fresh citrus in spring, etc. (only when earned by the recipe)
-- **Hero cut vs. whole:** Some dishes photograph better whole (leg of lamb roast), others at the cut (steak). Add a rule for this once there are more examples.
-- **Plating vessels:** As the recipe collection grows, establish preferred plate/bowl colors for different dish types.
-- **Background texture catalogue:** Build a small set of 2–3 approved surface textures so all hero shots feel like they're from the same kitchen.
-
-Iterate by updating `IMAGE_STYLE` in `generate.js` and rebuilding — never by editing individual recipe `imagePrompt` fields for style reasons.
+To evolve the quality standards across all cards: edit `IMAGE_STYLE` in `generate.js` and rebuild.
+To update a single recipe's photography direction: edit that recipe's `imagePrompt` field.

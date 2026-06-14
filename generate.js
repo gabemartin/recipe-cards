@@ -1173,7 +1173,7 @@ function renderSlide(slide, index) {
 // ─── House photography style — embedded in every recipe card ──────────────────
 // Subject (recipe.imagePrompt) + this style block = the full image prompt.
 // Update this string to evolve the visual identity across all cards on next build.
-const IMAGE_STYLE = `Shot on a dark, weathered walnut or charcoal slate surface — deep grain, imperfect texture, no fill light or reflectors. Single-source natural light from the upper left, angled low to rake across surfaces and cast deep organic shadows. Overhead flat lay or slight ¾ overhead — choose whichever reveals the dish's best silhouette and texture. Props are earned, not decorative: one vintage knife or fork, a small sauce vessel if the dish has one, a sprig of the herb actually used in the recipe, coarse salt where salt was used. Color palette: deep jewel tones — charcoal, burgundy, forest green, ochre, dark gold. No bright whites, no clinical backgrounds. Food is styled honestly: genuine doneness, real pooling and drips, no tweezered perfect garnish. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element, natural depth falloff. Mood: moody editorial. Honest food, beautiful light.`;
+const IMAGE_STYLE = `Honest food photography: real doneness, natural sauce behavior, no artificial food styling, no added ingredients not in the recipe, no digital manipulation. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element with natural depth falloff. Props are earned — only objects actually used in the recipe or found at a dinner table. Food is photographed as it comes out of the pan: genuine crust texture, real pooling and drips, natural imperfection.`;
 
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
