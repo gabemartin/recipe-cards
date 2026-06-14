@@ -110,11 +110,20 @@ header{
   gap:10px;
   padding: 12px 14px;
 }
+.top-nav-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-shrink:0;
+}
 #openIngredients{
   white-space: nowrap;
   display:flex;
   align-items:center;
   gap:8px;
+}
+#copyImagePrompt{
+  white-space: nowrap;
 }
 .topbar{
   padding: 14px 14px 12px;
@@ -1161,6 +1170,11 @@ function renderSlide(slide, index) {
           </section>`.trimStart();
 }
 
+// ─── House photography style — embedded in every recipe card ──────────────────
+// Subject (recipe.imagePrompt) + this style block = the full image prompt.
+// Update this string to evolve the visual identity across all cards on next build.
+const IMAGE_STYLE = `Shot on a dark, weathered walnut or charcoal slate surface — deep grain, imperfect texture, no fill light or reflectors. Single-source natural light from the upper left, angled low to rake across surfaces and cast deep organic shadows. Overhead flat lay or slight ¾ overhead — choose whichever reveals the dish's best silhouette and texture. Props are earned, not decorative: one vintage knife or fork, a small sauce vessel if the dish has one, a sprig of the herb actually used in the recipe, coarse salt where salt was used. Color palette: deep jewel tones — charcoal, burgundy, forest green, ochre, dark gold. No bright whites, no clinical backgrounds. Food is styled honestly: genuine doneness, real pooling and drips, no tweezered perfect garnish. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element, natural depth falloff. Mood: moody editorial. Honest food, beautiful light.`;
+
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
 function buildHTML(recipe, slug, imageFile) {
@@ -1259,9 +1273,12 @@ function buildHTML(recipe, slug, imageFile) {
     <header class="safe-top">
       <nav class="top-nav">
         <a class="btn btn-back" id="backToIndex" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}</a>
-        <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
-          ${HI.queueList}<span>Ingredients</span>
-        </button>
+        <div class="top-nav-actions">
+          ${recipe.imagePrompt ? `<button class="btn" id="copyImagePrompt" type="button" aria-label="Copy image prompt">📷 Prompt</button>` : ""}
+          <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
+            ${HI.queueList}<span>Ingredients</span>
+          </button>
+        </div>
       </nav>
       <div class="topbar">
         <div class="brandrow">
@@ -1382,6 +1399,7 @@ ${expandedSlidesHtml}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const RECIPE = ${recipeJson};
+    const IMAGE_STYLE = ${JSON.stringify(IMAGE_STYLE)};
     const CURRENT_SLUG = ${JSON.stringify(slug)};
     const CHECK_KEYS = [${checkIds.join(",")}];
     const SHOP_KEYS = [${shopIds.join(",")}];
@@ -1997,6 +2015,20 @@ ${expandedSlidesHtml}
         }
       });
     });
+
+    const imgPromptBtn = document.getElementById("copyImagePrompt");
+    if (imgPromptBtn) {
+      imgPromptBtn.addEventListener("click", async () => {
+        const fullPrompt = IMAGE_STYLE + "\\n\\n" + (RECIPE.imagePrompt || "");
+        try {
+          await copyText(fullPrompt);
+          imgPromptBtn.textContent = "✓ Copied";
+          setTimeout(() => { imgPromptBtn.textContent = "📷 Prompt"; }, 1800);
+        } catch(e) {
+          openCopyPromptDialog(fullPrompt);
+        }
+      });
+    }
 
     // Pull to refresh — rests below notch when shown; slides up fully off-screen when idle
     (function(){

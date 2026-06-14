@@ -60,7 +60,24 @@ Read [schema-reference.md](schema-reference.md) for the complete field reference
 
 **Hero image (optional):** When the source is a URL, set `"image": "https://..."` to the main finished-dish photo or the page’s `og:image` URL if that’s all that’s available. On the first `node generate.js` run, the build downloads it once into `src/images/<slug>.<ext>` (same kebab-case stem as the JSON filename, predictable extension from `Content-Type` or URL). That file is committed as the cache and is reused for both the recipe hero and the index thumbnail. If you omit `image` and there is no `src/images/<slug>.*` yet, the site shows a deterministic gradient + initial-letter placeholder until you add a URL or drop in an image file manually.
 
-### 3. Write the file
+### 3. Write `imagePrompt` into the JSON
+
+Before writing the file, generate the `imagePrompt` field and add it as the **second field** in the JSON (right after `"title"`).
+
+The `imagePrompt` is a **2–4 sentence dish-specific subject paragraph** that describes only what the finished cooked dish looks like: real colors, real textures, honest doneness, how sauces pool or drip, what garnishes look like after cooking. It does **not** include photography terms, lighting, surface, camera angle, or props — the global house style in `generate.js` handles all of that.
+
+**Rules:**
+- Write as if a journalist is describing what they see on the plate
+- Describe real doneness (medium-rare = rosy-red, not deep red; cream gravy = ivory-white)
+- Note how sauces and glazes naturally behave (pool, drip, soak into starch)
+- Include contrasting elements that make the dish visually interesting (dark crust / pale interior)
+- No photography language whatsoever
+
+**Reference:** `handoff/ART_DIRECTION.md` — "Subject Writing Rules" section
+
+When the recipe card is built, this field powers the `📷 Prompt` button in the top nav. The button concatenates the global `IMAGE_STYLE` constant (in `generate.js`) with `recipe.imagePrompt` to produce the full prompt.
+
+### 4. Write the file
 
 ```bash
 # Write the JSON to src/recipes/
@@ -69,7 +86,7 @@ Read [schema-reference.md](schema-reference.md) for the complete field reference
 
 After writing, verify the JSON is valid by reading it back.
 
-### 4. Build
+### 5. Build
 
 Run a full build to regenerate all HTML, the index page, and the manifest:
 
@@ -79,29 +96,15 @@ node generate.js
 
 This produces `dist/{slug}.html` plus an updated `dist/index.html`, copies `src/images/` to `dist/images/`, and may create a new cached file under `src/images/` when `image` is set.
 
-### 5. Verify
+### 6. Verify
 
 After the build, confirm:
 - [ ] `dist/{slug}.html` exists
-- [ ] All required fields present: `title`, `subtitle`, `storageKey`, `chips`, `ingredients`, `slides`
+- [ ] All required fields present: `title`, `imagePrompt`, `subtitle`, `storageKey`, `chips`, `ingredients`, `slides`
 - [ ] At least one slide has a `checkboxLabel`
 - [ ] `storageKey` doesn't duplicate an existing recipe's key
 - [ ] Ingredients list is non-empty
-
-### 6. Image prompt
-
-After every new recipe, generate a detailed image prompt for the finished dish and output it in the chat so it can be copied and pasted into an image generator.
-
-**Style rules (apply to every prompt):**
-- **Background**: Dark surface — weathered dark walnut wood, charcoal slate, or dark brown leather/stone
-- **Lighting**: Dramatic single-source natural or window light from the upper left, casting deep organic shadows; no fill flash
-- **Angle**: Overhead flat lay or slight 3/4 overhead; choose whichever suits the dish's shape
-- **Props**: Vintage silverware resting naturally, fresh herbs (rosemary, thyme, parsley) tucked in without fussiness, one or two supporting elements (cast iron pan, small sauce vessel, halved garlic head) — nothing that doesn't belong on the table
-- **Color palette**: Deep jewel tones and dark neutrals — charcoal, burgundy, forest green, golden brown; avoid bright whites or clinical backgrounds
-- **Food styling**: Honest, generous portions; natural drips and pooled sauce are good; no artificial height-stacking or tweezered garnishes
-- **Rendering**: Editorial food photography; shot at f/2.0–f/2.8; tack-sharp on the hero element with shallow depth of field; no HDR
-
-**Prompt format:** One dense paragraph describing the scene. No bullet points in the output. End with the shooting spec (focal length, aperture, mood keyword).
+- [ ] `📷 Prompt` button appears in the top nav of the built HTML
 
 ### 7. README
 
