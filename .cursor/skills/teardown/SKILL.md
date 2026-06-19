@@ -126,6 +126,20 @@ Track recurring teardown patterns here. Update this section when new patterns em
 - **JS updated**: no event listeners removed; the overview slide button now uses `data-prompt-kind="start"` and label `Get Started`
 - **Kept**: `buildPrompt(kind, stepIndex)` start-mode branch because the overview slide still needs startup-context prompt generation
 
+### Main-swiper carousel
+
+- **Archive tag**: none
+- **Removed**: `<div class="swiper main-swiper">` and all rendered slides; `<div class="progresswrap">` from header; `<div class="bottombar">` with Prev/Next nav
+- **CSS deleted**: `.progresswrap`, `.progress`, `.bar`, `.progtext`; `.expand-btn` and its pseudo-class rules; `.swiper-pagination-*` bullet rules; `.bottombar`-specific and shared rule (`.expanded-steps-footer` kept); `min-height: 560px` from `.swiper`; `.expand-btn .icon-expand`; `@media print` references to `.bottombar` and `.expand-btn`
+- **CSS added**: `gap: 10px` on `.step-actions`; `.overview-actions .btn{ flex:1; }` and `.overview-actions .copy-prompt-btn{ width:auto; }` for two-button layout
+- **HTML added**: static overview card (slide 0 content) with `<div class="step-actions overview-actions">` containing "Get Started" button (`id="getStartedBtn"`) and "Copy Recipe Prompt" button
+- **JS deleted**: `new Swiper(".main-swiper", ...)`, `updateProgress()` function + calls, `bar`/`progtext` element refs, `prev`/`next` `addEventListener` calls, `swiper.slideTo()` in `expandedStepsSwiper.on("slideChange")`, `.expand-btn` `querySelectorAll` listener
+- **JS added**: `getStartedBtn` click listener → `openExpandedSteps(0)`
+- **JS updated**: copy-prompt-btn stepIndex fallback simplified to `expandedStepsSwiper.activeIndex` (no more `swiper.activeIndex`)
+- **Removed function**: `renderSlide` (entire function deleted; `const slides = ...` variable also removed)
+- **Checkbox IDs**: expanded-steps inline HTML changed from `fsc${i}` to `c${i}` so `loadChecks()` and `CHECK_KEYS` wire up correctly; localStorage keys unchanged
+- **Kept**: `expanded-steps-swiper`, `expandedStepsDialog`, all expanded-steps HTML/CSS/JS; `renderPromptButton`, `buildPrompt`; `HI.arrowsPointingOut` SVG constant (harmless orphan)
+
 ## Self-update rule
 
 After each teardown, append a new entry under **Known patterns** documenting what was removed, what was kept and why, the archive tag name (or "none -- user declined"), and any non-obvious decisions. This builds a project-specific reference for future removals and restorations.

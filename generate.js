@@ -241,43 +241,12 @@ a.btn{ text-decoration:none; color:inherit; }
   display:block;
 }
 .icon-inline{ width:18px; height:18px; }
-.expand-btn .icon-expand{ width:22px; height:22px; }
 
 .btn.primary{
   background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent-dark) 12%, transparent));
   border-color: color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
-.progresswrap{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding: 0 14px 12px;
-}
-.progress{
-  position:relative;
-  flex:1;
-  height: 10px;
-  border-radius: 999px;
-  border:1px solid var(--border);
-  background: var(--surface-muted);
-  overflow:hidden;
-}
-.bar{
-  height:100%;
-  width:0%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
-  box-shadow: 0 10px 30px var(--accent-glow);
-  border-radius: 999px;
-  transition: width .18s ease;
-}
-.progtext{
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--foreground-secondary);
-  min-width: 88px;
-  text-align:right;
-}
 
 .hero-wrap{
   padding: 0 14px 12px;
@@ -340,8 +309,6 @@ main{
 
 .swiper{
   width:100%;
-  min-height: 560px;
-  padding: 6px 0 14px;
   overflow:hidden;
   touch-action: pan-y;
 }
@@ -383,30 +350,15 @@ main{
   font-weight: 900;
   letter-spacing:.2px;
 }
-.expand-btn{
-  flex:0 0 auto;
-  width: 46px; height: 46px;
-  border-radius: 18px;
-  border:1px solid var(--border);
-  background: var(--surface-muted);
-  display:grid;
-  place-items:center;
-  cursor:pointer;
-  color: var(--foreground-secondary);
-  z-index:1;
-  appearance:none;
-  -webkit-tap-highlight-color: transparent;
-  transition: background .15s ease, color .15s ease, transform .08s ease;
-}
-.expand-btn:hover{ border-color: var(--border-strong); color: var(--foreground-primary); }
-.expand-btn:active{ transform: scale(.92); }
-.expand-btn:focus-visible{ outline:none; box-shadow: var(--focus); }
 
 .cardbody{ z-index:1; }
 .step-actions{
   margin-top: 14px;
   display:flex;
+  gap: 10px;
 }
+.overview-actions .btn{ flex:1; }
+.overview-actions .copy-prompt-btn{ width:auto; }
 .p{
   margin:0;
   color: var(--foreground-primary);
@@ -426,7 +378,7 @@ ul{
   line-height: 1.55;
   color: var(--foreground-primary);
 }
-li{ margin: 7px 0; }
+li{ margin: 5px 0; }
 
 .callout{
   margin-top:auto;
@@ -463,16 +415,9 @@ li{ margin: 7px 0; }
   line-height: 1.25;
 }
 
-.bottombar,
 .expanded-steps-footer{
   border-top: 1px solid var(--border);
   background: var(--chrome-footer-fill);
-}
-.bottombar{
-  position: sticky;
-  bottom:0;
-  z-index: 10;
-  backdrop-filter: blur(12px);
 }
 .expanded-steps-footer{
   flex: 0 0 auto;
@@ -493,16 +438,6 @@ li{ margin: 7px 0; }
   align-items:center;
 }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal{ bottom: 8px; }
-.swiper-pagination-bullet{
-  width: 8px; height: 8px;
-  background: var(--border-strong);
-  opacity: 1;
-}
-.swiper-pagination-bullet-active{
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-glow);
-}
 
 dialog{
   width: min(520px, calc(100vw - 28px));
@@ -858,10 +793,10 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
 }
 
 .body-list {
-  background: var(--background-secondary);
-  padding: 24px 44px;
-  border-radius: var(--radius-md);
-  margin: 10px 0 10px 0;
+  background: transparent;
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 0;
+  margin: 8px 0;
 }
 
 @media (min-width: 640px) {
@@ -873,12 +808,11 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
 }
 @media print{
   body{ background:#fff; color:#000; }
-  header,.bottombar,.swiper-pagination{ display:none !important; }
+  header,.step-actions{ display:none !important; }
   .app{ max-width: 100%; }
   main{ padding: 0; }
   .card{ box-shadow:none; border:1px solid #ccc; background:#fff; color:#000; page-break-inside: avoid; }
   .muted,.callout,.chip{ color:#333 !important; }
-  .expand-btn,.step-actions{ display:none !important; }
 }
 /* ── Pull-to-refresh ──────────────────────────────── */
 /* Visible slot clears notch; idle translate lifts entire circle above the viewport */
@@ -975,7 +909,7 @@ function renderBodyBlock(block) {
     case "callout":
       return `<div class="callout">${block.html}</div>`;
     case "spacer":
-      return `<div style="height:10px"></div>`;
+      return `<div style="height:8px"></div>`;
     default:
       return `<!-- unknown block type: ${block.type} -->`;
   }
@@ -1017,57 +951,15 @@ function renderPromptButton({ label, kind, id = "", stepIndex = null, extraClass
   return `<button ${attrs.join(" ")}><span class="copy-prompt-label">${label}</span></button>`;
 }
 
-function renderSlide(slide, index) {
-  const stepLabel = index === 0 ? "0" : String(index);
-
-  const checkbox = slide.checkboxLabel
-    ? `<div class="checkrow">
-          <input id="c${index}" type="checkbox" />
-          <label for="c${index}">${slide.checkboxLabel}</label>
-        </div>`
-    : "";
-
-  const body = slide.body.map(renderBodyBlock).join("\n        ");
-  const measures = renderMeasurements(slide.measurements);
-  const promptButton = renderPromptButton({
-    label: index === 0 ? "Copy Recipe Prompt" : "Copy Prompt",
-    kind: index === 0 ? "start" : "step",
-    stepIndex: index
-  });
-
-  return `
-          <section class="swiper-slide">
-            <article class="card">
-              <div class="cardhead">
-                <div>
-                  <p class="kicker">${slide.kicker}</p>
-                  <h2 class="h">${slide.title}</h2>
-                </div>
-                <button class="expand-btn" type="button" aria-label="View fullscreen">
-                  ${HI.arrowsPointingOut}
-                </button>
-              </div>
-
-              <div class="cardbody">
-                ${checkbox}
-        ${body}
-        ${measures}
-                <div class="step-actions">${promptButton}</div>
-              </div>
-            </article>
-          </section>`.trimStart();
-}
-
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
 function buildHTML(recipe, slug, imageFile) {
   const chips = recipe.chips.map(renderChip).join("\n            ");
-  const slides = recipe.slides.map((s, i) => renderSlide(s, i)).join("\n");
   const expandedSlidesHtml = recipe.slides.map((s, i) => {
     const checkbox = s.checkboxLabel
       ? `<div class="checkrow">
-              <input id="fsc${i}" type="checkbox" />
-              <label for="fsc${i}">${s.checkboxLabel}</label>
+              <input id="c${i}" type="checkbox" />
+              <label for="c${i}">${s.checkboxLabel}</label>
             </div>`
       : "";
     const mainBody = s.body.filter(b => b.type !== "callout").map(renderBodyBlock).join("\n          ");
@@ -1129,6 +1021,27 @@ function buildHTML(recipe, slug, imageFile) {
   const recipeJson = JSON.stringify(recipe).replace(/</g, "\\u003c");
   const heroHtml = renderRecipeHero(recipe, slug, imageFile);
 
+  const overviewSlide = recipe.slides[0];
+  const overviewBody = overviewSlide.body.map(renderBodyBlock).join("\n        ");
+  const overviewMeasures = renderMeasurements(overviewSlide.measurements);
+  const overviewPromptButton = renderPromptButton({ label: "Copy Recipe Prompt", kind: "start", stepIndex: 0 });
+  const overviewCard = `      <article class="card">
+        <div class="cardhead">
+          <div>
+            <p class="kicker">${overviewSlide.kicker}</p>
+            <h2 class="h">${overviewSlide.title}</h2>
+          </div>
+        </div>
+        <div class="cardbody">
+        ${overviewBody}
+        ${overviewMeasures}
+          <div class="step-actions overview-actions">
+            <button class="btn primary" id="getStartedBtn" type="button">Get Started</button>
+            ${overviewPromptButton}
+          </div>
+        </div>
+      </article>`;
+
   return `<!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -1177,34 +1090,12 @@ function buildHTML(recipe, slug, imageFile) {
         </div>
       </div>
 
-      <div class="progresswrap">
-        <div class="progress" aria-label="Step progress">
-          <div class="bar" id="bar"></div>
-        </div>
-        <div class="progtext" id="progtext">1 / ${recipe.slides.length}</div>
-      </div>
     </header>
 ${heroHtml}
 
     <main>
-      <div class="swiper main-swiper" aria-label="Recipe steps carousel">
-        <div class="swiper-wrapper">
-${slides}
-        </div>
-        <div class="swiper-pagination" aria-hidden="true"></div>
-      </div>
+${overviewCard}
     </main>
-
-    <div class="bottombar safe-bot">
-      <div class="nav">
-        <button class="btn" id="prev" type="button" aria-label="Previous step">
-          ${HI.chevronLeft}<span>Prev</span>
-        </button>
-        <button class="btn primary" id="next" type="button" aria-label="Next step">
-          <span>Next</span>${HI.chevronRight}
-        </button>
-      </div>
-    </div>
   </div>
 
   <dialog id="dlg" class="expanded-steps-dialog">
@@ -1579,33 +1470,8 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
-    const swiper = new Swiper(".main-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 14,
-      speed: 260,
-      grabCursor: true,
-      pagination: { el: ".swiper-pagination", clickable: true },
-      keyboard: { enabled: true },
-      a11y: { enabled: true }
-    });
-
-    const bar = document.getElementById("bar");
-    const progtext = document.getElementById("progtext");
-
-    function updateProgress(){
-      const idx = swiper.activeIndex + 1;
-      const total = swiper.slides.length;
-      bar.style.width = (idx / total * 100) + "%";
-      progtext.textContent = idx + " / " + total;
-    }
-
-    swiper.on("slideChange", updateProgress);
-    updateProgress();
     loadChecks();
     loadShop();
-
-    document.getElementById("prev").addEventListener("click", () => swiper.slidePrev());
-    document.getElementById("next").addEventListener("click", () => swiper.slideNext());
 
     const dlg = document.getElementById("dlg");
     const ingredientsView = document.getElementById("ingredientsView");
@@ -1719,7 +1585,6 @@ ${expandedSlidesHtml}
       document.getElementById("expandedStepsNext").disabled = expandedStepsSwiper.isEnd;
     }
     expandedStepsSwiper.on("slideChange", () => {
-      swiper.slideTo(expandedStepsSwiper.activeIndex, 0);
       updateExpandedStepsNav();
     });
     updateExpandedStepsNav();
@@ -1737,9 +1602,7 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
-    document.querySelectorAll(".expand-btn").forEach(btn => {
-      btn.addEventListener("click", () => openExpandedSteps(swiper.activeIndex));
-    });
+    document.getElementById("getStartedBtn").addEventListener("click", () => openExpandedSteps(0));
     document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
     document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
     document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
@@ -1759,7 +1622,7 @@ ${expandedSlidesHtml}
       button.addEventListener("click", async () => {
         const kind = button.dataset.promptKind;
         const stepIndex = kind === "step"
-          ? Number(button.dataset.stepIndex || (expandedStepsDialog.open ? expandedStepsSwiper.activeIndex : swiper.activeIndex))
+          ? Number(button.dataset.stepIndex || expandedStepsSwiper.activeIndex)
           : null;
         const promptText = buildPrompt(kind, stepIndex);
 
