@@ -1,0 +1,184 @@
+{
+  "title": "Potato Pancake Brunch Plate",
+  "imagePrompt": "A round, deeply golden potato pancake forms the base of the plate, its pressed surface crisped to an uneven, lacy-edged brown. Pale yellow soft-scrambled eggs are spooned over the top in loose, silky folds that barely hold their shape. Irregular pieces of caramelized chorizo — their edges dark red and rendered — are scattered across the eggs, with fresh green coriander leaves and thin rounds of spring onion scattered over everything.",
+  "subtitle": "A crispy rösti-style potato pancake stacked with buttery soft scrambled eggs, chorizo, and fresh garnishes.",
+  "storageKey": "potato_pancake_breakfast_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Main", "value": "Potato pancake" },
+    { "label": "Serves", "value": "1–2" },
+    { "label": "Technique", "value": "Pan-fry + soft scramble" },
+    { "label": "Time", "value": "~25 min" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Serves 1–2. Scale up the potato pancake for more people.",
+    "items": [
+      "<strong>2 large russet or Yukon gold potatoes</strong> (~600g / 1.3 lbs), grated",
+      "<strong>Salt + black pepper</strong> to taste",
+      "<strong>2 tbsp neutral oil or butter</strong> (for pancake)",
+      "<strong>4 eggs</strong>",
+      "<strong>1 tbsp butter</strong> (for scramble)",
+      "<strong>100g / 3.5oz chorizo</strong>, sliced or crumbled",
+      "<strong>Handful fresh coriander (cilantro)</strong>",
+      "<strong>2 spring onions</strong>, sliced thin",
+      "<strong>Hot sauce</strong> to taste"
+    ],
+    "callout": "<strong>Most important step:</strong> Squeeze all the moisture out of the grated potato before it hits the pan — it's the difference between crispy and soggy.",
+    "shoppingList": [
+      { "item": "2 large russet or Yukon gold potatoes", "substitutes": ["Sweet potatoes"] },
+      { "item": "4 eggs" },
+      { "item": "Butter" },
+      { "item": "Neutral oil (vegetable or sunflower)" },
+      { "item": "Chorizo (100g / 3.5oz)", "substitutes": ["Merguez", "Italian sausage", "Bacon"] },
+      { "item": "Fresh coriander (cilantro)" },
+      { "item": "Spring onions (1 bunch)" },
+      { "item": "Hot sauce" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A brunch plate built around a golden, press-flat potato pancake as the base. Soft scrambled eggs and crispy chorizo go on top, finished with coriander, spring onion, and hot sauce."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Grate + squeeze</strong> potatoes dry, season",
+            "<strong>Press flat and fry</strong> potato pancake until golden and crispy",
+            "<strong>Cook chorizo</strong> until caramelized",
+            "<strong>Soft scramble eggs</strong> on low heat",
+            "<strong>Stack + garnish</strong> — coriander, spring onion, hot sauce"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't skip the squeeze:</strong> The mandolin or box grater gets the potato fine enough to cook through fast, but a towel-squeeze to remove excess water is what makes it crispy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Grate + Drain Potatoes",
+      "checkboxLabel": "Grate, squeeze dry, season",
+      "measurements": [
+        { "item": "Russet or Yukon gold potatoes", "qty": "2 large (~600g)", "alts": ["Sweet potatoes"] },
+        { "item": "Salt", "qty": "generous pinch" },
+        { "item": "Black pepper", "qty": "to taste" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Grate potatoes on the fine side of a <strong>mandolin or box grater</strong>.",
+            "Transfer to a clean kitchen towel and <strong>squeeze hard</strong> — remove as much moisture as possible.",
+            "Season with <strong>salt + pepper</strong> and toss to combine.",
+            "Don't rinse — you want the starch to help the pancake bind."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't fear the mandolin:</strong> Go slow, use the guard, and you'll get beautifully thin, even shreds. A box grater works too."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Cook the Potato Pancake",
+      "checkboxLabel": "Fry pancake until crispy on both sides",
+      "measurements": [
+        { "item": "Neutral oil or butter", "qty": "2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a skillet (carbon steel or cast iron) over <strong>medium heat</strong>.",
+            "Add oil or butter. Once shimmering, add the grated potato.",
+            "<strong>Press firmly flat</strong> with a spatula — good contact with the pan is everything.",
+            "Cook <strong>undisturbed for 5–7 minutes</strong> until deep golden underneath.",
+            "Carefully flip (wide spatula or plate-flip method) — press flat again.",
+            "Cook another <strong>5–6 minutes</strong> until crispy and cooked through.",
+            "Transfer to a plate while you make the toppings."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't rush it:</strong> The crust only forms when you leave it alone. Resist checking or moving it for the first 5 minutes."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Cook the Chorizo",
+      "checkboxLabel": "Chorizo caramelized and cooked through",
+      "measurements": [
+        { "item": "Chorizo", "qty": "100g / 3.5oz", "alts": ["Merguez", "Italian sausage", "Bacon"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In the same pan (or a clean one), add chorizo slices or crumbles.",
+            "Cook over <strong>medium heat</strong> for <strong>3–4 minutes</strong>, turning occasionally.",
+            "Cook until edges are caramelized and the fat has rendered.",
+            "Remove from pan and set aside."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Soft Scramble the Eggs",
+      "checkboxLabel": "Eggs soft scrambled, silky and barely set",
+      "measurements": [
+        { "item": "Eggs", "qty": "4" },
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Salt", "qty": "pinch" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Whisk eggs with a pinch of salt.",
+            "Melt butter in a non-stick or carbon steel pan over <strong>low heat</strong>.",
+            "Add eggs and stir <strong>constantly</strong> with a spatula.",
+            "Keep stirring and folding — don't stop, don't raise the heat.",
+            "<strong>Pull off the heat</strong> while still slightly underdone (carryover cooking finishes them).",
+            "Eggs should be silky and just barely set — not dry, not watery."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Low and slow is non-negotiable.</strong> High heat = rubbery eggs. Low heat + constant stirring = silky curds."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Plate + Garnish",
+      "checkboxLabel": "Stacked, garnished, ready to eat",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place the potato pancake on the plate as the base.",
+            "Spoon soft scrambled eggs on top.",
+            "Add chorizo pieces over the eggs.",
+            "Scatter fresh <strong>coriander leaves</strong> and sliced <strong>spring onions</strong>.",
+            "Hit it with <strong>hot sauce</strong> to finish.",
+            "Serve immediately — the pancake softens as it sits."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Avocado belongs here:</strong> A few slices between the eggs and chorizo would not be wrong. 100% a missed opportunity."
+        }
+      ]
+    }
+  ]
+}

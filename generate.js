@@ -81,6 +81,10 @@ body{
 @supports (padding: max(0px)) {
   .safe-top{ padding-top: max(14px, env(safe-area-inset-top)); }
   .safe-bot{ padding-bottom: max(14px, env(safe-area-inset-bottom)); }
+  .bottombar.safe-bot,
+  .expanded-steps-footer.safe-bot{
+    padding-bottom: max(8px, calc(env(safe-area-inset-bottom) - 14px));
+  }
 }
 
 .app{
@@ -106,11 +110,20 @@ header{
   gap:10px;
   padding: 12px 14px;
 }
+.top-nav-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-shrink:0;
+}
 #openIngredients{
   white-space: nowrap;
   display:flex;
   align-items:center;
   gap:8px;
+}
+#copyImagePrompt{
+  white-space: nowrap;
 }
 .topbar{
   padding: 14px 14px 12px;
@@ -419,6 +432,108 @@ li{ margin: 5px 0; }
   border-top: 1px solid var(--border);
   background: var(--chrome-footer-fill);
 }
+.bottombar{
+  position: sticky;
+  bottom:0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.tabbar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding: 8px 12px 0;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  overscroll-behavior-x:contain;
+}
+.tabbar::-webkit-scrollbar{ display:none; }
+.tabbar:empty{ display:none; }
+.tabbar[data-has-pins="false"] .pin-toggle{ margin-right:0; }
+.pin-toggle{
+  appearance:none;
+  flex-shrink:0;
+  width:34px;
+  height:30px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--foreground-secondary);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding:0;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.pin-toggle:hover{ color: var(--foreground-primary); border-color: var(--border-strong); }
+.pin-toggle:focus-visible{ outline:none; box-shadow: var(--focus); }
+.pin-toggle.pinned{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1200;
+}
+.pin-toggle .icon-pin{ width:16px; height:16px; }
+.tab{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding: 6px 4px 6px 10px;
+  border-radius: 10px;
+  border:1px solid var(--border);
+  background: var(--surface-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--foreground-secondary);
+  text-decoration:none;
+  max-width: 180px;
+  white-space:nowrap;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.tab:hover{ color: var(--foreground-primary); border-color: var(--border-strong); }
+.tab.tab-active{
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent-dark) 12%, transparent));
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--foreground-primary);
+}
+.tab-label{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width: 140px;
+}
+.tab-close{
+  appearance:none;
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  border:none;
+  background:transparent;
+  color: var(--foreground-tertiary);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding:0;
+  flex-shrink:0;
+  -webkit-tap-highlight-color: transparent;
+}
+.tab-close:hover{ color: var(--foreground-primary); background: var(--border); }
+.tab-close:focus-visible{ outline:none; box-shadow: var(--focus); }
+.tab-close .icon-tab-close{ width:13px; height:13px; }
+.tabbar-divider{
+  flex-shrink:0;
+  width:1px;
+  height:20px;
+  background: var(--border);
+  margin: 0 2px;
+}
+.tabbar-divider:last-child{ display:none; }
+
 .expanded-steps-footer{
   flex: 0 0 auto;
   backdrop-filter: blur(14px);
@@ -845,7 +960,10 @@ const HI = {
   chevronRight: `<svg class="icon" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>`,
   arrowsPointingOut: `<svg class="icon icon-expand" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>`,
   xMark: `<svg class="icon icon-close" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>`,
-  queueList: `<svg class="icon icon-inline" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 4.5h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 4.5h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>`
+  queueList: `<svg class="icon icon-inline" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 4.5h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 4.5h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>`,
+  bookmarkOutline: `<svg class="icon icon-pin" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" /></svg>`,
+  bookmarkSolid: `<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clip-rule="evenodd" /></svg>`,
+  xMarkSmall: `<svg class="icon icon-tab-close" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>`
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -950,6 +1068,52 @@ function renderPromptButton({ label, kind, id = "", stepIndex = null, extraClass
 
   return `<button ${attrs.join(" ")}><span class="copy-prompt-label">${label}</span></button>`;
 }
+
+function renderSlide(slide, index) {
+  const stepLabel = index === 0 ? "0" : String(index);
+
+  const checkbox = slide.checkboxLabel
+    ? `<div class="checkrow">
+          <input id="c${index}" type="checkbox" />
+          <label for="c${index}">${slide.checkboxLabel}</label>
+        </div>`
+    : "";
+
+  const body = slide.body.map(renderBodyBlock).join("\n        ");
+  const measures = renderMeasurements(slide.measurements);
+  const promptButton = renderPromptButton({
+    label: index === 0 ? "Copy Recipe Prompt" : "Copy Prompt",
+    kind: index === 0 ? "start" : "step",
+    stepIndex: index
+  });
+
+  return `
+          <section class="swiper-slide">
+            <article class="card">
+              <div class="cardhead">
+                <div>
+                  <p class="kicker">${slide.kicker}</p>
+                  <h2 class="h">${slide.title}</h2>
+                </div>
+                <button class="expand-btn" type="button" aria-label="View fullscreen">
+                  ${HI.arrowsPointingOut}
+                </button>
+              </div>
+
+              <div class="cardbody">
+                ${checkbox}
+        ${body}
+        ${measures}
+                <div class="step-actions">${promptButton}</div>
+              </div>
+            </article>
+          </section>`.trimStart();
+}
+
+// ─── House photography style — embedded in every recipe card ──────────────────
+// Subject (recipe.imagePrompt) + this style block = the full image prompt.
+// Update this string to evolve the visual identity across all cards on next build.
+const IMAGE_STYLE = `Shot on a dark, weathered walnut or charcoal slate surface — deep grain, imperfect texture, no fill light or reflectors. Single-source natural light from the upper left, angled low to rake across surfaces and cast deep organic shadows. Overhead flat lay or slight ¾ overhead — choose whichever reveals the dish's best silhouette and texture. Props are earned, not decorative: one vintage knife or fork, a small sauce vessel if the dish has one, a sprig of the herb actually used in the recipe, coarse salt where salt was used. Color palette: deep jewel tones — charcoal, burgundy, forest green, ochre, dark gold. No bright whites, no clinical backgrounds. Food is styled honestly: genuine doneness, real pooling and drips, no tweezered perfect garnish. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element, natural depth falloff. Mood: moody editorial. Honest food, beautiful light.`;
 
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
@@ -1069,9 +1233,12 @@ function buildHTML(recipe, slug, imageFile) {
     <header class="safe-top">
       <nav class="top-nav">
         <a class="btn btn-back" id="backToIndex" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}</a>
-        <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
-          ${HI.queueList}<span>Ingredients</span>
-        </button>
+        <div class="top-nav-actions">
+          ${recipe.imagePrompt ? `<button class="btn" id="copyImagePrompt" type="button" aria-label="Copy image prompt">📷 Prompt</button>` : ""}
+          <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
+            ${HI.queueList}<span>Ingredients</span>
+          </button>
+        </div>
       </nav>
       <div class="topbar">
         <div class="brandrow">
@@ -1096,6 +1263,22 @@ ${heroHtml}
     <main>
 ${overviewCard}
     </main>
+
+    <div class="bottombar safe-bot">
+      <div class="nav">
+        <button class="btn" id="prev" type="button" aria-label="Previous step">
+          ${HI.chevronLeft}<span>Prev</span>
+        </button>
+        <button class="btn primary" id="next" type="button" aria-label="Next step">
+          <span>Next</span>${HI.chevronRight}
+        </button>
+      </div>
+      <div class="tabbar" role="tablist" aria-label="Pinned recipes">
+        <button class="pin-toggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
+          ${HI.bookmarkOutline}
+        </button>
+      </div>
+    </div>
   </div>
 
   <dialog id="dlg" class="expanded-steps-dialog">
@@ -1142,6 +1325,11 @@ ${expandedSlidesHtml}
         <button class="btn" id="expandedStepsPrev" type="button" aria-label="Previous step">${HI.chevronLeft}<span>Prev</span></button>
         <button class="btn primary" id="expandedStepsNext" type="button" aria-label="Next step"><span>Next</span>${HI.chevronRight}</button>
       </div>
+      <div class="tabbar" role="tablist" aria-label="Pinned recipes">
+        <button class="pin-toggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
+          ${HI.bookmarkOutline}
+        </button>
+      </div>
     </div>
   </dialog>
 
@@ -1160,10 +1348,109 @@ ${expandedSlidesHtml}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const RECIPE = ${recipeJson};
+    const IMAGE_STYLE = ${JSON.stringify(IMAGE_STYLE)};
+    const CURRENT_SLUG = ${JSON.stringify(slug)};
     const CHECK_KEYS = [${checkIds.join(",")}];
     const SHOP_KEYS = [${shopIds.join(",")}];
     const LS_KEY = ${JSON.stringify(recipe.storageKey)};
     const LS_SHOP = LS_KEY + "_shop";
+    const LS_SLIDE = LS_KEY + "_slide";
+    const LS_PINS = "recipe_cards_pins_v1";
+
+    function loadSlide(){
+      try{
+        const n = parseInt(localStorage.getItem(LS_SLIDE) || "0", 10);
+        if (!Number.isFinite(n) || n < 0) return 0;
+        return Math.min(n, RECIPE.slides.length - 1);
+      }catch(e){ return 0; }
+    }
+    function saveSlide(idx){
+      try{ localStorage.setItem(LS_SLIDE, String(idx)); }catch(e){}
+    }
+
+    function loadPins(){
+      try{
+        const arr = JSON.parse(localStorage.getItem(LS_PINS) || "[]");
+        if (!Array.isArray(arr)) return [];
+        return arr.filter(p => p && typeof p.slug === "string" && typeof p.title === "string");
+      }catch(e){ return []; }
+    }
+    function savePins(pins){
+      try{ localStorage.setItem(LS_PINS, JSON.stringify(pins)); }catch(e){}
+    }
+    function isPinned(slug, pins){
+      return pins.some(p => p.slug === slug);
+    }
+    function setPinned(pinned){
+      const pins = loadPins();
+      const idx = pins.findIndex(p => p.slug === CURRENT_SLUG);
+      if (pinned && idx < 0) pins.push({ slug: CURRENT_SLUG, title: RECIPE.title });
+      else if (!pinned && idx >= 0) pins.splice(idx, 1);
+      savePins(pins);
+      renderTabs();
+    }
+    function unpin(slug){
+      const pins = loadPins().filter(p => p.slug !== slug);
+      savePins(pins);
+      renderTabs();
+    }
+
+    const TAB_CLOSE_ICON = ${JSON.stringify(HI.xMarkSmall)};
+    const PIN_OUTLINE_ICON = ${JSON.stringify(HI.bookmarkOutline)};
+    const PIN_SOLID_ICON = ${JSON.stringify(HI.bookmarkSolid)};
+
+    function buildTabElement(pin){
+      const isCurrent = pin.slug === CURRENT_SLUG;
+      const tab = document.createElement(isCurrent ? "span" : "a");
+      tab.className = "tab" + (isCurrent ? " tab-active" : "");
+      tab.setAttribute("role", "tab");
+      tab.setAttribute("aria-selected", String(isCurrent));
+      if (!isCurrent) tab.href = pin.slug + ".html";
+
+      const label = document.createElement("span");
+      label.className = "tab-label";
+      label.textContent = pin.title;
+      tab.appendChild(label);
+
+      const close = document.createElement("button");
+      close.className = "tab-close";
+      close.type = "button";
+      close.setAttribute("aria-label", "Unpin " + pin.title);
+      close.innerHTML = TAB_CLOSE_ICON;
+      close.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        unpin(pin.slug);
+      });
+      tab.appendChild(close);
+      return tab;
+    }
+
+    function renderTabs(){
+      const pins = loadPins();
+      const pinned = isPinned(CURRENT_SLUG, pins);
+
+      document.querySelectorAll(".pin-toggle").forEach(pinBtn => {
+        pinBtn.classList.toggle("pinned", pinned);
+        pinBtn.setAttribute("aria-pressed", String(pinned));
+        pinBtn.setAttribute("aria-label", pinned ? "Unpin this recipe" : "Pin this recipe");
+        pinBtn.innerHTML = pinned ? PIN_SOLID_ICON : PIN_OUTLINE_ICON;
+      });
+
+      document.querySelectorAll(".tabbar").forEach(tabbar => {
+        tabbar.querySelectorAll(".tab, .tabbar-divider").forEach(el => el.remove());
+        tabbar.dataset.hasPins = String(pins.length > 0);
+        if (pins.length === 0) return;
+
+        if (tabbar.querySelector(".pin-toggle")) {
+          const divider = document.createElement("span");
+          divider.className = "tabbar-divider";
+          divider.setAttribute("aria-hidden", "true");
+          tabbar.appendChild(divider);
+        }
+        pins.forEach(pin => tabbar.appendChild(buildTabElement(pin)));
+      });
+    }
 
     function loadChecks(){
       try{
@@ -1470,8 +1757,44 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
+    const swiper = new Swiper(".main-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 14,
+      speed: 260,
+      grabCursor: true,
+      initialSlide: loadSlide(),
+      pagination: { el: ".swiper-pagination", clickable: true },
+      keyboard: { enabled: true },
+      a11y: { enabled: true }
+    });
+
+    const bar = document.getElementById("bar");
+    const progtext = document.getElementById("progtext");
+
+    function updateProgress(){
+      const idx = swiper.activeIndex + 1;
+      const total = swiper.slides.length;
+      bar.style.width = (idx / total * 100) + "%";
+      progtext.textContent = idx + " / " + total;
+    }
+
+    swiper.on("slideChange", () => {
+      updateProgress();
+      saveSlide(swiper.activeIndex);
+    });
+    updateProgress();
     loadChecks();
     loadShop();
+    renderTabs();
+
+    document.querySelectorAll(".pin-toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        setPinned(!isPinned(CURRENT_SLUG, loadPins()));
+      });
+    });
+    window.addEventListener("storage", (e) => {
+      if (e.key === LS_PINS) renderTabs();
+    });
 
     const dlg = document.getElementById("dlg");
     const ingredientsView = document.getElementById("ingredientsView");
@@ -1635,6 +1958,20 @@ ${expandedSlidesHtml}
         }
       });
     });
+
+    const imgPromptBtn = document.getElementById("copyImagePrompt");
+    if (imgPromptBtn) {
+      imgPromptBtn.addEventListener("click", async () => {
+        const fullPrompt = IMAGE_STYLE + "\\n\\n" + (RECIPE.imagePrompt || "");
+        try {
+          await copyText(fullPrompt);
+          imgPromptBtn.textContent = "✓ Copied";
+          setTimeout(() => { imgPromptBtn.textContent = "📷 Prompt"; }, 1800);
+        } catch(e) {
+          openCopyPromptDialog(fullPrompt);
+        }
+      });
+    }
 
     // Pull to refresh — rests below notch when shown; slides up fully off-screen when idle
     (function(){
@@ -1878,6 +2215,56 @@ function buildIndex(entries) {
       background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
     .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
+    .index-bottombar{
+      position:fixed; left:0; right:0; bottom:0; z-index:10;
+      border-top:1px solid var(--border);
+      background:linear-gradient(to top, rgba(24,19,13,.94), rgba(24,19,13,.65));
+      backdrop-filter:blur(12px);
+      padding-bottom:max(8px, calc(env(safe-area-inset-bottom) - 14px));
+    }
+    html[data-theme="light"] .index-bottombar{
+      background:linear-gradient(to top, rgba(221,217,206,.94), rgba(221,217,206,.65));
+    }
+    .index-bottombar[hidden]{ display:none; }
+    body.has-tabbar{ padding-bottom:calc(50px + max(8px, calc(env(safe-area-inset-bottom) - 14px))); }
+    .tabbar{
+      display:flex; align-items:center; gap:6px;
+      padding:8px 12px;
+      overflow-x:auto; overflow-y:hidden;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      overscroll-behavior-x:contain;
+    }
+    .tabbar::-webkit-scrollbar{ display:none; }
+    .tab{
+      flex-shrink:0;
+      display:inline-flex; align-items:center; gap:4px;
+      padding:6px 4px 6px 10px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:var(--surface-muted);
+      font-size:var(--text-xs); font-weight:700;
+      color:var(--foreground-secondary);
+      text-decoration:none;
+      max-width:180px;
+      white-space:nowrap;
+    }
+    .tab:hover{ color:var(--foreground-primary); border-color:var(--border-strong); }
+    .tab-label{
+      overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+      max-width:140px;
+    }
+    .tab-close{
+      appearance:none;
+      width:22px; height:22px; border-radius:7px;
+      border:none; background:transparent;
+      color:var(--foreground-tertiary);
+      display:grid; place-items:center;
+      cursor:pointer; padding:0; flex-shrink:0;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .tab-close:hover{ color:var(--foreground-primary); background:var(--border); }
+    .tab-close svg{ width:13px; height:13px; }
     #ptr{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 2em);left:50%;z-index:200;width:44px;height:44px;border-radius:50%;background:var(--surface-muted);border:1px solid var(--border);box-shadow:var(--shadow-elevated);display:grid;place-items:center;pointer-events:none;transform:translate(-50%,calc(-100% - env(safe-area-inset-top, 0px) - 2em - 16px));color:var(--foreground-tertiary);transition:border-color .15s,color .15s;}
     #ptr.armed{border-color:color-mix(in srgb,var(--accent) 55%,transparent);color:var(--accent);}
     .ptr-icon{width:22px;height:22px;display:block;}
@@ -1899,7 +2286,70 @@ function buildIndex(entries) {
 ${cards || '      <p class="empty">No recipes yet.</p>'}
     </div>
   </div>
+  <div class="index-bottombar" id="indexBottombar" hidden>
+    <div class="tabbar" role="tablist" aria-label="Pinned recipes"></div>
+  </div>
   <script>
+    (function(){
+      var LS_PINS = "recipe_cards_pins_v1";
+      var TAB_CLOSE_ICON = ${JSON.stringify(HI.xMarkSmall)};
+      var bottombar = document.getElementById("indexBottombar");
+      var tabbar = bottombar.querySelector(".tabbar");
+
+      function loadPins(){
+        try{
+          var arr = JSON.parse(localStorage.getItem(LS_PINS) || "[]");
+          if (!Array.isArray(arr)) return [];
+          return arr.filter(function(p){
+            return p && typeof p.slug === "string" && typeof p.title === "string";
+          });
+        }catch(e){ return []; }
+      }
+      function savePins(pins){
+        try{ localStorage.setItem(LS_PINS, JSON.stringify(pins)); }catch(e){}
+      }
+      function unpin(slug){
+        savePins(loadPins().filter(function(p){ return p.slug !== slug; }));
+        renderTabs();
+      }
+      function renderTabs(){
+        var pins = loadPins();
+        tabbar.innerHTML = "";
+        var hasPins = pins.length > 0;
+        bottombar.hidden = !hasPins;
+        document.body.classList.toggle("has-tabbar", hasPins);
+        pins.forEach(function(pin){
+          var a = document.createElement("a");
+          a.className = "tab";
+          a.href = pin.slug + ".html";
+          a.setAttribute("role", "tab");
+
+          var label = document.createElement("span");
+          label.className = "tab-label";
+          label.textContent = pin.title;
+          a.appendChild(label);
+
+          var close = document.createElement("button");
+          close.className = "tab-close";
+          close.type = "button";
+          close.setAttribute("aria-label", "Unpin " + pin.title);
+          close.innerHTML = TAB_CLOSE_ICON;
+          close.addEventListener("click", function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            unpin(pin.slug);
+          });
+          a.appendChild(close);
+
+          tabbar.appendChild(a);
+        });
+      }
+
+      renderTabs();
+      window.addEventListener("storage", function(e){
+        if (e.key === LS_PINS) renderTabs();
+      });
+    })();
     (function(){
       var KEY="recipe_cards_theme_v1",DARK_BG="#18130d",LIGHT_BG="#ddd9ce";
       var html=document.documentElement,btn=document.getElementById("themeToggle"),meta=document.getElementById("metaTheme");

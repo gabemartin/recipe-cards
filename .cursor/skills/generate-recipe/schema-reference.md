@@ -5,6 +5,7 @@
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `title` | string | yes | Recipe name, used as page `<title>` and H1 |
+| `imagePrompt` | string | yes | Dish-specific subject paragraph for the image prompt. Describes the cooked dish accurately: colors, textures, plating, sauce behavior, doneness. 2–4 sentences. **Do NOT include** lighting, angle, surface, props, or any staging/photography language — those come from the global `IMAGE_STYLE` block in `generate.js`. See `handoff/ART_DIRECTION.md` for rules. |
 | `subtitle` | string | yes | One-line description shown in the header and meta description |
 | `storageKey` | string | yes | `localStorage` key for checkbox persistence. Format: `snake_case_checks_v1` |
 | `image` | string | no | Optional `https://` URL for the recipe photo. On build, if `src/images/<slug>.{jpg,png,webp,…}` does not exist yet, the generator fetches once and caches the file in `src/images/` (filename = slug + extension). Same file is used for the index thumbnail. If omitted and no cached file, a gradient + initial placeholder is rendered |

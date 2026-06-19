@@ -1,0 +1,199 @@
+{
+  "title": "Honey Garlic Cajun Chicken Thighs",
+  "imagePrompt": "Bone-in chicken thighs sit skin-side up in a rich, pale cream sauce, their skin deeply browned and lacquered to a glossy finish from the butter brush and oven heat. The Cajun spice crust — dark red from smoked paprika, nearly mahogany at the edges — contrasts sharply with the ivory sauce pooling around and beneath the thighs. Thin lemon slices and smashed garlic cloves nestle between the pieces, softened and lightly caramelized, while the cream sauce shows faint golden streaks from the honey and dissolved Parmesan.",
+  "subtitle": "Cast iron-seared bone-in thighs finished in a honey garlic cream sauce.",
+  "storageKey": "honey_garlic_cajun_chicken_thighs_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein",    "value": "5–6 bone-in thighs" },
+    {              "label": "Serves",     "value": "~4" },
+    {              "label": "Technique",  "value": "Cast iron → oven" },
+    {              "label": "Sauce",      "value": "Honey garlic cream" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "A Cajun spice blend seared into crispy skin, then finished in a rich cream pan sauce.",
+    "items": [
+      "<strong>5–6 bone-in, skin-on chicken thighs</strong>",
+      "<strong>4 tbsp olive oil</strong> (divided: 2 tbsp for coating, 2 tbsp for the pan)",
+      "<strong>2 tsp salt</strong>",
+      "<strong>2 tsp black pepper</strong>",
+      "<strong>2 tsp garlic powder</strong>",
+      "<strong>2 tsp lemon pepper</strong>",
+      "<strong>2 tsp onion powder</strong>",
+      "<strong>2 tsp smoked paprika</strong>",
+      "<strong>2 tsp Italian seasoning</strong>",
+      "<strong>1 shallot</strong>, diced",
+      "<strong>5 cloves garlic</strong> — 3 minced, 2 smashed",
+      "<strong>1 cup dry white wine</strong>",
+      "<strong>1 cup heavy cream</strong>",
+      "<strong>¼ cup chicken broth</strong>",
+      "<strong>¼ cup Parmesan cheese</strong>, freshly grated",
+      "<strong>Juice of ½ lime</strong>",
+      "<strong>1 tbsp honey</strong>",
+      "Lemon slices (for baking)",
+      "Melted butter for brushing"
+    ],
+    "callout": "<strong>Key tip:</strong> Sear skin-side down without moving — that's how you get a crispy, deeply browned crust.",
+    "shoppingList": [
+      { "item": "5–6 bone-in skin-on chicken thighs" },
+      { "item": "Olive oil" },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "Garlic powder" },
+      { "item": "Lemon pepper" },
+      { "item": "Onion powder" },
+      { "item": "Smoked paprika" },
+      { "item": "Italian seasoning" },
+      { "item": "1 shallot", "substitutes": ["Small yellow onion"] },
+      { "item": "1 head garlic" },
+      { "item": "Dry white wine (1 cup)", "substitutes": ["Extra chicken broth"] },
+      { "item": "Heavy cream (1 cup)", "substitutes": ["Half-and-half (thinner sauce)"] },
+      { "item": "Chicken broth (small carton)" },
+      { "item": "Parmesan cheese" },
+      { "item": "1 lime" },
+      { "item": "Honey" },
+      { "item": "1 lemon" },
+      { "item": "Butter" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Bone-in thighs coated in a Cajun spice blend, seared hard in a cast iron for crispy skin, then finished in the oven sitting in a honey garlic Parmesan cream sauce."
+        },
+        {
+          "type": "spacer"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mix spices</strong> and coat chicken",
+            "<strong>Sear skin-side down</strong> in cast iron 5–7 min",
+            "<strong>Build sauce</strong> from pan drippings — shallot, garlic, wine, cream, Parm",
+            "<strong>Add honey + lime</strong> for balance",
+            "<strong>Bake</strong> 25–30 min, brushing with butter halfway"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Serve with:</strong> Mashed potatoes and broccolini to soak up the sauce."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season the Chicken",
+      "checkboxLabel": "Coat chicken in oil and spice blend",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" },
+        { "item": "Salt", "qty": "2 tsp" },
+        { "item": "Black pepper", "qty": "2 tsp" },
+        { "item": "Garlic powder", "qty": "2 tsp" },
+        { "item": "Lemon pepper", "qty": "2 tsp" },
+        { "item": "Onion powder", "qty": "2 tsp" },
+        { "item": "Smoked paprika", "qty": "2 tsp" },
+        { "item": "Italian seasoning", "qty": "2 tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>350°F</strong>.",
+            "Mix all spices together in a small bowl.",
+            "Coat chicken thighs in <strong>2 tbsp olive oil</strong>, then press the spice blend onto all sides."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Even coverage matters:</strong> Press the spices in — don't just dust them on."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Sear the Chicken",
+      "checkboxLabel": "Sear skin-side down, then flip",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat <strong>2 tbsp olive oil</strong> in a cast iron skillet over <strong>medium-high heat</strong>.",
+            "Place chicken <strong>skin-side down</strong> — don't touch it.",
+            "Sear <strong>5–7 minutes</strong> until the skin is deep golden and releases easily.",
+            "If thighs are large, flip and sear the second side <strong>3–5 minutes</strong>.",
+            "Remove chicken and set aside."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't move it:</strong> The skin will stick at first — wait for it to release naturally for the best crust."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Build the Sauce",
+      "checkboxLabel": "Shallot → garlic → wine → cream → Parm → honey",
+      "measurements": [
+        { "item": "Shallot", "qty": "1, diced" },
+        { "item": "Garlic (minced)", "qty": "3 cloves" },
+        { "item": "White wine", "qty": "1 cup" },
+        { "item": "Chicken broth", "qty": "¼ cup" },
+        { "item": "Heavy cream", "qty": "1 cup" },
+        { "item": "Parmesan", "qty": "¼ cup, grated" },
+        { "item": "Lime juice", "qty": "½ lime" },
+        { "item": "Honey", "qty": "1 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In the same skillet over <strong>medium heat</strong>, sauté shallot <strong>3 minutes</strong> until softened.",
+            "Add <strong>minced garlic</strong> and cook until fragrant, about <strong>30–60 seconds</strong>.",
+            "Deglaze with <strong>white wine</strong> — scrape up all the browned bits.",
+            "Reduce wine <strong>5 minutes</strong>, then add <strong>chicken broth</strong> and simmer briefly.",
+            "Stir in <strong>heavy cream</strong>, then grate in <strong>Parmesan</strong>.",
+            "Add <strong>lime juice</strong> and <strong>honey</strong>. Taste and adjust sweetness."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Balance check:</strong> The honey should round out the acidity — add a little at a time and taste as you go."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Finish in the Oven",
+      "checkboxLabel": "Bake 25–30 min, butter-brush halfway",
+      "measurements": [
+        { "item": "Garlic (smashed)", "qty": "2 cloves" },
+        { "item": "Lemon slices", "qty": "a few" },
+        { "item": "Butter (melted)", "qty": "for brushing" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Nestle chicken thighs back into the skillet, skin-side up.",
+            "Tuck in <strong>lemon slices</strong> and <strong>2 smashed garlic cloves</strong>.",
+            "Bake at 350°F for <strong>10 minutes</strong>.",
+            "Brush skin with <strong>melted butter</strong>.",
+            "Continue baking <strong>15–20 minutes more</strong> until chicken is cooked through (165°F internal)."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Butter brush timing:</strong> Brushing partway through (not at the start) keeps the skin crispy and adds a glossy finish."
+        }
+      ]
+    }
+  ]
+}

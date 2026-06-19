@@ -1,0 +1,201 @@
+{
+  "title": "Country Fried Steak",
+  "imagePrompt": "A breaded cube steak sits nearly buried under a generous pour of ivory cream gravy, its peppery speckle visible across the surface. Where the crust peeks through at the edges, it shows a deep, even golden-brown with a slightly rugged texture from the double-dredge. One steak is cut open to reveal the contrast between the crisp outer crust and the tender, pale meat beneath, with gravy pooling naturally into the cut. The plate is finished with a few sprigs of fresh thyme and a scattering of coarse sea salt.",
+  "subtitle": "Cube steak pan-fried in a seasoned crust, smothered in peppery cream gravy.",
+  "storageKey": "country_fried_steak_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "4 cube steaks" },
+    { "label": "Serves", "value": "~4" },
+    { "label": "Style", "value": "Southern comfort" },
+    { "label": "Sauce", "value": "Peppery cream gravy" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Double-dredge breading and drippings-based gravy — both built in the same skillet.",
+    "items": [
+      "<strong>4 cube steaks</strong> (about 6 oz each, tenderized round steak)",
+      "<strong>1½ tsp kosher salt</strong>",
+      "<strong>1 tsp black pepper</strong>",
+      "<strong>1 tsp garlic powder</strong>",
+      "<strong>1 tsp onion powder</strong>",
+      "<strong>½ tsp smoked paprika</strong>",
+      "<strong>¼ tsp cayenne pepper</strong> (optional)",
+      "<strong>1½ cups all-purpose flour</strong> (1 cup for dredge + ½ cup seasoned for final coat)",
+      "<strong>2 large eggs</strong>",
+      "<strong>½ cup buttermilk</strong>",
+      "<strong>Vegetable oil</strong> for frying (~½ inch deep in skillet)",
+      "<strong>3 tbsp reserved pan drippings</strong> (for gravy)",
+      "<strong>3 tbsp all-purpose flour</strong> (for gravy roux)",
+      "<strong>2 cups whole milk</strong>",
+      "<strong>Salt + heavy black pepper</strong> to taste (for gravy)"
+    ],
+    "callout": "<strong>Key rule:</strong> Press the breading firmly into the steak and let it rest 5 minutes before it hits the oil — this is what keeps the crust from falling off.",
+    "shoppingList": [
+      { "item": "Cube steaks (4, ~6 oz each)", "substitutes": ["Round steak, tenderized", "Thin-cut sirloin, pounded flat"] },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "Garlic powder" },
+      { "item": "Onion powder" },
+      { "item": "Smoked paprika" },
+      { "item": "Cayenne pepper (optional)" },
+      { "item": "All-purpose flour" },
+      { "item": "Eggs (2)" },
+      { "item": "Buttermilk (small carton)", "substitutes": ["Whole milk + 1 tsp white vinegar, rested 5 min"] },
+      { "item": "Vegetable oil (large bottle)", "substitutes": ["Canola oil", "Peanut oil"] },
+      { "item": "Whole milk (1 pint)", "substitutes": ["Half-and-half for richer gravy"] }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Cube steak double-dredged in seasoned flour, pan-fried until the crust is shatteringly crisp, then rested while you build a peppery cream gravy from the drippings in the same pan. One skillet, one classic."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Season + set up dredge</strong> — spice mix, three-bowl breading station",
+            "<strong>Bread the steaks</strong> — flour → egg wash → flour, press firmly, rest 5 min",
+            "<strong>Fry in batches</strong> — ½ inch oil, 350°F, don't crowd, flip once",
+            "<strong>Build cream gravy</strong> — roux from drippings, whisk in milk, pepper heavy",
+            "<strong>Plate + smother</strong> — ladle gravy over steak, serve with mashed potatoes or biscuits"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>The move:</strong> Rest the breaded steaks 5 min before frying. That pause is what glues the crust to the meat."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Season + Set Up Dredge",
+      "checkboxLabel": "Steaks seasoned, dredge station ready",
+      "measurements": [
+        { "item": "Cube steaks", "qty": "4 (~6 oz each)" },
+        { "item": "Kosher salt", "qty": "1½ tsp" },
+        { "item": "Black pepper", "qty": "1 tsp" },
+        { "item": "Garlic powder", "qty": "1 tsp" },
+        { "item": "Onion powder", "qty": "1 tsp" },
+        { "item": "Smoked paprika", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "¼ tsp", "alts": ["Omit for mild"] },
+        { "item": "All-purpose flour", "qty": "1½ cups (divided)" },
+        { "item": "Eggs", "qty": "2 large" },
+        { "item": "Buttermilk", "qty": "½ cup", "alts": ["Whole milk + 1 tsp vinegar"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat cube steaks <strong>very dry</strong> with paper towels.",
+            "Combine salt, pepper, garlic powder, onion powder, paprika, and cayenne in a small bowl.",
+            "Season steaks on <strong>both sides</strong> with the spice mix — use it all.",
+            "Set up 3-bowl dredge station: <strong>1 cup plain flour</strong> → <strong>2 eggs + ½ cup buttermilk whisked together</strong> → <strong>½ cup flour seasoned with a pinch of the same spice mix</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Season the flour too.</strong> A pinch of salt, pepper, and garlic powder in both flour stages adds flavor in every layer of the crust."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Bread the Steaks",
+      "checkboxLabel": "Steaks breaded and resting",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Dredge each steak in <strong>flour (bowl 1)</strong> — coat all sides, shake off excess.",
+            "Dip into <strong>egg-buttermilk wash (bowl 2)</strong> — let excess drip off.",
+            "Press into <strong>seasoned flour (bowl 3)</strong> — press firmly on both sides so it adheres.",
+            "Set breaded steaks on a wire rack or plate.",
+            "Let rest <strong>5 minutes</strong> before frying — don't skip."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Press, don't dab.</strong> Firm pressure on that final flour coat is the difference between a crust that stays and one that slides into the oil."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Fry the Steaks",
+      "checkboxLabel": "All steaks fried, drippings reserved",
+      "measurements": [
+        { "item": "Vegetable oil", "qty": "~½ inch deep in skillet", "alts": ["Canola oil", "Peanut oil"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pour <strong>~½ inch of oil</strong> into a large cast iron or heavy skillet.",
+            "Heat over <strong>medium-high</strong> until a pinch of flour dropped in sizzles immediately — about <strong>350°F</strong>.",
+            "Fry steaks <strong>2 at a time</strong> — don't crowd the pan.",
+            "Cook <strong>3–4 min first side</strong> without moving until crust is deep golden brown.",
+            "Flip once → cook <strong>2–3 min second side</strong>.",
+            "Transfer to a wire rack. <strong>Reserve 3 tbsp of the drippings</strong> for the gravy — pour off the rest."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Wire rack, not paper towels.</strong> Paper towels steam the crust soft. A rack keeps it crispy while you build the gravy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Make the Cream Gravy",
+      "checkboxLabel": "Gravy done and seasoned",
+      "measurements": [
+        { "item": "Reserved drippings", "qty": "3 tbsp" },
+        { "item": "All-purpose flour", "qty": "3 tbsp" },
+        { "item": "Whole milk", "qty": "2 cups", "alts": ["Half-and-half for richer gravy"] },
+        { "item": "Black pepper", "qty": "1–1½ tsp (heavy hand)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "With <strong>3 tbsp drippings</strong> remaining in the skillet, lower heat to <strong>medium</strong>.",
+            "Whisk in <strong>3 tbsp flour</strong> → stir constantly for <strong>1–2 min</strong> to cook out the raw flour taste.",
+            "Slowly whisk in <strong>milk, ¼ cup at a time</strong> — work out any lumps before adding more.",
+            "Stir continuously until gravy <strong>thickens to a pourable, creamy consistency, 4–6 min</strong>.",
+            "Season with <strong>heavy black pepper</strong> and salt — taste and adjust.",
+            "If it gets too thick, add a splash of milk and stir."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Peppery is correct.</strong> Cream gravy should have a serious black pepper presence — not subtle. If it tastes mild, add more."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Plate + Serve",
+      "checkboxLabel": "Plated and smothered",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place a fried steak on each plate.",
+            "Ladle <strong>cream gravy generously over the top</strong> — cover it.",
+            "Serve with <strong>mashed potatoes, biscuits, or white rice</strong>.",
+            "Put remaining gravy in a small pitcher or bowl on the table — there will be requests for more."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't be shy with the gravy.</strong> Country fried steak is smothered food. If the steak is still visible, you haven't added enough."
+        }
+      ]
+    }
+  ]
+}

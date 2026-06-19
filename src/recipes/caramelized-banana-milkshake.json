@@ -1,0 +1,155 @@
+{
+  "title": "Caramelized Banana Milkshake",
+  "imagePrompt": "A tall glass holds a thick, warm-ivory milkshake with a faint golden-caramel tint throughout. A generous cloud of whipped cream crowns the top, its surface cracked and amber where the brown sugar has been torched into a thin brûléed crust. Dark caramel sauce drizzles down through the whipped cream and traces lazy streaks along the inside of the glass.",
+  "subtitle": "Bananas Foster-style caramelized banana blended into a vanilla milkshake. Whipped cream, caramel, torched sugar on top.",
+  "storageKey": "caramelized_banana_milkshake_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Base",    "value": "1 caramelized banana" },
+    {              "label": "Serves",  "value": "1" },
+    {              "label": "Method",  "value": "Caramelize + blend" },
+    {              "label": "Topping", "value": "Whipped cream + caramel" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Inspired by @cookingwithcarrrl. Riffs on Bananas Foster — butter, brown sugar, ripe banana.",
+    "items": [
+      "<strong>1 ripe banana</strong>",
+      "<strong>1 tbsp butter</strong>",
+      "<strong>2 tbsp brown sugar</strong> (plus extra for the top)",
+      "<strong>¼ cup milk</strong>",
+      "<strong>½ cup vanilla ice cream</strong>",
+      "<strong>Whipped cream</strong> (for topping)",
+      "<strong>Caramel sauce</strong> (for topping)"
+    ],
+    "callout": "<strong>Banana ripeness matters:</strong> Spotty, ripe bananas caramelize best — more sugar to work with. Green bananas stay starchy and don't soften right.",
+    "shoppingList": [
+      { "item": "1 ripe banana" },
+      { "item": "Butter" },
+      { "item": "Brown sugar" },
+      { "item": "Milk", "substitutes": ["Whole milk for richer", "Oat milk"] },
+      { "item": "Vanilla ice cream" },
+      { "item": "Whipped cream (canister or homemade)" },
+      { "item": "Caramel sauce" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Pan-caramelize a sliced banana in butter and brown sugar — Bananas Foster style — then blend it hot into milk and vanilla ice cream for a deep, toasty banana milkshake. Top with whipped cream, caramel, and (optionally) torched brown sugar."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Slice + caramelize</strong> banana in butter and brown sugar",
+            "<strong>Baste</strong> the second side in the bubbling sauce",
+            "<strong>Blend</strong> with milk, then add ice cream",
+            "<strong>Top</strong> with whipped cream + caramel (torch optional)"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Whole thing takes ~6–8 minutes.</strong> The slowest step is caramelizing the banana — everything after that is a quick blend."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Caramelize the Banana",
+      "checkboxLabel": "Slice lengthwise, caramelize both sides",
+      "measurements": [
+        { "item": "Banana", "qty": "1, ripe" },
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Brown sugar", "qty": "2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a skillet over <strong>medium heat</strong>. Melt <strong>1 tbsp butter</strong>.",
+            "Slice the banana <strong>lengthwise</strong> and add to the skillet, cut side down.",
+            "Sprinkle <strong>2 tbsp brown sugar</strong> over the top.",
+            "Cook <strong>~3 minutes</strong> until the bottom is deep golden.",
+            "<strong>Flip</strong> the banana → baste in the bubbling sauce for <strong>~2 more minutes</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>You want real color.</strong> Pale = no flavor. Push it until the sugar turns into a glossy, mahogany caramel sauce in the pan."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Blend with Milk",
+      "checkboxLabel": "Banana + pan sauce + milk into blender",
+      "measurements": [
+        { "item": "Milk", "qty": "¼ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Scrape the <strong>banana and all the caramel sauce</strong> from the pan into a blender.",
+            "Add <strong>¼ cup milk</strong>.",
+            "Blend until smooth."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't leave any sauce in the pan.</strong> That's where most of the caramel flavor lives. Use a silicone spatula to get every drop."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Add Ice Cream + Blend",
+      "checkboxLabel": "Add ice cream, blend to milkshake texture",
+      "measurements": [
+        { "item": "Vanilla ice cream", "qty": "½ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>½ cup vanilla ice cream</strong> to the blender.",
+            "Blend in short pulses until thick and smooth — <strong>spoonable, not pourable</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Texture target:</strong> Holds a soft peak when you lift the blender lid. Too thin? More ice cream. Too thick? Splash more milk."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Top + Serve",
+      "checkboxLabel": "Whipped cream, caramel, torch the sugar",
+      "measurements": [
+        { "item": "Whipped cream", "qty": "to taste" },
+        { "item": "Caramel sauce", "qty": "drizzle" },
+        { "item": "Brown sugar", "qty": "pinch (optional, for torching)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pour the milkshake into a tall glass.",
+            "Crown with <strong>whipped cream</strong>.",
+            "Drizzle <strong>caramel sauce</strong> over the top.",
+            "<em>Optional:</em> sprinkle a pinch of <strong>brown sugar</strong> on top and hit it with a kitchen torch until it bubbles and crackles."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Torch tip:</strong> Move the flame constantly — don't park it in one spot or the sugar burns black instead of bruleeing. A few seconds is enough."
+        }
+      ]
+    }
+  ]
+}
