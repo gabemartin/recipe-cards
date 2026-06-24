@@ -1757,32 +1757,6 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
-    const swiper = new Swiper(".main-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 14,
-      speed: 260,
-      grabCursor: true,
-      initialSlide: loadSlide(),
-      pagination: { el: ".swiper-pagination", clickable: true },
-      keyboard: { enabled: true },
-      a11y: { enabled: true }
-    });
-
-    const bar = document.getElementById("bar");
-    const progtext = document.getElementById("progtext");
-
-    function updateProgress(){
-      const idx = swiper.activeIndex + 1;
-      const total = swiper.slides.length;
-      bar.style.width = (idx / total * 100) + "%";
-      progtext.textContent = idx + " / " + total;
-    }
-
-    swiper.on("slideChange", () => {
-      updateProgress();
-      saveSlide(swiper.activeIndex);
-    });
-    updateProgress();
     loadChecks();
     loadShop();
     renderTabs();
@@ -1899,6 +1873,7 @@ ${expandedSlidesHtml}
       speed: 260,
       threshold: 8,
       grabCursor: true,
+      initialSlide: loadSlide(),
       keyboard: { enabled: true },
       a11y: { enabled: true }
     });
@@ -1909,6 +1884,7 @@ ${expandedSlidesHtml}
     }
     expandedStepsSwiper.on("slideChange", () => {
       updateExpandedStepsNav();
+      saveSlide(expandedStepsSwiper.activeIndex);
     });
     updateExpandedStepsNav();
 
@@ -1925,7 +1901,7 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
-    document.getElementById("getStartedBtn").addEventListener("click", () => openExpandedSteps(0));
+    document.getElementById("getStartedBtn").addEventListener("click", () => openExpandedSteps(loadSlide()));
     document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
     document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
     document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
