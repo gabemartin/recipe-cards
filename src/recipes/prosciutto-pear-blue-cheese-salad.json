@@ -1,0 +1,190 @@
+{
+  "title": "Prosciutto, Pear & Blue Cheese Salad",
+  "imagePrompt": "A loose, airy mound of dark-green peppery arugula fills the plate, draped with delicate ribbons of rosy-pink prosciutto and fanned slices of ripe pear showing pale ivory flesh and thin amber skin. Crumbles of veined blue cheese, ivory shot through with blue-grey, are scattered across the leaves alongside glossy mahogany candied walnuts that catch the light. A thin honey-balsamic vinaigrette beads on the greens and pools in dark glossy droplets at the base of the plate.",
+  "subtitle": "Salty prosciutto, sweet ripe pear, and sharp blue cheese over peppery arugula with candied walnuts.",
+  "storageKey": "prosciutto_pear_blue_cheese_salad_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Greens", "value": "Arugula" },
+    {              "label": "Fruit",  "value": "Ripe pears" },
+    {              "label": "Cheese", "value": "Blue cheese" },
+    {              "label": "Serves", "value": "2–4" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "No cooking required beyond crisping the prosciutto and candying the walnuts — both optional if you're short on time. Use the ripest pears you can find.",
+    "items": [
+      "<strong>5 oz arugula</strong> (or a spring mix / arugula blend)",
+      "<strong>2 ripe pears</strong> (Bartlett or Anjou), thinly sliced",
+      "<strong>4–6 slices prosciutto</strong>",
+      "<strong>½ cup blue cheese</strong>, crumbled (Gorgonzola or Stilton)",
+      "<strong>½ cup walnut halves</strong>",
+      "<strong>2 tbsp honey</strong> (1 tbsp for walnuts, 1 tbsp for dressing)",
+      "<strong>3 tbsp extra-virgin olive oil</strong>",
+      "<strong>1½ tbsp balsamic vinegar</strong>",
+      "<strong>1 tsp Dijon mustard</strong>",
+      "<strong>1 small shallot</strong>, minced (optional)",
+      "<strong>Kosher salt &amp; freshly ground pepper</strong>"
+    ],
+    "callout": "<strong>Balance is everything:</strong> salty (prosciutto + cheese), sweet (pear + candied nuts), sharp (blue cheese), and acidic (vinaigrette). Taste and adjust so no single element dominates.",
+    "shoppingList": [
+      { "item": "Arugula (5 oz)",            "substitutes": ["Spring mix", "Baby spinach", "Mixed greens"] },
+      { "item": "2 ripe pears",              "substitutes": ["Bartlett", "Anjou", "Bosc"] },
+      { "item": "Prosciutto (4–6 slices)",   "substitutes": ["Speck", "Crispy pancetta", "Serrano ham"] },
+      { "item": "Blue cheese (small wedge)", "substitutes": ["Gorgonzola", "Stilton", "Goat cheese"] },
+      { "item": "Walnut halves (½ cup)",     "substitutes": ["Pecans", "Candied walnuts (pre-made)"] },
+      { "item": "Honey" },
+      { "item": "Extra-virgin olive oil" },
+      { "item": "Balsamic vinegar" },
+      { "item": "Dijon mustard" },
+      { "item": "1 shallot (optional)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A restaurant-style composed salad that comes together in about 15 minutes. Peppery arugula is the base for salty prosciutto, sweet ripe pear, sharp blue cheese, and crunchy candied walnuts, all pulled together with a honey-balsamic vinaigrette."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Candy the walnuts</strong> — quick toast in honey",
+            "<strong>Crisp the prosciutto</strong> (or leave it silky — your call)",
+            "<strong>Whisk the vinaigrette</strong> — balsamic, honey, Dijon, oil",
+            "<strong>Slice the pears</strong> thin, right before serving",
+            "<strong>Build the salad</strong> — dress greens, then layer everything on top"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Make-ahead:</strong> Candy the walnuts and whisk the dressing in advance. Slice the pears and assemble at the last minute so the pear stays bright and the greens stay crisp."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Candy the Walnuts",
+      "checkboxLabel": "Walnuts toasted and candied",
+      "measurements": [
+        { "item": "Walnut halves", "qty": "½ cup", "alts": ["Pecans"] },
+        { "item": "Honey",         "qty": "1 tbsp" },
+        { "item": "Kosher salt",   "qty": "pinch" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>walnuts</strong> to a dry skillet over <strong>medium heat</strong>.",
+            "Toast, stirring, until <strong>fragrant — 2–3 minutes</strong>.",
+            "Drizzle in <strong>1 tbsp honey</strong> and a <strong>pinch of salt</strong>; stir to coat.",
+            "Cook <strong>1 more minute</strong> until glossy and sticky, then spread on parchment to cool."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Short on time?</strong> Skip the honey and just toast the walnuts plain — or use store-bought candied nuts. Watch closely; honey burns fast."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Crisp the Prosciutto",
+      "checkboxLabel": "Prosciutto crisped (or left silky)",
+      "measurements": [
+        { "item": "Prosciutto", "qty": "4–6 slices" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "For <strong>crispy</strong> prosciutto: lay slices in a single layer in a dry skillet over <strong>medium heat</strong>.",
+            "Cook <strong>2–3 minutes per side</strong> until crisp, then drain on paper towels (it crisps further as it cools).",
+            "For <strong>silky</strong> prosciutto: skip the pan entirely and just tear the slices into ribbons."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Two textures, two vibes:</strong> Crispy prosciutto shatters like a chip; silky prosciutto drapes and melts into the greens. Both are correct — pick your preference."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Whisk the Vinaigrette",
+      "checkboxLabel": "Vinaigrette whisked and seasoned",
+      "measurements": [
+        { "item": "Extra-virgin olive oil", "qty": "3 tbsp" },
+        { "item": "Balsamic vinegar",       "qty": "1½ tbsp" },
+        { "item": "Honey",                  "qty": "1 tbsp" },
+        { "item": "Dijon mustard",          "qty": "1 tsp" },
+        { "item": "Shallot, minced",        "qty": "1 small", "alts": ["Omit"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a small bowl, whisk together <strong>balsamic, honey, Dijon</strong>, and the <strong>shallot</strong> (if using).",
+            "Slowly stream in the <strong>olive oil</strong>, whisking until emulsified.",
+            "Season with <strong>salt and pepper</strong>.",
+            "<strong>Taste:</strong> it should be tangy but balanced — add a touch more honey if too sharp, more vinegar if too flat."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Go easy on the dressing:</strong> Arugula wilts fast. Dress lightly — you can always add more, but you can't un-soak the greens."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Slice the Pears",
+      "checkboxLabel": "Pears thinly sliced",
+      "measurements": [
+        { "item": "Ripe pears", "qty": "2", "alts": ["Bartlett", "Anjou", "Bosc"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Halve and <strong>core</strong> the pears (no need to peel).",
+            "Slice into <strong>thin wedges</strong>, about ¼-inch thick.",
+            "Do this <strong>right before assembling</strong> so the pears don't brown."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Browning fix:</strong> If slicing ahead, toss the pear wedges with a squeeze of lemon juice to keep them bright."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Build the Salad",
+      "checkboxLabel": "Greens dressed, everything layered, served",
+      "measurements": [
+        { "item": "Arugula",            "qty": "5 oz", "alts": ["Spring mix", "Baby spinach"] },
+        { "item": "Blue cheese, crumbled", "qty": "½ cup", "alts": ["Gorgonzola", "Stilton"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Put the <strong>arugula</strong> in a large bowl and drizzle with <strong>most of the vinaigrette</strong>; toss gently to coat.",
+            "Spread the dressed greens on a platter or divide among plates.",
+            "Layer on the <strong>pear slices</strong>, then drape or scatter the <strong>prosciutto</strong>.",
+            "Scatter the <strong>blue cheese</strong> and <strong>candied walnuts</strong> over the top.",
+            "Finish with a <strong>final drizzle of vinaigrette</strong> and a few cracks of <strong>black pepper</strong>. Serve immediately."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Layer, don't toss:</strong> Toss only the greens with dressing, then arrange everything else on top. It keeps the cheese from clumping and the prosciutto from disappearing into the pile."
+        }
+      ]
+    }
+  ]
+}
