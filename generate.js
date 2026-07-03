@@ -1757,32 +1757,6 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
-    const swiper = new Swiper(".main-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 14,
-      speed: 260,
-      grabCursor: true,
-      initialSlide: loadSlide(),
-      pagination: { el: ".swiper-pagination", clickable: true },
-      keyboard: { enabled: true },
-      a11y: { enabled: true }
-    });
-
-    const bar = document.getElementById("bar");
-    const progtext = document.getElementById("progtext");
-
-    function updateProgress(){
-      const idx = swiper.activeIndex + 1;
-      const total = swiper.slides.length;
-      bar.style.width = (idx / total * 100) + "%";
-      progtext.textContent = idx + " / " + total;
-    }
-
-    swiper.on("slideChange", () => {
-      updateProgress();
-      saveSlide(swiper.activeIndex);
-    });
-    updateProgress();
     loadChecks();
     loadShop();
     renderTabs();
