@@ -1873,6 +1873,7 @@ ${expandedSlidesHtml}
       speed: 260,
       threshold: 8,
       grabCursor: true,
+      initialSlide: loadSlide(),
       keyboard: { enabled: true },
       a11y: { enabled: true }
     });
@@ -1883,6 +1884,7 @@ ${expandedSlidesHtml}
     }
     expandedStepsSwiper.on("slideChange", () => {
       updateExpandedStepsNav();
+      saveSlide(expandedStepsSwiper.activeIndex);
     });
     updateExpandedStepsNav();
 
@@ -1899,7 +1901,7 @@ ${expandedSlidesHtml}
       document.documentElement.style.overflow = "";
     }
 
-    document.getElementById("getStartedBtn").addEventListener("click", () => openExpandedSteps(0));
+    document.getElementById("getStartedBtn").addEventListener("click", () => openExpandedSteps(loadSlide()));
     document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
     document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
     document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
