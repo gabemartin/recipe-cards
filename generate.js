@@ -921,13 +921,297 @@ dialog.expanded-steps-dialog::backdrop{ background: rgba(0,0,0,.38); backdrop-fi
   .h{ font-size: clamp(24px,3.5vw,32px); }
   .p, ul{ font-size: var(--text-lg); }
 }
+
+/* ── Print layout (screen: hidden; @media print below) ── */
+.print-recipe{ display:none; }
+
 @media print{
-  body{ background:#fff; color:#000; }
-  header,.step-actions{ display:none !important; }
-  .app{ max-width: 100%; }
-  main{ padding: 0; }
-  .card{ box-shadow:none; border:1px solid #ccc; background:#fff; color:#000; page-break-inside: avoid; }
-  .muted,.callout,.chip{ color:#333 !important; }
+  @page{
+    size: letter;
+    margin: 0.6in 0.55in;
+  }
+
+  html, body{
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+    color: #111 !important;
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+  }
+
+  .app,
+  #ptr,
+  dialog{
+    display: none !important;
+  }
+
+  .print-recipe{
+    display: block !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #111;
+    background: #fff !important;
+  }
+
+  /* Neutralize screen-theme rules that leak via shared class names */
+  .print-recipe,
+  .print-recipe *{
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .print-recipe .chip,
+  .print-recipe .callout,
+  .print-recipe .measures,
+  .print-recipe .measures-heading,
+  .print-recipe .measures-row > span,
+  .print-recipe .p,
+  .print-recipe ul,
+  .print-recipe li{
+    background: transparent !important;
+  }
+
+  .print-header{
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1.5pt solid #111;
+    background: transparent !important;
+    position: static !important;
+    backdrop-filter: none !important;
+  }
+  .print-title{
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 21pt;
+    font-weight: 850;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: #111 !important;
+  }
+  .print-subtitle{
+    margin: 0.3rem 0 0.55rem;
+    font-size: 10.5pt;
+    color: #444 !important;
+    line-height: 1.35;
+  }
+  .print-chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5pt;
+  }
+  .print-chips .chip{
+    display: inline-flex;
+    align-items: center;
+    gap: 5pt;
+    padding: 2pt 7pt;
+    border: 0.75pt solid #888;
+    border-radius: 999px;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 8pt;
+    font-weight: 500;
+    color: #333 !important;
+    background: transparent !important;
+  }
+  .print-chips .chip b{
+    font-weight: 800;
+    color: #111 !important;
+  }
+  .print-chips .dot{
+    width: 5pt;
+    height: 5pt;
+    background: #111 !important;
+    box-shadow: none;
+  }
+
+  .print-layout{
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 2.05fr);
+    gap: 0.45in;
+    align-items: start;
+  }
+
+  .print-sidebar{
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .print-sidebar-heading{
+    margin: 0 0 0.45rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 8.5pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #444 !important;
+    border-bottom: 0.75pt solid #888;
+    padding-bottom: 0.2rem;
+  }
+  .print-sidebar-note{
+    margin: 0 0 0.5rem;
+    font-size: 9pt;
+    font-style: italic;
+    color: #444 !important;
+    line-height: 1.42;
+  }
+  .print-ingredients{
+    margin: 0;
+    padding-left: 1.05em;
+    font-size: 9.25pt;
+    line-height: 1.42;
+    color: #111 !important;
+  }
+  .print-ingredients li{
+    margin: 0.22rem 0;
+    padding-left: 0.1em;
+    color: #111 !important;
+  }
+  .print-sidebar-callout{
+    margin-top: 0.65rem;
+    padding: 0.35rem 0 0.35rem 0.5rem;
+    border-left: 2pt solid #111;
+    background: transparent !important;
+    font-size: 8.75pt;
+    line-height: 1.42;
+    color: #333 !important;
+  }
+  .print-sidebar-callout strong{
+    color: #111 !important;
+  }
+
+  .print-steps{
+    min-width: 0;
+  }
+  .print-step{
+    margin-bottom: 0.95rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 0.5pt solid #bbb;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background: transparent !important;
+  }
+  .print-step:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .print-step--overview{
+    margin-bottom: 1.05rem;
+    padding-bottom: 0.95rem;
+    border-bottom: 0.75pt solid #888;
+  }
+  .print-step-head{
+    background: transparent !important;
+    position: static !important;
+    backdrop-filter: none !important;
+    border: none !important;
+  }
+  .print-kicker{
+    margin: 0 0 0.12rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 7.5pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #444 !important;
+  }
+  .print-step-title{
+    margin: 0 0 0.45rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 13.5pt;
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    color: #111 !important;
+  }
+
+  .print-recipe .measures{
+    margin: 0 0 0.5rem;
+    border: 0.75pt solid #888;
+    border-radius: 0;
+    background: transparent !important;
+    overflow: hidden;
+  }
+  .print-recipe .measures-heading{
+    margin: 0;
+    padding: 3pt 8pt;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 6.75pt;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: transparent !important;
+    border-bottom: 0.75pt solid #888;
+    color: #444 !important;
+  }
+  .print-recipe .measures-grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  .print-recipe .measures-row > span{
+    padding: 3pt 8pt;
+    font-size: 8.75pt;
+    line-height: 1.35;
+    border-top: 0.5pt solid #ccc;
+    color: #111 !important;
+    background: transparent !important;
+  }
+  .print-recipe .measures-item{
+    font-weight: 650;
+    color: #111 !important;
+  }
+  .print-recipe .measures-qty{
+    color: #333 !important;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .print-recipe .measures-alts{
+    color: #555 !important;
+    font-size: 7.75pt;
+  }
+
+  .print-step-body .p{
+    margin: 0 0 0.45rem;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #111 !important;
+  }
+  .print-step-body ul,
+  .print-step-body .body-list{
+    margin: 0;
+    padding-left: 1.2em;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    background: transparent !important;
+    color: #111 !important;
+  }
+  .print-step-body li{
+    margin: 0.28rem 0;
+    color: #111 !important;
+  }
+  .print-step-body li::marker{
+    color: #111;
+    font-weight: 700;
+  }
+  .print-step-body .callout{
+    margin: 0.55rem 0 0;
+    padding: 0.35rem 0 0.35rem 0.5rem;
+    border: none;
+    border-left: 2pt solid #111;
+    border-radius: 0;
+    background: transparent !important;
+    font-size: 9pt;
+    line-height: 1.42;
+    color: #333 !important;
+  }
+  .print-step-body .callout strong{
+    color: #111 !important;
+  }
+  .print-step-body div[style*="height:8px"]{
+    display: none;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+  strong{ font-weight: 700; color: inherit; }
 }
 /* ── Pull-to-refresh ──────────────────────────────── */
 /* Visible slot clears notch; idle translate lifts entire circle above the viewport */
@@ -1067,6 +1351,56 @@ function renderPromptButton({ label, kind, id = "", stepIndex = null, extraClass
   if (stepIndex !== null) attrs.push(`data-step-index="${stepIndex}"`);
 
   return `<button ${attrs.join(" ")}><span class="copy-prompt-label">${label}</span></button>`;
+}
+
+function renderPrintStep(slide, index) {
+  const body = slide.body.map(renderBodyBlock).join("\n          ");
+  const measures = renderMeasurements(slide.measurements);
+  const stepClass = index === 0 ? "print-step print-step--overview" : "print-step";
+  return `<section class="${stepClass}">
+          <div class="print-step-head">
+            <p class="print-kicker">${slide.kicker}</p>
+            <h2 class="print-step-title">${slide.title}</h2>
+          </div>
+          ${measures}
+          <div class="print-step-body">
+          ${body}
+          </div>
+        </section>`;
+}
+
+function renderPrintRecipe(recipe) {
+  const chips = recipe.chips.map(renderChip).join("\n          ");
+  const ingredientItems = recipe.ingredients.items
+    .map(i => `<li>${i}</li>`)
+    .join("\n            ");
+  const ingredientsNoteHtml = recipe.ingredients.note?.trim()
+    ? `<p class="print-sidebar-note">${recipe.ingredients.note}</p>\n        `
+    : "";
+  const ingredientsCalloutHtml = recipe.ingredients.callout?.trim()
+    ? `<div class="print-sidebar-callout">${recipe.ingredients.callout}</div>`
+    : "";
+  const steps = recipe.slides.map(renderPrintStep).join("\n        ");
+
+  return `<div class="print-recipe" aria-hidden="true">
+    <div class="print-header">
+      <h1 class="print-title">${recipe.title}</h1>
+      <p class="print-subtitle">${recipe.subtitle}</p>
+      <div class="print-chips">${chips}</div>
+    </div>
+    <div class="print-layout">
+      <aside class="print-sidebar">
+        <h2 class="print-sidebar-heading">${recipe.ingredients.heading}</h2>
+        ${ingredientsNoteHtml}<ul class="print-ingredients">
+            ${ingredientItems}
+          </ul>
+        ${ingredientsCalloutHtml}
+      </aside>
+      <div class="print-steps">
+        ${steps}
+      </div>
+    </div>
+  </div>`;
 }
 
 function renderSlide(slide, index) {
@@ -1344,6 +1678,8 @@ ${expandedSlidesHtml}
       </div>
     </div>
   </dialog>
+
+${renderPrintRecipe(recipe)}
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>

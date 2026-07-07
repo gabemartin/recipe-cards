@@ -1,0 +1,213 @@
+{
+  "title": "Bananas Foster",
+  "imagePrompt": "Two scoops of pale vanilla bean ice cream sit in a shallow bowl, their surfaces beginning to soften where the heat meets them. Four banana quarters ring the ice cream, their cut faces glazed in a thick, dark amber caramel that pools and drips down the sides. The sauce is glossy and bubbling at the edges, with flecks of orange zest visible in the rum-spiked caramel.",
+  "subtitle": "New Orleans flambéed bananas in spice-infused dark caramel. Served over cold vanilla ice cream.",
+  "storageKey": "bananas_foster_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Fruit",     "value": "4 firm bananas" },
+    {              "label": "Serves",    "value": "4" },
+    {              "label": "Time",      "value": "~15 min" },
+    {              "label": "Technique", "value": "Flambé" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Use a heavy stainless steel or cast-iron skillet — not nonstick. Firm, yellow bananas with green tips hold their shape under heat.",
+    "items": [
+      "<strong>Caramel base &amp; spices</strong>",
+      "<strong>¼ cup (½ stick) unsalted butter</strong>, cubed",
+      "<strong>1 cup dark brown sugar</strong>, firmly packed",
+      "<strong>1 tsp Vietnamese or Ceylon cinnamon</strong>, ground",
+      "<strong>¼ tsp whole nutmeg</strong>, freshly grated",
+      "<strong>½ tsp vanilla bean paste</strong> (or high-quality bourbon vanilla extract)",
+      "<strong>1 tsp fresh orange zest</strong>",
+      "<strong>Generous pinch fleur de sel</strong> (or flaky sea salt)",
+      "<strong>Fruit &amp; spirits</strong>",
+      "<strong>4 firm, ripe bananas</strong>, peeled and quartered (halved lengthwise, then halved crosswise)",
+      "<strong>¼ cup (2 oz) banana liqueur</strong> (e.g., Giffard or Tempus Fugit)",
+      "<strong>¼ cup (2 oz) high-proof dark or spiced rum</strong> (80–151 proof for a strong flame)",
+      "<strong>To serve</strong>",
+      "<strong>1 pint premium Madagascar vanilla bean ice cream</strong>"
+    ],
+    "callout": "<strong>Banana ripeness:</strong> Entirely yellow with green tips and no brown spots. Overripe bananas turn to mush in the hot caramel.",
+    "shoppingList": [
+      { "item": "Butter (½ stick)" },
+      { "item": "Dark brown sugar (1 cup)" },
+      { "item": "Ground cinnamon", "substitutes": ["Vietnamese cinnamon", "Ceylon cinnamon"] },
+      { "item": "Whole nutmeg" },
+      { "item": "Vanilla bean paste", "substitutes": ["Bourbon vanilla extract"] },
+      { "item": "1 orange" },
+      { "item": "Fleur de sel or flaky sea salt" },
+      { "item": "4 firm bananas" },
+      { "item": "Banana liqueur (¼ cup)", "substitutes": ["Extra rum + ½ tsp banana extract"] },
+      { "item": "Dark or spiced rum (¼ cup)", "substitutes": ["151-proof rum for bigger flame"] },
+      { "item": "Vanilla bean ice cream (1 pint)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A chef-tier take on the Brennan's classic: butter and dark brown sugar caramelized with cinnamon, nutmeg, orange zest, and vanilla, then banana liqueur and rum flambéed tableside-style. Ladled hot over cold vanilla ice cream."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Melt butter</strong> and build a spice-infused caramel base",
+            "<strong>Bloom</strong> vanilla, orange zest, and salt into the sauce",
+            "<strong>Caramelize bananas</strong> cut-side down, baste, flip",
+            "<strong>Flambé</strong> the rum — baste through the flames",
+            "<strong>Serve immediately</strong> over vanilla ice cream"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Safety first:</strong> Turn off the overhead exhaust fan before igniting. Keep a metal lid nearby to smother flames if needed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Build the Spice-Infused Caramel",
+      "checkboxLabel": "Melt butter, stir in sugar and spices",
+      "measurements": [
+        { "item": "Unsalted butter", "qty": "¼ cup, cubed" },
+        { "item": "Dark brown sugar", "qty": "1 cup, packed" },
+        { "item": "Ground cinnamon", "qty": "1 tsp", "alts": ["Vietnamese", "Ceylon"] },
+        { "item": "Whole nutmeg", "qty": "¼ tsp, freshly grated" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Set a <strong>10–12 inch heavy-bottomed skillet</strong> (stainless or cast iron) over <strong>medium-low</strong> heat.",
+            "Melt the <strong>butter</strong> evenly — do not use nonstick; flambé heat can damage the coating.",
+            "Stir in <strong>brown sugar, cinnamon, and nutmeg</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Pan choice matters.</strong> You need a pan that can take high heat and an open flame without warping or releasing fumes from a coating."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Dissolve and Bloom",
+      "checkboxLabel": "Stir 3–4 min, add vanilla, zest, salt",
+      "measurements": [
+        { "item": "Vanilla bean paste", "qty": "½ tsp", "alts": ["Bourbon vanilla extract"] },
+        { "item": "Orange zest", "qty": "1 tsp" },
+        { "item": "Fleur de sel", "qty": "generous pinch", "alts": ["Flaky sea salt"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Stir constantly with a <strong>heat-resistant spatula or wooden spoon</strong> for <strong>3–4 minutes</strong>.",
+            "Sugar melts into the butter — the base should be <strong>fragrant, bubbling, and glossy</strong>.",
+            "Stir in <strong>vanilla bean paste, orange zest, and fleur de sel</strong> to bloom the flavors."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't rush this step.</strong> Full sugar dissolution is what gives you the thick, dark amber glaze — not grainy caramel."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Caramelize the Bananas",
+      "checkboxLabel": "Add liqueur, cook bananas 2 min per side",
+      "measurements": [
+        { "item": "Banana liqueur", "qty": "¼ cup" },
+        { "item": "Bananas", "qty": "4, quartered" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pour in <strong>banana liqueur</strong> and stir until fully integrated.",
+            "Arrange banana quarters in a <strong>single layer, cut-side down</strong>.",
+            "<strong>Baste</strong> by spooning caramel over the bananas.",
+            "Cook undisturbed <strong>2 minutes</strong>, then flip and cook <strong>1 more minute</strong> until tender but still holding shape."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Cut-side down first.</strong> That's where the caramelization happens. Basting keeps the tops glossy while the bottoms take color."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "The Flambé",
+      "checkboxLabel": "Pour rum, ignite vapors — do not stir",
+      "measurements": [
+        { "item": "Dark or spiced rum", "qty": "¼ cup", "alts": ["151-proof for bigger flame"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pour <strong>rum evenly over the bananas</strong> — do not stir it in.",
+            "Let it heat through <strong>~10 seconds</strong> until vapors form on the surface.",
+            "<strong>Gas stove:</strong> Tilt the skillet toward the burner flame to ignite.",
+            "<strong>Electric:</strong> Keep your face back and use a long-reach lighter or match along the skillet edge."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Turn off the exhaust fan</strong> before lighting. A draft can pull flames upward. Keep loose clothing and hair clear of the pan."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Baste and Extinguish",
+      "checkboxLabel": "Shake pan, baste through flames, remove from heat",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "As blue and gold flames erupt, <strong>gently shake the skillet</strong> by the handle.",
+            "Use a <strong>long-handled spoon</strong> to baste the bananas in the flaming sauce.",
+            "Fire dies down naturally after <strong>30–45 seconds</strong> as alcohol burns off.",
+            "<strong>Remove from heat immediately</strong> when flames subside."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>The flambé isn't just theater.</strong> Burning off the rum concentrates the sauce and adds a warm, boozy depth without raw alcohol bite."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Assemble and Serve",
+      "checkboxLabel": "Ice cream in bowls, bananas + hot sauce on top",
+      "measurements": [
+        { "item": "Vanilla bean ice cream", "qty": "2 scoops per bowl" },
+        { "item": "Banana quarters", "qty": "4 per serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Scoop <strong>two balls of cold vanilla ice cream</strong> into shallow serving bowls.",
+            "Arrange <strong>four warm banana quarters</strong> around each scoop.",
+            "Generously <strong>ladle hot rum-caramel sauce</strong> straight from the skillet over the top.",
+            "Serve <strong>immediately</strong> — the hot-cold contrast is the whole point."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Speed is everything.</strong> The sauce keeps cooking in the hot pan. Plate as soon as the flames die — ice cream should still be firm when it hits the table."
+        }
+      ]
+    }
+  ]
+}

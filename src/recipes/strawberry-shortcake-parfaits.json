@@ -1,0 +1,187 @@
+{
+  "title": "Strawberry Shortcake Parfaits",
+  "imagePrompt": "Four clear glass parfaits show distinct layers: golden-brown shortcake crumbs at the bottom, pale ivory vanilla cream in the middle, and deep red macerated strawberries with glossy pink syrup pooling between the layers. A final dollop of cream crowns each glass, dusted with more crumbs and topped with a single glistening strawberry slice.",
+  "subtitle": "Macerated citrus strawberries, whipped vanilla bean cream, and buttery baked shortcake crumbs layered in clear glasses.",
+  "storageKey": "strawberry_shortcake_parfaits_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Fruit",   "value": "1 lb strawberries" },
+    {              "label": "Serves",  "value": "4" },
+    {              "label": "Time",    "value": "~35 min" },
+    {              "label": "Style",   "value": "Layered parfait" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Bake the crumbs first — macerate strawberries and whip cream while they cool. Assemble right before serving so the crumbs stay crisp.",
+    "items": [
+      "<strong>Vanilla bean cream</strong>",
+      "<strong>1 cup heavy whipping cream</strong>, chilled",
+      "<strong>½ cup crème fraîche</strong> (or full-fat Greek yogurt)",
+      "<strong>3 tbsp powdered sugar</strong>",
+      "<strong>1 tsp vanilla bean paste</strong> (or pure vanilla extract)",
+      "<strong>Zest of 1 organic lemon</strong>, finely minced",
+      "<strong>Macerated citrus strawberries</strong>",
+      "<strong>1 lb fresh strawberries</strong>, hulled and sliced",
+      "<strong>3 tbsp granulated vanilla sugar</strong> (or regular sugar)",
+      "<strong>1 tbsp fresh lemon juice</strong>",
+      "<strong>Golden shortcake crumbs</strong>",
+      "<strong>1½ cups all-purpose flour</strong>",
+      "<strong>3 tbsp granulated sugar</strong>",
+      "<strong>1½ tsp baking powder</strong>",
+      "<strong>¼ tsp fine sea salt</strong>",
+      "<strong>6 tbsp cold unsalted butter</strong>, cut into small cubes",
+      "<strong>⅓ cup ice-cold buttermilk</strong>"
+    ],
+    "callout": "<strong>Crunch shortcut:</strong> Substitute baked crumbs with crumbled premium shortbread or graham crackers for a faster, ultra-crisp layer.",
+    "shoppingList": [
+      { "item": "Heavy whipping cream (1 cup)" },
+      { "item": "Crème fraîche (½ cup)", "substitutes": ["Full-fat Greek yogurt"] },
+      { "item": "Powdered sugar" },
+      { "item": "Vanilla bean paste", "substitutes": ["Pure vanilla extract"] },
+      { "item": "1 organic lemon" },
+      { "item": "Fresh strawberries (1 lb)" },
+      { "item": "Granulated sugar (or vanilla sugar)" },
+      { "item": "All-purpose flour" },
+      { "item": "Baking powder" },
+      { "item": "Fine sea salt" },
+      { "item": "Butter (6 tbsp)" },
+      { "item": "Buttermilk (⅓ cup)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A gourmet take on strawberry shortcake built as layered parfaits: buttery baked crumb clusters, macerated strawberries in glossy citrus syrup, and lemon-kissed vanilla bean cream whipped to medium-stiff peaks."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Bake shortcake crumbs</strong> until deeply golden and crisp",
+            "<strong>Macerate strawberries</strong> with sugar and lemon juice",
+            "<strong>Whip vanilla bean cream</strong> with crème fraîche and lemon zest",
+            "<strong>Layer twice</strong> in clear glasses and serve immediately"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Timing trick:</strong> Start the crumbs in the oven, then macerate berries and whip cream while they bake and cool."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Bake the Shortcake Crumbs",
+      "checkboxLabel": "Bake shaggy dough crumbs until golden",
+      "measurements": [
+        { "item": "All-purpose flour", "qty": "1½ cups" },
+        { "item": "Granulated sugar", "qty": "3 tbsp" },
+        { "item": "Baking powder", "qty": "1½ tsp" },
+        { "item": "Fine sea salt", "qty": "¼ tsp" },
+        { "item": "Cold unsalted butter", "qty": "6 tbsp, cubed" },
+        { "item": "Ice-cold buttermilk", "qty": "⅓ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat oven to <strong>400°F</strong>. Line a baking sheet with parchment.",
+            "Whisk <strong>flour, sugar, baking powder, and salt</strong> in a medium bowl.",
+            "Pinch <strong>cold butter</strong> into the flour until it resembles coarse, pea-sized sand.",
+            "Make a well, pour in <strong>buttermilk</strong>, and stir with a fork just until a shaggy dough forms.",
+            "Crumble dough by hand onto the sheet in <strong>irregular, bite-sized clumps</strong>.",
+            "Bake <strong>15–18 minutes</strong> until deeply golden brown and crisp.",
+            "Cool completely on a wire rack."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't overwork the dough.</strong> Shaggy and irregular = better crumb texture. You want distinct clusters, not a smooth ball."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Macerate the Strawberries",
+      "checkboxLabel": "Toss berries with sugar and lemon, rest 15–20 min",
+      "measurements": [
+        { "item": "Fresh strawberries", "qty": "1 lb, hulled and sliced" },
+        { "item": "Vanilla sugar", "qty": "3 tbsp", "alts": ["Regular granulated sugar"] },
+        { "item": "Lemon juice", "qty": "1 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Combine <strong>strawberries, sugar, and lemon juice</strong> in a glass bowl.",
+            "Toss gently to coat evenly.",
+            "Cover and rest at <strong>room temperature 15–20 minutes</strong>.",
+            "Sugar draws out juice — you want a <strong>bright, glossy strawberry syrup</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Herbal variation:</strong> Slap a few basil or mint leaves to release their oils, then toss into the berries while they macerate for a clean, sophisticated back-note."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Whip the Vanilla Bean Cream",
+      "checkboxLabel": "Whip to medium-stiff peaks, chill until assembly",
+      "measurements": [
+        { "item": "Heavy whipping cream", "qty": "1 cup, chilled" },
+        { "item": "Crème fraîche", "qty": "½ cup", "alts": ["Full-fat Greek yogurt"] },
+        { "item": "Powdered sugar", "qty": "3 tbsp" },
+        { "item": "Vanilla bean paste", "qty": "1 tsp", "alts": ["Pure vanilla extract"] },
+        { "item": "Lemon zest", "qty": "from 1 organic lemon" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a <strong>chilled glass or metal bowl</strong>, combine cream, crème fraîche, powdered sugar, vanilla, and lemon zest.",
+            "Whip with a hand mixer on <strong>medium speed 3–4 minutes</strong> until <strong>medium-stiff peaks</strong> form.",
+            "Peaks should hold their shape elegantly — not loose, not overwhipped and grainy.",
+            "Refrigerate until ready to assemble."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Crème fraîche adds tang and stability.</strong> Greek yogurt works in a pinch — the cream will be slightly sharper but still delicious."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Assemble the Parfaits",
+      "checkboxLabel": "Layer crumbs, cream, berries — repeat and garnish",
+      "measurements": [
+        { "item": "Shortcake crumbs", "qty": "divided among 4 glasses" },
+        { "item": "Vanilla bean cream", "qty": "divided among 4 glasses" },
+        { "item": "Macerated strawberries", "qty": "divided among 4 glasses" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Use four clear <strong>8-ounce glasses or jars</strong> to show the layers.",
+            "<strong>First layer:</strong> Generous spoonful of cooled shortcake crumbs.",
+            "<strong>Second layer:</strong> Thick layer of vanilla bean cream.",
+            "<strong>Third layer:</strong> Macerated strawberries with a drizzle of glossy syrup.",
+            "<strong>Repeat</strong> all three layers to fill the glasses.",
+            "Finish with a <strong>dollop of cream</strong>, a sprinkle of crumbs, and a glossy strawberry slice on top.",
+            "Serve <strong>immediately</strong> while crumbs are crisp."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Include the syrup.</strong> Spoon it over each berry layer so it seeps down — that's what ties the parfait together."
+        }
+      ]
+    }
+  ]
+}
