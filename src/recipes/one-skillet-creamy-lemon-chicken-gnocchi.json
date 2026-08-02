@@ -1,0 +1,166 @@
+{
+  "title": "One-Skillet Creamy Lemon Chicken Gnocchi",
+  "imagePrompt": "Plump potato gnocchi and shreds of rotisserie chicken sit in a glossy, ivory cream sauce flecked with cracked black pepper and pale green thyme. Wilted baby spinach leaves are folded throughout, their deep green threading through the pale sauce, and a light dusting of melted parmesan clings to the ridges of the gnocchi. Bright flecks of lemon zest catch the light across the top, with a few red-pepper flakes adding small bursts of orange.",
+  "subtitle": "A 20-minute one-skillet dinner: gnocchi simmered right in a lemon cream sauce with rotisserie chicken, spinach, and parmesan.",
+  "storageKey": "one_skillet_lemon_chicken_gnocchi_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Rotisserie chicken" },
+    {              "label": "Serves",  "value": "4" },
+    {              "label": "Time",    "value": "~20 min" },
+    {              "label": "Method",  "value": "One skillet" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "The quick version of our rotisserie chicken gnocchi bake -- same cozy flavors, no oven, no bacon, no mushrooms, done in one skillet.",
+    "items": [
+      "<strong>1 lb potato gnocchi</strong>",
+      "<strong>2-3 cups shredded rotisserie chicken</strong>",
+      "<strong>2 tbsp butter</strong>",
+      "<strong>4 cloves garlic</strong>, minced",
+      "<strong>1 cup chicken broth</strong>",
+      "<strong>1 cup heavy cream</strong>",
+      "<strong>1/2 cup grated parmesan</strong>",
+      "<strong>3 cups baby spinach</strong>",
+      "<strong>1 lemon</strong> (zest of half + 1 tbsp juice)",
+      "<strong>1/2 tsp dried thyme</strong> (or Italian seasoning)",
+      "<strong>Kosher salt and black pepper</strong>",
+      "<strong>Pinch of red-pepper flakes</strong> (optional)"
+    ],
+    "callout": "<strong>Important:</strong> Add the lemon juice only after the heat is off -- stirring it into a hot cream sauce can cause the cream to break.",
+    "shoppingList": [
+      { "item": "Rotisserie chicken (1 whole)", "substitutes": ["Cooked shredded chicken (2-3 cups)"] },
+      { "item": "Potato gnocchi (1 lb)", "substitutes": ["17.5 oz shelf-stable gnocchi"] },
+      { "item": "Butter (1 stick)" },
+      { "item": "Garlic (1 head)", "substitutes": ["Jarred minced garlic"] },
+      { "item": "Chicken broth (1 can/box)" },
+      { "item": "Heavy cream (small carton)" },
+      { "item": "Parmesan (wedge or pre-grated)" },
+      { "item": "Baby spinach (1 bag)" },
+      { "item": "1 lemon" },
+      { "item": "Dried thyme", "substitutes": ["Italian seasoning"] },
+      { "item": "Red-pepper flakes (optional)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "The fast, weeknight version: raw gnocchi simmers directly in a broth-and-cream sauce, rotisserie chicken and spinach fold in at the end, and parmesan plus a hit of lemon finish it off the heat. One skillet, no oven, about 20 minutes start to finish."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Melt butter</strong>, bloom garlic and thyme",
+            "<strong>Simmer gnocchi</strong> in broth and cream until tender",
+            "<strong>Fold in chicken and spinach</strong> to warm through and wilt",
+            "<strong>Off heat</strong>, stir in parmesan, lemon zest, and lemon juice"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Key rule:</strong> Add the lemon juice after you turn off the heat -- that's what keeps the cream sauce smooth instead of curdled."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Melt Butter + Bloom Garlic",
+      "checkboxLabel": "Butter melted, garlic and thyme bloomed",
+      "measurements": [
+        { "item": "Butter", "qty": "2 tbsp" },
+        { "item": "Garlic", "qty": "4 cloves, minced" },
+        { "item": "Dried thyme", "qty": "1/2 tsp", "alts": ["Italian seasoning"] },
+        { "item": "Red-pepper flakes", "qty": "pinch, optional" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Melt the <strong>butter</strong> in a large skillet over medium heat.",
+            "Add the <strong>garlic</strong>, <strong>thyme</strong> (or Italian seasoning), and optional <strong>red-pepper flakes</strong>.",
+            "Cook about <strong>30 seconds</strong>, just until fragrant -- don't let the garlic brown."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Shortcut:</strong> Jarred minced garlic works fine here and saves the mincing step entirely."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Simmer the Gnocchi",
+      "checkboxLabel": "Gnocchi simmered until tender",
+      "measurements": [
+        { "item": "Chicken broth", "qty": "1 cup" },
+        { "item": "Heavy cream", "qty": "1 cup" },
+        { "item": "Potato gnocchi", "qty": "1 lb, raw" },
+        { "item": "Kosher salt", "qty": "1/4 tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>chicken broth</strong>, <strong>heavy cream</strong>, <strong>gnocchi</strong>, <strong>1/4 tsp salt</strong>, and plenty of black pepper. Stir and bring to a gentle simmer.",
+            "Cover and cook <strong>4-6 minutes</strong>, stirring once or twice, until the gnocchi is tender.",
+            "Keep the heat moderate so the cream doesn't scorch."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why the broth matters:</strong> It's what actually cooks the gnocchi -- there's no separate pot of boiling water in this version."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Add Chicken + Spinach",
+      "checkboxLabel": "Chicken warmed through, spinach wilted",
+      "measurements": [
+        { "item": "Rotisserie chicken", "qty": "2-3 cups, shredded" },
+        { "item": "Baby spinach", "qty": "3 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Stir in the <strong>rotisserie chicken</strong> and <strong>spinach</strong>.",
+            "Cook uncovered for <strong>2-3 minutes</strong>, until the chicken is hot and the spinach has wilted."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Rotisserie rule:</strong> The chicken is already cooked, so you're just warming it through -- don't let it simmer long enough to dry out."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Finish with Parmesan + Lemon",
+      "checkboxLabel": "Off heat: parmesan, lemon zest, and juice stirred in",
+      "measurements": [
+        { "item": "Parmesan", "qty": "1/2 cup, grated" },
+        { "item": "Lemon zest", "qty": "from 1/2 lemon" },
+        { "item": "Lemon juice", "qty": "1 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Turn off the heat. Stir in the <strong>parmesan</strong>, the zest of half the lemon, and <strong>1 tbsp lemon juice</strong>.",
+            "Taste and add more salt, pepper, or lemon if needed.",
+            "Let it stand <strong>2 minutes</strong> before serving."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Adjust the texture:</strong> If the sauce is too thick, loosen it with a splash of broth. If it's thin, stir in a little more parmesan and let it sit a minute."
+        }
+      ]
+    }
+  ]
+}
