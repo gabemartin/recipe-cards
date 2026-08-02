@@ -1599,14 +1599,6 @@ ${overviewCard}
     </main>
 
     <div class="bottombar safe-bot">
-      <div class="nav">
-        <button class="btn" id="prev" type="button" aria-label="Previous step">
-          ${HI.chevronLeft}<span>Prev</span>
-        </button>
-        <button class="btn primary" id="next" type="button" aria-label="Next step">
-          <span>Next</span>${HI.chevronRight}
-        </button>
-      </div>
       <div class="tabbar" role="tablist" aria-label="Pinned recipes">
         <button class="pin-toggle" type="button" aria-pressed="false" aria-label="Pin this recipe">
           ${HI.bookmarkOutline}
