@@ -1,0 +1,117 @@
+{
+  "title": "5-Minute Blender Salsa",
+  "imagePrompt": "A rustic bowl holds bright red-orange salsa, its surface flecked with tiny green specks of cilantro and translucent slivers of white onion suspended throughout. The texture is loose and pourable but not watery, with small visible bits of tomato pulp and jalapeño seeds. A few whole tortilla chips lean into the bowl, one dipped and glistening with clinging salsa.",
+  "subtitle": "Canned tomatoes, jalapeño, and a handful of pantry staples blend into a bright, ready-in-minutes salsa.",
+  "storageKey": "blender_salsa_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Base", "value": "Canned roma tomatoes" },
+    {              "label": "Yield", "value": "~3 cups" },
+    {              "label": "Active", "value": "~5 min" },
+    {              "label": "Style",  "value": "No-cook, blended" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Everything goes into the blender or food processor together—no chopping required beyond a rough dice.",
+    "items": [
+      "<strong>2 (14.5 oz) cans roma tomatoes</strong>, with juices",
+      "<strong>1 jalapeño pepper</strong>, stemmed (seed for less heat)",
+      "<strong>Juice of 1 lime</strong>",
+      "<strong>¼ cup white onion</strong>, roughly chopped (red onion works too)",
+      "<strong>½ cup fresh cilantro</strong>, leaves and tender stems",
+      "<strong>1 (4 oz) can diced green chiles</strong>",
+      "<strong>2 cloves garlic</strong>",
+      "<strong>1 tsp sugar</strong>",
+      "<strong>1 tsp kosher salt</strong>",
+      "<strong>½ tsp ground cumin</strong>",
+      "<strong>½ tsp chili powder</strong>"
+    ],
+    "callout": "<strong>Key tip:</strong> Pulse rather than puree for a chip-friendly chunky texture—over-blending turns it into juice.",
+    "shoppingList": [
+      { "item": "Canned roma tomatoes (2 x 14.5 oz)", "substitutes": ["Canned fire-roasted diced tomatoes"] },
+      { "item": "1 jalapeño pepper", "substitutes": ["Serrano (spicier)", "Poblano (milder)"] },
+      { "item": "1 lime" },
+      { "item": "White onion (partial)", "substitutes": ["Red onion"] },
+      { "item": "Fresh cilantro (1 small bunch)" },
+      { "item": "Diced green chiles (4 oz can)" },
+      { "item": "Garlic (a few cloves)" },
+      { "item": "Sugar" },
+      { "item": "Kosher salt" },
+      { "item": "Ground cumin" },
+      { "item": "Chili powder" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A <strong>quick blender salsa</strong> built on canned tomatoes—no roasting or simmering required. Everything goes into the food processor at once and pulses into a bright, chunky salsa in about five minutes."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Add everything</strong> to a food processor or blender",
+            "<strong>Pulse</strong> to your preferred consistency",
+            "<strong>Taste and adjust</strong> salt, lime, or heat",
+            "<strong>Chill</strong> before serving, or serve right away"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Serve with:</strong> Tortilla chips, or spoon over tacos, eggs, or grilled meat anywhere salsa is called for."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Load the Blender",
+      "checkboxLabel": "Add all ingredients to food processor",
+      "measurements": [
+        { "item": "Roma tomatoes", "qty": "2 (14.5 oz) cans, with juices" },
+        { "item": "Jalapeño", "qty": "1", "alts": ["Serrano", "Poblano"] },
+        { "item": "Lime juice", "qty": "from 1 lime" },
+        { "item": "White onion", "qty": "¼ cup", "alts": ["Red onion"] },
+        { "item": "Cilantro", "qty": "½ cup" },
+        { "item": "Diced green chiles", "qty": "1 (4 oz) can" },
+        { "item": "Garlic", "qty": "2 cloves" },
+        { "item": "Sugar", "qty": "1 tsp" },
+        { "item": "Kosher salt", "qty": "1 tsp" },
+        { "item": "Cumin", "qty": "½ tsp" },
+        { "item": "Chili powder", "qty": "½ tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>canned tomatoes</strong> (with their juices) to a food processor or blender.",
+            "Add the <strong>jalapeño, onion, cilantro, and garlic</strong>.",
+            "Pour in the <strong>green chiles and lime juice</strong>.",
+            "Sprinkle in the <strong>sugar, salt, cumin, and chili powder</strong>."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Blend & Adjust",
+      "checkboxLabel": "Pulse, taste, and adjust seasoning",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Pulse</strong> in short bursts until you reach a chunky, chip-friendly consistency—avoid running it continuously or it turns watery.",
+            "<strong>Taste</strong> and adjust with more <strong>salt</strong>, <strong>lime juice</strong>, or a bit of extra <strong>jalapeño</strong> for heat.",
+            "Transfer to a bowl or jar and <strong>refrigerate</strong> for at least 30 minutes for the best flavor, or serve immediately."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Storage:</strong> Keeps well covered in the fridge for about a week."
+        }
+      ]
+    }
+  ]
+}
