@@ -1,43 +1,39 @@
 {
-  "title": "5-Minute Blender Salsa",
-  "imagePrompt": "A rustic bowl holds bright red-orange salsa, its surface flecked with tiny green specks of cilantro and translucent slivers of white onion suspended throughout. The texture is loose and pourable but not watery, with small visible bits of tomato pulp and jalapeño seeds. A few whole tortilla chips lean into the bowl, one dipped and glistening with clinging salsa.",
-  "subtitle": "Canned tomatoes, jalapeño, and a handful of pantry staples blend into a bright, ready-in-minutes salsa.",
+  "title": "Fresh Garden Salsa",
+  "imagePrompt": "A rustic bowl holds bright red salsa with a clearly chunky texture — small, distinct cubes of ripe tomato suspended in a thicker, slightly darker-red blended base. Flecks of chopped cilantro and pale translucent onion are visible throughout, along with tiny bits of red and green pepper skin. A few tortilla chips lean into the bowl, one dipped and glistening with clinging salsa, juice pooling faintly where it rests against the bowl's edge.",
+  "subtitle": "A fresh-tomato, chop-and-blend base you can freely adapt — tune the peppers to whatever heat and flavor you're after.",
   "storageKey": "blender_salsa_checks_v1",
   "chips": [
-    { "dot": true, "label": "Base", "value": "Canned roma tomatoes" },
-    {              "label": "Yield", "value": "~3 cups" },
-    {              "label": "Active", "value": "~5 min" },
-    {              "label": "Style",  "value": "No-cook, blended" }
+    { "dot": true, "label": "Base",    "value": "1 lb fresh tomatoes" },
+    {              "label": "Heat",    "value": "Spicy (2 jalapeños, adjustable)" },
+    {              "label": "Yield",   "value": "~2 cups" },
+    {              "label": "Texture", "value": "Hand-diced + pulsed" }
   ],
   "ingredients": {
     "heading": "Ingredients",
-    "note": "Everything goes into the blender or food processor together—no chopping required beyond a rough dice.",
+    "note": "This is a starting point, not a fixed formula — scale up freely for a big garden haul, and swap peppers per the guide in Step 1 to land the heat and flavor you want.",
     "items": [
-      "<strong>2 (14.5 oz) cans roma tomatoes</strong>, with juices",
-      "<strong>1 jalapeño pepper</strong>, stemmed (seed for less heat)",
-      "<strong>Juice of 1 lime</strong>",
-      "<strong>¼ cup white onion</strong>, roughly chopped (red onion works too)",
-      "<strong>½ cup fresh cilantro</strong>, leaves and tender stems",
-      "<strong>1 (4 oz) can diced green chiles</strong>",
+      "<strong>1 lb fresh tomatoes</strong> (about 3 medium or 8–10 Roma/paste tomatoes), cored",
+      "<strong>2 fresh jalapeños</strong>, stemmed (seed for less heat) — see Step 1 for swaps",
+      "<strong>⅓ cup white onion</strong>, roughly chopped (red onion works too)",
+      "<strong>⅓ cup fresh cilantro</strong>, leaves and tender stems",
       "<strong>2 cloves garlic</strong>",
-      "<strong>1 tsp sugar</strong>",
-      "<strong>1 tsp kosher salt</strong>",
-      "<strong>½ tsp ground cumin</strong>",
-      "<strong>½ tsp chili powder</strong>"
+      "<strong>2 tbsp fresh lime juice</strong> (about 1 lime)",
+      "<strong>¾ tsp kosher salt</strong>, plus more to taste",
+      "<strong>½ tsp sugar</strong> (optional — balances acidity in very tart tomatoes)",
+      "<strong>¼ tsp ground cumin</strong> (optional, for depth)"
     ],
-    "callout": "<strong>Key tip:</strong> Pulse rather than puree for a chip-friendly chunky texture—over-blending turns it into juice.",
+    "callout": "<strong>Key tip:</strong> Garden tomatoes vary a lot in water content and acidity — taste as you go and adjust salt, lime, and sugar at the end rather than trusting exact amounts.",
     "shoppingList": [
-      { "item": "Canned roma tomatoes (2 x 14.5 oz)", "substitutes": ["Canned fire-roasted diced tomatoes"] },
-      { "item": "1 jalapeño pepper", "substitutes": ["Serrano (spicier)", "Poblano (milder)"] },
-      { "item": "1 lime" },
+      { "item": "Fresh tomatoes (1 lb)", "substitutes": ["Roma/paste tomatoes (meatier, less watery)"] },
+      { "item": "Fresh jalapeños (2)", "substitutes": ["See pepper guide in Step 1 for other heat/flavor options"] },
       { "item": "White onion (partial)", "substitutes": ["Red onion"] },
       { "item": "Fresh cilantro (1 small bunch)" },
-      { "item": "Diced green chiles (4 oz can)" },
       { "item": "Garlic (a few cloves)" },
-      { "item": "Sugar" },
+      { "item": "1 lime" },
       { "item": "Kosher salt" },
-      { "item": "Ground cumin" },
-      { "item": "Chili powder" }
+      { "item": "Sugar (optional)" },
+      { "item": "Ground cumin (optional)" }
     ]
   },
   "slides": [
@@ -47,69 +43,126 @@
       "body": [
         {
           "type": "p",
-          "html": "A <strong>quick blender salsa</strong> built on canned tomatoes—no roasting or simmering required. Everything goes into the food processor at once and pulses into a bright, chunky salsa in about five minutes."
+          "html": "A <strong>fresh, chunky salsa</strong> built from garden tomatoes instead of canned — this version uses a <strong>hybrid technique</strong>: half the tomatoes get hand-diced and folded in at the end for real chunks, while the rest gets pulsed with the aromatics into a thicker base. That solves the classic blender problem of everything turning into juice."
         },
         { "type": "spacer" },
         {
           "type": "ul",
           "items": [
-            "<strong>Add everything</strong> to a food processor or blender",
-            "<strong>Pulse</strong> to your preferred consistency",
-            "<strong>Taste and adjust</strong> salt, lime, or heat",
-            "<strong>Chill</strong> before serving, or serve right away"
+            "<strong>Pick your peppers</strong> using the heat + flavor guide in Step 1",
+            "<strong>Hand-dice half the tomatoes</strong>; rough-chop the rest",
+            "<strong>Pulse-blend</strong> the rough-chopped tomatoes with the aromatics into a base",
+            "<strong>Fold in</strong> the reserved diced tomato for texture, then rest and taste"
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Serve with:</strong> Tortilla chips, or spoon over tacos, eggs, or grilled meat anywhere salsa is called for."
+          "html": "<strong>This is a template:</strong> treat every quantity here as a starting ratio. Scale it up for a big batch, swap in whatever fresh chiles you've got, and adjust to taste at each stage rather than following it exactly."
         }
       ]
     },
     {
       "kicker": "Step 1",
-      "title": "Load the Blender",
-      "checkboxLabel": "Add all ingredients to food processor",
-      "measurements": [
-        { "item": "Roma tomatoes", "qty": "2 (14.5 oz) cans, with juices" },
-        { "item": "Jalapeño", "qty": "1", "alts": ["Serrano", "Poblano"] },
-        { "item": "Lime juice", "qty": "from 1 lime" },
-        { "item": "White onion", "qty": "¼ cup", "alts": ["Red onion"] },
-        { "item": "Cilantro", "qty": "½ cup" },
-        { "item": "Diced green chiles", "qty": "1 (4 oz) can" },
-        { "item": "Garlic", "qty": "2 cloves" },
-        { "item": "Sugar", "qty": "1 tsp" },
-        { "item": "Kosher salt", "qty": "1 tsp" },
-        { "item": "Cumin", "qty": "½ tsp" },
-        { "item": "Chili powder", "qty": "½ tsp" }
-      ],
+      "title": "Pick Your Peppers",
+      "checkboxLabel": "Choose peppers for your target heat + flavor",
       "body": [
+        {
+          "type": "p",
+          "html": "Every fresh chile brings a different heat level <em>and</em> flavor — heat alone isn't the whole story. Use this as a reference for what you've got, from mildest to hottest:"
+        },
         {
           "type": "ul",
           "items": [
-            "Add the <strong>canned tomatoes</strong> (with their juices) to a food processor or blender.",
-            "Add the <strong>jalapeño, onion, cilantro, and garlic</strong>.",
-            "Pour in the <strong>green chiles and lime juice</strong>.",
-            "Sprinkle in the <strong>sugar, salt, cumin, and chili powder</strong>."
+            "<strong>Poblano</strong> — ~1,000–1,500 SHU. Mild, rich, green-bean-like flavor. Adds body and a slight earthiness with almost no heat.",
+            "<strong>Jalapeño</strong> — ~2,500–8,000 SHU. Bright and grassy with moderate, straightforward heat. This recipe's default — 2 gives a real but manageable kick.",
+            "<strong>Fresno</strong> — ~2,500–10,000 SHU. Similar heat range to jalapeño but fruitier and slightly sweeter, with a crisp texture and vivid red color that flecks nicely through salsa.",
+            "<strong>Serrano</strong> — ~10,000–23,000 SHU. Jalapeño's hotter, grassier sibling. Roughly <strong>1 serrano ≈ 2 jalapeños</strong> in heat — swap in for more fire without changing the flavor much.",
+            "<strong>Cayenne (fresh)</strong> — ~30,000–50,000 SHU. Thin-walled with a sharp, clean heat and little fruitiness. Mince fine and add gradually.",
+            "<strong>Chile de árbol (fresh)</strong> — ~15,000–30,000 SHU. Bright, biting heat that builds quickly; a little goes a long way.",
+            "<strong>Habanero</strong> — ~100,000–350,000 SHU. Intense heat with a distinct tropical-fruit aroma. Start with a quarter pepper, seeded and deveined, minced very fine.",
+            "<strong>Thai bird's eye</strong> — ~50,000–100,000 SHU. Small, fast, sharp heat that hits quick and fades. Slice thin, add a little at a time."
           ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Got an unlabeled pepper from the garden?</strong> Judge by size and shape first: small, thin, and pointed usually means hotter (serrano, chile de árbol, bird's eye); wide, thick-walled, or lantern-shaped ranges from very mild (poblano) to blazing (habanero) depending on the variety. Ripe red is typically hotter and sweeter than the same pepper picked green. When unsure, cut a tiny sliver and taste it raw before committing a whole pepper to the batch — you can always blend in more heat, but you can't take it out."
+        },
+        {
+          "type": "callout",
+          "html": "<strong>For this batch:</strong> the ingredient list assumes 2 jalapeños for a solid, everyday-spicy salsa. Swap 1 jalapeño for 1 serrano to push it hotter, or add a thin sliver of habanero alongside the jalapeños if you want real heat without losing the base flavor."
         }
       ]
     },
     {
       "kicker": "Step 2",
-      "title": "Blend & Adjust",
-      "checkboxLabel": "Pulse, taste, and adjust seasoning",
+      "title": "Prep for Texture",
+      "checkboxLabel": "Hand-dice half the tomatoes; rough-chop the rest",
+      "measurements": [
+        { "item": "Fresh tomatoes", "qty": "1 lb, split in half" },
+        { "item": "Jalapeños", "qty": "2 (or swap per Step 1)", "alts": ["Serrano", "Fresno", "Habanero (small amount)"] },
+        { "item": "White onion", "qty": "⅓ cup", "alts": ["Red onion"] },
+        { "item": "Garlic", "qty": "2 cloves" },
+        { "item": "Cilantro", "qty": "⅓ cup" }
+      ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "<strong>Pulse</strong> in short bursts until you reach a chunky, chip-friendly consistency—avoid running it continuously or it turns watery.",
-            "<strong>Taste</strong> and adjust with more <strong>salt</strong>, <strong>lime juice</strong>, or a bit of extra <strong>jalapeño</strong> for heat.",
-            "Transfer to a bowl or jar and <strong>refrigerate</strong> for at least 30 minutes for the best flavor, or serve immediately."
+            "Core the tomatoes. <strong>Hand-dice half</strong> into small, even ¼-inch cubes and set aside — this is what gives the finished salsa real chunks instead of an all-blended texture.",
+            "<strong>Rough-chop the remaining half</strong> into large chunks; this portion goes into the blender.",
+            "Rough-chop the <strong>onion, garlic, and peppers</strong>. Remove pepper seeds and ribs for less heat, or keep some in for more.",
+            "Roughly chop the <strong>cilantro</strong>, stems and all."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Storage:</strong> Keeps well covered in the fridge for about a week."
+          "html": "<strong>Skip the blender entirely?</strong> You can — finely hand-chop everything (peppers, onion, garlic, cilantro) and stir it into the diced tomato instead of blending. That gives you pico de gallo: no liquid base, all texture. The technique below is a middle ground."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Build the Base",
+      "checkboxLabel": "Pulse the rough-chopped tomatoes with the aromatics",
+      "measurements": [
+        { "item": "Lime juice", "qty": "2 tbsp" },
+        { "item": "Kosher salt", "qty": "¾ tsp" },
+        { "item": "Sugar", "qty": "½ tsp (optional)" },
+        { "item": "Cumin", "qty": "¼ tsp (optional)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>rough-chopped tomatoes</strong> (not the reserved diced half), <strong>onion, garlic, cilantro, and peppers</strong> to a food processor or blender.",
+            "Add the <strong>lime juice, salt, sugar, and cumin</strong>.",
+            "<strong>Pulse</strong> in short 1–2 second bursts, checking texture between pulses. Stop once it's a thick, slightly chunky puree — not a smooth liquid.",
+            "<strong>Taste now</strong> and adjust heat before folding anything else in — this is the easiest point to add more pepper if it needs it."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Key tip:</strong> Pulse, don't run continuously. A blender left running whips air and liquid into the tomatoes and turns the base watery fast."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Fold, Rest & Taste Again",
+      "checkboxLabel": "Fold in reserved diced tomato, rest, and re-season",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Fold the reserved hand-diced tomato</strong> into the blended base — this is what keeps every bite chunky instead of uniform.",
+            "<strong>Taste</strong> and adjust <strong>salt</strong>, <strong>lime</strong>, or heat as needed.",
+            "Transfer to a bowl or jar and let it <strong>rest 15–20 minutes</strong> (in the fridge if you can) — this is the classic restaurant-salsa trick that lets the flavors settle and meld.",
+            "Give it a final stir and taste before serving; fresh tomatoes vary batch to batch, so this last check matters more than any exact measurement above."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Storage:</strong> Keeps well covered in the fridge for about 5 days. Fresh-tomato salsa is more watery than canned-tomato versions and won't hold quite as long."
         }
       ]
     }
