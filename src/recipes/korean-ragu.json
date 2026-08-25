@@ -2,42 +2,43 @@
   "title": "Korean Tteok & Spicy Pork \"Ragù\"",
   "imagePrompt": "Ivory-white rice cakes glisten with a deep rust-red and brown sauce, each piece coated in the thick, glossy ragù so that the color clings in lacquered folds. Crumbles of cooked ground pork are visible throughout, intermingled with wilted bok choy whose dark-green leaves contrast against the sauce. A scattering of bright-green garlic chives tops the dish, and the overall surface looks richly sauced, slightly shiny, and deeply colored from the gochujang and black bean sauce.",
   "subtitle": "with Baby Bok Choy",
-  "storageKey": "korean_ragu_checks_v1",
+  "storageKey": "korean_ragu_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "Ground Pork" },
-    {              "label": "Serves",  "value": "2" },
-    {              "label": "Cook",    "value": "20–30 min" },
+    {              "label": "Serves",  "value": "6" },
+    {              "label": "Cook",    "value": "35–45 min" },
     {              "label": "Calories", "value": "~700/serving" }
   ],
   "ingredients": {
     "heading": "Ingredients",
-    "note": "A Korean-style ragù—ground pork simmered in an aromatic, spiced sauce tossed with soft rice cakes and tender baby bok choy.",
+    "note": "A Korean-style ragù—2 lb ground pork simmered in an aromatic, spiced sauce tossed with soft rice cakes and tender baby bok choy. Scaled for 6.",
     "items": [
-      "<strong>10 oz ground pork</strong>",
-      "<strong>½ lb Korean rice cakes</strong> (tteok)",
-      "<strong>4 oz baby bok choy</strong>",
-      "<strong>1 bunch garlic chives</strong>",
-      "<strong>1 yellow onion</strong>",
-      "<strong>1 inch piece fresh ginger</strong>",
-      "<strong>2 tbsp black bean sauce</strong>",
-      "<strong>2 tbsp crème fraîche</strong>",
-      "<strong>1 tbsp gochujang</strong>",
-      "<strong>1 tbsp soy glaze</strong>",
-      "<strong>2 tsp oil</strong>",
+      "<strong>2 lb ground pork</strong>",
+      "<strong>1 lb 10 oz Korean rice cakes</strong> (tteok)",
+      "<strong>13 oz baby bok choy</strong>",
+      "<strong>3 bunches garlic chives</strong>",
+      "<strong>3 medium yellow onions</strong>",
+      "<strong>3-inch piece fresh ginger</strong>",
+      "<strong>6½ tbsp black bean sauce</strong>",
+      "<strong>6½ tbsp crème fraîche</strong>",
+      "<strong>3 tbsp gochujang</strong>",
+      "<strong>3 tbsp soy glaze</strong>",
+      "<strong>2 tbsp oil</strong>",
+      "<strong>1⅔ cups water</strong> (for the sauce)",
       "<strong>Salt and pepper to taste</strong>"
     ],
-    "callout": "<strong>Gochujang note:</strong> Start with ½ tbsp and add more to taste—this Korean red chili paste brings the heat. Adjust to your spice preference.",
+    "callout": "<strong>Gochujang note:</strong> Start with 1½ tbsp and add more to taste—this Korean red chili paste brings the heat. You’ll have 3 tbsp total if you want it spicy.",
     "shoppingList": [
-      { "item": "10 oz ground pork", "substitutes": ["Ground beef", "Ground turkey"] },
-      { "item": "½ lb Korean rice cakes (tteok)", "substitutes": ["Mochi", "Rice noodles"] },
-      { "item": "4 oz baby bok choy" },
-      { "item": "1 bunch garlic chives", "substitutes": ["Green onions"] },
-      { "item": "1 yellow onion" },
-      { "item": "Fresh ginger (small piece)" },
-      { "item": "Black bean sauce" },
-      { "item": "Crème fraîche", "substitutes": ["Sour cream"] },
-      { "item": "Gochujang" },
-      { "item": "Soy glaze", "substitutes": ["Soy sauce"] },
+      { "item": "2 lb ground pork", "substitutes": ["Ground beef", "Ground turkey"] },
+      { "item": "1 lb 10 oz Korean rice cakes (tteok)", "substitutes": ["Mochi", "Rice noodles"] },
+      { "item": "13 oz baby bok choy" },
+      { "item": "3 bunches garlic chives", "substitutes": ["Green onions"] },
+      { "item": "3 medium yellow onions" },
+      { "item": "Fresh ginger (3-inch piece)" },
+      { "item": "Black bean sauce (at least 6½ tbsp)" },
+      { "item": "Crème fraîche (small tub)", "substitutes": ["Sour cream"] },
+      { "item": "Gochujang (at least 3 tbsp)" },
+      { "item": "Soy glaze (at least 3 tbsp)", "substitutes": ["Soy sauce"] },
       { "item": "Neutral oil (vegetable or canola)" }
     ]
   },
@@ -48,39 +49,59 @@
       "body": [
         {
           "type": "p",
-          "html": "A Korean-style ragù—ground pork cooked down in an aromatic, spiced sauce with ginger, onion, and garlic chives, then tossed with soft rice cakes (tteok) and tender baby bok choy. Finished with a touch of crème fraîche and soy glaze."
+          "html": "A Korean-style ragù—2 lb ground pork cooked down in an aromatic, spiced sauce with ginger, onion, and garlic chives, then tossed with soft rice cakes (tteok) and tender baby bok choy. Finished with crème fraîche and soy glaze. This batch serves 6."
         },
         { "type": "spacer" },
         {
           "type": "ul",
           "items": [
-            "<strong>Prep</strong> — wash, chop, and mince aromatics (10 min)",
-            "<strong>Cook the pork</strong> — brown ground pork on medium heat",
+            "<strong>Mise en place</strong> — wash, chop, and measure everything (15 min)",
+            "<strong>Cook the pork</strong> — brown 2 lb ground pork in a wide pot",
             "<strong>Build flavor</strong> — add ginger, onion, garlic chives, bok choy",
-            "<strong>Finish</strong> — simmer rice cakes in the sauce until coated (20–30 min total)"
+            "<strong>Finish</strong> — simmer rice cakes in the sauce until coated (35–45 min cook)"
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Pro tip:</strong> Break up the pork as it cooks to get small, tender pieces that coat evenly with sauce."
+          "html": "<strong>Pro tip:</strong> Use a Dutch oven or 12-inch skillet. Two pounds of pork will steam in a small pan—you want room to brown, not stew."
         }
       ]
     },
     {
       "kicker": "Step 1",
-      "title": "Prepare the Ingredients",
-      "checkboxLabel": "Ingredients prepped and ready",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, chopped, and ready",
+      "measurements": [
+        { "item": "Ground pork", "qty": "2 lb", "alts": ["Ground beef", "Ground turkey"] },
+        { "item": "Korean rice cakes (tteok)", "qty": "1 lb 10 oz", "alts": ["Mochi", "Rice noodles"] },
+        { "item": "Baby bok choy", "qty": "13 oz" },
+        { "item": "Garlic chives", "qty": "3 bunches", "alts": ["Green onions"] },
+        { "item": "Yellow onion", "qty": "3 medium" },
+        { "item": "Fresh ginger", "qty": "3-inch piece" },
+        { "item": "Black bean sauce", "qty": "6½ tbsp" },
+        { "item": "Crème fraîche", "qty": "6½ tbsp", "alts": ["Sour cream"] },
+        { "item": "Gochujang", "qty": "3 tbsp" },
+        { "item": "Soy glaze", "qty": "3 tbsp", "alts": ["Soy sauce"] },
+        { "item": "Neutral oil", "qty": "2 tbsp" },
+        { "item": "Water (for sauce)", "qty": "1⅔ cups" }
+      ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "Heat a medium pot of salted water to boiling on high (for the rice cakes later).",
+            "Set a <strong>large pot</strong> of salted water on to boil (you’ll need room for 1 lb 10 oz rice cakes later).",
             "Wash and dry all fresh produce.",
-            "Peel and mince the ginger into small pieces.",
-            "Thinly slice the garlic chives.",
-            "Peel and small dice the yellow onion.",
-            "Roughly chop the baby bok choy, separating stems from leaves."
+            "Peel and mince the <strong>3-inch piece of ginger</strong>.",
+            "Thinly slice all <strong>3 bunches of garlic chives</strong>. Set <strong>1½ bunches aside</strong> for garnish.",
+            "Peel and small-dice the <strong>3 onions</strong>.",
+            "Roughly chop the <strong>bok choy</strong>, keeping stems and leaves separate.",
+            "Measure the sauces into small bowls: <strong>6½ tbsp black bean sauce</strong>, <strong>6½ tbsp crème fraîche</strong>, <strong>3 tbsp soy glaze</strong>, and <strong>3 tbsp gochujang</strong>.",
+            "Have the <strong>2 lb pork</strong> and <strong>rice cakes</strong> at the station. Measure <strong>1⅔ cups water</strong> for the sauce."
           ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Mise en place:</strong> Don’t turn on the pork pan until every bowl is filled. This batch moves fast once the meat is in."
         }
       ]
     },
@@ -89,19 +110,22 @@
       "title": "Cook the Pork",
       "checkboxLabel": "Pork browned and cooked through",
       "measurements": [
-        { "item": "Oil", "qty": "2 tsp" },
-        { "item": "Ground pork", "qty": "10 oz" },
-        { "item": "Salt & pepper", "qty": "to taste" }
+        { "item": "Oil", "qty": "2 tbsp" },
+        { "item": "Ground pork", "qty": "2 lb" }
       ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "Heat a large pan (nonstick preferred) over medium heat.",
-            "Add <strong>2 tsp oil</strong>. Once hot, add the <strong>ground pork</strong>.",
-            "Season with <strong>salt and pepper</strong>. Cook for <strong>4–6 minutes</strong>, frequently breaking the meat apart with a spoon.",
-            "Cook until browned and cooked through."
+            "Heat a <strong>Dutch oven or 12-inch skillet</strong> (nonstick is fine) over medium heat.",
+            "Add <strong>2 tbsp oil</strong>. Once hot, add the <strong>2 lb ground pork</strong>.",
+            "Season with <strong>salt and pepper</strong>. Cook for <strong>8–12 minutes</strong>, frequently breaking the meat apart with a spoon.",
+            "Cook until browned and cooked through. If the pan is crowded and the pork is steaming, work in <strong>two batches</strong> and return it all to the pot."
           ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Browning, not steaming:</strong> Leave the pork alone for a minute at a time so it can color. Two pounds needs space and a little patience."
         }
       ]
     },
@@ -110,16 +134,16 @@
       "title": "Add the Aromatics",
       "checkboxLabel": "Aromatics softened and fragrant",
       "measurements": [
-        { "item": "Ginger", "qty": "1 inch, minced" },
-        { "item": "Onion", "qty": "1, diced" },
-        { "item": "Garlic chives", "qty": "½ bunch" }
+        { "item": "Ginger", "qty": "3 inches, minced" },
+        { "item": "Onion", "qty": "3 medium, diced" },
+        { "item": "Garlic chives", "qty": "1½ bunches" }
       ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "To the pan of cooked pork, add the <strong>minced ginger, diced onion, and half of the garlic chives</strong>.",
-            "Cook, stirring occasionally, for <strong>2–3 minutes</strong> until softened and fragrant."
+            "To the pot of cooked pork, add the <strong>minced ginger, diced onion, and 1½ bunches of garlic chives</strong> (the other half is for garnish).",
+            "Cook, stirring occasionally, for <strong>4–5 minutes</strong> until the onion is softened and fragrant."
           ]
         }
       ]
@@ -129,25 +153,25 @@
       "title": "Finish the Ragù",
       "checkboxLabel": "Sauce thickened and coating the pork",
       "measurements": [
-        { "item": "Baby bok choy", "qty": "4 oz, chopped" },
-        { "item": "Black bean sauce", "qty": "2 tbsp" },
-        { "item": "Crème fraîche", "qty": "2 tbsp" },
-        { "item": "Soy glaze", "qty": "1 tbsp" },
-        { "item": "Gochujang", "qty": "½–1 tbsp" },
-        { "item": "Water", "qty": "½ cup" }
+        { "item": "Baby bok choy", "qty": "13 oz, chopped" },
+        { "item": "Black bean sauce", "qty": "6½ tbsp" },
+        { "item": "Crème fraîche", "qty": "6½ tbsp", "alts": ["Sour cream"] },
+        { "item": "Soy glaze", "qty": "3 tbsp", "alts": ["Soy sauce"] },
+        { "item": "Gochujang", "qty": "1½–3 tbsp" },
+        { "item": "Water", "qty": "1⅔ cups" }
       ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "To the pan, add the <strong>bok choy, black bean sauce, crème fraîche, soy glaze</strong>, and <strong>½ cup water</strong>.",
-            "Add <strong>½ tbsp gochujang</strong> to start (you can add more for extra spice).",
-            "Stir to combine. Simmer, stirring occasionally, for <strong>4–6 minutes</strong> until the sauce has thickened and coats the pork."
+            "To the pot, add the <strong>bok choy, black bean sauce, crème fraîche, soy glaze</strong>, and <strong>1⅔ cups water</strong>.",
+            "Add <strong>1½ tbsp gochujang</strong> to start (you can add the remaining 1½ tbsp for extra spice).",
+            "Stir to combine. Simmer, stirring occasionally, for <strong>6–8 minutes</strong> until the sauce has thickened and coats the pork."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Spice control:</strong> Taste as you go. Add more gochujang ½ tbsp at a time if you like more heat."
+          "html": "<strong>Spice control:</strong> Taste as you go. Add more gochujang ½ tbsp at a time if you like more heat. You have 3 tbsp total."
         }
       ]
     },
@@ -156,17 +180,16 @@
       "title": "Cook & Add the Rice Cakes",
       "checkboxLabel": "Rice cakes tender and coated",
       "measurements": [
-        { "item": "Korean rice cakes", "qty": "½ lb" },
-        { "item": "Salt & pepper", "qty": "to taste" }
+        { "item": "Korean rice cakes", "qty": "1 lb 10 oz", "alts": ["Mochi", "Rice noodles"] }
       ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "While the ragù simmers, add the <strong>rice cakes to the pot of boiling water</strong>.",
+            "While the ragù simmers, add the <strong>rice cakes to the pot of boiling water</strong>. Stir so they don’t stick.",
             "Cook for <strong>2–3 minutes</strong>, or until tender. Drain thoroughly.",
-            "Transfer the <strong>cooked rice cakes to the pan of ragù</strong>.",
-            "Season with <strong>salt and pepper</strong>. Cook, stirring occasionally, for <strong>2–3 minutes</strong> until the rice cakes are thoroughly coated.",
+            "Transfer the <strong>cooked rice cakes to the pot of ragù</strong>.",
+            "Season with <strong>salt and pepper</strong>. Cook, stirring occasionally, for <strong>3–4 minutes</strong> until the rice cakes are thoroughly coated.",
             "Remove from heat and season again to taste."
           ]
         }
@@ -175,12 +198,15 @@
     {
       "kicker": "Step 6",
       "title": "Serve Your Dish",
+      "measurements": [
+        { "item": "Garlic chives (garnish)", "qty": "1½ bunches" }
+      ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "Divide the finished ragù and rice cakes between <strong>2 bowls or dishes</strong>.",
-            "Garnish with the <strong>remaining garlic chives</strong>.",
+            "Divide the finished ragù and rice cakes between <strong>6 bowls</strong>.",
+            "Garnish with the <strong>remaining 1½ bunches of garlic chives</strong>.",
             "Enjoy!"
           ]
         },
