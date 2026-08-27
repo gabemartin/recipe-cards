@@ -2,7 +2,7 @@
   "title": "Honey Garlic Cajun Chicken Thighs",
   "imagePrompt": "Bone-in chicken thighs sit skin-side up in a rich, pale cream sauce, their skin deeply browned and lacquered to a glossy finish from the butter brush and oven heat. The Cajun spice crust — dark red from smoked paprika, nearly mahogany at the edges — contrasts sharply with the ivory sauce pooling around and beneath the thighs. Thin lemon slices and smashed garlic cloves nestle between the pieces, softened and lightly caramelized, while the cream sauce shows faint golden streaks from the honey and dissolved Parmesan.",
   "subtitle": "Cast iron-seared bone-in thighs finished in a honey garlic cream sauce.",
-  "storageKey": "honey_garlic_cajun_chicken_thighs_checks_v1",
+  "storageKey": "honey_garlic_cajun_chicken_thighs_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein",    "value": "5–6 bone-in thighs" },
     {              "label": "Serves",     "value": "~4" },
@@ -71,6 +71,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep the chicken, spice blend, aromatics, sauce ingredients, and baking finish",
             "<strong>Mix spices</strong> and coat chicken",
             "<strong>Sear skin-side down</strong> in cast iron 5–7 min",
             "<strong>Build sauce</strong> from pan drippings — shallot, garlic, wine, cream, Parm",
@@ -86,6 +87,49 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Bone-in chicken thighs", "qty": "5–6" },
+        { "item": "Olive oil", "qty": "4 tbsp" },
+        { "item": "Salt", "qty": "2 tsp" },
+        { "item": "Black pepper", "qty": "2 tsp" },
+        { "item": "Garlic powder", "qty": "2 tsp" },
+        { "item": "Lemon pepper", "qty": "2 tsp" },
+        { "item": "Onion powder", "qty": "2 tsp" },
+        { "item": "Smoked paprika", "qty": "2 tsp" },
+        { "item": "Italian seasoning", "qty": "2 tsp" },
+        { "item": "Shallot", "qty": "1" },
+        { "item": "Garlic", "qty": "5 cloves" },
+        { "item": "Dry white wine", "qty": "1 cup" },
+        { "item": "Heavy cream", "qty": "1 cup" },
+        { "item": "Chicken broth", "qty": "¼ cup" },
+        { "item": "Parmesan", "qty": "¼ cup" },
+        { "item": "Lime juice", "qty": "½ lime" },
+        { "item": "Honey", "qty": "1 tbsp" },
+        { "item": "Lemon slices", "qty": "for baking" },
+        { "item": "Melted butter", "qty": "for brushing" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>350°F</strong> and set out a large cast-iron skillet, small mixing bowl, and clean plate.",
+            "Pat the <strong>5–6 chicken thighs</strong> dry.",
+            "Measure <strong>2 tsp each salt, black pepper, garlic powder, lemon pepper, onion powder, smoked paprika, and Italian seasoning</strong> into the small bowl.",
+            "Dice the <strong>shallot</strong>; mince <strong>3 garlic cloves</strong> and smash the remaining <strong>2 cloves</strong>.",
+            "Measure <strong>1 cup wine</strong>, <strong>1 cup cream</strong>, <strong>¼ cup broth</strong>, <strong>¼ cup grated Parmesan</strong>, <strong>juice of ½ lime</strong>, and <strong>1 tbsp honey</strong>.",
+            "Slice the <strong>lemon</strong>, melt the <strong>butter for brushing</strong>, and divide the <strong>4 tbsp olive oil</strong> into two 2-tbsp portions."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep raw and cooked stations separate:</strong> Use the clean plate only after the chicken has been seared."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Season the Chicken",
       "checkboxLabel": "Coat chicken in oil and spice blend",
       "measurements": [
@@ -102,8 +146,6 @@
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>350°F</strong>.",
-            "Mix all spices together in a small bowl.",
             "Coat chicken thighs in <strong>2 tbsp olive oil</strong>, then press the spice blend onto all sides."
           ]
         },
@@ -114,7 +156,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Sear the Chicken",
       "checkboxLabel": "Sear skin-side down, then flip",
       "measurements": [
@@ -138,7 +180,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Sauce",
       "checkboxLabel": "Shallot → garlic → wine → cream → Parm → honey",
       "measurements": [
@@ -159,7 +201,7 @@
             "Add <strong>minced garlic</strong> and cook until fragrant, about <strong>30–60 seconds</strong>.",
             "Deglaze with <strong>white wine</strong> — scrape up all the browned bits.",
             "Reduce wine <strong>5 minutes</strong>, then add <strong>chicken broth</strong> and simmer briefly.",
-            "Stir in <strong>heavy cream</strong>, then grate in <strong>Parmesan</strong>.",
+            "Stir in <strong>heavy cream</strong>, then add the <strong>grated Parmesan</strong>.",
             "Add <strong>lime juice</strong> and <strong>honey</strong>. Taste and adjust sweetness."
           ]
         },
@@ -170,7 +212,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Finish in the Oven",
       "checkboxLabel": "Bake 25–30 min, butter-brush halfway",
       "measurements": [

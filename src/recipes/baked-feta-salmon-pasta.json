@@ -2,7 +2,7 @@
   "title": "Baked Feta Salmon Pasta",
   "imagePrompt": "A shallow baking dish holds short pasta coated in a creamy, blush-pink sauce — the collapsed cherry tomatoes have burst into jammy pockets of red and orange threaded through the pasta. Wilted spinach weaves through in dark green ribbons. Large, tender chunks of salmon rest on top, their flesh pale rose and just beginning to flake at the edges, glistening where the feta sauce clings to them.",
   "subtitle": "Salmon and feta bake together with cherry tomatoes, spinach, and pesto into a silky one-dish sauce.",
-  "storageKey": "baked_feta_salmon_pasta_checks_v1",
+  "storageKey": "baked_feta_salmon_pasta_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "2 salmon fillets" },
     {              "label": "Serves",  "value": "2" },
@@ -57,6 +57,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — preheat the oven, prep produce, and measure the seasonings",
             "<strong>Season salmon</strong> with spices + lemon",
             "<strong>Assemble baking dish</strong> with feta, tomatoes, garlic, spinach",
             "<strong>Bake at 375°F</strong> for 30 minutes",
@@ -72,6 +73,43 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Salmon fillets", "qty": "2" },
+        { "item": "Feta block", "qty": "~7 oz" },
+        { "item": "Cherry tomatoes", "qty": "2 cups" },
+        { "item": "Fresh spinach", "qty": "4 cups" },
+        { "item": "Garlic", "qty": "1 head" },
+        { "item": "Pesto", "qty": "2 tbsp" },
+        { "item": "Lemon juice", "qty": "from 1 lemon" },
+        { "item": "Onion powder", "qty": "½ tsp" },
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Paprika", "qty": "½ tsp" },
+        { "item": "Olive oil", "qty": "2–3 tbsp" },
+        { "item": "Pasta", "qty": "8 oz" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>375°F (190°C)</strong>.",
+            "Wash and dry the <strong>cherry tomatoes, spinach, and lemon</strong>.",
+            "Halve the <strong>2 cups cherry tomatoes</strong>; separate the <strong>garlic cloves</strong> but leave them unpeeled.",
+            "Juice the <strong>lemon</strong> and pat the <strong>2 salmon fillets</strong> dry.",
+            "Measure the <strong>onion powder, garlic powder, paprika, salt, pepper, pesto, and olive oil</strong>.",
+            "Set out the <strong>feta block</strong> and <strong>8 oz pasta</strong>.",
+            "Gather a <strong>large baking dish</strong> and a <strong>large pot</strong> for the pasta."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Plan for the pasta water:</strong> Set a measuring cup by the pot now so you remember to reserve ¼–½ cup before draining."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Season the Salmon",
       "checkboxLabel": "Season salmon, set aside",
       "measurements": [
@@ -87,7 +125,6 @@
         {
           "type": "ul",
           "items": [
-            "Pat salmon <strong>dry</strong> with paper towels.",
             "Drizzle with <strong>lemon juice + olive oil</strong>.",
             "Season with <strong>onion powder, garlic powder, paprika, salt, and pepper</strong>.",
             "Set aside while you assemble the baking dish."
@@ -96,7 +133,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Assemble the Baking Dish",
       "checkboxLabel": "Feta, tomatoes, garlic, spinach in dish",
       "measurements": [
@@ -126,7 +163,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Bake",
       "checkboxLabel": "Bake 30 min at 375°F",
       "body": [
@@ -147,7 +184,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Build the Sauce",
       "checkboxLabel": "Mash feta, stir everything together",
       "measurements": [
@@ -171,7 +208,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Combine + Serve",
       "checkboxLabel": "Toss pasta in sauce, top with salmon",
       "body": [

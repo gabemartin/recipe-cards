@@ -2,7 +2,7 @@
   "title": "Jalapeño Popper Smashburger",
   "imagePrompt": "Two thin, lacy-edged beef patties are stacked on a toasted pretzel bun, their deeply browned and craggy crusts embedded with bright-green jalapeño slices that have softened and charred at the edges. Pale, creamy whipped cream cheese spreads across the bottom bun beneath the patties, while a thick, glossy smear of deep-red raspberry bacon jam coats the top bun, its jammy surface studded with bacon bits. The whole burger is generously built, with the melted Havarti draped over the patties in soft, slightly translucent folds.",
   "subtitle": "Smashed beef patties with jalapeños, Havarti, whipped cream cheese, and raspberry bacon jam on a pretzel bun.",
-  "storageKey": "jalapeno_popper_smashburger_checks_v1",
+  "storageKey": "jalapeno_popper_smashburger_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "4 oz beef patties" },
     { "label": "Serves", "value": "~2–4" },
@@ -56,6 +56,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — dice the bacon and onion, slice the jalapeños, portion the beef, and measure the jam ingredients",
             "<strong>Cook the bacon</strong> for the jam",
             "<strong>Build the raspberry bacon jam</strong> — simmer 45–50 min",
             "<strong>Smash patties</strong> with jalapeños pressed in before flipping",
@@ -71,6 +72,43 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Bacon", "qty": "1 lb" },
+        { "item": "White onion", "qty": "1" },
+        { "item": "Espresso", "qty": "1 double shot", "alts": ["¼ cup black coffee"] },
+        { "item": "Apple cider vinegar", "qty": "2–3 tbsp" },
+        { "item": "Brown sugar", "qty": "¼ cup" },
+        { "item": "Fresh raspberries", "qty": "1 cup", "alts": ["Frozen raspberries, thawed"] },
+        { "item": "Ground beef", "qty": "1–1½ lbs" },
+        { "item": "Jalapeños", "qty": "2–3" },
+        { "item": "Texas Jalapeño Salt", "qty": "for seasoning", "alts": ["Jalapeño seasoning + kosher salt", "Tajín"] },
+        { "item": "Havarti cheese", "qty": "4–8 slices", "alts": ["Pepper jack", "Monterey Jack"] },
+        { "item": "Pretzel buns", "qty": "2–4", "alts": ["Brioche buns"] },
+        { "item": "Whipped cream cheese", "qty": "4 oz" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Dice the <strong>1 lb bacon</strong> and <strong>1 white onion</strong>, keeping them separate.",
+            "Brew <strong>1 double shot espresso</strong> or measure <strong>¼ cup black coffee</strong>.",
+            "Measure <strong>2–3 tbsp apple cider vinegar</strong>, <strong>¼ cup brown sugar</strong>, and <strong>1 cup raspberries</strong>.",
+            "Thinly slice the <strong>2–3 jalapeños</strong>.",
+            "Divide the <strong>1–1½ lbs ground beef</strong> into loose <strong>4 oz balls</strong>; do not compact them.",
+            "Set out the <strong>Havarti, pretzel buns, whipped cream cheese</strong>, and Jalapeño Salt.",
+            "Ready a heavy skillet for the jam, a very hot-capable griddle or cast-iron pan for the patties, a burger press or sturdy spatula, and a plate for the cooked bacon."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Stage the jam first:</strong> Keep its measured ingredients beside the bacon skillet; the burgers can wait until the jam has reduced."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Cook the Bacon",
       "checkboxLabel": "Bacon crispy with slight chew, drippings reserved",
       "measurements": [
@@ -93,7 +131,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Build the Raspberry Bacon Jam",
       "checkboxLabel": "Jam reduced and thickened, set aside",
       "measurements": [
@@ -121,7 +159,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Smash the Patties",
       "checkboxLabel": "Patties smashed with jalapeños, dark crust formed",
       "measurements": [
@@ -148,7 +186,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Cheese & Finish",
       "checkboxLabel": "Flipped, Havarti melted, burgers pulled",
       "measurements": [
@@ -171,7 +209,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Assemble",
       "checkboxLabel": "Cream cheese bottom, patties stacked, jam on top bun",
       "body": [

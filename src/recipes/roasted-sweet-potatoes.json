@@ -2,7 +2,7 @@
   "title": "Roasted Sweet Potatoes",
   "imagePrompt": "Small cubes of sweet potato with edges that have caramelized to a dark, burnished orange-brown while the cut faces remain a vivid deep orange. The exterior of each piece looks slightly crisp and tacky from the caramelized sugars, while the centers appear soft and yielding where a fork has pierced one. The seasoned version shows a dusting of reddish spice clinging to the caramelized surfaces.",
   "subtitle": "Crispy outside, soft inside, and easy to make plain or with a warm spice blend that keeps the natural sweetness front and center.",
-  "storageKey": "roasted_sweet_potatoes_checks_v1",
+  "storageKey": "roasted_sweet_potatoes_checks_v2",
   "chips": [
     { "dot": true, "label": "Main",   "value": "1 lb sweet potatoes" },
     {              "label": "Serves", "value": "~3 as a side" },
@@ -53,7 +53,7 @@
         {
           "type": "ul",
           "items": [
-            "<strong>Peel and cube</strong> the potatoes into even 1/2-inch pieces",
+            "<strong>Mise en place</strong> — peel and cube the potatoes, then measure your chosen seasoning path",
             "<strong>Choose a flavor path</strong>: plain-sweet or warm-spiced",
             "<strong>Spread out on a large sheet pan</strong> with no overlap",
             "<strong>Flip every 10-15 minutes</strong> for even browning",
@@ -68,24 +68,34 @@
     },
     {
       "kicker": "Step 1",
-      "title": "Preheat + Prep",
-      "checkboxLabel": "Heat oven and cube potatoes evenly",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
       "measurements": [
-        { "item": "Sweet potatoes", "qty": "1 lb" }
+        { "item": "Sweet potatoes", "qty": "1 lb" },
+        { "item": "Coconut oil", "qty": "1 tbsp", "alts": ["Butter"] },
+        { "item": "Sea salt", "qty": "⅜ tsp" },
+        { "item": "Brown sugar", "qty": "½ tbsp" },
+        { "item": "Olive oil", "qty": "1 tbsp" },
+        { "item": "Black pepper", "qty": "⅛ tsp" },
+        { "item": "Chili powder", "qty": "¼ tsp", "alts": ["Chipotle chili powder"] },
+        { "item": "Paprika", "qty": "¼ tsp", "alts": ["Smoked paprika"] },
+        { "item": "Cumin", "qty": "¼ tsp" },
+        { "item": "Garlic powder", "qty": "¼ tsp" }
       ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>425F</strong>.",
-            "Peel the sweet potatoes.",
-            "Cut into <strong>1/2-inch pieces</strong> so everything roasts at the same pace.",
-            "Set out your <strong>largest sheet pan</strong> so the potatoes can roast in one layer."
+            "Preheat the oven to <strong>425F</strong> and set out your <strong>largest sheet pan</strong>.",
+            "Wash, peel, and cut <strong>1 lb sweet potatoes</strong> into even <strong>½-inch pieces</strong>.",
+            "For the plain version, melt <strong>1 tbsp coconut oil</strong> and measure <strong>⅜ tsp sea salt</strong> and <strong>½ tbsp brown sugar</strong>.",
+            "For the seasoned version, measure <strong>1 tbsp olive oil</strong>, <strong>⅜ tsp sea salt</strong>, <strong>⅛ tsp black pepper</strong>, and <strong>¼ tsp each chili powder, paprika, cumin, and garlic powder</strong>.",
+            "Choose one flavor path and keep its measured ingredients beside the sheet pan."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Even cuts matter:</strong> Smaller pieces can burn before larger pieces finish, so aim for a consistent dice."
+          "html": "<strong>Choose one version per batch:</strong> Keep the unused seasoning path off the work surface so the two versions do not get mixed together."
         }
       ]
     },

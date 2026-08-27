@@ -2,7 +2,7 @@
   "title": "Sauce Sicilian Sunday",
   "imagePrompt": "A wide platter holds a family-style spread of braised meats — fork-tender pork pieces pulling apart at the edges, plump browned sausage links, and dark, sauce-glazed meatballs — all slicked with a deeply red, long-simmered tomato sauce. A separate bowl of pasta is spooned with the same rich, orange-red gravy that has reduced to a thick, clinging consistency with visible flecks of parsley. Dollops of milky-white ricotta sit in a small bowl alongside, waiting to be stirred into the sauce at the table.",
   "subtitle": "Long-simmered tomato sauce with seared pork, Italian sausage, and meatballs—family-style with pasta, ricotta, and cheese on the side.",
-  "storageKey": "sauce_sicilian_sunday_checks_v1",
+  "storageKey": "sauce_sicilian_sunday_checks_v2",
   "chips": [
     { "dot": true, "label": "Sauce", "value": "Pork + sausage + meatballs" },
     {              "label": "Time", "value": "~3 hr simmer" },
@@ -63,6 +63,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — dice the onion, slice the garlic, chop the parsley, and measure everything",
             "<strong>Sear pork</strong> in a hot Dutch oven, then set aside",
             "<strong>Sweat aromatics</strong>, toast tomato paste, add tomatoes + water",
             "<strong>Simmer meats</strong> covered (lid ajar) ~3 hours, stirring occasionally",
@@ -77,6 +78,42 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Extra virgin olive oil", "qty": "2 tbsp" },
+        { "item": "Pork", "qty": "2–3 lbs" },
+        { "item": "Onion", "qty": "1 small" },
+        { "item": "Garlic", "qty": "5 cloves" },
+        { "item": "Red chili flakes", "qty": "a pinch" },
+        { "item": "Tomato paste", "qty": "3 tbsp" },
+        { "item": "Canned tomatoes", "qty": "2 × 28 oz", "alts": ["Crushed tomatoes"] },
+        { "item": "Bay leaves", "qty": "2" },
+        { "item": "Fresh parsley", "qty": "a handful" },
+        { "item": "Sugar", "qty": "a pinch (optional)" },
+        { "item": "Italian sausage", "qty": "1½ lbs" },
+        { "item": "Premade meatballs", "qty": "1 bag" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Finely dice the <strong>small onion</strong>, very thinly slice the <strong>5 garlic cloves</strong>, and chop a <strong>handful of parsley</strong>.",
+            "Pat the <strong>2–3 lbs pork</strong> dry, then season it on all sides with <strong>kosher salt and black pepper</strong>.",
+            "Measure <strong>2 tbsp olive oil</strong>, <strong>3 tbsp tomato paste</strong>, a <strong>pinch of chili flakes</strong>, and the optional <strong>pinch of sugar</strong>.",
+            "Open the <strong>two 28-oz cans of tomatoes</strong> and set out the <strong>2 bay leaves</strong>.",
+            "Have the <strong>1½ lbs sausage</strong> and <strong>bag of meatballs</strong> ready beside the stove.",
+            "Set out a <strong>Dutch oven with lid</strong>, wooden spoon, tongs, and an empty tomato can for measuring water."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Set up before searing:</strong> Once the pork comes out, the aromatics and tomato paste build directly on the hot fond."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Sear the Pork",
       "checkboxLabel": "Brown pork on all sides, set aside",
       "body": [
@@ -84,8 +121,7 @@
           "type": "ul",
           "items": [
             "Heat a <strong>Dutch oven</strong> over <strong>high</strong> heat. Add <strong>olive oil</strong>.",
-            "Season pork on all sides with <strong>salt and pepper</strong>.",
-            "Sear until <strong>deeply browned</strong> on all sides. Remove and set aside."
+            "Add the seasoned pork and sear until <strong>deeply browned</strong> on all sides. Remove and set aside."
           ]
         },
         {
@@ -99,7 +135,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Onions",
       "checkboxLabel": "Sauté onion until soft (~5 min)",
       "body": [
@@ -116,7 +152,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Garlic, Chili, Tomato Paste",
       "checkboxLabel": "Garlic + flakes, then toast paste",
       "body": [
@@ -135,7 +171,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Tomatoes + Liquid",
       "checkboxLabel": "Tomatoes, bay, parsley, water; bring to boil",
       "body": [
@@ -158,7 +194,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Long Simmer",
       "checkboxLabel": "Add all meats; simmer ~3 hr, stir often",
       "body": [
@@ -183,7 +219,7 @@
       ]
     },
     {
-      "kicker": "Step 6",
+      "kicker": "Step 7",
       "title": "Finish + Serve",
       "checkboxLabel": "Plate meats; pasta; pass cheese & ricotta",
       "body": [

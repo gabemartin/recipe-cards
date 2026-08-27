@@ -113,17 +113,84 @@ header{
 .top-nav-actions{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:6px;
   flex-shrink:0;
+}
+.top-nav .btn{
+  box-shadow: none;
+  min-height: 40px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 12px;
+}
+.top-nav .btn:focus-visible{
+  box-shadow: var(--focus);
+}
+.top-nav .btn:active{
+  transform: scale(.98);
 }
 #openIngredients{
   white-space: nowrap;
-  display:flex;
-  align-items:center;
-  gap:8px;
 }
-#copyImagePrompt{
+.prompt-menu{
+  position: relative;
+}
+.prompt-menu > summary{
+  list-style: none;
+  cursor: pointer;
+}
+.prompt-menu > summary::-webkit-details-marker{ display: none; }
+.prompt-menu-label{
   white-space: nowrap;
+}
+.prompt-menu-chevron{
+  width: 16px;
+  height: 16px;
+  opacity: .72;
+  transition: transform .15s ease;
+}
+.prompt-menu[open] .prompt-menu-chevron{
+  transform: rotate(180deg);
+}
+.prompt-menu-panel{
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 20;
+  min-width: 210px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--background-secondary);
+  box-shadow: var(--shadow-elevated);
+}
+.prompt-menu-item{
+  appearance: none;
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--foreground-primary);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.prompt-menu-item:hover{
+  background: var(--surface-muted);
+}
+.prompt-menu-item:focus-visible{
+  outline: none;
+  box-shadow: var(--focus);
+}
+.prompt-menu-item[data-copied="true"]{
+  color: var(--accent);
 }
 .topbar{
   padding: 14px 14px 12px;
@@ -158,7 +225,9 @@ header{
 a.btn{ text-decoration:none; color:inherit; }
 .btn-back{
   flex-shrink:0;
-  align-self:flex-start;
+  align-self: center;
+  width: 40px;
+  padding: 0;
 }
 
 .title{
@@ -188,21 +257,27 @@ a.btn{ text-decoration:none; color:inherit; }
 
 .chips{
   display:flex;
-  gap:8px;
-  flex-wrap:nowrap;
+  gap:0;
+  flex-wrap:wrap;
+  align-items:center;
 }
 
 .chip{
   display:inline-flex;
   align-items:center;
-  gap:8px;
-  border:1px solid var(--border);
-  background: var(--surface-muted);
-  border-radius: 999px;
-  padding: 8px 10px;
+  gap:6px;
+  padding: 0;
+  border: none;
+  background: transparent;
   font-size: var(--text-xs);
   color: var(--foreground-secondary);
   white-space:nowrap;
+}
+.chip + .chip::before{
+  content: "·";
+  margin: 0 8px;
+  color: var(--foreground-tertiary);
+  font-weight: 700;
 }
 
 .chip b{ color: var(--foreground-primary); font-weight: 800; }
@@ -370,8 +445,13 @@ main{
   display:flex;
   gap: 10px;
 }
-.overview-actions .btn{ flex:1; }
-.overview-actions .copy-prompt-btn{ width:auto; }
+.landing-actions{
+  display:flex;
+  gap: 10px;
+}
+.landing-actions .btn{
+  flex: 1;
+}
 .p{
   margin:0;
   color: var(--foreground-primary);
@@ -1241,6 +1321,7 @@ const HI_O =
   'xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"';
 const HI = {
   chevronLeft: `<svg class="icon" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>`,
+  chevronDown: `<svg class="icon prompt-menu-chevron" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>`,
   chevronRight: `<svg class="icon" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>`,
   arrowsPointingOut: `<svg class="icon icon-expand" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>`,
   xMark: `<svg class="icon icon-close" ${HI_O} aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>`,
@@ -1351,6 +1432,25 @@ function renderPromptButton({ label, kind, id = "", stepIndex = null, extraClass
   if (stepIndex !== null) attrs.push(`data-step-index="${stepIndex}"`);
 
   return `<button ${attrs.join(" ")}><span class="copy-prompt-label">${label}</span></button>`;
+}
+
+// Header prompt menu items — extend PROMPT_MENU_ITEMS for future copy targets.
+function renderPromptMenu(recipe) {
+  const items = [
+    ...(recipe.imagePrompt
+      ? [`<button class="prompt-menu-item" type="button" data-copy-prompt="image">Image prompt</button>`]
+      : []),
+    `<button class="prompt-menu-item" type="button" data-copy-prompt="recipe">Full recipe prompt</button>`
+  ];
+
+  return `<details class="prompt-menu" id="promptMenu">
+          <summary class="btn prompt-menu-trigger" aria-label="Copy prompts">
+            <span class="prompt-menu-label">Prompt</span>${HI.chevronDown}
+          </summary>
+          <div class="prompt-menu-panel" role="menu">
+            ${items.join("\n            ")}
+          </div>
+        </details>`;
 }
 
 function renderPrintStep(slide, index) {
@@ -1518,27 +1618,11 @@ function buildHTML(recipe, slug, imageFile) {
     .map((_, i) => `"shop${i}"`);
   const recipeJson = JSON.stringify(recipe).replace(/</g, "\\u003c");
   const heroHtml = renderRecipeHero(recipe, slug, imageFile);
+  const promptMenuHtml = renderPromptMenu(recipe);
 
-  const overviewSlide = recipe.slides[0];
-  const overviewBody = overviewSlide.body.map(renderBodyBlock).join("\n        ");
-  const overviewMeasures = renderMeasurements(overviewSlide.measurements);
-  const overviewPromptButton = renderPromptButton({ label: "Copy Recipe Prompt", kind: "start", stepIndex: 0 });
-  const overviewCard = `      <article class="card">
-        <div class="cardhead">
-          <div>
-            <p class="kicker">${overviewSlide.kicker}</p>
-            <h2 class="h">${overviewSlide.title}</h2>
-          </div>
-        </div>
-        <div class="cardbody">
-        ${overviewBody}
-        ${overviewMeasures}
-          <div class="step-actions overview-actions">
-            <button class="btn primary" id="getStartedBtn" type="button">Get Started</button>
-            ${overviewPromptButton}
-          </div>
-        </div>
-      </article>`;
+  const landingActions = `      <div class="landing-actions">
+        <button class="btn primary" id="getStartedBtn" type="button">Get Started</button>
+      </div>`;
 
   return `<!doctype html>
 <html lang="en" data-theme="light">
@@ -1568,7 +1652,7 @@ function buildHTML(recipe, slug, imageFile) {
       <nav class="top-nav">
         <a class="btn btn-back" id="backToIndex" href="index.html" aria-label="Back to all recipes">${HI.chevronLeft}</a>
         <div class="top-nav-actions">
-          ${recipe.imagePrompt ? `<button class="btn" id="copyImagePrompt" type="button" aria-label="Copy image prompt">📷 Prompt</button>` : ""}
+          ${promptMenuHtml}
           <button class="btn primary" id="openIngredients" type="button" aria-label="Open ingredients">
             ${HI.queueList}<span>Ingredients</span>
           </button>
@@ -1595,7 +1679,7 @@ function buildHTML(recipe, slug, imageFile) {
 ${heroHtml}
 
     <main>
-${overviewCard}
+${landingActions}
     </main>
 
     <div class="bottombar safe-bot">
@@ -2229,7 +2313,9 @@ ${renderPrintRecipe(recipe)}
       document.documentElement.style.overflow = "";
     }
 
-    document.getElementById("getStartedBtn").addEventListener("click", () => openExpandedSteps(loadSlide()));
+    document.getElementById("getStartedBtn").addEventListener("click", () => {
+      openExpandedSteps(Math.max(loadSlide(), 1));
+    });
     document.getElementById("closeExpandedStepsDialog").addEventListener("click", closeExpandedSteps);
     document.getElementById("expandedStepsPrev").addEventListener("click", () => expandedStepsSwiper.slidePrev());
     document.getElementById("expandedStepsNext").addEventListener("click", () => expandedStepsSwiper.slideNext());
@@ -2263,17 +2349,51 @@ ${renderPrintRecipe(recipe)}
       });
     });
 
-    const imgPromptBtn = document.getElementById("copyImagePrompt");
-    if (imgPromptBtn) {
-      imgPromptBtn.addEventListener("click", async () => {
-        const fullPrompt = IMAGE_STYLE + "\\n\\n" + (RECIPE.imagePrompt || "");
-        try {
-          await copyText(fullPrompt);
-          imgPromptBtn.textContent = "✓ Copied";
-          setTimeout(() => { imgPromptBtn.textContent = "📷 Prompt"; }, 1800);
-        } catch(e) {
-          openCopyPromptDialog(fullPrompt);
-        }
+    const promptMenu = document.getElementById("promptMenu");
+    if (promptMenu) {
+      const promptTriggerLabel = promptMenu.querySelector(".prompt-menu-label");
+      const defaultPromptLabel = promptTriggerLabel?.textContent || "Prompt";
+
+      function closePromptMenu() {
+        promptMenu.removeAttribute("open");
+      }
+
+      promptMenu.querySelectorAll("[data-copy-prompt]").forEach(item => {
+        item.addEventListener("click", async () => {
+          const copyType = item.dataset.copyPrompt;
+          let promptText = "";
+
+          if (copyType === "image") {
+            promptText = IMAGE_STYLE + "\\n\\n" + (RECIPE.imagePrompt || "");
+          } else if (copyType === "recipe") {
+            promptText = buildPrompt("start");
+          }
+
+          try {
+            await copyText(promptText);
+            closePromptMenu();
+            item.dataset.copied = "true";
+            if (promptTriggerLabel) promptTriggerLabel.textContent = "Copied";
+            window.setTimeout(() => {
+              delete item.dataset.copied;
+              if (promptTriggerLabel) promptTriggerLabel.textContent = defaultPromptLabel;
+            }, 1800);
+          } catch (e) {
+            console.warn("[copy] Prompt menu copy failed, opening dialog:", e);
+            closePromptMenu();
+            openCopyPromptDialog(promptText);
+          }
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!promptMenu.open) return;
+        if (promptMenu.contains(e.target)) return;
+        closePromptMenu();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && promptMenu.open) closePromptMenu();
       });
     }
 

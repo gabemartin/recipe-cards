@@ -2,7 +2,7 @@
   "title": "Country Fried Steak",
   "imagePrompt": "A breaded cube steak sits nearly buried under a generous pour of ivory cream gravy, its peppery speckle visible across the surface. Where the crust peeks through at the edges, it shows a deep, even golden-brown with a slightly rugged texture from the double-dredge. One steak is cut open to reveal the contrast between the crisp outer crust and the tender, pale meat beneath, with gravy pooling naturally into the cut. The plate is finished with a few sprigs of fresh thyme and a scattering of coarse sea salt.",
   "subtitle": "Cube steak pan-fried in a seasoned crust, smothered in peppery cream gravy.",
-  "storageKey": "country_fried_steak_checks_v1",
+  "storageKey": "country_fried_steak_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "4 cube steaks" },
     { "label": "Serves", "value": "~4" },
@@ -58,7 +58,7 @@
         {
           "type": "ul",
           "items": [
-            "<strong>Season + set up dredge</strong> — spice mix, three-bowl breading station",
+            "<strong>Mise en place</strong> — measure seasonings and set up the three-bowl dredge",
             "<strong>Bread the steaks</strong> — flour → egg wash → flour, press firmly, rest 5 min",
             "<strong>Fry in batches</strong> — ½ inch oil, 350°F, don't crowd, flip once",
             "<strong>Build cream gravy</strong> — roux from drippings, whisk in milk, pepper heavy",
@@ -73,8 +73,44 @@
     },
     {
       "kicker": "Step 1",
-      "title": "Season + Set Up Dredge",
-      "checkboxLabel": "Steaks seasoned, dredge station ready",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Cube steaks", "qty": "4 (~6 oz each)" },
+        { "item": "Kosher salt", "qty": "1½ tsp" },
+        { "item": "Black pepper", "qty": "1 tsp, plus more for gravy" },
+        { "item": "Garlic powder", "qty": "1 tsp" },
+        { "item": "Onion powder", "qty": "1 tsp" },
+        { "item": "Smoked paprika", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "¼ tsp, optional" },
+        { "item": "All-purpose flour", "qty": "1½ cups for dredge + 3 tbsp for gravy" },
+        { "item": "Eggs", "qty": "2 large" },
+        { "item": "Buttermilk", "qty": "½ cup" },
+        { "item": "Vegetable oil", "qty": "~½ inch deep in skillet" },
+        { "item": "Whole milk", "qty": "2 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat the <strong>4 cube steaks</strong> dry with paper towels.",
+            "Measure the <strong>salt, pepper, garlic powder, onion powder, paprika, and optional cayenne</strong> into a small bowl.",
+            "Portion <strong>1 cup flour</strong> and <strong>½ cup flour</strong> into two shallow bowls; keep the separate <strong>3 tbsp flour</strong> for gravy.",
+            "Whisk the <strong>2 eggs</strong> with <strong>½ cup buttermilk</strong> in a third shallow bowl.",
+            "Measure <strong>2 cups milk</strong> for the gravy and set out the frying oil.",
+            "Gather a <strong>large heavy skillet, tongs, wire rack, sheet pan, and whisk</strong>; arrange the dredge bowls in order."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the gravy flour separate:</strong> The 3 tbsp for the roux should never touch the raw-steak dredging station."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Season the Steaks",
+      "checkboxLabel": "Steaks and final flour seasoned",
       "measurements": [
         { "item": "Cube steaks", "qty": "4 (~6 oz each)" },
         { "item": "Kosher salt", "qty": "1½ tsp" },
@@ -91,10 +127,9 @@
         {
           "type": "ul",
           "items": [
-            "Pat cube steaks <strong>very dry</strong> with paper towels.",
-            "Combine salt, pepper, garlic powder, onion powder, paprika, and cayenne in a small bowl.",
-            "Season steaks on <strong>both sides</strong> with the spice mix — use it all.",
-            "Set up 3-bowl dredge station: <strong>1 cup plain flour</strong> → <strong>2 eggs + ½ cup buttermilk whisked together</strong> → <strong>½ cup flour seasoned with a pinch of the same spice mix</strong>."
+            "Season the prepared steaks on <strong>both sides</strong> with the spice mix, reserving a pinch for the final flour.",
+            "Stir the reserved spice mix into the <strong>½ cup flour in bowl 3</strong>.",
+            "Confirm the dredge order: <strong>1 cup plain flour</strong> → <strong>egg-buttermilk wash</strong> → <strong>seasoned ½ cup flour</strong>."
           ]
         },
         {
@@ -104,7 +139,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Bread the Steaks",
       "checkboxLabel": "Steaks breaded and resting",
       "body": [
@@ -125,7 +160,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Fry the Steaks",
       "checkboxLabel": "All steaks fried, drippings reserved",
       "measurements": [
@@ -150,7 +185,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Make the Cream Gravy",
       "checkboxLabel": "Gravy done and seasoned",
       "measurements": [
@@ -178,7 +213,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Plate + Serve",
       "checkboxLabel": "Plated and smothered",
       "body": [

@@ -2,7 +2,7 @@
   "title": "Black Bean Sweet Potato Enchiladas",
   "imagePrompt": "Eight snugly packed corn tortilla rolls fill a rectangular baking dish, their tops lightly golden and spotted where the cheese has browned and bubbled. A pale green salsa verde pools around the edges and seeps between the rolls, still glistening. Stringy melted Monterey Jack stretches across the surface, with flecks of bright cilantro and fanned slices of creamy avocado draped over the top.",
   "subtitle": "Vegetarian enchiladas with spiced black bean–sweet potato filling, salsa verde, and melted Jack.",
-  "storageKey": "black_bean_sweet_potato_enchiladas_checks_v1",
+  "storageKey": "black_bean_sweet_potato_enchiladas_checks_v2",
   "chips": [
     { "dot": true, "label": "Main", "value": "Black beans & sweet potato" },
     { "label": "Serves", "value": "~4 (8 rolls)" },
@@ -61,7 +61,8 @@
         {
           "type": "ul",
           "items": [
-            "<strong>Preheat</strong> the oven and line the baking dish with salsa verde",
+            "<strong>Mise en place</strong> — prep the filling ingredients, toppings, tortillas, and baking dish",
+            "<strong>Prepare the dish</strong> with a thin layer of salsa verde",
             "<strong>Mix</strong> filling: beans, sweet potato, aromatics, spices, optional goat cheese",
             "<strong>Warm tortillas</strong>, fill, sprinkle Jack, roll, and pack the dish",
             "<strong>Top</strong> with more salsa and cheese; <strong>bake</strong> until golden and bubbling",
@@ -76,8 +77,48 @@
     },
     {
       "kicker": "Step 1",
-      "title": "Heat & prep the dish",
-      "checkboxLabel": "Preheat 350°F, salsa in dish",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Black beans", "qty": "1 can (15 oz)" },
+        { "item": "Garlic", "qty": "2 tsp, minced" },
+        { "item": "Lime juice", "qty": "of 1 lime" },
+        { "item": "Baked sweet potato", "qty": "2 cups, cubed" },
+        { "item": "Goat cheese", "qty": "⅓ cup (optional)", "alts": ["Feta"] },
+        { "item": "Roasted green chiles", "qty": "½ cup" },
+        { "item": "Cumin", "qty": "½ tsp" },
+        { "item": "Chili powder", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "½ tsp (optional)" },
+        { "item": "Jalapeño", "qty": "1" },
+        { "item": "Fresno pepper", "qty": "1" },
+        { "item": "Salsa verde", "qty": "1 jar" },
+        { "item": "Corn tortillas", "qty": "8" },
+        { "item": "Monterey Jack", "qty": "for filling + topping" },
+        { "item": "Cilantro", "qty": "for serving" },
+        { "item": "Avocado", "qty": "for serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>350°F</strong> and set out a baking dish and a large mixing bowl.",
+            "Rinse and drain the <strong>15-oz can black beans</strong>; have <strong>2 cups baked sweet potato</strong> cubed and ready.",
+            "Mince <strong>2 tsp garlic</strong>, juice <strong>1 lime</strong>, and dice the <strong>jalapeño</strong> and <strong>Fresno pepper</strong>.",
+            "Measure the <strong>½ cup green chiles</strong>, optional <strong>⅓ cup goat cheese</strong>, and <strong>½ tsp each cumin, chili powder, and optional cayenne</strong>.",
+            "Shred enough <strong>Monterey Jack</strong> for the filling and topping; set out the <strong>salsa verde</strong> and <strong>8 tortillas</strong>.",
+            "Wash and chop the <strong>cilantro</strong>, and slice the <strong>avocado</strong> for serving."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the assembly line clear:</strong> Arrange tortillas, filling, shredded Jack, and the baking dish in that order before you start rolling."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Prepare the Baking Dish",
+      "checkboxLabel": "Coat the baking dish with salsa verde",
       "measurements": [
         { "item": "Salsa verde", "qty": "thin layer" }
       ],
@@ -85,14 +126,13 @@
         {
           "type": "ul",
           "items": [
-            "Preheat the oven to <strong>350°F</strong>.",
             "Pour enough <strong>salsa verde</strong> into a baking dish to <strong>lightly coat the bottom</strong>."
           ]
         }
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Make the filling",
       "checkboxLabel": "Stir beans, potato, aromatics, spices",
       "measurements": [
@@ -119,7 +159,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Warm, fill & roll",
       "checkboxLabel": "Warm tortillas, fill eighths, roll in dish",
       "measurements": [
@@ -142,7 +182,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Bake",
       "checkboxLabel": "More salsa + Jack; bake 20–25 min",
       "measurements": [
@@ -160,7 +200,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Serve",
       "checkboxLabel": "Cilantro + avocado on top",
       "body": [

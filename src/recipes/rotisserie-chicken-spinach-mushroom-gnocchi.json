@@ -2,7 +2,7 @@
   "title": "Rotisserie Chicken, Spinach & Mushroom Gnocchi",
   "imagePrompt": "Pillowy gnocchi and shredded chicken are coated in a creamy, golden-tinged sauce that clings thickly to every surface. Dark brown slices of portabella mushroom are tucked throughout, and deep green wilted spinach leaves show in pockets across the dish. The top is blanketed with melted, lightly browned parmesan, and crumbles of crispy bacon with fried rosemary are scattered over the golden crust.",
   "subtitle": "Rotisserie chicken folded into a deeply savory white wine cream sauce with portabellas, spinach, rosemary, thyme, and parmesan.",
-  "storageKey": "rotisserie_chicken_spinach_mushroom_gnocchi_checks_v1",
+  "storageKey": "rotisserie_chicken_spinach_mushroom_gnocchi_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "Rotisserie chicken" },
     {              "label": "Serves",  "value": "4-6" },
@@ -70,6 +70,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep the chicken, mushrooms, spinach, aromatics, herbs, cheese, and sauce ingredients",
             "<strong>Crisp bacon</strong> with rosemary, then save it for the finish",
             "<strong>Brown portabellas hard</strong> in the bacon fat",
             "<strong>Bloom shallots, garlic, thyme, paprika, cayenne, and nutmeg</strong>",
@@ -86,6 +87,51 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Thick-cut bacon", "qty": "4 slices" },
+        { "item": "Fresh rosemary", "qty": "1 tbsp", "alts": ["Dried rosemary (1 tsp)"] },
+        { "item": "Fresh thyme", "qty": "2 tbsp, divided", "alts": ["Dried thyme (2 tsp)"] },
+        { "item": "Portabella mushrooms", "qty": "2 large caps", "alts": ["Baby bellas (8-10 oz)"] },
+        { "item": "Salted butter", "qty": "3 tbsp, divided" },
+        { "item": "Shallots", "qty": "2", "alts": ["1/2 small yellow onion"] },
+        { "item": "Garlic", "qty": "4 cloves" },
+        { "item": "All-purpose flour", "qty": "2 tbsp" },
+        { "item": "Dry white wine", "qty": "1 cup", "alts": ["Extra chicken broth"] },
+        { "item": "Chicken broth", "qty": "1 cup" },
+        { "item": "Heavy cream", "qty": "3/4 cup" },
+        { "item": "Nutmeg", "qty": "1/4 tsp" },
+        { "item": "Paprika", "qty": "1/2 tsp" },
+        { "item": "Cayenne", "qty": "a pinch" },
+        { "item": "Potato gnocchi", "qty": "1 lb" },
+        { "item": "Rotisserie chicken", "qty": "1, pulled (about 3-4 cups)" },
+        { "item": "Baby spinach", "qty": "4 packed cups" },
+        { "item": "Parmesan", "qty": "3/4 cup, divided" },
+        { "item": "Lemon", "qty": "1/2, juiced (optional)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>425°F</strong> with a rack in the upper-middle position.",
+            "Chop the <strong>4 bacon slices</strong>, finely chop <strong>1 tbsp rosemary</strong>, and strip and measure <strong>2 tbsp thyme leaves</strong>.",
+            "Scrape the gills from the <strong>2 portabella caps</strong> and slice them; chop the <strong>2 shallots</strong> and <strong>4 garlic cloves</strong>.",
+            "Pull and shred the rotisserie chicken to make about <strong>3-4 cups</strong>; wash and dry the <strong>4 packed cups spinach</strong> if needed.",
+            "Grate <strong>3/4 cup Parmesan</strong>, keeping <strong>1/4 cup</strong> for the sauce and <strong>1/2 cup</strong> for the top.",
+            "Measure <strong>3 tbsp butter</strong>, <strong>2 tbsp flour</strong>, <strong>1 cup wine</strong>, <strong>1 cup broth</strong>, and <strong>3/4 cup cream</strong>.",
+            "Measure <strong>1/4 tsp nutmeg</strong>, <strong>1/2 tsp paprika</strong>, and a <strong>pinch of cayenne</strong>; juice the optional <strong>1/2 lemon</strong>.",
+            "Set out a deep <strong>oven-safe skillet</strong>, whisk, wooden spoon, and plates for the cooked bacon and mushrooms."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Use separate bowls:</strong> Keep the bacon-rosemary mixture, browned mushrooms, sauce ingredients, and finishing Parmesan organized—the skillet is reused at every stage."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Crisp Bacon + Bloom Rosemary",
       "checkboxLabel": "Bacon crisped with rosemary, fat left in pan",
       "measurements": [
@@ -96,7 +142,6 @@
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>425°F</strong> with a rack in the upper-middle position.",
             "In a deep <strong>oven-safe skillet</strong>, cook bacon over medium heat until crisp, about <strong>5-7 minutes</strong>.",
             "During the last minute, stir in the <strong>rosemary</strong> so it blooms and crisps in the bacon fat.",
             "Transfer bacon and rosemary to a plate. <strong>Leave the fat in the skillet.</strong>"
@@ -109,7 +154,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Brown the Mushrooms",
       "checkboxLabel": "Portabellas deeply browned, set aside",
       "measurements": [
@@ -134,7 +179,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Sauce",
       "checkboxLabel": "Aromatics cooked, wine reduced, cream sauce thickened",
       "measurements": [
@@ -170,7 +215,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Gnocchi, Chicken + Spinach",
       "checkboxLabel": "Gnocchi tender, chicken warmed, spinach wilted",
       "measurements": [
@@ -197,7 +242,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Parmesan Bake + Serve",
       "checkboxLabel": "Baked until bubbling, topped with bacon and herbs",
       "measurements": [

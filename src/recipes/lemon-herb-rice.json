@@ -2,7 +2,7 @@
   "title": "Lemon Herb Rice",
   "imagePrompt": "A mound of long-grain rice with individual grains that are distinctly separate and lightly glossed with olive oil, pale ivory with a faint yellow tint from the lemon zest worked through it. Flecks of bright green chopped parsley or dill are scattered throughout, and fine strands of zest dot the surface. The overall texture looks light and airy, not clumped or wet.",
   "subtitle": "Fluffy rice finished with lemon, olive oil, and fresh herbs — built for lamb, tzatziki, and grilled meats.",
-  "storageKey": "lemon_herb_rice_checks_v1",
+  "storageKey": "lemon_herb_rice_checks_v2",
   "chips": [
     { "dot": true, "label": "Style", "value": "Mediterranean-inspired" },
     { "label": "Texture", "value": "Fluffy, separate grains" },
@@ -49,6 +49,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — measure the rice base and prep the lemon-herb finish",
             "Rinse rice to remove excess starch",
             "Toast briefly in fat for better texture",
             "Cook covered at low heat for 15 minutes",
@@ -64,6 +65,37 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Long grain white rice", "qty": "1 cup" },
+        { "item": "Water or chicken broth", "qty": "1¾–2 cups" },
+        { "item": "Olive oil or butter", "qty": "1 tbsp" },
+        { "item": "Kosher salt", "qty": "1 tsp" },
+        { "item": "Lemon zest", "qty": "from ½ lemon" },
+        { "item": "Lemon juice", "qty": "1–2 tsp" },
+        { "item": "Parsley or dill", "qty": "1 tbsp, chopped" },
+        { "item": "Olive oil", "qty": "small drizzle, optional" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Measure <strong>1 cup rice</strong>, <strong>1¾–2 cups water or broth</strong>, <strong>1 tbsp olive oil or butter</strong>, and <strong>1 tsp salt</strong>.",
+            "Wash and dry the <strong>lemon</strong> and <strong>parsley or dill</strong>.",
+            "Zest <strong>½ lemon</strong>, squeeze <strong>1–2 tsp lemon juice</strong>, and chop <strong>1 tbsp herbs</strong>.",
+            "Keep the <strong>lemon zest, juice, herbs, and optional olive-oil drizzle</strong> together for the off-heat finish.",
+            "Gather a <strong>fine-mesh strainer or bowl, pot with a tight-fitting lid, and fork</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Separate the finish:</strong> Lemon juice and herbs go in after cooking so they stay bright and fresh."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Rinse the Rice",
       "checkboxLabel": "Rinse until water runs clear, drain thoroughly",
       "body": [
@@ -82,7 +114,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Toast the Rice",
       "checkboxLabel": "Toast in oil 1–2 min until lightly steamy",
       "measurements": [
@@ -105,7 +137,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Cook",
       "checkboxLabel": "Covered at low heat for 15 min — do not open lid",
       "measurements": [
@@ -129,7 +161,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Rest",
       "checkboxLabel": "Heat off, lid on — rest 10 min",
       "body": [
@@ -147,7 +179,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Finish",
       "checkboxLabel": "Fluff, add lemon and herbs, taste and adjust",
       "measurements": [

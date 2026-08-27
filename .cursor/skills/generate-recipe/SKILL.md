@@ -75,7 +75,7 @@ The `imagePrompt` is a **2–4 sentence dish-specific subject paragraph** that d
 
 **Reference:** `handoff/ART_DIRECTION.md` — "Subject Writing Rules" section
 
-When the recipe card is built, this field powers the `📷 Prompt` button in the top nav. The button concatenates the global `IMAGE_STYLE` constant (in `generate.js`) with `recipe.imagePrompt` to produce the full prompt.
+When the recipe card is built, this field powers the **Image prompt** item in the header Prompt menu. The menu concatenates the global `IMAGE_STYLE` constant (in `generate.js`) with `recipe.imagePrompt` to produce the full prompt.
 
 ### 4. Write the file
 

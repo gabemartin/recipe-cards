@@ -2,7 +2,7 @@
   "title": "Lamb Chop Fond Potatoes (Cast Iron)",
   "imagePrompt": "Small halved Honey Gold potatoes are golden-brown and deeply crisped on their cut faces, with rough, starchy edges that have turned almost lacey and dark from the cast iron. The skins remain pale yellow and tender while the flat sides show a seared, amber crust developed from cooking in lamb drippings. Flecks of bright green parsley and pale minced garlic cling to the surface, and the whole batch glistens lightly with the remaining fat and a squeeze of lemon that leaves the potatoes looking glossy but not wet.",
   "subtitle": "Crowd-size Honey Gold potatoes par-cooked, then crisped in batches with lamb drippings and fond before a garlic-parsley-lemon finish.",
-  "storageKey": "lamb_chop_fond_potatoes_checks_v1",
+  "storageKey": "lamb_chop_fond_potatoes_checks_v2",
   "chips": [
     { "dot": true, "label": "Main",   "value": "240 oz Honey Gold potatoes" },
     {              "label": "Serves", "value": "~20-24" },
@@ -49,6 +49,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — cut the potatoes, prep the finish, and set up pots and sheet pans",
             "<strong>Par-cook</strong> 15 lb of potatoes in well-salted water",
             "<strong>Drain + rough up</strong> the surfaces for extra crisp edges",
             "<strong>Work in batches</strong> with the lamb-chop skillet",
@@ -64,6 +65,38 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Honey Gold potatoes", "qty": "15 lb", "alts": ["Baby gold potatoes", "Fingerlings"] },
+        { "item": "Kosher salt", "qty": "~2 tbsp, plus more for boiling" },
+        { "item": "Baking soda", "qty": "1 tbsp (optional)" },
+        { "item": "Lamb fat + fond", "qty": "1–1½ cups total", "alts": ["Rendered lamb fat", "Olive oil"] },
+        { "item": "Butter", "qty": "4 tbsp (optional)" },
+        { "item": "Garlic", "qty": "6–8 cloves" },
+        { "item": "Flat-leaf parsley", "qty": "1 cup" },
+        { "item": "Fresh lemon juice", "qty": "3–4 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Wash and dry the <strong>15 lb potatoes</strong>; halve tiny potatoes and quarter larger ones so the pieces are similar in size.",
+            "Set out <strong>one very large pot or two large pots</strong>, a colander, a cast-iron skillet, and <strong>2–3 sheet pans</strong>.",
+            "Measure the <strong>salt</strong> and optional <strong>1 tbsp baking soda</strong> for par-cooking.",
+            "Collect <strong>1–1½ cups lamb fat and clean brown fond</strong>, supplementing with rendered lamb fat or olive oil if needed.",
+            "Finely mince or grate <strong>6–8 garlic cloves</strong>, finely chop <strong>1 cup parsley</strong>, and squeeze <strong>3–4 tbsp lemon juice</strong>.",
+            "Divide the optional <strong>4 tbsp butter</strong> so it is ready for the finishing batches."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Batch setup:</strong> With 15 lb of potatoes, clear space for the drained potatoes and finished sheet pans before you start boiling."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Par-Cook the Potatoes",
       "checkboxLabel": "Boil until just tender, then drain well",
       "measurements": [
@@ -87,7 +120,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Rough Up + Preheat",
       "checkboxLabel": "Rough up the edges; heat oven to 425F",
       "measurements": [
@@ -99,7 +132,7 @@
           "items": [
             "Shake the drained potatoes in the colander or toss them in a bowl until the outsides look a little <strong>scruffy</strong>.",
             "Season with <strong>about 2 tbsp kosher salt</strong> to start; use less if your lamb drippings are already salty.",
-            "Preheat the oven to <strong>425F</strong> and set out <strong>2-3 sheet pans</strong> for holding finished batches."
+            "Preheat the oven to <strong>425F</strong> so it is ready to hold finished batches."
           ]
         },
         {
@@ -109,7 +142,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Set Up for Batch Cooking",
       "checkboxLabel": "Hold 1/4 cup drippings per batch and scrape up the good fond",
       "measurements": [
@@ -132,7 +165,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Crisp in Batches",
       "checkboxLabel": "Sear each batch, then oven-finish and hold warm",
       "body": [
@@ -152,7 +185,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Finish the Full Batch",
       "checkboxLabel": "Bloom garlic briefly, then toss with parsley and lemon",
       "measurements": [

@@ -2,7 +2,7 @@
   "title": "Caramelized Banana Milkshake",
   "imagePrompt": "A tall glass holds a thick, warm-ivory milkshake with a faint golden-caramel tint throughout. A generous cloud of whipped cream crowns the top, its surface cracked and amber where the brown sugar has been torched into a thin brûléed crust. Dark caramel sauce drizzles down through the whipped cream and traces lazy streaks along the inside of the glass.",
   "subtitle": "Bananas Foster-style caramelized banana blended into a vanilla milkshake. Whipped cream, caramel, torched sugar on top.",
-  "storageKey": "caramelized_banana_milkshake_checks_v1",
+  "storageKey": "caramelized_banana_milkshake_checks_v2",
   "chips": [
     { "dot": true, "label": "Base",    "value": "1 caramelized banana" },
     {              "label": "Serves",  "value": "1" },
@@ -45,6 +45,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — measure the ingredients and ready the skillet, blender, and serving glass",
             "<strong>Slice + caramelize</strong> banana in butter and brown sugar",
             "<strong>Baste</strong> the second side in the bubbling sauce",
             "<strong>Blend</strong> with milk, then add ice cream",
@@ -59,8 +60,38 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Ripe banana", "qty": "1" },
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Brown sugar", "qty": "2 tbsp, plus extra for topping" },
+        { "item": "Milk", "qty": "¼ cup" },
+        { "item": "Vanilla ice cream", "qty": "½ cup" },
+        { "item": "Whipped cream", "qty": "for topping" },
+        { "item": "Caramel sauce", "qty": "for topping" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Measure <strong>1 tbsp butter</strong>, <strong>2 tbsp brown sugar</strong>, <strong>¼ cup milk</strong>, and <strong>½ cup vanilla ice cream</strong>.",
+            "Peel the <strong>ripe banana</strong> and slice it lengthwise.",
+            "Set the <strong>whipped cream</strong>, <strong>caramel sauce</strong>, and extra brown sugar for the optional torched topping beside the serving glass.",
+            "Set out a skillet, spatula, blender, silicone scraper, and tall serving glass.",
+            "If torching the topping, place the kitchen torch within reach on a clear, heat-safe work surface."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Work without pauses:</strong> Have the blender open and ready before the banana hits the skillet so the hot caramel goes straight into the shake."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Caramelize the Banana",
-      "checkboxLabel": "Slice lengthwise, caramelize both sides",
+      "checkboxLabel": "Caramelize banana on both sides",
       "measurements": [
         { "item": "Banana", "qty": "1, ripe" },
         { "item": "Butter", "qty": "1 tbsp" },
@@ -71,7 +102,7 @@
           "type": "ul",
           "items": [
             "Heat a skillet over <strong>medium heat</strong>. Melt <strong>1 tbsp butter</strong>.",
-            "Slice the banana <strong>lengthwise</strong> and add to the skillet, cut side down.",
+            "Add the prepared banana to the skillet, <strong>cut side down</strong>.",
             "Sprinkle <strong>2 tbsp brown sugar</strong> over the top.",
             "Cook <strong>~3 minutes</strong> until the bottom is deep golden.",
             "<strong>Flip</strong> the banana → baste in the bubbling sauce for <strong>~2 more minutes</strong>."
@@ -84,7 +115,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Blend with Milk",
       "checkboxLabel": "Banana + pan sauce + milk into blender",
       "measurements": [
@@ -106,7 +137,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Add Ice Cream + Blend",
       "checkboxLabel": "Add ice cream, blend to milkshake texture",
       "measurements": [
@@ -127,7 +158,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Top + Serve",
       "checkboxLabel": "Whipped cream, caramel, torch the sugar",
       "measurements": [

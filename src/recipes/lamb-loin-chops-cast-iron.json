@@ -2,7 +2,7 @@
   "title": "Lamb Loin Chops (Cast Iron)",
   "imagePrompt": "Lamb loin chops sit with a deep mahogany crust on both seared faces, the exterior darkly caramelized and slightly charred at the outermost edges while the fat cap along the rim is rendered to a translucent, golden crisp. Where the meat is sliced or pressed open, the interior shows a warm rosy-pink that fades toward a slightly darker ring just beneath the crust. A thin sheen of browned butter clings to the surface, and any rosemary or thyme sprigs nearby have darkened and crisped from the pan heat.",
   "subtitle": "Hot cast-iron sear with optional herb butter: deep crust, warm pink center around 130–135°F.",
-  "storageKey": "lamb_loin_chops_cast_iron_checks_v1",
+  "storageKey": "lamb_loin_chops_cast_iron_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "Lamb loin chops" },
     {              "label": "Pan",     "value": "Cast iron" },
@@ -44,6 +44,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — dry the chops, trim the fat, and set out seasonings, herbs, and tools",
             "<strong>Season</strong> and rest so the surface isn't wet",
             "<strong>Heat the pan</strong> on trimmed lamb fat until it's seriously hot",
             "<strong>Sear side 1</strong> without moving",
@@ -59,13 +60,43 @@
     },
     {
       "kicker": "Step 1",
-      "title": "Season",
-      "checkboxLabel": "Pat dry, salt & pepper, rest 10–15 min",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything prepped and ready to sear",
+      "measurements": [
+        { "item": "Lamb loin chops", "qty": "as many as fit without crowding" },
+        { "item": "Kosher salt", "qty": "for seasoning" },
+        { "item": "Black pepper", "qty": "for seasoning" },
+        { "item": "Lamb fat", "qty": "trimmed from chops" },
+        { "item": "Butter", "qty": "1 tbsp (optional)" },
+        { "item": "Rosemary", "qty": "a few sprigs (optional)", "alts": ["Dried rosemary"] },
+        { "item": "Thyme", "qty": "a few sprigs (optional)", "alts": ["Dried thyme"] }
+      ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "Pat chops <strong>dry</strong> with paper towels.",
+            "Pat the <strong>lamb loin chops</strong> thoroughly dry with paper towels.",
+            "Trim and reserve any usable <strong>lamb fat</strong> for rendering in the skillet.",
+            "Set out <strong>kosher salt</strong> and <strong>black pepper</strong> for seasoning.",
+            "If using the herb finish, measure <strong>1 tbsp butter</strong> and wash and dry a few sprigs each of <strong>rosemary and thyme</strong>.",
+            "Set out a <strong>cast-iron skillet</strong>, tongs, an instant-read thermometer, and a clean plate for resting the cooked chops.",
+            "Plan batches now if all the chops will not fit in one uncrowded layer."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Dry tools, dry meat:</strong> Keep the chops and herbs free of surface water so the hot fat sears instead of spattering and steaming."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Season",
+      "checkboxLabel": "Salt & pepper, then rest 10–15 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
             "Season with <strong>kosher salt + black pepper</strong> on both sides.",
             "Rest <strong>10–15 minutes</strong> at room temperature."
           ]
@@ -77,7 +108,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Heat the Pan",
       "checkboxLabel": "Render lamb fat until pan is hot, lightly smoking",
       "body": [
@@ -98,7 +129,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Sear (Side 1)",
       "checkboxLabel": "Add chops; cook 3 min without moving",
       "body": [
@@ -116,7 +147,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Flip + Flavor",
       "checkboxLabel": "Flip; add butter & herbs; baste 30–60 sec",
       "body": [
@@ -136,7 +167,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Finish (Side 2)",
       "checkboxLabel": "Cook second side 2–3 min",
       "body": [
@@ -153,7 +184,7 @@
       ]
     },
     {
-      "kicker": "Step 6",
+      "kicker": "Step 7",
       "title": "Rest",
       "checkboxLabel": "Plate and rest 5 min",
       "body": [

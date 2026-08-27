@@ -2,7 +2,7 @@
   "title": "Steakhouse Sirloin Tips",
   "imagePrompt": "Bite-size pieces of sirloin tip rest on a plate, each showing a deep mahogany crust with faint char marks where the cast iron made contact, while cross-sections reveal a rosy, medium-rare interior that grades to pink toward the edges. A sheen of butter coats the surface of the meat, pooling slightly around the pieces where it has settled after basting. The pieces vary slightly in size and shape, their uneven edges and well-developed crust giving them a distinctly steakhouse character.",
   "subtitle": "Marinated sirloin tips with a hard sear and butter finish.",
-  "storageKey": "steakhouse_sirloin_tips_checks_v1",
+  "storageKey": "steakhouse_sirloin_tips_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein",   "value": "Beef sirloin tips" },
     {              "label": "Pan",        "value": "Cast iron" },
@@ -44,6 +44,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — mince garlic, measure the marinade, and gather searing equipment",
             "<strong>Marinate</strong> 2–4 hours in the fridge",
             "<strong>Temper</strong> 15–20 min before cooking",
             "<strong>Pat dry</strong> — dry surface = real crust",
@@ -60,6 +61,36 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Beef sirloin tips", "qty": "2 lbs" },
+        { "item": "Dale's marinade", "qty": "¼ cup" },
+        { "item": "Olive oil", "qty": "1–2 tbsp" },
+        { "item": "Garlic", "qty": "2–3 cloves", "alts": ["Garlic paste"] },
+        { "item": "Black pepper", "qty": "heavy" },
+        { "item": "Salt", "qty": "light, optional" },
+        { "item": "Butter", "qty": "2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat the <strong>2 lbs sirloin tips</strong> dry and place them near a zip bag.",
+            "Peel and mince the <strong>2–3 garlic cloves</strong>, or portion the garlic paste.",
+            "Measure <strong>¼ cup Dale's marinade</strong>, <strong>1–2 tbsp olive oil</strong>, and <strong>2 tbsp butter</strong> separately.",
+            "Set out the <strong>black pepper</strong>; keep optional salt separate because the marinade is already salty.",
+            "Gather a <strong>cast-iron skillet, tongs, paper towels, and a plate</strong> for the sear and rest."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Stage the butter separately:</strong> It is for the final baste, not the marinade."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Marinate",
       "checkboxLabel": "Bag, coat, refrigerate 2–4 hrs",
       "body": [
@@ -86,7 +117,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Temper & Dry",
       "checkboxLabel": "Remove from fridge 15–20 min; pat dry",
       "body": [
@@ -105,7 +136,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Sear — Side 1",
       "checkboxLabel": "Add oil, sear 2–3 min without moving",
       "body": [
@@ -124,7 +155,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Sear — Side 2",
       "checkboxLabel": "Flip, sear another 2–3 min",
       "body": [
@@ -139,7 +170,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Butter Finish",
       "checkboxLabel": "Reduce heat; add butter + garlic; baste 30–60 sec",
       "body": [
@@ -162,7 +193,7 @@
       ]
     },
     {
-      "kicker": "Step 6",
+      "kicker": "Step 7",
       "title": "Rest & Serve",
       "checkboxLabel": "Rest briefly and serve",
       "body": [

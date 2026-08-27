@@ -2,7 +2,7 @@
   "title": "Salmon & Lemon Bucatini",
   "imagePrompt": "A tangle of thick bucatini coils in a glossy, pale-gold sauce that clings to every strand, bright with lemon and flecked with green from wilted Brussels sprout leaves scattered throughout. Irregular chunks of flaked salmon — rosy-pink at the center, lightly seared at the edges — nestle into the pasta rather than sitting on top. The whole dish is dusted with finely grated Parmesan that melts into the sauce, with a few golden panko crumbs on top adding a faint crunch over the otherwise silky, butter-rich tangle.",
   "subtitle": "Seared salmon flaked over bucatini with crème fraîche, butter, and lots of lemon. Brussels sprout leaves for crunch.",
-  "storageKey": "salmon_lemon_bucatini_checks_v1",
+  "storageKey": "salmon_lemon_bucatini_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "Salmon fillets" },
     {              "label": "Pasta",   "value": "Bucatini" },
@@ -54,6 +54,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep the sprouts, lemon, garlic, cheese, and salmon; measure the sauce ingredients",
             "<strong>Sear salmon</strong> and set it aside",
             "<strong>Cook bucatini</strong>—salt the water aggressively, save a cup",
             "<strong>Sauté Brussels sprouts</strong> (or wilt spinach)",
@@ -69,6 +70,44 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Salmon fillets", "qty": "2 (about 6 oz each)", "alts": ["Arctic char", "Steelhead trout"] },
+        { "item": "Bucatini", "qty": "8–12 oz", "alts": ["Spaghetti", "Linguine"] },
+        { "item": "Brussels sprouts", "qty": "a big handful", "alts": ["Baby spinach"] },
+        { "item": "Crème fraîche", "qty": "3–4 tbsp", "alts": ["Sour cream", "Mascarpone"] },
+        { "item": "Butter", "qty": "3–4 tbsp" },
+        { "item": "Lemon juice", "qty": "2–3 lemons' worth" },
+        { "item": "Lemon zest", "qty": "from 1 lemon" },
+        { "item": "Garlic", "qty": "2–3 cloves" },
+        { "item": "Parmesan", "qty": "for finishing" },
+        { "item": "Panko breadcrumbs", "qty": "optional" },
+        { "item": "Parsley or chives", "qty": "optional, for finishing" },
+        { "item": "Olive oil", "qty": "for searing" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Bring a <strong>large pot of water</strong> toward a boil and set out a cup for reserving pasta water.",
+            "Wash and dry the <strong>Brussels sprouts, lemons</strong>, and optional fresh herbs.",
+            "Separate the Brussels sprout leaves or halve small sprouts; if using spinach, have it washed and ready.",
+            "Zest <strong>1 lemon</strong>, then juice the lemons to yield the recipe's <strong>2–3 lemons' worth</strong>.",
+            "Mince the <strong>2–3 garlic cloves</strong>, grate the <strong>Parmesan</strong>, and chop the optional parsley or chives.",
+            "Measure <strong>3–4 tbsp crème fraîche</strong> and <strong>3–4 tbsp butter</strong>; set out the optional panko.",
+            "Pat the <strong>2 salmon fillets</strong> very dry and season with salt and pepper.",
+            "Set out a large skillet, pasta pot, colander, tongs, and a plate for the cooked salmon."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the lemon components separate:</strong> Zest before juicing, then add the juice gradually when building the sauce so you can balance it to taste."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Sear the Salmon",
       "checkboxLabel": "Sear salmon, flake, set aside",
       "measurements": [
@@ -79,10 +118,8 @@
         {
           "type": "ul",
           "items": [
-            "Pat salmon <strong>very dry</strong>.",
-            "Season with <strong>salt &amp; pepper</strong>.",
             "Heat a drizzle of <strong>olive oil</strong> in a skillet over <strong>medium-high</strong>.",
-            "Sear <strong>skin-side down first</strong> (if skin-on) for <strong>3–4 min</strong> until crisp.",
+            "Add the prepared salmon and sear <strong>skin-side down first</strong> (if skin-on) for <strong>3–4 min</strong> until crisp.",
             "Flip and cook <strong>2–3 min</strong> more—don't overcook, it'll break apart when you flake it.",
             "Remove to a plate. <strong>Flake into bite-size pieces</strong> when cool enough to handle."
           ]
@@ -94,7 +131,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Cook the Pasta",
       "checkboxLabel": "Boil bucatini, reserve 1 cup water",
       "measurements": [
@@ -104,7 +141,7 @@
         {
           "type": "ul",
           "items": [
-            "Bring a big pot of water to a boil.",
+            "Bring the staged pot of water to a full boil.",
             "Salt it <strong>more than you're comfortable with</strong>—this is important.",
             "Cook <strong>bucatini</strong> until al dente per package directions.",
             "Before draining, <strong>reserve at least 1 cup</strong> of the starchy pasta water.",
@@ -118,7 +155,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Cook the Brussels Sprouts",
       "checkboxLabel": "Sauté sprout leaves until tender",
       "measurements": [
@@ -129,9 +166,8 @@
         {
           "type": "ul",
           "items": [
-            "Separate <strong>Brussels sprout leaves</strong> (or halve small sprouts). If subbing spinach, just have it ready.",
             "In the same skillet (or a fresh pan), heat a little <strong>olive oil</strong> over <strong>medium-high</strong>.",
-            "Cook <strong>3–5 min</strong> until tender and getting some color.",
+            "Add the prepared <strong>Brussels sprout leaves</strong> (or halved sprouts) and cook <strong>3–5 min</strong> until tender and getting some color.",
             "Season with a pinch of <strong>salt</strong>. Set aside or leave in the pan for the next step."
           ]
         },
@@ -142,7 +178,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Build the Sauce &amp; Combine",
       "checkboxLabel": "Crème fraîche + butter + lemon + pasta water",
       "measurements": [
@@ -171,7 +207,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Finish &amp; Serve",
       "checkboxLabel": "Top with breadcrumbs (optional) and serve",
       "measurements": [

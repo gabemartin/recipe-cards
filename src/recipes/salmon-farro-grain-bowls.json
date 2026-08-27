@@ -2,7 +2,7 @@
   "title": "Salmon and Farro Grain Bowls",
   "imagePrompt": "A shallow bowl holds a mound of nutty-brown farro tossed with bright ribbons of orange sweet pepper, pale green snap peas, thin crimson radish slices, creamy chunks of avocado, and chopped cucumber, everything glistening with a honey-lemon vinaigrette. A pan-seared salmon fillet rests on top, its skin deeply bronzed and slightly crisped while the flesh shows a moist, just-flaked interior. A generous scatter of chopped pistachios crowns the bowl, adding a rough, pale-green texture over the colorful grain base.",
   "subtitle": "Hearty farro, crisp raw vegetables, and skillet salmon with a honey-lemon vinaigrette and crunchy pistachios.",
-  "storageKey": "salmon_farro_grain_bowls_checks_v1",
+  "storageKey": "salmon_farro_grain_bowls_checks_v2",
   "chips": [
     {
       "dot": true,
@@ -121,6 +121,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — wash, chop, measure, and set out the pot and skillet",
             "<strong>Simmer farro</strong> until tender, then drain",
             "<strong>Sear salmon</strong> flesh side first, then flip to skin side",
             "<strong>Combine</strong> farro with prepped vegetables and cilantro",
@@ -130,12 +131,105 @@
         },
         {
           "type": "callout",
-          "html": "<strong>Prep window:</strong> While farro and salmon cook, chop vegetables so everything lands in the bowl at once."
+          "html": "<strong>Parallel cooking:</strong> With the vegetables prepped, cook the farro and salmon at the same time so everything lands in the bowl warm."
         }
       ]
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        {
+          "item": "Farro",
+          "qty": "1 cup dry"
+        },
+        {
+          "item": "Salmon",
+          "qty": "2 fillets (~12 oz)"
+        },
+        {
+          "item": "Olive oil",
+          "qty": "6 tbsp total"
+        },
+        {
+          "item": "Kosher salt",
+          "qty": "1½ tsp total"
+        },
+        {
+          "item": "Black pepper",
+          "qty": "½ tsp, plus more for dressing"
+        },
+        {
+          "item": "Onion powder",
+          "qty": "½ tsp"
+        },
+        {
+          "item": "Garlic powder",
+          "qty": "½ tsp"
+        },
+        {
+          "item": "Snap peas",
+          "qty": "1 cup"
+        },
+        {
+          "item": "Mini sweet peppers",
+          "qty": "1 cup"
+        },
+        {
+          "item": "Radish",
+          "qty": "½ cup"
+        },
+        {
+          "item": "Avocado",
+          "qty": "1"
+        },
+        {
+          "item": "English cucumber",
+          "qty": "½"
+        },
+        {
+          "item": "Cilantro",
+          "qty": "¼ cup"
+        },
+        {
+          "item": "Pistachios",
+          "qty": "⅓ cup"
+        },
+        {
+          "item": "White wine vinegar",
+          "qty": "2 tbsp"
+        },
+        {
+          "item": "Honey",
+          "qty": "1 tbsp"
+        },
+        {
+          "item": "Lemon",
+          "qty": "½, juiced"
+        }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Wash and dry the snap peas, sweet peppers, radishes, cucumber, cilantro, avocado, and lemon.",
+            "Halve <strong>1 cup snap peas</strong> crosswise; slice <strong>1 cup sweet peppers</strong> and <strong>½ cup radish</strong>; chop <strong>½ cucumber</strong> and <strong>¼ cup cilantro</strong>.",
+            "Chop the <strong>⅓ cup pistachios</strong>. Leave the avocado whole until the bowl base is ready.",
+            "Pat the <strong>2 salmon fillets</strong> dry. Measure <strong>1 tsp salt</strong>, <strong>½ tsp black pepper</strong>, <strong>½ tsp onion powder</strong>, and <strong>½ tsp garlic powder</strong> for seasoning.",
+            "Measure <strong>1 cup farro</strong> and check its package directions for the required water and cooking time.",
+            "Measure the dressing ingredients separately: <strong>4 tbsp olive oil</strong>, <strong>2 tbsp white wine vinegar</strong>, <strong>1 tbsp honey</strong>, the juice of <strong>½ lemon</strong>, and <strong>½ tsp salt</strong>.",
+            "Set out a pot and colander for the farro, a large skillet for the salmon, and large and small mixing bowls."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the avocado whole:</strong> Dice it just before building the bowl base so it stays fresh while the farro and salmon cook."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Cook the Farro",
       "checkboxLabel": "Farro tender, drained",
       "body": [
@@ -160,7 +254,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Sear the Salmon",
       "checkboxLabel": "Salmon cooked, flaky, moist",
       "body": [
@@ -168,7 +262,7 @@
           "type": "ul",
           "items": [
             "Heat <strong>2 tbsp olive oil</strong> in a large skillet over <strong>medium</strong> heat.",
-            "<strong>Pat salmon dry.</strong> Season with <strong>salt, pepper, onion powder, and garlic powder</strong>.",
+            "Season the prepared salmon with <strong>salt, pepper, onion powder, and garlic powder</strong>.",
             "Place <strong>flesh-side down</strong> → cook <strong>~4 minutes</strong>.",
             "Flip to <strong>skin side</strong> → cook <strong>~4 minutes more</strong> until it flakes easily but doesn’t look dry.",
             "Transfer to a plate and keep warm if needed."
@@ -208,13 +302,14 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Bowl Base",
       "checkboxLabel": "Farro + veg + cilantro combined",
       "body": [
         {
           "type": "ul",
           "items": [
+            "Dice the <strong>avocado</strong> just before combining the bowl.",
             "In a <strong>large bowl</strong>, add the warm farro.",
             "Add <strong>snap peas, peppers, radish, avocado, cucumber,</strong> and <strong>cilantro</strong>.",
             "Toss gently—the avocado will break a little; that’s fine."
@@ -250,7 +345,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Dress and Toss",
       "checkboxLabel": "Vinaigrette whisked and mixed in",
       "body": [
@@ -291,7 +386,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Plate and Finish",
       "checkboxLabel": "Bowls assembled with pistachios",
       "body": [

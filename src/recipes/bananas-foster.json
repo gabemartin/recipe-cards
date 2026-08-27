@@ -2,7 +2,7 @@
   "title": "Bananas Foster",
   "imagePrompt": "Two scoops of pale vanilla bean ice cream sit in a shallow bowl, their surfaces beginning to soften where the heat meets them. Four banana quarters ring the ice cream, their cut faces glazed in a thick, dark amber caramel that pools and drips down the sides. The sauce is glossy and bubbling at the edges, with flecks of orange zest visible in the rum-spiked caramel.",
   "subtitle": "New Orleans flambéed bananas in spice-infused dark caramel. Served over cold vanilla ice cream.",
-  "storageKey": "bananas_foster_checks_v1",
+  "storageKey": "bananas_foster_checks_v2",
   "chips": [
     { "dot": true, "label": "Fruit",     "value": "4 firm bananas" },
     {              "label": "Serves",    "value": "4" },
@@ -56,6 +56,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep bananas, measure the caramel ingredients, and stage flambé equipment",
             "<strong>Melt butter</strong> and build a spice-infused caramel base",
             "<strong>Bloom</strong> vanilla, orange zest, and salt into the sauce",
             "<strong>Caramelize bananas</strong> cut-side down, baste, flip",
@@ -71,6 +72,42 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Unsalted butter", "qty": "¼ cup, cubed" },
+        { "item": "Dark brown sugar", "qty": "1 cup, packed" },
+        { "item": "Ground cinnamon", "qty": "1 tsp", "alts": ["Vietnamese", "Ceylon"] },
+        { "item": "Whole nutmeg", "qty": "¼ tsp, freshly grated" },
+        { "item": "Vanilla bean paste", "qty": "½ tsp", "alts": ["Bourbon vanilla extract"] },
+        { "item": "Orange zest", "qty": "1 tsp" },
+        { "item": "Fleur de sel", "qty": "generous pinch", "alts": ["Flaky sea salt"] },
+        { "item": "Bananas", "qty": "4, quartered" },
+        { "item": "Banana liqueur", "qty": "¼ cup" },
+        { "item": "Dark or spiced rum", "qty": "¼ cup" },
+        { "item": "Vanilla bean ice cream", "qty": "1 pint" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Cube the <strong>¼ cup butter</strong>; firmly pack <strong>1 cup brown sugar</strong>.",
+            "Grate <strong>¼ tsp nutmeg</strong> and <strong>1 tsp orange zest</strong>.",
+            "Measure the <strong>cinnamon, vanilla, and fleur de sel</strong> into separate small bowls.",
+            "Peel the <strong>4 bananas</strong>; halve them lengthwise, then crosswise into quarters.",
+            "Measure <strong>¼ cup banana liqueur</strong> and <strong>¼ cup rum</strong> into separate containers. Keep both away from the stove until called for.",
+            "Set out a <strong>10–12 inch heavy skillet, heat-resistant spatula, long-handled spoon, long-reach lighter, and metal lid</strong>.",
+            "Keep the <strong>ice cream</strong> frozen until the bananas are ready to serve."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Flambé setup:</strong> Keep the metal lid within reach, and never pour rum directly from the bottle into the hot pan."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Build the Spice-Infused Caramel",
       "checkboxLabel": "Melt butter, stir in sugar and spices",
       "measurements": [
@@ -95,7 +132,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Dissolve and Bloom",
       "checkboxLabel": "Stir 3–4 min, add vanilla, zest, salt",
       "measurements": [
@@ -119,7 +156,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Caramelize the Bananas",
       "checkboxLabel": "Add liqueur, cook bananas 2 min per side",
       "measurements": [
@@ -143,7 +180,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "The Flambé",
       "checkboxLabel": "Pour rum, ignite vapors — do not stir",
       "measurements": [
@@ -166,7 +203,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Baste and Extinguish",
       "checkboxLabel": "Shake pan, baste through flames, remove from heat",
       "body": [
@@ -186,7 +223,7 @@
       ]
     },
     {
-      "kicker": "Step 6",
+      "kicker": "Step 7",
       "title": "Assemble and Serve",
       "checkboxLabel": "Ice cream in bowls, bananas + hot sauce on top",
       "measurements": [

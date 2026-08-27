@@ -2,7 +2,7 @@
   "title": "Italian Spinach",
   "imagePrompt": "A mound of fully wilted, deep-green spinach glistens with olive oil and butter, flecked with soft brick-red tomato paste and small pieces of tender red pepper and translucent onion. The leaves are silky and collapsed, coated in a light, savory pan sauce that pools slightly at the base. The whole dish looks rich and yielding, with the greens giving off a gentle sheen.",
   "subtitle": "A quick sautéed spinach with sweet pepper, onion, garlic, and tomato—ready in about 10 minutes.",
-  "storageKey": "italian_spinach_checks_v1",
+  "storageKey": "italian_spinach_checks_v2",
   "chips": [
     { "dot": true, "label": "Base", "value": "Spinach + tomato" },
     {              "label": "Yield", "value": "2–3 servings" },
@@ -45,6 +45,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — wash, dry, dice, slice, and measure everything",
             "<strong>Heat</strong> butter and olive oil in a skillet",
             "<strong>Add</strong> spinach and all remaining ingredients",
             "<strong>Cover and steam</strong> over high heat, then simmer until tender"
@@ -58,6 +59,37 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Spinach", "qty": "1 lb" },
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Olive oil", "qty": "1 tbsp" },
+        { "item": "Sweet red pepper", "qty": "½" },
+        { "item": "Garlic", "qty": "1 tsp", "alts": ["Garlic paste"] },
+        { "item": "Onion", "qty": "½ cup" },
+        { "item": "Tomato paste", "qty": "½ cup", "alts": ["1 small tomato"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Wash and thoroughly dry the <strong>1 lb spinach</strong>.",
+            "Dice the <strong>½ sweet red pepper</strong> and enough onion to make <strong>½ cup</strong>.",
+            "Slice enough garlic to make <strong>1 tsp</strong>, or measure the garlic paste.",
+            "Measure <strong>½ cup tomato paste</strong>; if using the substitute, dice the <strong>1 small tomato</strong>.",
+            "Measure <strong>1 tbsp butter</strong> and <strong>1 tbsp olive oil</strong>.",
+            "Set out a <strong>large skillet with a lid</strong> and keep every ingredient within reach; they all go into the pan quickly."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Dry the spinach well:</strong> Excess wash water will dilute the tomato and keep the skillet from sautéing cleanly."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Heat the Fat",
       "checkboxLabel": "Butter and olive oil heated in skillet",
       "body": [
@@ -76,7 +108,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Add Everything & Steam",
       "checkboxLabel": "All ingredients in; covered until steam appears",
       "body": [
@@ -101,7 +133,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Simmer Until Tender",
       "checkboxLabel": "Reduced heat; simmered 5–6 minutes",
       "body": [

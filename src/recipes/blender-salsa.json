@@ -2,7 +2,7 @@
   "title": "Fresh Garden Salsa",
   "imagePrompt": "A rustic bowl holds bright red salsa with a clearly chunky texture — small, distinct cubes of ripe tomato suspended in a thicker, slightly darker-red blended base. Flecks of chopped cilantro and pale translucent onion are visible throughout, along with tiny bits of red and green pepper skin. A few tortilla chips lean into the bowl, one dipped and glistening with clinging salsa, juice pooling faintly where it rests against the bowl's edge.",
   "subtitle": "A fresh-tomato, chop-and-blend base you can freely adapt — tune the peppers to whatever heat and flavor you're after.",
-  "storageKey": "blender_salsa_checks_v1",
+  "storageKey": "blender_salsa_checks_v2",
   "chips": [
     { "dot": true, "label": "Base",    "value": "1 lb fresh tomatoes" },
     {              "label": "Heat",    "value": "Spicy (2 jalapeños, adjustable)" },
@@ -11,10 +11,10 @@
   ],
   "ingredients": {
     "heading": "Ingredients",
-    "note": "This is a starting point, not a fixed formula — scale up freely for a big garden haul, and swap peppers per the guide in Step 1 to land the heat and flavor you want.",
+    "note": "This is a starting point, not a fixed formula — scale up freely for a big garden haul, and swap peppers per the guide in Step 2 to land the heat and flavor you want.",
     "items": [
       "<strong>1 lb fresh tomatoes</strong> (about 3 medium or 8–10 Roma/paste tomatoes), cored",
-      "<strong>2 fresh jalapeños</strong>, stemmed (seed for less heat) — see Step 1 for swaps",
+      "<strong>2 fresh jalapeños</strong>, stemmed (seed for less heat) — see Step 2 for swaps",
       "<strong>⅓ cup white onion</strong>, roughly chopped (red onion works too)",
       "<strong>⅓ cup fresh cilantro</strong>, leaves and tender stems",
       "<strong>2 cloves garlic</strong>",
@@ -26,7 +26,7 @@
     "callout": "<strong>Key tip:</strong> Garden tomatoes vary a lot in water content and acidity — taste as you go and adjust salt, lime, and sugar at the end rather than trusting exact amounts.",
     "shoppingList": [
       { "item": "Fresh tomatoes (1 lb)", "substitutes": ["Roma/paste tomatoes (meatier, less watery)"] },
-      { "item": "Fresh jalapeños (2)", "substitutes": ["See pepper guide in Step 1 for other heat/flavor options"] },
+      { "item": "Fresh jalapeños (2)", "substitutes": ["See pepper guide in Step 2 for other heat/flavor options"] },
       { "item": "White onion (partial)", "substitutes": ["Red onion"] },
       { "item": "Fresh cilantro (1 small bunch)" },
       { "item": "Garlic (a few cloves)" },
@@ -49,7 +49,8 @@
         {
           "type": "ul",
           "items": [
-            "<strong>Pick your peppers</strong> using the heat + flavor guide in Step 1",
+            "<strong>Mise en place</strong> — wash the produce, gather the pepper options, measure seasonings, and set up the blender",
+            "<strong>Pick your peppers</strong> using the heat + flavor guide in Step 2",
             "<strong>Hand-dice half the tomatoes</strong>; rough-chop the rest",
             "<strong>Pulse-blend</strong> the rough-chopped tomatoes with the aromatics into a base",
             "<strong>Fold in</strong> the reserved diced tomato for texture, then rest and taste"
@@ -63,6 +64,38 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, washed, and ready",
+      "measurements": [
+        { "item": "Fresh tomatoes", "qty": "1 lb" },
+        { "item": "Jalapeños", "qty": "2", "alts": ["Serrano", "Fresno", "Habanero (small amount)"] },
+        { "item": "White onion", "qty": "⅓ cup", "alts": ["Red onion"] },
+        { "item": "Cilantro", "qty": "⅓ cup" },
+        { "item": "Garlic", "qty": "2 cloves" },
+        { "item": "Lime juice", "qty": "2 tbsp" },
+        { "item": "Kosher salt", "qty": "¾ tsp" },
+        { "item": "Sugar", "qty": "½ tsp (optional)" },
+        { "item": "Cumin", "qty": "¼ tsp (optional)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Wash and dry the <strong>tomatoes, peppers, cilantro, and lime</strong>.",
+            "Gather <strong>1 lb tomatoes</strong> and the available pepper options; the recipe default is <strong>2 jalapeños</strong>.",
+            "Measure <strong>⅓ cup onion</strong> and <strong>⅓ cup cilantro</strong>; peel <strong>2 garlic cloves</strong>.",
+            "Juice the lime and measure <strong>2 tbsp lime juice</strong>, <strong>¾ tsp kosher salt</strong>, optional <strong>½ tsp sugar</strong>, and optional <strong>¼ tsp cumin</strong>.",
+            "Set out a blender or food processor, cutting board, sharp knife, and two bowls—one for the hand-diced tomatoes and one for the finished salsa."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Control the heat:</strong> Read the pepper guide next and choose before chopping; use gloves for very hot chiles and avoid touching your face."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Pick Your Peppers",
       "checkboxLabel": "Choose peppers for your target heat + flavor",
       "body": [
@@ -94,12 +127,12 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Prep for Texture",
       "checkboxLabel": "Hand-dice half the tomatoes; rough-chop the rest",
       "measurements": [
         { "item": "Fresh tomatoes", "qty": "1 lb, split in half" },
-        { "item": "Jalapeños", "qty": "2 (or swap per Step 1)", "alts": ["Serrano", "Fresno", "Habanero (small amount)"] },
+        { "item": "Jalapeños", "qty": "2 (or swap per Step 2)", "alts": ["Serrano", "Fresno", "Habanero (small amount)"] },
         { "item": "White onion", "qty": "⅓ cup", "alts": ["Red onion"] },
         { "item": "Garlic", "qty": "2 cloves" },
         { "item": "Cilantro", "qty": "⅓ cup" }
@@ -121,7 +154,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Base",
       "checkboxLabel": "Pulse the rough-chopped tomatoes with the aromatics",
       "measurements": [
@@ -147,7 +180,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Fold, Rest & Taste Again",
       "checkboxLabel": "Fold in reserved diced tomato, rest, and re-season",
       "body": [

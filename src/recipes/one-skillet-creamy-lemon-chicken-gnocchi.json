@@ -2,7 +2,7 @@
   "title": "One-Skillet Creamy Lemon Chicken Gnocchi",
   "imagePrompt": "Plump potato gnocchi and shreds of rotisserie chicken sit in a glossy, ivory cream sauce flecked with cracked black pepper and pale green thyme. Wilted baby spinach leaves are folded throughout, their deep green threading through the pale sauce, and a light dusting of melted parmesan clings to the ridges of the gnocchi. Bright flecks of lemon zest catch the light across the top, with a few red-pepper flakes adding small bursts of orange.",
   "subtitle": "A 20-minute one-skillet dinner: gnocchi simmered right in a lemon cream sauce with rotisserie chicken, spinach, and parmesan.",
-  "storageKey": "one_skillet_lemon_chicken_gnocchi_checks_v1",
+  "storageKey": "one_skillet_lemon_chicken_gnocchi_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "Rotisserie chicken" },
     {              "label": "Serves",  "value": "4" },
@@ -54,6 +54,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — shred, mince, grate, zest, and measure everything",
             "<strong>Melt butter</strong>, bloom garlic and thyme",
             "<strong>Simmer gnocchi</strong> in broth and cream until tender",
             "<strong>Fold in chicken and spinach</strong> to warm through and wilt",
@@ -68,6 +69,43 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Potato gnocchi", "qty": "1 lb" },
+        { "item": "Rotisserie chicken", "qty": "2-3 cups" },
+        { "item": "Butter", "qty": "2 tbsp" },
+        { "item": "Garlic", "qty": "4 cloves" },
+        { "item": "Chicken broth", "qty": "1 cup" },
+        { "item": "Heavy cream", "qty": "1 cup" },
+        { "item": "Parmesan", "qty": "1/2 cup" },
+        { "item": "Baby spinach", "qty": "3 cups" },
+        { "item": "Lemon", "qty": "1" },
+        { "item": "Dried thyme", "qty": "1/2 tsp", "alts": ["Italian seasoning"] },
+        { "item": "Kosher salt and black pepper", "qty": "to taste" },
+        { "item": "Red-pepper flakes", "qty": "pinch, optional" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Shred enough rotisserie chicken to make <strong>2-3 cups</strong>.",
+            "Peel and mince the <strong>4 garlic cloves</strong>.",
+            "Grate <strong>1/2 cup parmesan</strong>. Wash and dry the <strong>3 cups spinach</strong> if needed.",
+            "Zest half of the <strong>lemon</strong>, then juice enough to measure <strong>1 tbsp</strong>. Keep the juice separate for the off-heat finish.",
+            "Measure <strong>1 cup broth</strong>, <strong>1 cup heavy cream</strong>, <strong>2 tbsp butter</strong>, and <strong>1/2 tsp thyme</strong>.",
+            "Set out the <strong>1 lb gnocchi</strong>, salt, black pepper, and optional red-pepper flakes.",
+            "Have a <strong>large skillet with a lid</strong>, a stirring spoon, and a fine grater ready."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the lemon juice separate:</strong> It goes in only after the heat is off so the cream sauce stays smooth."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Melt Butter + Bloom Garlic",
       "checkboxLabel": "Butter melted, garlic and thyme bloomed",
       "measurements": [
@@ -87,12 +125,12 @@
         },
         {
           "type": "callout",
-          "html": "<strong>Shortcut:</strong> Jarred minced garlic works fine here and saves the mincing step entirely."
+          "html": "<strong>Shortcut:</strong> Jarred minced garlic works fine if measured during mise en place."
         }
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Simmer the Gnocchi",
       "checkboxLabel": "Gnocchi simmered until tender",
       "measurements": [
@@ -117,7 +155,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Add Chicken + Spinach",
       "checkboxLabel": "Chicken warmed through, spinach wilted",
       "measurements": [
@@ -139,7 +177,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Finish with Parmesan + Lemon",
       "checkboxLabel": "Off heat: parmesan, lemon zest, and juice stirred in",
       "measurements": [

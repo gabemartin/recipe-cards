@@ -2,7 +2,7 @@
   "title": "Tzatziki Sauce",
   "imagePrompt": "A smooth, thick white sauce fills a small bowl, its surface swirled with a slight spoonable texture that holds its shape without spreading thin. Tiny threads of grated cucumber are visible throughout, and fine green flecks of chopped dill are distributed evenly across the top. A thin pool of olive oil settles into the center swirl, catching a faint sheen against the cool, dense yogurt base.",
   "subtitle": "Cool yogurt-cucumber sauce—great with lamb and chicken, or as a dip for raw vegetables.",
-  "storageKey": "tzatziki_sauce_checks_v1",
+  "storageKey": "tzatziki_sauce_checks_v2",
   "chips": [
     { "dot": true, "label": "Base", "value": "Greek yogurt + cucumber" },
     {              "label": "Yield", "value": "~1 cup" },
@@ -47,7 +47,7 @@
         {
           "type": "ul",
           "items": [
-            "<strong>Prep</strong> cucumber, garlic, and herbs",
+            "<strong>Mise en place</strong> — grate the cucumber and garlic, chop the herbs, and measure the base",
             "<strong>Whisk</strong> yogurt with lemon, oil, and salt",
             "<strong>Fold in</strong> cucumber and herbs, then chill"
           ]
@@ -60,27 +60,33 @@
     },
     {
       "kicker": "Step 1",
-      "title": "Prep Cucumber, Garlic & Herbs",
-      "checkboxLabel": "Grate cucumber; grate garlic; chop dill & mint",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Cucumber", "qty": "½ cup finely grated" },
+        { "item": "Greek yogurt", "qty": "1 cup", "alts": ["Strained regular yogurt"] },
+        { "item": "Lemon juice", "qty": "1 tbsp" },
+        { "item": "Olive oil", "qty": "½ tbsp" },
+        { "item": "Garlic", "qty": "1 clove" },
+        { "item": "Sea salt", "qty": "¼ tsp" },
+        { "item": "Dill", "qty": "1 tbsp" },
+        { "item": "Mint", "qty": "1 tbsp (optional)", "alts": ["More dill"] }
+      ],
       "body": [
         {
           "type": "ul",
           "items": [
-            "<strong>Grate the cucumber</strong> finely until you have about <strong>½ cup</strong>.",
-            "<strong>Grate the garlic</strong> on a microplane or fine holes of a box grater.",
-            "<strong>Chop the dill</strong>. If using mint, <strong>chop it</strong> too."
+            "Wash and dry the <strong>cucumber, dill, mint, and lemon</strong>.",
+            "Finely grate enough cucumber to make <strong>½ cup</strong>, and finely grate <strong>1 garlic clove</strong>.",
+            "Chop <strong>1 tbsp dill</strong> and, if using, <strong>1 tbsp mint</strong>.",
+            "Measure <strong>1 cup Greek yogurt</strong>, <strong>1 tbsp lemon juice</strong>, <strong>½ tbsp olive oil</strong>, and <strong>¼ tsp sea salt</strong>.",
+            "Set out a medium mixing bowl, whisk, grater, and a clean towel or paper towels for squeezing the cucumber if needed."
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Optional:</strong> Toss grated cucumber with a pinch of salt, rest a few minutes, then squeeze out excess liquid for a thicker tzatziki."
+          "html": "<strong>For thicker tzatziki:</strong> Salt the grated cucumber lightly, let it sit a few minutes, then squeeze out excess liquid before mixing."
         }
-      ],
-      "measurements": [
-        { "item": "Cucumber", "qty": "½ cup grated" },
-        { "item": "Garlic", "qty": "1 clove" },
-        { "item": "Dill", "qty": "1 tbsp", "alts": ["Dried dill"] },
-        { "item": "Mint", "qty": "1 tbsp (optional)", "alts": ["More dill"] }
       ]
     },
     {

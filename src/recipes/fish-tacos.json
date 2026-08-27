@@ -2,7 +2,7 @@
   "title": "Fish Tacos",
   "imagePrompt": "Small corn tortillas, lightly charred from the skillet, are folded around large flaky chunks of tilapia with a warm reddish-orange spice crust on the outside and tender white flesh within. Shredded purple cabbage spills out the sides, vivid against the pale fish, and slices of creamy avocado fan across the top. White lime crema drizzles in irregular streaks over the filling, and crumbled cotija and fresh cilantro leaves finish each taco with bright contrast.",
   "subtitle": "Baked seasoned tilapia with crunchy cabbage, avocado, and a tangy lime crema. Ready in under an hour.",
-  "storageKey": "fish_tacos_checks_v1",
+  "storageKey": "fish_tacos_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "1½ lb tilapia" },
     {              "label": "Serves",  "value": "24 tacos" },
@@ -68,21 +68,67 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — preheat, measure, wash, and prep the fish, sauce, and toppings",
             "<strong>Season + bake</strong> the fish at 375°F",
             "<strong>Make the lime crema</strong> while the fish cooks",
-            "<strong>Prep toppings</strong> — shred, slice, dice",
+            "<strong>Slice avocados</strong> just before serving",
             "<strong>Toast tortillas</strong> in a dry skillet",
             "<strong>Assemble</strong> and serve immediately"
           ]
         },
         {
           "type": "callout",
-          "html": "<strong>Crowd-pleaser tip:</strong> Set up a topping bar so guests build their own tacos. Everything can be prepped while the fish bakes."
+          "html": "<strong>Crowd-pleaser tip:</strong> Arrange the prepped toppings as a build-your-own bar while the fish bakes."
         }
       ]
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Tilapia", "qty": "1½ lb", "alts": ["Salmon", "Shrimp"] },
+        { "item": "Corn tortillas", "qty": "24 small" },
+        { "item": "Ground cumin", "qty": "½ tsp" },
+        { "item": "Cayenne pepper", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "1 tsp" },
+        { "item": "Black pepper", "qty": "¼ tsp" },
+        { "item": "Olive oil", "qty": "1 Tbsp" },
+        { "item": "Unsalted butter", "qty": "1 Tbsp" },
+        { "item": "Purple cabbage", "qty": "½ small head" },
+        { "item": "Avocados", "qty": "2 medium" },
+        { "item": "Roma tomatoes", "qty": "2, optional" },
+        { "item": "Red onion", "qty": "½" },
+        { "item": "Cilantro", "qty": "½ bunch" },
+        { "item": "Cotija cheese", "qty": "4 oz (1 cup)" },
+        { "item": "Lime", "qty": "1" },
+        { "item": "Sour cream", "qty": "½ cup" },
+        { "item": "Mayonnaise", "qty": "⅓ cup" },
+        { "item": "Fresh lime juice", "qty": "2 Tbsp" },
+        { "item": "Garlic powder", "qty": "1 tsp" },
+        { "item": "Sriracha", "qty": "1 tsp", "alts": ["Hot sauce", "Chili garlic sauce"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>375°F</strong>. Line a baking sheet with parchment.",
+            "Pat the <strong>1½ lb tilapia</strong> dry. Measure cumin, cayenne, salt, and black pepper into a small bowl.",
+            "Measure <strong>1 Tbsp olive oil</strong> and <strong>1 Tbsp butter</strong> for the fish.",
+            "Wash and dry the cabbage, avocados, tomatoes, cilantro, and lime. Remove the thick cilantro stems.",
+            "Shred the <strong>½ cabbage</strong>, finely dice the <strong>½ red onion</strong> and optional <strong>2 tomatoes</strong>, grate the <strong>4 oz cotija</strong>, and cut the <strong>lime</strong> into wedges. Leave the avocados whole until close to serving.",
+            "Measure the crema ingredients into separate containers: <strong>½ cup sour cream</strong>, <strong>⅓ cup mayonnaise</strong>, <strong>2 Tbsp lime juice</strong>, <strong>1 tsp garlic powder</strong>, and <strong>1 tsp sriracha</strong>.",
+            "Set out the <strong>24 tortillas</strong>, a dry skillet, a mixing bowl and whisk, and a clean towel or tortilla warmer."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Save the avocados:</strong> Slice them just before assembly so they stay green while the fish bakes and the tortillas toast."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Season the Fish",
       "checkboxLabel": "Season fish, drizzle oil, dot with butter",
       "measurements": [
@@ -98,8 +144,6 @@
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>375°F</strong>. Line a baking sheet with parchment.",
-            "Mix cumin, cayenne, salt, and pepper in a small bowl.",
             "Lay fish on the baking sheet and <strong>season both sides</strong> with the spice mix.",
             "Drizzle with olive oil and <strong>dot the top with butter</strong>."
           ]
@@ -111,7 +155,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Bake the Fish",
       "checkboxLabel": "Bake 20–25 min until flaky",
       "body": [
@@ -130,7 +174,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Make the Lime Crema",
       "checkboxLabel": "Whisk sauce, refrigerate until ready",
       "measurements": [
@@ -153,26 +197,20 @@
       ]
     },
     {
-      "kicker": "Step 4",
-      "title": "Prep the Toppings",
-      "checkboxLabel": "Shred, slice, and dice all toppings",
+      "kicker": "Step 5",
+      "title": "Slice the Avocados",
+      "checkboxLabel": "Avocados sliced just before serving",
       "body": [
         {
           "type": "ul",
           "items": [
-            "<strong>Cabbage:</strong> Shred thinly with a knife or mandoline.",
-            "<strong>Avocados:</strong> Halve, pit, and slice just before serving to avoid browning.",
-            "<strong>Tomatoes:</strong> Dice finely (optional).",
-            "<strong>Red onion:</strong> Dice finely.",
-            "<strong>Cilantro:</strong> Remove thick stems, roughly chop or leave as leaves.",
-            "<strong>Cotija:</strong> Grate if not pre-crumbled.",
-            "<strong>Lime:</strong> Cut into wedges."
+            "Halve, pit, and slice the <strong>2 avocados</strong> just before serving to avoid browning."
           ]
         }
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Toast the Tortillas",
       "checkboxLabel": "Toast tortillas 30 sec per side",
       "measurements": [
@@ -194,7 +232,7 @@
       ]
     },
     {
-      "kicker": "Step 6",
+      "kicker": "Step 7",
       "title": "Assemble + Serve",
       "checkboxLabel": "Build tacos, drizzle crema, squeeze lime",
       "body": [

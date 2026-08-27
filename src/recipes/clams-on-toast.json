@@ -2,7 +2,7 @@
   "title": "Clams on Toast",
   "imagePrompt": "Thick slices of sourdough toast, deeply golden and glistening with olive oil, are piled high with Manila clams in their open shells, the pale flesh just visible inside. A fragrant amber-tinted broth pools around and beneath the clams, flecked with thyme leaves and bits of oregano. Shards of crumbled prosciutto, crisped to a deep rust color, are scattered across the top alongside torn fresh basil leaves and a pinch of red pepper flakes.",
   "subtitle": "In Herbed White Wine",
-  "storageKey": "clams_on_toast_checks_v1",
+  "storageKey": "clams_on_toast_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein",     "value": "Manila Clams" },
     {              "label": "Bread",       "value": "Sourdough" },
@@ -52,6 +52,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep the clams, garlic, herbs, bread, and garnishes",
             "<strong>Toast sourdough</strong> in olive oil, rub with raw garlic",
             "<strong>Crisp prosciutto</strong> in the same skillet",
             "<strong>Build the broth</strong> — smashed garlic, thyme, oregano, wine",
@@ -67,6 +68,41 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Extra-virgin olive oil", "qty": "2 tbsp, plus more for serving" },
+        { "item": "Sourdough bread", "qty": "4 thick slices" },
+        { "item": "Garlic cloves", "qty": "4" },
+        { "item": "Prosciutto", "qty": "3 oz" },
+        { "item": "Fresh thyme leaves", "qty": "2 tbsp" },
+        { "item": "Fresh oregano", "qty": "1 tbsp" },
+        { "item": "Dry white wine", "qty": "1 cup", "alts": ["Chicken broth"] },
+        { "item": "Manila clams", "qty": "2 lbs", "alts": ["Littleneck clams"] },
+        { "item": "Crushed red pepper flakes", "qty": "for serving" },
+        { "item": "Fresh basil leaves", "qty": "for serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Rinse and inspect the <strong>2 lbs clams</strong>; discard any cracked clams or any open clams that do not close when tapped.",
+            "Cut <strong>2 garlic cloves</strong> in half for rubbing the toast and smash the remaining <strong>2 cloves</strong> for the broth.",
+            "Tear the <strong>3 oz prosciutto</strong> into skillet-size pieces.",
+            "Strip and measure <strong>2 tbsp thyme leaves</strong>. Chop and measure <strong>1 tbsp oregano</strong>.",
+            "Measure <strong>1 cup wine</strong> and <strong>2 tbsp olive oil</strong>.",
+            "Set out the <strong>4 sourdough slices</strong>, basil, red pepper flakes, salt, and pepper.",
+            "Have a <strong>large skillet with a lid</strong>, tongs, and two wide serving bowls ready."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Clam check:</strong> Keep the cleaned clams cold until the broth is ready."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Toast the Bread",
       "checkboxLabel": "Bread toasted and rubbed with garlic",
       "measurements": [
@@ -93,7 +129,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Crisp the Prosciutto",
       "checkboxLabel": "Prosciutto crisped and set aside",
       "measurements": [
@@ -116,7 +152,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Broth &amp; Steam Clams",
       "checkboxLabel": "Clams open and broth reduced",
       "measurements": [
@@ -145,7 +181,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Serve",
       "checkboxLabel": "Plated and on the table",
       "body": [

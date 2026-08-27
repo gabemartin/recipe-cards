@@ -2,7 +2,7 @@
   "title": "Crispy Salmon Croquettes",
   "imagePrompt": "Round salmon patties with an even, deep golden-brown crust of panko that has shattered and crisped across the surface, with visible flecks of dill and capers pressed into the exterior. The crust on each patty is uniform and dry-looking rather than oily, and where one has been broken open, the interior shows a chunky, salmon-pink filling with visible flakes of fish. A creamy, caper-studded white sauce pools alongside.",
   "subtitle": "Pan-fried, golden patties packed with bright lemon and briny capers, served with a zesty yogurt sauce.",
-  "storageKey": "salmon_croquettes_checks_v1",
+  "storageKey": "salmon_croquettes_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "14 oz canned salmon" },
     { "label": "Prep Time", "value": "15 min (plus chill)" },
@@ -55,6 +55,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — drain salmon, chop herbs and capers, and divide the panko",
             "<strong>Mix</strong> the salmon base with half the panko",
             "<strong>Form patties</strong> and coat in the remaining panko",
             "<strong>Chill</strong> for 20 minutes to firm up",
@@ -70,6 +71,43 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Canned wild salmon", "qty": "14 oz" },
+        { "item": "Panko breadcrumbs", "qty": "1 cup, divided", "alts": ["Crushed saltines"] },
+        { "item": "Eggs", "qty": "2 large" },
+        { "item": "Mayonnaise", "qty": "3 tbsp + ⅓ cup", "alts": ["Greek yogurt"] },
+        { "item": "Dijon mustard", "qty": "1 tbsp" },
+        { "item": "Dill or parsley", "qty": "2 tbsp, chopped" },
+        { "item": "Capers", "qty": "3 tbsp, drained and chopped" },
+        { "item": "Lemon", "qty": "1 large, zested and juiced" },
+        { "item": "Old Bay", "qty": "½ tsp", "alts": ["Worcestershire sauce"] },
+        { "item": "Black pepper", "qty": "½ tsp" },
+        { "item": "Oil", "qty": "3–4 tbsp" },
+        { "item": "Butter", "qty": "1 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Drain the <strong>14 oz salmon</strong> well, remove the skin, and mash the soft bones.",
+            "Divide the <strong>1 cup panko</strong> into two <strong>½-cup</strong> portions.",
+            "Lightly beat the <strong>2 eggs</strong>; measure the <strong>3 tbsp mayonnaise, 1 tbsp Dijon, ½ tsp Old Bay, and ½ tsp pepper</strong>.",
+            "Wash and dry the <strong>lemon and fresh herbs</strong>. Zest and juice the lemon; chop <strong>2 tbsp dill or parsley</strong>.",
+            "Drain and chop the <strong>3 tbsp capers</strong>; separate <strong>1 tbsp</strong> for the patties and <strong>2 tbsp</strong> for the sauce.",
+            "Measure <strong>⅓ cup mayo or yogurt</strong> for the sauce and set out the <strong>oil and butter</strong> for frying.",
+            "Gather a <strong>large mixing bowl, shallow plate, sheet pan or plate, large skillet, and thin spatula</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Divide before mixing:</strong> Keep the coating panko and the sauce portions of capers, lemon juice, and mayo separate from the patty bowl."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Mix the Base",
       "checkboxLabel": "Combine salmon, wet ingredients, and seasonings",
       "measurements": [
@@ -88,10 +126,9 @@
         {
           "type": "ul",
           "items": [
-            "Drain the <strong>salmon</strong> well. Remove the skin, but you can crush the soft bones in for extra calcium.",
-            "In a large bowl, whisk the <strong>eggs, mayo, Dijon, Old Bay, lemon zest</strong> (reserve juice for sauce), and <strong>pepper</strong>.",
+            "In a large bowl, whisk the <strong>prepared eggs, mayo, Dijon, Old Bay, lemon zest</strong>, and <strong>pepper</strong>.",
             "Stir in <strong>½ cup of the panko</strong>, <strong>1 tbsp of the capers</strong>, and the <strong>dill</strong>.",
-            "Fold in the salmon, mixing gently so you keep some texture."
+            "Fold in the <strong>prepared salmon</strong>, mixing gently so you keep some texture."
           ]
         },
         {
@@ -101,7 +138,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Form and Coat",
       "checkboxLabel": "Shape into 4–6 patties and coat in panko",
       "measurements": [
@@ -124,7 +161,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "The Crucial Chill",
       "checkboxLabel": "Refrigerate patties for 20 mins",
       "body": [
@@ -142,7 +179,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Make the Sauce",
       "checkboxLabel": "Mix mayo, lemon juice, and remaining capers",
       "measurements": [
@@ -162,7 +199,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Pan-Fry",
       "checkboxLabel": "Fry 3–4 mins per side until golden brown",
       "measurements": [
@@ -188,7 +225,7 @@
       ]
     },
     {
-      "kicker": "Step 6",
+      "kicker": "Step 7",
       "title": "Serve",
       "checkboxLabel": "Serve hot with lemon caper sauce",
       "body": [

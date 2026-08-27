@@ -2,7 +2,7 @@
   "title": "Skillet Creamy Chicken and Parmesan Gnocchi",
   "imagePrompt": "A cast iron skillet holds golden-seared chicken breasts nestled into a bubbling cream sauce, its surface ivory with faint streaks of yellow from the wine reduction. Plump, pillowy gnocchi and dark wilted kale fill the spaces between the chicken, all of it glazed in the sauce. A golden-brown parmesan crust has formed across the top, and shards of crispy bacon and rosemary are scattered over the whole dish.",
   "subtitle": "Pan-seared chicken in a white wine cream sauce with kale and gnocchi, finished in the oven.",
-  "storageKey": "chicken_parmesan_gnocchi_checks_v1",
+  "storageKey": "chicken_parmesan_gnocchi_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "4–6 chicken breasts or thighs" },
     {              "label": "Serves",  "value": "4–6" },
@@ -66,6 +66,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep the chicken, aromatics, greens, bacon, cheese, and measured sauce ingredients",
             "<strong>Season + dredge</strong> chicken in seasoned flour",
             "<strong>Crisp bacon</strong> with rosemary in the skillet, set aside",
             "<strong>Sear chicken</strong> in butter until golden, set aside",
@@ -83,6 +84,46 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Chicken breasts or thighs", "qty": "4–6 pieces" },
+        { "item": "All-purpose flour", "qty": "¼ cup" },
+        { "item": "Paprika", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "pinch" },
+        { "item": "Fresh thyme", "qty": "2 tbsp" },
+        { "item": "Thick-cut bacon", "qty": "4 slices" },
+        { "item": "Fresh rosemary", "qty": "1 tbsp" },
+        { "item": "Salted butter", "qty": "3 tbsp" },
+        { "item": "Shallots", "qty": "2" },
+        { "item": "Garlic", "qty": "4 cloves" },
+        { "item": "Dry white wine", "qty": "1 cup" },
+        { "item": "Chicken bone broth", "qty": "½ cup" },
+        { "item": "Heavy cream", "qty": "½–1 cup" },
+        { "item": "Kale", "qty": "2 cups" },
+        { "item": "Potato gnocchi", "qty": "1 lb" },
+        { "item": "Parmesan", "qty": "½ cup, plus more for serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>400°F</strong> and set out a large <strong>oven-safe skillet</strong>, shallow dredging bowl, and two clean plates.",
+            "Pat dry the <strong>4–6 chicken pieces</strong>; measure <strong>¼ cup flour</strong>, <strong>½ tsp paprika</strong>, a <strong>pinch of cayenne</strong>, and <strong>1 tbsp thyme</strong> into the shallow bowl.",
+            "Chop the <strong>4 bacon slices</strong> and <strong>1 tbsp rosemary</strong>; keep them together for the skillet.",
+            "Chop the <strong>2 shallots</strong> and <strong>4 garlic cloves</strong>, strip the remaining <strong>1 tbsp thyme</strong>, and roughly chop <strong>2 cups kale</strong>.",
+            "Measure <strong>1 cup wine</strong>, <strong>½ cup broth</strong>, <strong>½–1 cup cream</strong>, and <strong>3 tbsp butter</strong>.",
+            "Grate <strong>½ cup parmesan</strong> and have the <strong>1 lb gnocchi</strong> unopened at the station."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Use separate plates:</strong> Reserve one for raw dredged chicken and one clean plate for the seared chicken."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Season + Dredge Chicken",
       "checkboxLabel": "Season chicken, dredge in flour mixture",
       "measurements": [
@@ -96,10 +137,8 @@
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>400°F</strong>.",
             "Season chicken all over with <strong>salt and pepper</strong>.",
-            "In a shallow bowl, combine <strong>flour, paprika, cayenne, and 1 tbsp thyme</strong>.",
-            "<strong>Dredge each piece</strong> through the flour mixture and toss to coat."
+            "<strong>Dredge each piece</strong> through the prepared flour mixture and toss to coat."
           ]
         },
         {
@@ -109,7 +148,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Crisp the Bacon",
       "checkboxLabel": "Bacon crisp, rosemary bloomed, set aside",
       "measurements": [
@@ -132,7 +171,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Sear the Chicken",
       "checkboxLabel": "Chicken golden on both sides, set aside",
       "measurements": [
@@ -155,7 +194,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Build Sauce + Bake",
       "checkboxLabel": "Sauce built, gnocchi floating, baked 10 min",
       "measurements": [
@@ -179,7 +218,7 @@
             "Pour in the <strong>cream</strong>.",
             "Add <strong>kale and raw gnocchi</strong>. Cook <strong>~5 minutes</strong>, stirring gently, until gnocchi float.",
             "Slide the <strong>chicken</strong> back into the skillet.",
-            "Sprinkle the <strong>parmesan</strong> over everything.",
+            "Sprinkle the <strong>grated parmesan</strong> over everything.",
             "Transfer to the oven. Cook uncovered <strong>10 minutes</strong>, until sauce is bubbling around the chicken."
           ]
         },
@@ -190,7 +229,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Serve",
       "checkboxLabel": "Top with bacon and serve",
       "body": [

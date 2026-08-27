@@ -2,7 +2,7 @@
   "title": "Chicken Enchiladas",
   "imagePrompt": "Eight flour tortilla rolls sit seam-down in a 9×13 baking dish, fully blanketed in a deep brick-red enchilada sauce that has bubbled and caramelized slightly at the edges. A thick layer of melted cheese covers the top, golden-brown in spots where it blistered against the heat. The filling peeks out at the ends — dark shredded chicken and black beans visible in the cross-section of each roll.",
   "subtitle": "Shredded chicken and black bean filling with homemade enchilada sauce, baked until bubbly.",
-  "storageKey": "chicken_enchiladas_checks_v1",
+  "storageKey": "chicken_enchiladas_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "Shredded chicken" },
     {              "label": "Serves",  "value": "4–5" },
@@ -72,6 +72,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — mince the garlic, dice the onion, drain the beans, and measure the sauce and filling ingredients",
             "<strong>Make the sauce</strong> — 10 min on the stovetop",
             "<strong>Cook the filling</strong> — sauté onion, garlic, then combine",
             "<strong>Assemble</strong> — fill, roll, arrange in baking dish",
@@ -86,6 +87,48 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tsp + 1 tbsp" },
+        { "item": "Garlic", "qty": "4 cloves, divided" },
+        { "item": "Chili powder", "qty": "1½ tbsp + 1 tsp" },
+        { "item": "Ground cumin", "qty": "1½ tsp + 1 tsp" },
+        { "item": "Onion powder", "qty": "½ tsp" },
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "¼ tsp + ½ tsp" },
+        { "item": "Cayenne pepper", "qty": "a pinch (optional)" },
+        { "item": "Tomato sauce", "qty": "15 oz can" },
+        { "item": "Chicken broth", "qty": "½ cup", "alts": ["Water"] },
+        { "item": "Onion", "qty": "½ medium" },
+        { "item": "Cooked chicken", "qty": "2 cups shredded", "alts": ["Rotisserie chicken"] },
+        { "item": "Black beans", "qty": "15 oz can" },
+        { "item": "Diced green chiles", "qty": "4 oz can" },
+        { "item": "Dried oregano", "qty": "½ tsp" },
+        { "item": "Flour tortillas", "qty": "8 large" },
+        { "item": "Shredded cheese", "qty": "3 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>350°F</strong> and set out a <strong>9×13 baking dish</strong>.",
+            "Mince the <strong>4 garlic cloves</strong>, keeping 2 cloves for the sauce and 2 for the filling; dice the <strong>½ onion</strong>.",
+            "Drain and rinse the <strong>15 oz can black beans</strong>; open the <strong>tomato sauce</strong> and <strong>green chiles</strong>.",
+            "Shred the cooked chicken to make <strong>2 cups</strong> and measure <strong>3 cups shredded cheese</strong>.",
+            "Measure the sauce seasonings together: <strong>1½ tbsp chili powder, 1½ tsp cumin, ½ tsp onion powder, ½ tsp garlic powder, ¼ tsp salt</strong>, and optional cayenne.",
+            "Measure the filling seasonings together: <strong>1 tsp chili powder, 1 tsp cumin, ½ tsp oregano, and ½ tsp salt</strong>.",
+            "Measure <strong>½ cup chicken broth</strong> and set out the <strong>8 tortillas</strong>, a small saucepan, and a large skillet."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the batches separate:</strong> Divide the garlic, chili powder, cumin, and salt now so the sauce and filling each get the correct amount."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Make the Enchilada Sauce",
       "checkboxLabel": "Sauce simmered and ready",
       "measurements": [
@@ -118,7 +161,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Make the Filling",
       "checkboxLabel": "Filling cooked and ready",
       "measurements": [
@@ -138,7 +181,6 @@
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>350°F</strong>.",
             "Heat <strong>1 tbsp olive oil</strong> in a large skillet over medium heat.",
             "Add <strong>diced onion</strong>, cook <strong>3–4 minutes</strong> until softened.",
             "Add <strong>garlic</strong>, cook <strong>30 seconds</strong>.",
@@ -149,7 +191,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Assemble",
       "checkboxLabel": "Enchiladas rolled and in the dish",
       "measurements": [
@@ -175,7 +217,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Bake & Serve",
       "checkboxLabel": "Baked, cheese melted and bubbly",
       "body": [

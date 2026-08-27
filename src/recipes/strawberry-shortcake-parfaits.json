@@ -2,7 +2,7 @@
   "title": "Strawberry Shortcake Parfaits",
   "imagePrompt": "Four clear glass parfaits show distinct layers: golden-brown shortcake crumbs at the bottom, pale ivory vanilla cream in the middle, and deep red macerated strawberries with glossy pink syrup pooling between the layers. A final dollop of cream crowns each glass, dusted with more crumbs and topped with a single glistening strawberry slice.",
   "subtitle": "Macerated citrus strawberries, whipped vanilla bean cream, and buttery baked shortcake crumbs layered in clear glasses.",
-  "storageKey": "strawberry_shortcake_parfaits_checks_v1",
+  "storageKey": "strawberry_shortcake_parfaits_checks_v2",
   "chips": [
     { "dot": true, "label": "Fruit",   "value": "1 lb strawberries" },
     {              "label": "Serves",  "value": "4" },
@@ -60,6 +60,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — preheat, line the pan, prep the fruit, and measure everything",
             "<strong>Bake shortcake crumbs</strong> until deeply golden and crisp",
             "<strong>Macerate strawberries</strong> with sugar and lemon juice",
             "<strong>Whip vanilla bean cream</strong> with crème fraîche and lemon zest",
@@ -74,6 +75,45 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Heavy whipping cream", "qty": "1 cup, chilled" },
+        { "item": "Crème fraîche", "qty": "½ cup", "alts": ["Full-fat Greek yogurt"] },
+        { "item": "Powdered sugar", "qty": "3 tbsp" },
+        { "item": "Vanilla bean paste", "qty": "1 tsp", "alts": ["Pure vanilla extract"] },
+        { "item": "Organic lemon", "qty": "1" },
+        { "item": "Fresh strawberries", "qty": "1 lb" },
+        { "item": "Vanilla sugar", "qty": "3 tbsp", "alts": ["Regular granulated sugar"] },
+        { "item": "All-purpose flour", "qty": "1½ cups" },
+        { "item": "Granulated sugar", "qty": "3 tbsp" },
+        { "item": "Baking powder", "qty": "1½ tsp" },
+        { "item": "Fine sea salt", "qty": "¼ tsp" },
+        { "item": "Cold unsalted butter", "qty": "6 tbsp" },
+        { "item": "Ice-cold buttermilk", "qty": "⅓ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>400°F</strong>. Line a baking sheet with parchment and set out a wire rack.",
+            "Chill a <strong>glass or metal mixing bowl</strong> for the vanilla bean cream.",
+            "Wash, hull, and slice the <strong>1 lb strawberries</strong>.",
+            "Zest the <strong>lemon</strong> finely, then juice enough for <strong>1 tbsp</strong>.",
+            "Cut the <strong>6 tbsp cold butter</strong> into small cubes and keep it cold. Measure the <strong>⅓ cup buttermilk</strong> and keep it chilled.",
+            "Measure the shortcake dry ingredients into separate bowls: <strong>1½ cups flour</strong>, <strong>3 tbsp sugar</strong>, <strong>1½ tsp baking powder</strong>, and <strong>¼ tsp salt</strong>.",
+            "Measure the cream ingredients: <strong>1 cup heavy cream</strong>, <strong>½ cup crème fraîche</strong>, <strong>3 tbsp powdered sugar</strong>, and <strong>1 tsp vanilla</strong>.",
+            "Set out <strong>four clear 8-ounce glasses or jars</strong> for assembly."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep it cold:</strong> Return the butter, buttermilk, and cream to the refrigerator until each is needed for the best crumb texture and whipped cream."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Bake the Shortcake Crumbs",
       "checkboxLabel": "Bake shaggy dough crumbs until golden",
       "measurements": [
@@ -88,7 +128,6 @@
         {
           "type": "ul",
           "items": [
-            "Preheat oven to <strong>400°F</strong>. Line a baking sheet with parchment.",
             "Whisk <strong>flour, sugar, baking powder, and salt</strong> in a medium bowl.",
             "Pinch <strong>cold butter</strong> into the flour until it resembles coarse, pea-sized sand.",
             "Make a well, pour in <strong>buttermilk</strong>, and stir with a fork just until a shaggy dough forms.",
@@ -104,7 +143,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Macerate the Strawberries",
       "checkboxLabel": "Toss berries with sugar and lemon, rest 15–20 min",
       "measurements": [
@@ -129,7 +168,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Whip the Vanilla Bean Cream",
       "checkboxLabel": "Whip to medium-stiff peaks, chill until assembly",
       "measurements": [
@@ -156,7 +195,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Assemble the Parfaits",
       "checkboxLabel": "Layer crumbs, cream, berries — repeat and garnish",
       "measurements": [
@@ -168,7 +207,6 @@
         {
           "type": "ul",
           "items": [
-            "Use four clear <strong>8-ounce glasses or jars</strong> to show the layers.",
             "<strong>First layer:</strong> Generous spoonful of cooled shortcake crumbs.",
             "<strong>Second layer:</strong> Thick layer of vanilla bean cream.",
             "<strong>Third layer:</strong> Macerated strawberries with a drizzle of glossy syrup.",

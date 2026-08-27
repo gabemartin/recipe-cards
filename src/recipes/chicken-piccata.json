@@ -2,7 +2,7 @@
   "title": "Chicken Piccata",
   "imagePrompt": "Golden-crusted chicken tenders rest on a nest of angel hair pasta, the noodles coated in a thin, glossy lemon-butter sauce that catches the light without pooling heavily. Scattered capers dot the dish throughout, and a few lemon rounds or squeezed wedge halves sit at the edge. A fine dusting of grated Parmesan and a handful of flat-leaf parsley leaves finish the plate with flecks of green against the pale, silky sauce.",
   "subtitle": "Pan-seared tenders in a light lemon-caper butter sauce. Served over angel hair.",
-  "storageKey": "chicken_piccata_checks_v1",
+  "storageKey": "chicken_piccata_checks_v2",
   "chips": [
     { "dot": true, "label": "Protein", "value": "2 lbs chicken tenders" },
     {              "label": "Serves",  "value": "~4" },
@@ -58,6 +58,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep chicken, juice lemons, drain capers, and measure the sauce",
             "<strong>Season + dredge</strong> chicken in flour",
             "<strong>Sear in batches</strong>—don't crowd the pan",
             "<strong>Build sauce</strong> from the pan drippings",
@@ -73,8 +74,45 @@
     },
     {
       "kicker": "Step 1",
-      "title": "Prep Chicken",
-      "checkboxLabel": "Pat dry, season, dredge in flour",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Chicken tenders", "qty": "2 lbs" },
+        { "item": "Kosher salt", "qty": "1½–2 tsp" },
+        { "item": "Black pepper", "qty": "1–1½ tsp" },
+        { "item": "All-purpose flour", "qty": "~¾ cup" },
+        { "item": "Olive oil", "qty": "2–3 tbsp" },
+        { "item": "Butter", "qty": "4 tbsp, divided" },
+        { "item": "Garlic", "qty": "1–1½ tsp, minced", "alts": ["Garlic paste"] },
+        { "item": "Lemon juice", "qty": "½ cup" },
+        { "item": "Chicken broth", "qty": "1½ cups" },
+        { "item": "Capers", "qty": "3–4 tbsp, drained" },
+        { "item": "Angel hair pasta", "qty": "~8 oz" },
+        { "item": "Parmesan + parsley", "qty": "optional, for serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat the <strong>2 lbs chicken tenders</strong> dry with paper towels.",
+            "Measure the <strong>salt and pepper</strong>; spread <strong>~¾ cup flour</strong> in a shallow dish.",
+            "Mince <strong>1–1½ tsp garlic</strong>, juice enough lemon for <strong>½ cup</strong>, and drain the <strong>3–4 tbsp capers</strong>.",
+            "Measure <strong>1½ cups chicken broth</strong> and divide the <strong>4 tbsp butter</strong>: 2 tbsp for searing and 2 tbsp for finishing.",
+            "Set out the <strong>olive oil, angel hair, and optional Parmesan and parsley</strong>.",
+            "Set out a <strong>large pot</strong> for the pasta; wait to heat the salted water until the chicken is nearly done.",
+            "Gather a <strong>large skillet, tongs, plate, and whisk</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the finishing butter cold:</strong> Leave its 2 tbsp in the fridge until the sauce is ready to turn glossy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Season + Dredge Chicken",
+      "checkboxLabel": "Season and dredge chicken in flour",
       "measurements": [
         { "item": "Chicken tenders", "qty": "2 lbs" },
         { "item": "Kosher salt", "qty": "1½–2 tsp" },
@@ -85,7 +123,6 @@
         {
           "type": "ul",
           "items": [
-            "Pat chicken <strong>very dry</strong> with paper towels.",
             "Season both sides with <strong>salt + pepper</strong>.",
             "Lightly <strong>dredge in flour</strong>—shake off all excess. Thin coating only."
           ]
@@ -97,7 +134,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Sear Chicken (in Batches)",
       "checkboxLabel": "Sear all chicken, set aside",
       "measurements": [
@@ -124,7 +161,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Sauce",
       "checkboxLabel": "Garlic → lemon → broth → capers",
       "measurements": [
@@ -152,7 +189,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Butter Finish",
       "checkboxLabel": "Swirl in 2 tbsp butter until glossy",
       "measurements": [
@@ -174,7 +211,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Combine + Serve",
       "checkboxLabel": "Pasta in sauce, chicken on top",
       "measurements": [
