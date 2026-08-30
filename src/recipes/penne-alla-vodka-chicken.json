@@ -1,0 +1,197 @@
+{
+  "title": "Penne alla Vodka with Chicken",
+  "imagePrompt": "Al dente penne coats generously in a warm coral-pink sauce, its surface glossy from butter and cream with tiny flecks of red pepper visible throughout. Slivers of pale, opaque chicken breast are folded through the noodles, tender and moist without any browned edges. A scattering of chopped parsley adds small bright green flecks against the sauce, and a light dusting of finely grated Parmigiano-Reggiano melts slightly into the warm pasta.",
+  "subtitle": "Silky tomato-cream sauce built on vodka's aromatic lift, tossed with penne and tender slivered chicken.",
+  "storageKey": "penne_alla_vodka_chicken_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "1 lb chicken breast" },
+    {              "label": "Serves",  "value": "4" },
+    {              "label": "Sauce",   "value": "Vodka cream tomato" },
+    {              "label": "Pasta",   "value": "Penne or ziti" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "The vodka's alcohol cooks off, leaving behind aromatic compounds that round out the tomatoes' acidity and carry the cream's richness.",
+    "items": [
+      "<strong>2 tbsp extra-virgin olive oil</strong>",
+      "<strong>2 tbsp unsalted butter</strong>",
+      "<strong>1 medium onion</strong>, finely diced (about 1½ cups)",
+      "<strong>2 medium cloves garlic</strong>, minced or grated (about 2 tsp)",
+      "<strong>½ tsp dried oregano</strong>",
+      "Pinch of <strong>red pepper flakes</strong>",
+      "<strong>One 28-oz can whole tomatoes</strong>, packed in juice, crushed by hand or with a potato masher into rough ½-inch chunks",
+      "<strong>1 stem fresh basil</strong> (optional)",
+      "<strong>½ cup heavy cream</strong>",
+      "<strong>¾ cup vodka</strong>",
+      "<strong>Kosher salt</strong>",
+      "<strong>1 lb penne, ziti, or other short tubular pasta</strong>",
+      "<strong>1 lb boneless, skinless chicken breasts</strong>, cut into ½-inch-wide slivers",
+      "<strong>2 tbsp chopped fresh parsley</strong>",
+      "Grated <strong>Parmigiano-Reggiano</strong>, for serving"
+    ],
+    "callout": "<strong>Key rule:</strong> Blend the tomato base completely smooth before adding the cream and vodka — that's what gives this sauce its classic silky, pale-pink texture.",
+    "shoppingList": [
+      { "item": "Olive oil" },
+      { "item": "Butter (1 stick)" },
+      { "item": "1 onion" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "Dried oregano" },
+      { "item": "Red pepper flakes" },
+      { "item": "Canned whole tomatoes (28 oz)" },
+      { "item": "Fresh basil (optional)" },
+      { "item": "Heavy cream" },
+      { "item": "Vodka (small bottle)" },
+      { "item": "Kosher salt" },
+      { "item": "Penne pasta (1 lb)", "substitutes": ["Ziti", "Rigatoni"] },
+      { "item": "Boneless, skinless chicken breasts (1 lb)" },
+      { "item": "Fresh parsley" },
+      { "item": "Parmigiano-Reggiano" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A classic vodka sauce built the right way: tomatoes simmered down, blended silky-smooth, then finished with cream and vodka before slivered chicken and pasta are folded in. The alcohol's aroma carries the tomato's acidity and the cream's richness together into one balanced sauce."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Simmer</strong> onion, garlic, and tomatoes into a thick sauce",
+            "<strong>Blend smooth</strong>, then add cream and vodka",
+            "<strong>Cook the pasta</strong> while the sauce reduces further",
+            "<strong>Poach the chicken</strong> directly in the sauce",
+            "<strong>Toss everything together</strong>, loosening with reserved pasta water"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Lesson learned:</strong> Blending the base before adding the cream and vodka is what gives this sauce its signature silky texture — don't skip it."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Build the Tomato Base",
+      "checkboxLabel": "Simmer onion, garlic & tomatoes into a thick sauce",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" },
+        { "item": "Butter", "qty": "2 tbsp" },
+        { "item": "Onion", "qty": "1 medium (~1½ cups), diced" },
+        { "item": "Garlic", "qty": "2 cloves (~2 tsp)", "alts": ["Garlic paste"] },
+        { "item": "Dried oregano", "qty": "½ tsp" },
+        { "item": "Red pepper flakes", "qty": "pinch" },
+        { "item": "Whole tomatoes", "qty": "one 28-oz can" },
+        { "item": "Fresh basil", "qty": "1 stem, optional" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat the <strong>olive oil and butter</strong> in a large saucepan over medium-high heat until the butter melts and the foaming subsides.",
+            "Add the <strong>onion</strong> and cook, stirring frequently, until softened but not browned, about 3 minutes.",
+            "Add the <strong>garlic, oregano, and red pepper flakes</strong> and cook, stirring, until fragrant, about 1 minute.",
+            "Add the <strong>tomatoes with their juice</strong> and the <strong>basil</strong>, if using.",
+            "Bring to a boil, reduce to a simmer, and cook, stirring occasionally, until thickened and reduced to about <strong>4 cups</strong>, about 30 minutes."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't rush the reduction:</strong> A full 30 minutes cooks out the raw tomato flavor and concentrates the sauce before it's blended."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Blend with Cream + Vodka",
+      "checkboxLabel": "Blend smooth, then simmer with cream and vodka",
+      "measurements": [
+        { "item": "Heavy cream", "qty": "½ cup" },
+        { "item": "Vodka", "qty": "¾ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Transfer the sauce to a <strong>blender</strong>, discarding the basil stem.",
+            "Add the <strong>cream and vodka</strong>.",
+            "Starting on the lowest speed and gradually increasing to high, blend until <strong>completely smooth</strong>, about 30 seconds.",
+            "Return the sauce to the saucepan and bring to a simmer over high heat, then reduce to a <strong>bare simmer</strong> and let it reduce further while the pasta cooks."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Blending hot liquid:</strong> Start on low and vent the lid — hot liquid expands fast and can blow the lid off."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Cook the Pasta",
+      "checkboxLabel": "Boil pasta until just shy of al dente",
+      "measurements": [
+        { "item": "Penne pasta", "qty": "1 lb", "alts": ["Ziti", "Rigatoni"] },
+        { "item": "Kosher salt", "qty": "large pinch" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place the <strong>pasta</strong> in a large pot and cover with hot water.",
+            "Add a <strong>large pinch of salt</strong> and bring to a boil over high heat, stirring occasionally to keep the pasta from sticking.",
+            "Cook until just shy of al dente — it will finish cooking in the sauce."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Poach the Chicken in the Sauce",
+      "checkboxLabel": "Simmer chicken in the sauce until just cooked through",
+      "measurements": [
+        { "item": "Chicken breast", "qty": "1 lb, slivered" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "About <strong>2 minutes before the pasta is done</strong>, add the <strong>chicken</strong> to the simmering sauce.",
+            "Cook over medium-high heat, stirring occasionally, until the chicken is <strong>cooked through</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Thin slivers cook fast:</strong> Cut the chicken into even ½-inch-wide strips so it poaches through in just a couple of minutes without overcooking."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Combine + Serve",
+      "checkboxLabel": "Toss pasta with sauce, chicken & parsley",
+      "measurements": [
+        { "item": "Parsley", "qty": "2 tbsp, chopped" },
+        { "item": "Parmigiano-Reggiano", "qty": "for serving" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Drain the pasta, <strong>reserving 1½ cups of the cooking liquid</strong>, and return the pasta to the pot.",
+            "Add the <strong>sauce and chicken</strong> to the pasta and stir to combine.",
+            "Cook over medium heat, stirring frequently, until the desired consistency is reached, adding some of the <strong>reserved pasta water</strong> as necessary.",
+            "Serve immediately, topped with the <strong>parsley</strong> and <strong>grated Parmigiano-Reggiano</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Loosen with pasta water:</strong> Starchy pasta water helps the sauce cling to every piece instead of pooling at the bottom of the bowl."
+        }
+      ]
+    }
+  ]
+}
