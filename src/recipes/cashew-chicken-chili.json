@@ -1,0 +1,207 @@
+{
+  "title": "Cashew Chicken Chili",
+  "imagePrompt": "A deep rust-brown chili fills the bowl, its sauce glossy and thick enough to cling to shredded chicken with a faint sheen from melted dark chocolate. Threads of pale, fork-shredded chicken and burgundy kidney beans break the surface, studded with pale golden cashews — some ground smooth into the sauce for body, others left whole for bite. A swirl of ivory yogurt marbles through the top and flecks of bright green cilantro rest against the dark sauce, ladled over a mound of white rice at the edge of the bowl.",
+  "subtitle": "Mole-inspired ancho-chipotle chili with toasted cashews, dark chocolate, and a cool yogurt-cilantro swirl.",
+  "storageKey": "cashew_chicken_chili_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "2 lbs chicken thighs" },
+    {              "label": "Serves",  "value": "6-8" },
+    {              "label": "Heat",    "value": "Ancho + chipotle, mild-medium" },
+    {              "label": "Served over", "value": "White rice" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Cashews do double duty here — half get blended into the purée for body, half stay whole and toasted for crunch.",
+    "items": [
+      "<strong>3 dried ancho chiles</strong>, stemmed and seeded",
+      "<strong>2 cups low-sodium chicken broth</strong>",
+      "<strong>⅔ cup raw cashews</strong>, divided",
+      "<strong>2 tbsp olive oil</strong>",
+      "<strong>2 lbs boneless, skinless chicken thighs</strong>, trimmed",
+      "<strong>1 large yellow onion</strong>, chopped",
+      "<strong>4 garlic cloves</strong>, minced",
+      "<strong>1 tbsp ground cumin</strong>",
+      "<strong>1 tsp ground coriander</strong>",
+      "<strong>1 cinnamon stick</strong> (or ½ tsp ground cinnamon)",
+      "<strong>1½ tsp kosher salt</strong>, plus more to taste",
+      "<strong>2 chipotle chiles in adobo</strong>, chopped, plus 1 tbsp adobo sauce",
+      "<strong>1 (14.5 oz) can diced tomatoes</strong>, with juice",
+      "<strong>1 (15 oz) can kidney beans</strong>, rinsed and drained",
+      "<strong>1 oz bittersweet chocolate</strong>, chopped",
+      "<strong>⅓ cup fresh cilantro</strong>, chopped, divided",
+      "<strong>⅓ cup plain whole-milk yogurt</strong>, for serving",
+      "Cooked white or jasmine rice, for serving"
+    ],
+    "callout": "<strong>Two jobs for the cashews:</strong> a third get blended into the chile purée for silkiness, the rest stay whole and toasted, stirred in at the end for crunch.",
+    "shoppingList": [
+      { "item": "Dried ancho chiles (3)" },
+      { "item": "Chicken broth (2 cups)", "substitutes": ["Bouillon + water"] },
+      { "item": "Raw cashews (⅔ cup / ~3 oz)", "substitutes": ["Roasted unsalted cashews"] },
+      { "item": "Olive oil" },
+      { "item": "2 lbs boneless, skinless chicken thighs", "substitutes": ["Bone-in chicken thighs, skin removed", "Chicken breasts"] },
+      { "item": "1 yellow onion" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste"] },
+      { "item": "Ground cumin" },
+      { "item": "Ground coriander" },
+      { "item": "Cinnamon stick", "substitutes": ["Ground cinnamon"] },
+      { "item": "Chipotle chiles in adobo (1 small can)" },
+      { "item": "Diced tomatoes (14.5 oz can)" },
+      { "item": "Kosher salt" },
+      { "item": "Kidney beans (15 oz can)", "substitutes": ["Black beans", "Pinto beans"] },
+      { "item": "Bittersweet chocolate (1 oz)", "substitutes": ["Dark chocolate, 70%+", "Unsweetened cocoa powder (1 tbsp)"] },
+      { "item": "Fresh cilantro (1 bunch)" },
+      { "item": "Plain whole-milk yogurt", "substitutes": ["Sour cream", "Mexican crema"] },
+      { "item": "White or jasmine rice" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A mole-inspired chili: dried ancho chiles and chipotles in adobo are toasted and blended into a deep, chocolate-rounded purée, then simmered with chicken thighs until they shred with a fork. Toasted cashews go in twice — ground into the sauce for body, and whole for crunch — and a swirl of yogurt and cilantro cools it all down at the end."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Toast + blend</strong> the chile purée — anchos, chipotles, cashews, broth",
+            "<strong>Build the base</strong> — onion, garlic, warm spices",
+            "<strong>Simmer the chicken</strong> in the purée until fall-apart tender",
+            "<strong>Shred + finish</strong> with beans, chocolate, and toasted cashews",
+            "<strong>Swirl in yogurt</strong> and serve over rice"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Make-ahead friendly:</strong> Flavor deepens overnight — this chili is even better the next day, and freezes well for up to 3 months."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Toast Cashews + Make the Chile Purée",
+      "checkboxLabel": "Purée blended, cashews toasted and set aside",
+      "measurements": [
+        { "item": "Raw cashews", "qty": "⅔ cup, divided" },
+        { "item": "Dried ancho chiles", "qty": "3" },
+        { "item": "Chicken broth", "qty": "2 cups" },
+        { "item": "Chipotle chiles in adobo", "qty": "2, plus 1 tbsp sauce" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Toast the <strong>whole ⅔ cup cashews</strong> in a dry skillet over medium heat, shaking often, <strong>3-4 minutes</strong> until golden and fragrant. Set aside to cool — you'll split them later.",
+            "In the same dry skillet, toast the <strong>ancho chiles</strong> a few seconds per side until pliable and fragrant.",
+            "Bring the <strong>chicken broth</strong> to a boil, then pour over the anchos in a bowl. Let soak <strong>10 minutes</strong> until softened.",
+            "Transfer the anchos and broth to a blender with the <strong>chipotles + adobo sauce</strong> and <strong>⅓ cup of the toasted cashews</strong>. Purée until completely smooth."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Scorched chiles turn bitter.</strong> A few seconds per side wakes up their oils — that's all you need."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Build the Base",
+      "checkboxLabel": "Onion softened, spices bloomed",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" },
+        { "item": "Onion", "qty": "1, chopped" },
+        { "item": "Garlic", "qty": "4 cloves" },
+        { "item": "Ground cumin", "qty": "1 tbsp" },
+        { "item": "Ground coriander", "qty": "1 tsp" },
+        { "item": "Cinnamon stick", "qty": "1" },
+        { "item": "Kosher salt", "qty": "1½ tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat <strong>2 tbsp olive oil</strong> in a large heavy pot or Dutch oven over medium heat.",
+            "Add the <strong>onion</strong> and cook, stirring occasionally, <strong>6-7 minutes</strong> until softened.",
+            "Add the <strong>garlic, cumin, coriander, cinnamon stick, and salt</strong>. Stir <strong>1 minute</strong> until fragrant."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Simmer the Chicken",
+      "checkboxLabel": "Chicken simmered until fork-tender",
+      "measurements": [
+        { "item": "Chicken thighs", "qty": "2 lbs" },
+        { "item": "Chile purée", "qty": "all of it (from Step 1)" },
+        { "item": "Diced tomatoes", "qty": "14.5 oz can, with juice" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>chicken thighs</strong> to the pot and turn to coat in the spiced onions.",
+            "Stir in the <strong>chile purée</strong> and <strong>diced tomatoes with their juice</strong>.",
+            "Bring to a simmer, then cover and cook over medium-low heat, stirring occasionally, <strong>40-45 minutes</strong>, until the chicken is completely tender and shreds easily."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't rush the simmer.</strong> The purée needs the full 40 minutes to lose its raw-chile edge and turn silky."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Shred + Finish",
+      "checkboxLabel": "Chicken shredded, beans + chocolate stirred in",
+      "measurements": [
+        { "item": "Kidney beans", "qty": "15 oz can" },
+        { "item": "Bittersweet chocolate", "qty": "1 oz" },
+        { "item": "Remaining toasted cashews", "qty": "⅓ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Remove the chicken to a bowl (discard the cinnamon stick) and shred with two forks.",
+            "Return the shredded chicken to the pot along with the <strong>kidney beans</strong>, <strong>chocolate</strong>, and the <strong>remaining ⅓ cup toasted cashews</strong>.",
+            "Simmer, stirring occasionally, <strong>5 minutes</strong>, until the chocolate is fully melted and everything is heated through. Taste and adjust salt."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>The chocolate should disappear.</strong> It's there to round out the chile heat, not to taste like dessert — if you can taste chocolate specifically, ease up next time."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Swirl + Serve",
+      "checkboxLabel": "Yogurt swirled in, plated over rice",
+      "measurements": [
+        { "item": "Plain yogurt", "qty": "⅓ cup" },
+        { "item": "Fresh cilantro", "qty": "remaining ~2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spoon the chili over <strong>cooked rice</strong> in bowls.",
+            "Swirl a spoonful of <strong>yogurt</strong> into each bowl and scatter with the <strong>remaining cilantro</strong>."
+          ]
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Optional toppings:</strong> sliced avocado, lime wedges, extra toasted cashews, warm tortillas"
+          ]
+        }
+      ]
+    }
+  ]
+}
