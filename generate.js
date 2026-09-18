@@ -1544,10 +1544,18 @@ function renderSlide(slide, index) {
           </section>`.trimStart();
 }
 
-// ─── House photography style — embedded in every recipe card ──────────────────
+// ─── House image style — embedded in every recipe card ────────────────────────
 // Subject (recipe.imagePrompt) + this style block = the full image prompt.
 // Update this string to evolve the visual identity across all cards on next build.
-const IMAGE_STYLE = `Shot on a dark, weathered walnut or charcoal slate surface — deep grain, imperfect texture, no fill light or reflectors. Single-source natural light from the upper left, angled low to rake across surfaces and cast deep organic shadows. Overhead flat lay or slight ¾ overhead — choose whichever reveals the dish's best silhouette and texture. Props are earned, not decorative: one vintage knife or fork, a small sauce vessel if the dish has one, a sprig of the herb actually used in the recipe, coarse salt where salt was used. Color palette: deep jewel tones — charcoal, burgundy, forest green, ochre, dark gold. No bright whites, no clinical backgrounds. Food is styled honestly: genuine doneness, real pooling and drips, no tweezered perfect garnish. Shot at 85mm equivalent, f/2.0–f/2.8, tack-sharp on the hero element, natural depth falloff. Mood: moody editorial. Honest food, beautiful light.`;
+const IMAGE_STYLE = `Create a single cinematic food portrait, not a recipe card, not an infographic, with no visible text, captions, labels, logos, or typography. The dish is the hero, presented close to the viewer by a woman serving the food with both presence and warmth. She should naturally reflect the recipe's culinary origin and cultural setting through subtle, respectful choices in styling, environment, ingredients, tableware, and kitchen atmosphere — never costume-like, stereotyped, or caricatured. Her pose should feel realistic and functional: leaned slightly forward, making direct eye contact with the viewer, offering or presenting the dish as if inviting them to eat.
+
+The setting is a hot, humid kitchen with visible golden heat, steam, condensation, and lived-in texture. A standing oscillating fan is a constant part of the scene, placed near her body as she seeks relief from the heat while still serving the food. The fan should influence the image naturally: moving loose hair, shifting fabric, bending steam, and cooling her neck, waist, arm, or leg. The environment should feel intimate, domestic, and alive — a working kitchen, not a studio.
+
+Use moody editorial lighting: single-source natural light from the upper left, low and raking across surfaces, with deep organic shadows and no fill light or reflectors. The palette should be rich and recipe-driven: deep jewel tones, charcoal, burgundy, forest green, ochre, dark gold, warm browns, burnished highlights, and saturated food colors. Avoid bright clinical whites, sterile backgrounds, and overly clean styling.
+
+Render the image as a luxurious painterly photograph / old-master oil painting hybrid: tactile brushwork, warm golden-hour atmosphere, shallow depth of field, 85mm portrait feel, f/2.0–f/2.8, tack-sharp focus on the food and her face, natural falloff elsewhere. Food texture should receive the most visual attention: genuine doneness, char, melted fat, sauce pooling, juices, crumbs, steam, glossy drips, crisp edges, herbs, and imperfect handmade details. Props must be earned, not decorative: only include utensils, vessels, herbs, sauces, salt, ingredients, or side dishes that belong to the recipe.
+
+The dish should occupy the foreground and lower center of the frame, large and appetizing, with the presenter close behind it. Keep the food readable and specific: individual ingredients should be identifiable, portions generous but believable, plating honest rather than tweezer-perfect. The image should feel sensual, hospitable, handcrafted, and deeply appetizing — the first reaction should be “I want to eat that.”`;
 
 // ─── Main builder ─────────────────────────────────────────────────────────────
 

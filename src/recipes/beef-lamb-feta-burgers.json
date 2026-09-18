@@ -1,0 +1,314 @@
+{
+  "title": "Grilled Beef & Lamb Feta Burgers",
+  "imagePrompt": "A thick, hand-formed burger sits on a toasted brioche bun, its exterior deeply browned with charred grill marks and a few crisped edges where lamb fat rendered and caught the flame. The cut interior is juicy and rosy-brown, shot through with small white pockets of feta that have softened into creamy, slightly melted seams rather than dissolving into the meat. A thick smear of pale tzatziki clings to both bun halves, with dark-green arugula wilting slightly against the hot patty, a ruby slice of tomato, thin translucent rings of red onion, and a glossy yellow-green pepperoncini leaning off the side. Juices bead at the base of the patty and soak faintly into the bottom bun.",
+  "subtitle": "Half lamb, half beef, gently folded with crumbled feta and grilled over direct heat until crusty outside and juicy within.",
+  "storageKey": "beef_lamb_feta_burgers_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "1 lb lamb + 1 lb beef" },
+    { "label": "Makes", "value": "6 large (or 8 small)" },
+    { "label": "Grill", "value": "425–450°F direct" },
+    { "label": "Pull at", "value": "155–160°F" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Keep the meat cold right up until you mix — cold meat folds cleanly and stays loose.",
+    "items": [
+      "<strong>1 lb ground lamb</strong> (80–85% lean)",
+      "<strong>1 lb ground beef</strong> (80/20 preferred)",
+      "<strong>4 oz feta cheese</strong>, crumbled",
+      "<strong>3 cloves garlic</strong>, finely grated",
+      "<strong>2 tsp kosher salt</strong>",
+      "<strong>1½ tsp black pepper</strong>, freshly ground",
+      "<strong>1 tsp dried oregano</strong>",
+      "<strong>1 tsp smoked paprika</strong>",
+      "<strong>1 tsp ground cumin</strong> (optional but recommended)",
+      "<strong>1 tbsp Worcestershire sauce</strong>",
+      "<strong>1 tbsp fresh parsley</strong>, chopped (optional)",
+      "<strong>6 brioche or ciabatta buns</strong>, toasted",
+      "<strong>Tzatziki</strong>, for spreading",
+      "<strong>Sliced tomato</strong>",
+      "<strong>Red onion</strong>, thinly sliced",
+      "<strong>Arugula</strong> or butter lettuce",
+      "<strong>Roasted red peppers</strong> (optional)",
+      "<strong>Pickled pepperoncini</strong> (optional)",
+      "<strong>Good olive oil</strong>, for finishing"
+    ],
+    "callout": "<strong>Restraint is the recipe:</strong> Fold the mixture like cookie dough, not bread dough. Overworking binds the proteins and gives you a dense, springy, sausage-like burger.",
+    "shoppingList": [
+      { "item": "Ground lamb (1 lb, 80–85% lean)" },
+      { "item": "Ground beef (1 lb, 80/20)" },
+      { "item": "Feta cheese (4 oz block)", "substitutes": ["Pre-crumbled feta"] },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste"] },
+      { "item": "Kosher salt" },
+      { "item": "Black peppercorns" },
+      { "item": "Dried oregano" },
+      { "item": "Smoked paprika", "substitutes": ["Sweet paprika"] },
+      { "item": "Ground cumin" },
+      { "item": "Worcestershire sauce", "substitutes": ["Soy sauce + a dash of vinegar"] },
+      { "item": "Fresh parsley (1 bunch)", "substitutes": ["Fresh mint", "Fresh dill"] },
+      { "item": "Brioche buns (6)", "substitutes": ["Ciabatta rolls", "Potato buns"] },
+      { "item": "Tzatziki (1 tub)", "substitutes": ["Homemade — see the tzatziki recipe card"] },
+      { "item": "Tomatoes (2)" },
+      { "item": "Red onion (1)" },
+      { "item": "Arugula", "substitutes": ["Butter lettuce", "Baby spinach"] },
+      { "item": "Roasted red peppers (jar)" },
+      { "item": "Pepperoncini (jar)", "substitutes": ["Banana peppers"] },
+      { "item": "Olive oil" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Beef brings richness, lamb brings earthiness, and the feta melts into little salty pockets throughout. This is a burger where restraint pays off — the goal is distinct pockets of cheese in loose, tender meat, not a uniform paste."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mise en place</strong> — grate garlic, crumble feta, chop parsley, keep the meat cold",
+            "<strong>Blend the dry seasonings</strong> first so they distribute evenly",
+            "<strong>Spread and fold</strong> the meat 8–12 gentle times — no kneading",
+            "<strong>Form loose patties</strong> with a thumb dent in the center",
+            "<strong>Chill 20–30 minutes</strong> so they hold together on the grill",
+            "<strong>Grill over direct heat</strong>, flipping exactly once",
+            "<strong>Rest 5 minutes</strong>, then build on toasted buns with tzatziki"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>The one mistake to avoid:</strong> Overmixing. Stop folding the second everything looks evenly distributed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything prepped, meat still cold from the fridge",
+      "measurements": [
+        { "item": "Ground lamb", "qty": "1 lb" },
+        { "item": "Ground beef", "qty": "1 lb" },
+        { "item": "Feta cheese", "qty": "4 oz, crumbled" },
+        { "item": "Garlic", "qty": "3 cloves, finely grated", "alts": ["1 tbsp garlic paste"] },
+        { "item": "Worcestershire sauce", "qty": "1 tbsp" },
+        { "item": "Fresh parsley", "qty": "1 tbsp, chopped" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Finely grate the <strong>3 cloves garlic</strong> and crumble the <strong>4 oz feta</strong>.",
+            "Chop <strong>1 tbsp parsley</strong> and measure <strong>1 tbsp Worcestershire</strong>.",
+            "Slice tomato and red onion, wash the greens, and set out tzatziki and buns.",
+            "Leave the <strong>lamb and beef in the refrigerator</strong> until the moment you mix.",
+            "Have ready: a large bowl or sheet pan, a clear spot in the fridge for the formed patties, an instant-read thermometer, tongs, and a paper towel plus oil for the grates."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep everything cold.</strong> Don't let the meat sit out for 30 minutes while you prep — cold fat stays in distinct pieces and the mixture is far easier to handle."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Blend the Seasonings",
+      "checkboxLabel": "Dry seasonings combined in a small bowl",
+      "measurements": [
+        { "item": "Kosher salt", "qty": "2 tsp" },
+        { "item": "Black pepper", "qty": "1½ tsp, freshly ground" },
+        { "item": "Dried oregano", "qty": "1 tsp" },
+        { "item": "Smoked paprika", "qty": "1 tsp" },
+        { "item": "Ground cumin", "qty": "1 tsp (optional)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a small bowl, stir together the <strong>salt, pepper, oregano, smoked paprika, and cumin</strong>.",
+            "Set it beside the bowl you'll mix the meat in."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why bother:</strong> Pre-blending lets you season evenly in one scattering pass instead of chasing pockets of salt around with extra mixing."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Spread & Fold — Don't Knead",
+      "checkboxLabel": "Folded 8–12 times, feta still in visible pockets",
+      "measurements": [
+        { "item": "Ground lamb", "qty": "1 lb" },
+        { "item": "Ground beef", "qty": "1 lb" },
+        { "item": "Feta cheese", "qty": "4 oz, crumbled" },
+        { "item": "Garlic", "qty": "3 cloves, grated" },
+        { "item": "Worcestershire sauce", "qty": "1 tbsp" },
+        { "item": "Seasoning blend", "qty": "all of it" },
+        { "item": "Fresh parsley", "qty": "1 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Gently spread the <strong>beef and lamb</strong> into a shallow layer in a large bowl or on a sheet pan — don't dump it in one pile.",
+            "Scatter the <strong>garlic, Worcestershire, seasoning blend, parsley, and feta</strong> evenly over the surface.",
+            "Using your <strong>fingertips</strong>: lift from the bottom, fold over, rotate the bowl. Repeat.",
+            "<strong>8–12 gentle folds</strong> is usually enough.",
+            "Stop the moment everything looks evenly distributed."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Think cookie dough, not bread dough.</strong> Squeezing and kneading binds the proteins and gives you a dense, springy, sausage-like texture."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Form the Patties",
+      "checkboxLabel": "6 loose patties, ¾–1 inch thick, thumb dent in each",
+      "measurements": [
+        { "item": "Burger mixture", "qty": "divided into 6 (or 8 smaller)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Divide the mixture into <strong>6 equal portions</strong> (or 8 for smaller burgers).",
+            "Roll each portion <strong>just enough to hold together</strong>.",
+            "Flatten gently to <strong>¾–1 inch thick</strong> and about <strong>½ inch wider than your bun</strong>.",
+            "Press a shallow <strong>¼-inch thumb dent</strong> into the center of each patty.",
+            "Do not compress them hard."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Loose patties = juicy burgers.</strong> The thumb dent keeps them from puffing into meatballs, and the extra width accounts for shrinkage."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Chill the Patties",
+      "checkboxLabel": "Patties chilled 20–30 minutes",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Arrange the patties on a plate or sheet pan in a single layer.",
+            "Refrigerate <strong>20–30 minutes</strong>.",
+            "Use the time to heat and clean the grill."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why chill:</strong> Firmed-up fat holds the loose patties together when they hit the hot grates."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Heat & Prep the Grill",
+      "checkboxLabel": "Grill at 425–450°F, grates clean and oiled",
+      "measurements": [
+        { "item": "Grill temp", "qty": "425–450°F (medium-high)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the grill to <strong>medium-high, around 425–450°F</strong>.",
+            "<strong>Clean the grates well</strong> — scrape them while hot.",
+            "Lightly oil the grates with a paper towel held in tongs.",
+            "Keep a <strong>cooler zone</strong> available for flare-ups."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Watch for flare-ups.</strong> Lamb fat ignites quickly. If flames climb, move the burgers to the cooler zone for a minute rather than letting them char."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 7",
+      "title": "Grill — Leave Them Alone",
+      "checkboxLabel": "First side 4–5 min, released cleanly, flipped once",
+      "measurements": [
+        { "item": "First side", "qty": "4–5 minutes" },
+        { "item": "Second side", "qty": "3–5 minutes" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Place the burgers over <strong>direct heat</strong>.",
+            "Once they hit the grill: <strong>no pressing, no moving, no flattening</strong>.",
+            "After about <strong>4–5 minutes</strong> they should release easily. If they stick, they aren't ready.",
+            "<strong>Flip once.</strong> Cook another <strong>3–5 minutes</strong>, depending on thickness."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Never press with the spatula.</strong> You're squeezing flavorful juices into the fire, and every extra flip costs you crust."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 8",
+      "title": "Temp & Rest",
+      "checkboxLabel": "Pulled at target temp, rested 5 minutes",
+      "measurements": [
+        { "item": "Medium", "qty": "145°F (less commonly recommended for mixed ground meats)" },
+        { "item": "Juicy & well-cooked", "qty": "155–160°F" },
+        { "item": "Safe minimum for ground meat", "qty": "160°F" },
+        { "item": "Rest", "qty": "5 minutes" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Use an <strong>instant-read thermometer</strong> — it's the only reliable guide for ground meat.",
+            "<strong>145°F</strong> is medium, though less commonly recommended for mixed ground meats.",
+            "<strong>155–160°F</strong> lands juicy and well-cooked; <strong>160°F</strong> is the recommended safety minimum for ground meat.",
+            "Pull them <strong>2–3°F before your target</strong> — they keep rising slightly as they rest.",
+            "Rest the burgers <strong>5 minutes</strong> before building."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Resting isn't optional.</strong> Five minutes lets the juices redistribute instead of running out onto the plate the second you bite in."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 9",
+      "title": "Build & Serve",
+      "checkboxLabel": "Buns toasted, burgers built and served",
+      "measurements": [
+        { "item": "Buns", "qty": "6, toasted", "alts": ["Ciabatta rolls"] },
+        { "item": "Tzatziki", "qty": "both bun halves" },
+        { "item": "Olive oil", "qty": "a drizzle to finish" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Toast the buns</strong> on the grill.",
+            "Spread <strong>tzatziki on both halves</strong>.",
+            "Layer: <strong>arugula, burger, tomato, red onion, pepperoncini</strong>.",
+            "Finish with a drizzle of <strong>good olive oil</strong> and a pinch of fresh parsley or oregano."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>You're looking for:</strong> a crisp, well-browned exterior and a juicy, tender interior — rich from the beef, earthy from the lamb, with salty pockets of feta throughout and none of the heaviness."
+        }
+      ]
+    }
+  ]
+}
