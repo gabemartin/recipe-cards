@@ -1,0 +1,219 @@
+{
+  "title": "Moussaka",
+  "imagePrompt": "A deep golden-brown crust blankets the top, mottled with darker caramelized patches where the béchamel has bubbled and set in the oven. A cut slice reveals distinct layers: pale golden potato rounds, soft green zucchini, and deep purple-skinned eggplant, all bound by a rich, dark red-brown meat sauce studded with flecks of tomato and onion. The béchamel itself is thick, ivory-colored, and custard-set, holding a clean edge where the slice has been cut, with a faint wisp of steam rising from the warm interior.",
+  "subtitle": "Layered eggplant, zucchini, and potato with a spiced veal ragù, crowned with a golden baked béchamel. Aria's family recipe.",
+  "storageKey": "moussaka_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "800g minced veal" },
+    {              "label": "Serves",  "value": "~8" },
+    {              "label": "Layers",  "value": "Potato, zucchini, eggplant" },
+    {              "label": "Bake",    "value": "200°C, ~40 min" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Three components: the vegetable layers, the spiced meat sauce, and the milk (béchamel) topping.",
+    "items": [
+      "<strong>5 eggplants</strong>, sliced ~1cm thick",
+      "<strong>4 zucchini</strong> (or 1 yellow squash), sliced ~1cm thick",
+      "<strong>4–5 large potatoes</strong>, sliced ~1cm thick",
+      "<strong>800g minced veal</strong>",
+      "<strong>4–5 tbsp olive oil</strong>",
+      "<strong>1 large onion</strong>, finely chopped",
+      "<strong>2 garlic cloves</strong>, finely chopped",
+      "<strong>1 tbsp tomato paste</strong>",
+      "<strong>1 can chopped tomatoes</strong>",
+      "<strong>1 cinnamon stick</strong>",
+      "<strong>1/3 cup red wine or brandy</strong>",
+      "<strong>1 tsp sugar</strong>",
+      "Salt &amp; pepper, to taste",
+      "<strong>1.5 litres full-fat milk</strong>",
+      "<strong>5 tbsp butter</strong>",
+      "<strong>5 tbsp all-purpose flour</strong>",
+      "<strong>2 eggs</strong>",
+      "Grated Parmesan cheese, to taste (for the béchamel, plus extra for sprinkling between layers)",
+      "Nutmeg, to taste",
+      "Salt &amp; pepper, to taste"
+    ],
+    "callout": "<strong>Key rule:</strong> Roast the eggplant and zucchini until truly soft and fry the potatoes until golden before layering — undercooked veggies leave the finished moussaka watery.",
+    "shoppingList": [
+      { "item": "Eggplants (5)" },
+      { "item": "Zucchini (4)", "substitutes": ["1 yellow squash"] },
+      { "item": "Large potatoes (4–5)" },
+      { "item": "Ground veal (800g / ~1.75 lb)", "substitutes": ["Ground beef", "Ground lamb"] },
+      { "item": "Olive oil" },
+      { "item": "Onion (1 large)" },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "Tomato paste (small can)" },
+      { "item": "Chopped tomatoes (1 can)" },
+      { "item": "Cinnamon stick" },
+      { "item": "Red wine or brandy (small bottle)" },
+      { "item": "Sugar" },
+      { "item": "Full-fat milk (1.5 litres / ~6 cups)" },
+      { "item": "Butter (1 stick)" },
+      { "item": "All-purpose flour" },
+      { "item": "Eggs (2)" },
+      { "item": "Parmesan cheese, grated", "substitutes": ["Kefalotyri", "Pecorino"] },
+      { "item": "Nutmeg (ground)" },
+      { "item": "Salt & pepper" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A classic layered Greek bake: roasted potato, zucchini, and eggplant stacked under a cinnamon-spiced veal ragù, then finished with a thick, glossy béchamel that bakes into a golden crust."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Prep the vegetable layers</strong> — roast the eggplant and zucchini, fry the potatoes",
+            "<strong>Build the meat sauce</strong> — onion, garlic, veal, wine, tomatoes, and cinnamon",
+            "<strong>Make the béchamel</strong> — butter, flour, milk, then eggs and Parmesan off the heat",
+            "<strong>Layer</strong> — potato, zucchini, eggplant, meat sauce, béchamel",
+            "<strong>Bake</strong> at 200°C until the top is golden brown"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>From Aria:</strong> Salt each vegetable layer as you go, and sprinkle a little grated cheese over each one for extra flavor."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Prep + Cook the Vegetable Layers",
+      "checkboxLabel": "Roast eggplant/zucchini, fry potatoes",
+      "measurements": [
+        { "item": "Eggplants", "qty": "5, sliced ~1cm thick" },
+        { "item": "Zucchini", "qty": "4, sliced ~1cm thick", "alts": ["1 yellow squash"] },
+        { "item": "Potatoes", "qty": "4–5 large, sliced ~1cm thick" },
+        { "item": "Olive oil", "qty": "for frying" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Wash and cut the <strong>eggplant, zucchini, and potatoes</strong> into slices about <strong>1cm thick</strong>.",
+            "Lay the <strong>eggplant and zucchini</strong> slices on a baking sheet lined with parchment paper.",
+            "Roast in a <strong>hot oven</strong> until the slices soften.",
+            "Meanwhile, <strong>fry the potato slices</strong> in olive oil until slightly golden.",
+            "Drain the fried potatoes on kitchen paper or a strainer to remove excess oil."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't rush this step:</strong> Soft eggplant and zucchini, and well-drained potatoes, keep the layers from turning watery once baked."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Build the Meat Sauce",
+      "checkboxLabel": "Onion, garlic, veal, wine, tomatoes, cinnamon",
+      "measurements": [
+        { "item": "Olive oil", "qty": "4–5 tbsp" },
+        { "item": "Onion", "qty": "1 large, chopped fine" },
+        { "item": "Garlic", "qty": "2 cloves, chopped finely" },
+        { "item": "Minced veal", "qty": "800g" },
+        { "item": "Red wine or brandy", "qty": "1/3 cup" },
+        { "item": "Tomato paste", "qty": "1 tbsp" },
+        { "item": "Chopped tomatoes", "qty": "1 can" },
+        { "item": "Cinnamon stick", "qty": "1" },
+        { "item": "Sugar", "qty": "1 tsp" },
+        { "item": "Salt & pepper", "qty": "to taste" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat the <strong>olive oil</strong> in a pot and add the <strong>chopped onion and garlic</strong>. Simmer until transparent.",
+            "Add the <strong>minced veal</strong>, stirring until it changes color and loses most of its liquid.",
+            "Pour in the <strong>wine or brandy</strong> and stir.",
+            "Add the <strong>tomato paste, chopped tomatoes, cinnamon stick, sugar</strong>, and <strong>salt &amp; pepper</strong>.",
+            "Lower the heat and cook until the meat is softened and the sauce has thickened slightly."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>The cinnamon stick is doing real work here</strong> — it's the backbone of the moussaka flavor. Fish it out before layering."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Make the Béchamel (Milk Sauce)",
+      "checkboxLabel": "Butter + flour roux, whisk in milk, finish with eggs",
+      "measurements": [
+        { "item": "Butter", "qty": "5 tbsp" },
+        { "item": "All-purpose flour", "qty": "5 tbsp" },
+        { "item": "Full-fat milk", "qty": "1.5 litres" },
+        { "item": "Eggs", "qty": "2" },
+        { "item": "Parmesan cheese", "qty": "to taste", "alts": ["Kefalotyri", "Pecorino"] },
+        { "item": "Nutmeg", "qty": "to taste" },
+        { "item": "Salt & pepper", "qty": "to taste" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Melt the <strong>butter</strong> in a large pot over low heat.",
+            "Add the <strong>flour</strong> and stir until fully combined with the melted butter.",
+            "Start adding the <strong>milk little by little</strong>, whisking constantly — add more if flour knobs appear.",
+            "Keep stirring so the sauce doesn't stick to the bottom of the pot.",
+            "Once it starts to thicken and you've used most or all of the milk, <strong>switch off the heat</strong>.",
+            "Stir in the <strong>2 eggs, Parmesan, nutmeg</strong>, and <strong>salt &amp; pepper</strong> until well combined."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Add the eggs off the heat, not on it.</strong> Stirring them into a still-hot (not boiling) sauce keeps them from scrambling."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Layer the Moussaka",
+      "checkboxLabel": "Potato, zucchini, eggplant, meat sauce, béchamel",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a large, deep baking pan, add the <strong>fried potato slices</strong> as the first layer.",
+            "Layer the <strong>zucchini</strong> next, then the <strong>eggplant</strong> on top.",
+            "Sprinkle a little <strong>salt</strong> and a little <strong>grated cheese</strong> over each vegetable layer as you go.",
+            "Spread the <strong>meat sauce</strong> evenly over the vegetable layers (remove the cinnamon stick first).",
+            "Finish with the <strong>béchamel</strong> as the top layer, spreading it out to fully cover the pan."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Order matters:</strong> Potato → zucchini → eggplant → meat sauce → béchamel on top."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Bake",
+      "checkboxLabel": "Bake at 200°C until the top browns, ~40 min",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>200°C (400°F)</strong>.",
+            "Place the pan in the oven.",
+            "Bake until the béchamel topping starts to <strong>brown</strong>, usually around <strong>40 minutes</strong>.",
+            "Switch off the oven once it's golden and let the moussaka rest a few minutes before slicing."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Let it rest.</strong> Moussaka is much easier to cut into clean slices once it's had a few minutes to set out of the oven."
+        }
+      ]
+    }
+  ]
+}
