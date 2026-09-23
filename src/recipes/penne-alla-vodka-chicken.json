@@ -61,6 +61,7 @@
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — dice the onion, mince the garlic, crush the tomatoes, sliver the chicken, and measure the sauce ingredients",
             "<strong>Simmer</strong> onion, garlic, and tomatoes into a thick sauce",
             "<strong>Blend smooth</strong>, then add cream and vodka",
             "<strong>Cook the pasta</strong> while the sauce reduces further",
@@ -76,6 +77,46 @@
     },
     {
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" },
+        { "item": "Butter", "qty": "2 tbsp" },
+        { "item": "Onion", "qty": "1 medium (~1½ cups), diced" },
+        { "item": "Garlic", "qty": "2 cloves (~2 tsp)", "alts": ["Garlic paste"] },
+        { "item": "Dried oregano", "qty": "½ tsp" },
+        { "item": "Red pepper flakes", "qty": "pinch" },
+        { "item": "Whole tomatoes", "qty": "one 28-oz can" },
+        { "item": "Fresh basil", "qty": "1 stem, optional" },
+        { "item": "Heavy cream", "qty": "½ cup" },
+        { "item": "Vodka", "qty": "¾ cup" },
+        { "item": "Penne pasta", "qty": "1 lb", "alts": ["Ziti", "Rigatoni"] },
+        { "item": "Chicken breast", "qty": "1 lb, slivered" },
+        { "item": "Parsley", "qty": "2 tbsp, chopped" },
+        { "item": "Parmigiano-Reggiano", "qty": "for serving" },
+        { "item": "Kosher salt", "qty": "large pinch" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Finely dice the <strong>1 medium onion</strong> (about <strong>1½ cups</strong>).",
+            "Mince or grate the <strong>2 garlic cloves</strong> (about <strong>2 tsp</strong>).",
+            "Crush the <strong>28-oz can of whole tomatoes</strong> by hand or with a potato masher into rough <strong>½-inch chunks</strong>.",
+            "Cut the <strong>1 lb chicken breasts</strong> into <strong>½-inch-wide slivers</strong>.",
+            "Chop the <strong>2 tbsp fresh parsley</strong> and grate the <strong>Parmigiano-Reggiano</strong> for serving.",
+            "Measure <strong>2 tbsp olive oil</strong>, <strong>2 tbsp butter</strong>, <strong>½ tsp dried oregano</strong>, a <strong>pinch of red pepper flakes</strong>, <strong>½ cup heavy cream</strong>, and <strong>¾ cup vodka</strong>.",
+            "Set out a <strong>large saucepan</strong>, <strong>blender</strong>, and <strong>large pasta pot</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Blend before you simmer:</strong> The tomatoes need to be crushed now so the sauce can reduce evenly — don't wait until the pan is hot."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
       "title": "Build the Tomato Base",
       "checkboxLabel": "Simmer onion, garlic & tomatoes into a thick sauce",
       "measurements": [
@@ -106,7 +147,7 @@
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Blend with Cream + Vodka",
       "checkboxLabel": "Blend smooth, then simmer with cream and vodka",
       "measurements": [
@@ -130,7 +171,7 @@
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Cook the Pasta",
       "checkboxLabel": "Boil pasta until just shy of al dente",
       "measurements": [
@@ -149,7 +190,7 @@
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Poach the Chicken in the Sauce",
       "checkboxLabel": "Simmer chicken in the sauce until just cooked through",
       "measurements": [
@@ -170,7 +211,7 @@
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Combine + Serve",
       "checkboxLabel": "Toss pasta with sauce, chicken & parsley",
       "measurements": [

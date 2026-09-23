@@ -82,13 +82,52 @@ The shopping list simplifies the detailed ingredient list into what you actually
 }
 ```
 
-No `checkboxLabel` on the overview slide.
+No `checkboxLabel` on the overview slide. The overview's **first bullet** must be a Mise en place summary (e.g. `"<strong>Mise en place</strong> — prep chicken, juice lemons, drain capers, and measure the sauce"`).
 
-### Step slides
+### Mise en Place slide (always second)
+
+Every recipe **must** include this slide immediately after Overview:
 
 ```json
 {
   "kicker": "Step 1",
+  "title": "Mise en Place",
+  "checkboxLabel": "Everything measured, prepped, and ready",
+  "measurements": [
+    { "item": "Chicken tenders", "qty": "2 lbs" },
+    { "item": "Kosher salt", "qty": "1½–2 tsp" }
+  ],
+  "body": [
+    {
+      "type": "ul",
+      "items": [
+        "Pat the <strong>2 lbs chicken tenders</strong> dry with paper towels.",
+        "Measure the <strong>salt and pepper</strong>; gather a <strong>large skillet</strong>."
+      ]
+    },
+    {
+      "type": "callout",
+      "html": "<strong>Keep the finishing butter cold:</strong> Leave its 2 tbsp in the fridge until the sauce is ready."
+    }
+  ]
+}
+```
+
+| Field | Required | Notes |
+|---|---|---|
+| `kicker` | yes | Always `"Step 1"` |
+| `title` | yes | Always `"Mise en Place"` |
+| `checkboxLabel` | yes | Short phrase like `"Everything measured, prepped, and ready"` |
+| `measurements` | yes | Full prep list — everything washed, chopped, measured, or staged |
+| `body` | yes | Imperative prep bullets + one practical callout |
+
+Cooking steps start at **Step 2**. The build fails if `slides[1].title` is not `"Mise en Place"`.
+
+### Cooking step slides (Step 2+)
+
+```json
+{
+  "kicker": "Step 2",
   "title": "Season + Score",
   "checkboxLabel": "Pat dry, score fat, season heavily",
   "measurements": [
@@ -222,6 +261,7 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
         {
           "type": "ul",
           "items": [
+            "<strong>Mise en place</strong> — prep chicken, juice lemons, drain capers, and measure the sauce",
             "<strong>Season + dredge</strong> chicken in flour",
             "<strong>Sear in batches</strong>—don't crowd the pan",
             "<strong>Build sauce</strong> from the pan drippings",
@@ -237,8 +277,42 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
     },
     {
       "kicker": "Step 1",
-      "title": "Prep Chicken",
-      "checkboxLabel": "Pat dry, season, dredge in flour",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Chicken tenders", "qty": "2 lbs" },
+        { "item": "Kosher salt", "qty": "1½–2 tsp" },
+        { "item": "Black pepper", "qty": "1–1½ tsp" },
+        { "item": "All-purpose flour", "qty": "~¾ cup" },
+        { "item": "Olive oil", "qty": "2–3 tbsp" },
+        { "item": "Butter", "qty": "4 tbsp, divided" },
+        { "item": "Garlic", "qty": "1–1½ tsp, minced", "alts": ["Garlic paste"] },
+        { "item": "Lemon juice", "qty": "½ cup" },
+        { "item": "Chicken broth", "qty": "1½ cups" },
+        { "item": "Capers", "qty": "3–4 tbsp, drained" },
+        { "item": "Angel hair pasta", "qty": "~8 oz" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat the <strong>2 lbs chicken tenders</strong> dry with paper towels.",
+            "Measure the <strong>salt and pepper</strong>; spread <strong>~¾ cup flour</strong> in a shallow dish.",
+            "Mince <strong>1–1½ tsp garlic</strong>, juice enough lemon for <strong>½ cup</strong>, and drain the <strong>3–4 tbsp capers</strong>.",
+            "Measure <strong>1½ cups chicken broth</strong> and divide the <strong>4 tbsp butter</strong>: 2 tbsp for searing and 2 tbsp for finishing.",
+            "Set out a <strong>large pot</strong> for the pasta and a <strong>large skillet, tongs, plate, and whisk</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep the finishing butter cold:</strong> Leave its 2 tbsp in the fridge until the sauce is ready to turn glossy."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Season + Dredge Chicken",
+      "checkboxLabel": "Season and dredge chicken in flour",
       "measurements": [
         { "item": "Chicken tenders", "qty": "2 lbs" },
         { "item": "Kosher salt", "qty": "1½–2 tsp" },
@@ -249,7 +323,6 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
         {
           "type": "ul",
           "items": [
-            "Pat chicken <strong>very dry</strong> with paper towels.",
             "Season both sides with <strong>salt + pepper</strong>.",
             "Lightly <strong>dredge in flour</strong>—shake off all excess. Thin coating only."
           ]
@@ -261,7 +334,7 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
       ]
     },
     {
-      "kicker": "Step 2",
+      "kicker": "Step 3",
       "title": "Sear Chicken (in Batches)",
       "checkboxLabel": "Sear all chicken, set aside",
       "measurements": [
@@ -288,7 +361,7 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
       ]
     },
     {
-      "kicker": "Step 3",
+      "kicker": "Step 4",
       "title": "Build the Sauce",
       "checkboxLabel": "Garlic, lemon, broth, capers",
       "body": [
@@ -310,7 +383,7 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
       ]
     },
     {
-      "kicker": "Step 4",
+      "kicker": "Step 5",
       "title": "Butter Finish",
       "checkboxLabel": "Swirl in 2 tbsp butter until glossy",
       "body": [
@@ -329,7 +402,7 @@ Each entry in `measurements` shows the quantity of an ingredient used in that sp
       ]
     },
     {
-      "kicker": "Step 5",
+      "kicker": "Step 6",
       "title": "Combine + Serve",
       "checkboxLabel": "Pasta in sauce, chicken on top",
       "body": [

@@ -97,14 +97,22 @@ A Cursor skill is included at `.cursor/skills/generate-recipe/`. Say "create a n
 
   "slides": [
     {
-      // Overview slide — no checkbox
+      // Overview slide — no checkbox; first bullet must mention Mise en place
       "kicker": "Overview",
       "title": "What You're Making",
       "body": [ ... ]
     },
     {
-      // Step slide — has a checkbox
+      // Mise en Place — always Step 1; required on every recipe
       "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [ ... ],
+      "body": [ ... ]
+    },
+    {
+      // Cooking steps start at Step 2
+      "kicker": "Step 2",
       "title": "Season + Score",
       "checkboxLabel": "Pat dry, score fat, season heavily",
       "body": [ ... ]

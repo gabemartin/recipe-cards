@@ -1,0 +1,226 @@
+{
+  "title": "Chicken and Chili Soup",
+  "imagePrompt": "A deep bowl of ivory-gold, silky-smooth broth cradles a mound of shredded chicken, its threads pale and tender, studded with chopped serrano chilies and pinto beans peeking through the surface. Steam rises where the soup is ladled over a scoop of white rice, the broth soaking into the grains at the edges. Bright flecks of chopped cilantro and a swirl of sour cream sit on top, the cream just beginning to melt into the hot broth in streaks.",
+  "subtitle": "A whole chicken simmered with garlic, onion, and serranos into a silky blended broth with shredded chicken, pinto beans, and lime.",
+  "storageKey": "chicken_chili_soup_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "Whole chicken (4–5 lbs)" },
+    {              "label": "Serves",  "value": "~6" },
+    {              "label": "Broth",   "value": "Blended garlic + onion" },
+    {              "label": "Heat",    "value": "Serrano chilies" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "The broth gets blended smooth, then built back up with shredded chicken, blistered serranos, and beans.",
+    "items": [
+      "<strong>1 whole chicken</strong> (4–5 lbs)",
+      "<strong>6 bay leaves</strong>",
+      "<strong>10 cloves fresh garlic</strong>",
+      "<strong>1 whole onion</strong>, cut in half",
+      "<strong>4–5 serrano chilies</strong>",
+      "<strong>1 tsp chili powder</strong>",
+      "<strong>2 tsp dried oregano</strong>",
+      "<strong>1 tbsp sea salt</strong>",
+      "<strong>1 tbsp freshly cracked black pepper</strong>",
+      "<strong>4 cups chicken stock</strong>",
+      "Water, just enough to cover the chicken",
+      "<strong>Juice of 1 lime</strong>",
+      "<strong>1 can pinto beans</strong>, drained",
+      "Cooked rice, for serving",
+      "Fresh cilantro, for serving",
+      "Sour cream, for serving"
+    ],
+    "callout": "<strong>Key rule:</strong> Blend the cooked onion and garlic straight into the broth—no chunks. The serranos get chopped and stirred back in separately for real heat and texture.",
+    "shoppingList": [
+      { "item": "Whole chicken (4–5 lbs)" },
+      { "item": "Bay leaves" },
+      { "item": "Garlic (2 heads)" },
+      { "item": "1 yellow onion" },
+      { "item": "Serrano chilies (4–5)", "substitutes": ["Jalapeños"] },
+      { "item": "Chili powder" },
+      { "item": "Dried oregano" },
+      { "item": "Sea salt" },
+      { "item": "Black pepper" },
+      { "item": "Chicken stock (4 cups / 1 box)" },
+      { "item": "1 lime" },
+      { "item": "Pinto beans (1 can)", "substitutes": ["Black beans"] },
+      { "item": "Rice, for serving" },
+      { "item": "Fresh cilantro, for serving" },
+      { "item": "Sour cream, for serving" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "A whole chicken simmers low and slow with garlic, onion, and serranos until it falls off the bone. The broth gets strained and blended silky-smooth, then built back up with shredded chicken, chopped chilies, and pinto beans."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mise en place</strong> — rinse the chicken, peel garlic, halve the onion, and measure the seasonings",
+            "<strong>Simmer</strong> the chicken low and slow until it pulls apart",
+            "<strong>Strain + blend</strong> the broth with the cooked onion and garlic until smooth",
+            "<strong>Shred</strong> the chicken and prep the serranos",
+            "<strong>Finish</strong> with lime, chopped serranos, and pinto beans",
+            "<strong>Serve</strong> over rice with cilantro and sour cream"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Lesson learned:</strong> Keep the cooked serranos out of the blender—chop and stir them back in whole for real heat and texture, not just background spice."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Whole chicken", "qty": "4–5 lbs" },
+        { "item": "Bay leaves", "qty": "6" },
+        { "item": "Garlic", "qty": "10 cloves" },
+        { "item": "Onion", "qty": "1, halved" },
+        { "item": "Serrano chilies", "qty": "4–5", "alts": ["Jalapeños"] },
+        { "item": "Chili powder", "qty": "1 tsp" },
+        { "item": "Dried oregano", "qty": "2 tsp" },
+        { "item": "Sea salt", "qty": "1 tbsp" },
+        { "item": "Black pepper", "qty": "1 tbsp, cracked" },
+        { "item": "Chicken stock", "qty": "4 cups" },
+        { "item": "Lime", "qty": "1, juiced" },
+        { "item": "Pinto beans", "qty": "1 can, drained", "alts": ["Black beans"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Rinse the <strong>whole chicken</strong> and pat dry.",
+            "Peel the <strong>10 cloves garlic</strong> and cut the <strong>onion</strong> in half.",
+            "Rinse the <strong>4–5 serrano chilies</strong> whole—they go in uncut.",
+            "Measure the <strong>chili powder, oregano, salt, and pepper</strong>.",
+            "Measure <strong>4 cups chicken stock</strong> and have water ready to top off the pot.",
+            "Juice the <strong>lime</strong> and drain the <strong>can of pinto beans</strong>.",
+            "Gather a <strong>large stockpot, immersion blender, strainer, and tongs</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Immersion blender ready:</strong> Keep it within reach for later—you'll blend the broth right in the pot."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Simmer the Chicken",
+      "checkboxLabel": "Simmer covered ~1½ hours until falling apart",
+      "measurements": [
+        { "item": "Whole chicken", "qty": "4–5 lbs" },
+        { "item": "Bay leaves", "qty": "6" },
+        { "item": "Garlic", "qty": "10 cloves" },
+        { "item": "Onion", "qty": "1, halved" },
+        { "item": "Serrano chilies", "qty": "4–5" },
+        { "item": "Chili powder", "qty": "1 tsp" },
+        { "item": "Dried oregano", "qty": "2 tsp" },
+        { "item": "Sea salt", "qty": "1 tbsp" },
+        { "item": "Black pepper", "qty": "1 tbsp" },
+        { "item": "Chicken stock", "qty": "4 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>chicken, bay leaves, garlic, onion, serranos, chili powder, oregano, salt, and pepper</strong> to a large pot.",
+            "Pour in the <strong>4 cups chicken stock</strong>, then add just enough <strong>water</strong> to cover the chicken.",
+            "Bring to a <strong>boil</strong>, then reduce heat to <strong>medium-low</strong>.",
+            "Cover and gently simmer for about <strong>1½ hours</strong>, until the chicken is very tender and pulls easily from the bone."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Doneness cue:</strong> The chicken should shred with almost no resistance—if it's still clinging to the bone, keep simmering."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Strain + Blend the Broth",
+      "checkboxLabel": "Strain broth, blend onion + garlic until smooth",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Remove the <strong>chicken</strong> to a plate or tray to cool slightly.",
+            "Strain the <strong>stock</strong>, discarding the <strong>bay leaves</strong> and any loose bones.",
+            "Set the cooked <strong>serrano chilies</strong> aside—don't discard them.",
+            "Reserve the cooked <strong>onion and garlic</strong> and return them to the pot with the strained broth.",
+            "Use an <strong>immersion blender</strong> to blend the broth until completely smooth."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why blend:</strong> The soft-cooked onion and garlic thicken the broth just enough to give it body—no flour or cream needed."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Shred Chicken + Prep Serranos",
+      "checkboxLabel": "Shred chicken, deseed and chop serranos",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Remove all the <strong>meat</strong> from the chicken and <strong>shred it</strong>.",
+            "Return the shredded chicken to the <strong>blended broth</strong>.",
+            "<strong>Deseed</strong> the reserved serrano chilies and <strong>coarsely chop</strong> them."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Adjust the heat here:</strong> Keep the seeds and ribs in a chili or two for more spice, or discard all of them for a milder soup."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Finish + Simmer",
+      "checkboxLabel": "Add lime, serranos, and beans; simmer 5 min",
+      "measurements": [
+        { "item": "Lime juice", "qty": "from 1 lime" },
+        { "item": "Pinto beans", "qty": "1 can, drained", "alts": ["Black beans"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add the <strong>lime juice</strong>, chopped <strong>serranos</strong>, and drained <strong>pinto beans</strong> to the pot.",
+            "<strong>Taste</strong> and adjust salt as needed.",
+            "Simmer for another <strong>5 minutes</strong> to let the beans heat through and the flavors settle."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Serve",
+      "checkboxLabel": "Serve over rice with cilantro and sour cream",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spoon the soup over <strong>cooked rice</strong> in each bowl.",
+            "Finish with fresh <strong>cilantro</strong> and a dollop of <strong>sour cream</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Serving tip:</strong> Add the rice to the bowl first, then ladle the soup over so it soaks up the broth without going mushy in the pot."
+        }
+      ]
+    }
+  ]
+}

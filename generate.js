@@ -2941,6 +2941,11 @@ function copyImagesToDist(outDir) {
 
 async function processFile(src) {
   const recipe = JSON.parse(readFileSync(src, "utf8"));
+  const miseTitle = recipe.slides?.[1]?.title;
+  if (miseTitle !== "Mise en Place") {
+    console.error(`  ✗ ${src}: slides[1].title must be "Mise en Place" (got ${JSON.stringify(miseTitle ?? null)})`);
+    process.exit(1);
+  }
   const name = basename(src, ".json");
   const imageFile = await resolveImage(name, recipe);
   const outDir = join(__dirname, "dist");

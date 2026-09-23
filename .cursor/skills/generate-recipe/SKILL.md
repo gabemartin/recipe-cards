@@ -47,8 +47,9 @@ Read [schema-reference.md](schema-reference.md) for the complete field reference
 
 **Structural rules:**
 
-- **Slide 0** is always the Overview: `kicker: "Overview"`, `title: "What You're Making"`, no `checkboxLabel`. Include a short description paragraph, a spacer, a bulleted summary of the steps, and a callout with a key tip.
-- **Slides 1+** are cooking steps: `kicker: "Step N"`, each **must** have a `checkboxLabel` (short imperative phrase summarizing the step).
+- **Slide 0** is always the Overview: `kicker: "Overview"`, `title: "What You're Making"`, no `checkboxLabel`. Include a short description paragraph, a spacer, a bulleted summary of the steps, and a callout with a key tip. The **first overview bullet** must be `<strong>Mise en place</strong> — …` summarizing all prep work.
+- **Slide 1** is always **Mise en Place**: `kicker: "Step 1"`, `title: "Mise en Place"`, required `checkboxLabel` (e.g. `"Everything measured, prepped, and ready"`). Include a `measurements` array covering everything being prepped, plus a `ul` body listing wash/chop/measure/stage-equipment tasks. No heat yet — actual cooking starts on Slide 2.
+- **Slides 2+** are cooking steps: `kicker: "Step N"`, each **must** have a `checkboxLabel` (short imperative phrase summarizing the step).
 - **Chips**: 3-4 total. First chip gets `"dot": true` for the primary identifier (usually the protein or main ingredient). Remaining chips cover serving size, key technique, or accompaniment.
 - **Ingredients**: Each item uses `<strong>` around the quantity and ingredient name. Optional prep notes follow outside the strong tag.
 - **Shopping list**: A simplified grocery-store version of the ingredients. Consolidate duplicates (e.g., "lemon zest" + "lemon juice" becomes "2 lemons"). Include `substitutes` array for ingredients that have common swaps. See schema-reference.md for the format.
@@ -101,7 +102,8 @@ This produces `dist/{slug}.html` plus an updated `dist/index.html`, copies `src/
 After the build, confirm:
 - [ ] `dist/{slug}.html` exists
 - [ ] All required fields present: `title`, `imagePrompt`, `subtitle`, `storageKey`, `chips`, `ingredients`, `slides`
-- [ ] At least one slide has a `checkboxLabel`
+- [ ] `slides[1].title === "Mise en Place"` (build fails if missing)
+- [ ] Overview's first bullet mentions Mise en place
 - [ ] `storageKey` doesn't duplicate an existing recipe's key
 - [ ] Ingredients list is non-empty
 - [ ] `📷 Prompt` button appears in the top nav of the built HTML

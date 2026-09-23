@@ -35,6 +35,8 @@ src/images/         →  dist/images/ (recipe hero + index thumbnails, named `<s
 | `ingredients.shoppingList[]` | yes | Simplified grocery list: `{ "item": "2 lemons", "substitutes": ["Lime"] }` |
 | `slides[]` | yes | Swiper slides |
 
+**Required slide order:** Overview → **Mise en Place** (Step 1) → cooking steps (Step 2+). `slides[1].title` must be `"Mise en Place"`. Overview's first bullet must mention Mise en place. The build fails if this slide is missing.
+
 **Slide fields:** `kicker` (small label), `title`, `checkboxLabel` (optional — renders a persistent checkbox), `measurements[]` (optional — per-step quantities: `{ "item": "Garlic", "qty": "3 cloves", "alts": ["Garlic paste"] }`), `body[]`
 
 **Body block types:**
@@ -45,7 +47,11 @@ src/images/         →  dist/images/ (recipe hero + index thumbnails, named `<s
 
 ## Recipe Generation
 
-See `.cursor/skills/generate-recipe/SKILL.md` for the full workflow to create new recipes from URLs, images, or raw text.
+See `.cursor/skills/generate-recipe/SKILL.md` for the full workflow to create new recipes from URLs, images, or raw text. The same skill is mirrored at `.claude/skills/generate-recipe/` for Claude Code cloud/mobile sessions.
+
+### Cloud / Claude Code mobile
+
+Claude Code cloud and mobile sessions **do not** auto-load `.cursor/skills/`. They load committed project skills from `.claude/skills/` plus this `CLAUDE.md`. When adding a recipe from mobile, follow the **generate-recipe** skill — do not rely on the short schema table above alone.
 
 ## Gotchas
 
