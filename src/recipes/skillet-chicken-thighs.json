@@ -1,0 +1,216 @@
+{
+  "title": "Skillet Chicken Thighs",
+  "imagePrompt": "Bone-in chicken thighs sit skin-side up in a dark cast iron skillet, their skin deep golden-brown and blistered crisp. A pale ivory cream sauce pools around the thighs and clings to the crispy skin in a thin glaze, flecked with minced shallot and garlic and a few thyme leaves. A scatter of chopped parsley sits bright green across the top, with the glossy sauce visibly thinner and looser where it pools at the edges of the pan.",
+  "subtitle": "Crispy-skinned chicken thighs in a rich garlic-shallot cream sauce, all in one skillet.",
+  "storageKey": "skillet_chicken_thighs_checks_v1",
+  "image": "https://www.twopeasandtheirpod.com/wp-content/uploads/2022/05/Chicken-Thighs-1236310.jpg",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "6 chicken thighs" },
+    {              "label": "Serves",  "value": "6" },
+    {              "label": "Sauce",   "value": "Garlic cream" },
+    {              "label": "Time",    "value": "~40 min" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Sauce is a light cream pan sauce built from the fond—not a heavy gravy.",
+    "items": [
+      "<strong>6 chicken thighs</strong> (bone-in, skin-on, about 1½ lbs)",
+      "<strong>½ tsp garlic powder</strong>",
+      "<strong>½ tsp onion powder</strong>",
+      "<strong>½ tsp paprika</strong>",
+      "Kosher salt and black pepper, to taste",
+      "<strong>2 tbsp olive oil</strong>",
+      "<strong>1 tbsp butter</strong>",
+      "<strong>1 small shallot</strong>, minced",
+      "<strong>3 cloves garlic</strong>, minced",
+      "<strong>½ cup chicken broth</strong>",
+      "<strong>1 tbsp fresh lemon juice</strong>",
+      "<strong>2 sprigs fresh thyme</strong>",
+      "<strong>¼ tsp crushed red pepper flakes</strong>",
+      "<strong>⅓ cup heavy cream</strong>",
+      "Freshly chopped parsley, for garnish"
+    ],
+    "callout": "<strong>Key rule:</strong> Let the skin sear undisturbed—moving it too early tears the crust and it won't crisp back up.",
+    "shoppingList": [
+      { "item": "6 chicken thighs, bone-in skin-on (~1½ lbs)" },
+      { "item": "Garlic powder" },
+      { "item": "Onion powder" },
+      { "item": "Paprika" },
+      { "item": "Kosher salt" },
+      { "item": "Black pepper" },
+      { "item": "Olive oil" },
+      { "item": "Butter" },
+      { "item": "1 small shallot", "substitutes": ["¼ small yellow onion"] },
+      { "item": "Garlic (1 head)", "substitutes": ["Garlic paste", "Jarred minced garlic"] },
+      { "item": "Chicken broth (small container)", "substitutes": ["Bouillon cube + water"] },
+      { "item": "1 lemon" },
+      { "item": "Fresh thyme", "substitutes": ["Dried thyme (½ tsp)"] },
+      { "item": "Crushed red pepper flakes" },
+      { "item": "Heavy cream" },
+      { "item": "Fresh parsley" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Bone-in thighs seared skin-side down until deeply golden and crispy, then finished gently until cooked through. The skillet drippings become a quick garlic-shallot cream sauce spooned right back over the chicken."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Dry + season</strong> chicken thighs",
+            "<strong>Sear skin-side down</strong> until crispy—don't move it",
+            "<strong>Flip + finish</strong> cooking to 165°F",
+            "<strong>Build sauce</strong> from the fond: shallot, garlic, broth, cream",
+            "<strong>Return chicken to pan</strong>, garnish with parsley"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Lesson learned:</strong> A cold, dry skillet start won't crisp skin—get the pan properly hot with oil shimmering before the chicken goes in."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Dry + Season",
+      "checkboxLabel": "Pat dry, season both sides",
+      "measurements": [
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Onion powder", "qty": "½ tsp" },
+        { "item": "Paprika", "qty": "½ tsp" },
+        { "item": "Kosher salt", "qty": "to taste" },
+        { "item": "Black pepper", "qty": "to taste" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pat chicken thighs <strong>very dry</strong> with paper towels, skin included.",
+            "Combine <strong>garlic powder, onion powder, paprika, salt, and pepper</strong> in a small bowl.",
+            "Season <strong>both sides</strong> of the chicken generously."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why dry matters:</strong> Moisture on the skin steams instead of crisping. Dry skin browns fast and evenly."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Sear Skin-Side Down",
+      "checkboxLabel": "Sear skin-side down, undisturbed",
+      "measurements": [
+        { "item": "Olive oil", "qty": "2 tbsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Heat a <strong>cast iron skillet</strong> over medium-high heat and add the olive oil.",
+            "Once shimmering, place chicken <strong>skin-side down</strong> in a single layer.",
+            "Cook <strong>undisturbed for 7–8 minutes</strong>, until the skin is deep golden and crispy."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't move it.</strong> Pressing or shifting the chicken while it sears tears the crust before it releases naturally."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Flip + Finish Cooking",
+      "checkboxLabel": "Flip, cook through to 165°F",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Flip the chicken and reduce heat to <strong>medium</strong>.",
+            "Cook <strong>15–25 minutes</strong>, until internal temperature reaches <strong>165°F</strong> at the thickest part.",
+            "Transfer chicken to a plate and set aside."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Doneness cue:</strong> Juices should run clear and the thickest part should read 165°F on an instant-read thermometer—time varies with thigh size."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Build the Sauce Base",
+      "checkboxLabel": "Shallot, garlic, then broth + aromatics",
+      "measurements": [
+        { "item": "Butter", "qty": "1 tbsp" },
+        { "item": "Shallot", "qty": "1 small, minced", "alts": ["¼ small yellow onion"] },
+        { "item": "Garlic", "qty": "3 cloves, minced", "alts": ["Garlic paste"] },
+        { "item": "Chicken broth", "qty": "½ cup" },
+        { "item": "Lemon juice", "qty": "1 tbsp" },
+        { "item": "Fresh thyme", "qty": "2 sprigs" },
+        { "item": "Red pepper flakes", "qty": "¼ tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Add <strong>butter, shallot, and garlic</strong> to the skillet. Cook about <strong>1 minute</strong>, stirring, until fragrant.",
+            "Stir in the <strong>chicken broth, lemon juice, thyme, and red pepper flakes</strong>.",
+            "<strong>Scrape the pan</strong> to release the browned bits from searing."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Scraping the pan is important.</strong> Those browned bits are the backbone of the sauce's flavor."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Stir in Cream + Simmer",
+      "checkboxLabel": "Low heat, stir in cream, simmer to thicken",
+      "measurements": [
+        { "item": "Heavy cream", "qty": "⅓ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Reduce heat to <strong>low</strong>.",
+            "Stir in the <strong>heavy cream</strong>.",
+            "Simmer about <strong>5 minutes</strong>, stirring occasionally, until the sauce thickens slightly."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Target texture:</strong> Light enough to coat a spoon, not thick like gravy. Low heat keeps the cream from separating."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Return Chicken + Serve",
+      "checkboxLabel": "Nestle chicken back in, garnish, serve",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Return the chicken thighs to the skillet, nestling them into the sauce.",
+            "Spoon sauce over the top to warm through.",
+            "Garnish with <strong>freshly chopped parsley</strong> and serve warm."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Keep skin up.</strong> Nestle the thighs skin-side up in the sauce so the crispy skin stays crispy instead of soaking."
+        }
+      ]
+    }
+  ]
+}
