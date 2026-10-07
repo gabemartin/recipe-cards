@@ -1,0 +1,202 @@
+{
+  "title": "Mama's Enchiladas",
+  "imagePrompt": "Rolled flour tortillas sit seam-side down in a tight row, blanketed in brick-red enchilada sauce that has soaked into the tortilla edges and pooled in the gaps. A thick layer of cheddar has melted into a glossy, golden-orange blanket with a few lightly browned, bubbly spots. Where a portion is lifted, the filling shows shredded chicken, yellow corn kernels, black beans, and bits of green chile, with the soft tortillas slightly steamed and tender rather than crisp.",
+  "subtitle": "Slow cooker chicken, corn, and black bean enchiladas under red sauce and melted cheddar.",
+  "storageKey": "mamas_enchiladas_checks_v1",
+  "image": "https://heyrecipe.com/wp-content/uploads/2025/09/mamas_enchiladas__2_-scaled.jpg",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "2 cups rotisserie chicken" },
+    {              "label": "Serves",  "value": "6" },
+    {              "label": "Method",  "value": "Slow cooker, low 3–4 hrs" },
+    {              "label": "Makes",   "value": "12 enchiladas" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Dump-and-roll dinner: the slow cooker does the baking.",
+    "items": [
+      "<strong>1 (10-oz) can enchilada sauce</strong> (divided: ¼ cup bottom, ½ cup filling, rest on top)",
+      "<strong>2 cups rotisserie chicken</strong>, shredded",
+      "<strong>½ cup salsa</strong>",
+      "<strong>1 cup frozen corn</strong>, thawed",
+      "<strong>1 (15-oz) can black beans</strong>, drained and rinsed",
+      "<strong>1 (4-oz) can mild green chiles</strong> (with juices)",
+      "<strong>12 flour tortillas</strong>, fajita-size",
+      "<strong>2 cups shredded cheddar cheese</strong>",
+      "Nonstick cooking spray"
+    ],
+    "callout": "<strong>Key rule:</strong> Tuck paper towels under the lid so condensation doesn't drip onto the cheese and make the tortillas soggy.",
+    "shoppingList": [
+      { "item": "Enchilada sauce (10-oz can)", "substitutes": ["Red enchilada sauce, any heat level"] },
+      { "item": "Rotisserie chicken (1 small)", "substitutes": ["Poached or leftover chicken breast"] },
+      { "item": "Salsa (1 jar)", "substitutes": ["Pico de gallo", "Salsa verde"] },
+      { "item": "Frozen corn (1 small bag)", "substitutes": ["Canned corn, drained"] },
+      { "item": "Black beans (15-oz can)", "substitutes": ["Pinto beans"] },
+      { "item": "Mild green chiles (4-oz can)", "substitutes": ["Hot green chiles", "Pickled jalapeños"] },
+      { "item": "Fajita-size flour tortillas (12)", "substitutes": ["Corn tortillas (will be softer)"] },
+      { "item": "Shredded cheddar (8 oz)", "substitutes": ["Mexican blend", "Monterey Jack"] },
+      { "item": "Nonstick cooking spray" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Shredded chicken, corn, black beans, and green chiles rolled in flour tortillas, then slow-cooked under enchilada sauce and cheddar. Almost entirely hands-off once assembled."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mise en place</strong> — shred chicken, thaw corn, drain beans, measure sauce, and spray the slow cooker",
+            "<strong>Sauce the bottom</strong> of the slow cooker",
+            "<strong>Mix the filling</strong> with chicken, salsa, corn, beans, chiles, and sauce",
+            "<strong>Fill and roll</strong> 12 tortillas",
+            "<strong>Layer, sauce, and cheese</strong> the enchiladas",
+            "<strong>Cook on low</strong> 3–4 hours with paper towels under the lid"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Tip:</strong> Paper towels under the lid absorb condensation so the cheese stays melty, not watery."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Enchilada sauce", "qty": "1 (10-oz) can" },
+        { "item": "Rotisserie chicken", "qty": "2 cups, shredded", "alts": ["Poached chicken breast"] },
+        { "item": "Salsa", "qty": "½ cup" },
+        { "item": "Frozen corn", "qty": "1 cup, thawed" },
+        { "item": "Black beans", "qty": "1 (15-oz) can, drained" },
+        { "item": "Mild green chiles", "qty": "1 (4-oz) can", "alts": ["Hot green chiles"] },
+        { "item": "Flour tortillas", "qty": "12, fajita-size" },
+        { "item": "Cheddar cheese", "qty": "2 cups, shredded" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Shred <strong>2 cups rotisserie chicken</strong> and thaw <strong>1 cup frozen corn</strong>.",
+            "Drain and rinse the <strong>15-oz can black beans</strong>; open the <strong>green chiles</strong> (keep the juices).",
+            "Measure <strong>½ cup salsa</strong> and open the <strong>10-oz can enchilada sauce</strong>.",
+            "Shred <strong>2 cups cheddar</strong> if not pre-shredded.",
+            "Coat a <strong>6-quart slow cooker</strong> with nonstick spray; set out a <strong>large bowl</strong>, <strong>spoon</strong>, and <strong>paper towels</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Thaw the corn fully:</strong> Frozen corn straight in drops the temperature and adds extra water."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Sauce the Slow Cooker",
+      "checkboxLabel": "Spray cooker, pour ¼ cup sauce on bottom",
+      "measurements": [
+        { "item": "Enchilada sauce", "qty": "¼ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Make sure the <strong>6-quart slow cooker</strong> is well coated with nonstick spray.",
+            "Pour <strong>¼ cup enchilada sauce</strong> across the bottom and spread it out."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why:</strong> The sauce layer keeps the bottom tortillas from sticking and scorching."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Mix the Filling",
+      "checkboxLabel": "Combine filling in a large bowl",
+      "measurements": [
+        { "item": "Rotisserie chicken", "qty": "2 cups, shredded" },
+        { "item": "Salsa", "qty": "½ cup" },
+        { "item": "Frozen corn", "qty": "1 cup, thawed" },
+        { "item": "Black beans", "qty": "1 (15-oz) can" },
+        { "item": "Mild green chiles", "qty": "1 (4-oz) can, with juices" },
+        { "item": "Enchilada sauce", "qty": "½ cup" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a large bowl, combine <strong>chicken, salsa, corn, black beans, and green chiles with their juices</strong>.",
+            "Stir in <strong>½ cup enchilada sauce</strong> until everything is evenly coated."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Fill + Roll",
+      "checkboxLabel": "Fill and roll all 12 tortillas",
+      "measurements": [
+        { "item": "Flour tortillas", "qty": "12" },
+        { "item": "Filling", "qty": "¼ cup per tortilla" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spoon about <strong>¼ cup filling</strong> down the center of each tortilla.",
+            "Roll up tightly.",
+            "Place <strong>seam-side down</strong> in the slow cooker, tucking them snugly in rows. Stack a second layer if needed."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't overfill:</strong> About ¼ cup keeps the rolls closed and lets all 12 use up the filling evenly."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Sauce + Cheese",
+      "checkboxLabel": "Pour on remaining sauce, add cheddar",
+      "measurements": [
+        { "item": "Enchilada sauce", "qty": "remaining (about ½ cup)" },
+        { "item": "Cheddar cheese", "qty": "2 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Pour the <strong>remaining enchilada sauce</strong> evenly over the enchiladas, covering any exposed tortilla.",
+            "Sprinkle <strong>2 cups cheddar</strong> over the top."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Slow Cook",
+      "checkboxLabel": "Paper towels under lid, cook on low 3–4 hrs",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Lay <strong>2–3 paper towels</strong> across the top of the slow cooker, then set the lid on top.",
+            "Cook on <strong>low for 3–4 hours</strong> until bubbling and the cheese is fully melted.",
+            "Serve straight from the cooker with a spatula."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Doneness cue:</strong> Sauce bubbling at the edges and cheese melted through. Don't lift the lid early; it lets heat and steam escape."
+        }
+      ]
+    }
+  ]
+}
