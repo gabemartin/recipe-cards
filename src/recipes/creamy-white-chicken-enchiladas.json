@@ -1,0 +1,235 @@
+{
+  "title": "Creamy White Chicken Enchiladas",
+  "imagePrompt": "Ten flour tortilla rolls packed tightly seam-down in a 9×13 baking dish, smothered in an ivory sour cream sauce flecked with pale green chiles. The Monterey Jack on top has melted into a glossy sheet, freckled golden-brown and blistered in spots from a quick broil, with sauce bubbling up thick and creamy around the edges. One enchilada is pulled out, showing a cross-section of tender shredded chicken bound in creamy, cheesy filling. Scattered chopped cilantro and thin green onion rings add bright green against the white.",
+  "subtitle": "Shredded chicken, cream cheese, and green chiles rolled in flour tortillas under a silky sour cream sauce.",
+  "storageKey": "creamy_white_chicken_enchiladas_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "3 cups shredded chicken" },
+    {              "label": "Serves",  "value": "5 (10 enchiladas)" },
+    {              "label": "Sauce",   "value": "Sour cream + green chile" },
+    {              "label": "Bake",    "value": "350°F, 20–25 min" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Based on The Country Cook's version, with a few upgrades from other popular recipes: cream cheese in the filling, milk in the sauce, chiles split between filling and sauce, and a little sauce under the rolls.",
+    "items": [
+      "<strong>Filling</strong>",
+      "<strong>3 cups shredded cooked chicken</strong> (rotisserie is easiest)",
+      "<strong>4 oz cream cheese</strong>, softened",
+      "<strong>1 cup shredded Monterey Jack</strong>",
+      "<strong>Half of a 7 oz can diced green chiles</strong> (do not drain)",
+      "<strong>½ tsp ground cumin</strong>",
+      "<strong>½ tsp garlic powder</strong>",
+      "<strong>½ tsp salt</strong> + black pepper",
+      "<strong>Sauce</strong>",
+      "<strong>3 tbsp butter</strong>",
+      "<strong>½ small onion</strong>, finely diced",
+      "<strong>3 tbsp all-purpose flour</strong>",
+      "<strong>1½ cups chicken broth</strong>",
+      "<strong>½ cup whole milk</strong>",
+      "<strong>½ tsp ground cumin</strong>",
+      "<strong>½ tsp salt</strong>",
+      "<strong>Pinch cayenne</strong> (optional)",
+      "<strong>1 cup sour cream</strong>, at room temperature",
+      "<strong>Other half of the green chiles</strong>",
+      "<strong>Assembly</strong>",
+      "<strong>10 taco-size flour tortillas</strong> (about 8-inch)",
+      "<strong>1½ cups shredded Monterey Jack</strong> (for the top)",
+      "Fresh cilantro + sliced green onion (for serving)"
+    ],
+    "callout": "<strong>Key rule:</strong> Sour cream goes in <em>off the heat</em>. If it boils, the sauce turns grainy.",
+    "shoppingList": [
+      { "item": "1 rotisserie chicken (or ~1½ lbs cooked chicken)", "substitutes": ["Boneless chicken breasts or thighs, poached and shredded"] },
+      { "item": "Cream cheese (4 oz, half a block)" },
+      { "item": "Monterey Jack (10 oz, about 2½ cups shredded)", "substitutes": ["Pepper Jack (for heat)", "Mexican blend"] },
+      { "item": "Diced green chiles (one 7 oz can or two 4 oz cans)" },
+      { "item": "Butter" },
+      { "item": "1 small onion" },
+      { "item": "All-purpose flour" },
+      { "item": "Chicken broth (1 carton)", "substitutes": ["Bouillon + water", "Low-sodium broth"] },
+      { "item": "Whole milk (small)", "substitutes": ["Half-and-half"] },
+      { "item": "Sour cream (8 oz)", "substitutes": ["Plain Greek yogurt"] },
+      { "item": "Ground cumin" },
+      { "item": "Garlic powder" },
+      { "item": "Cayenne (optional)" },
+      { "item": "10 taco-size flour tortillas", "substitutes": ["Corn tortillas (warm each before rolling)"] },
+      { "item": "Fresh cilantro" },
+      { "item": "Green onions" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Mild, creamy, crowd-pleasing enchiladas. Chicken and cheese bound with cream cheese, rolled up, and baked under a roux-thickened sour cream and green chile sauce until bubbly and browned."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mise en place</strong> — shred chicken, soften cream cheese, dice onion, shred cheese, split the chiles, measure sauce ingredients",
+            "<strong>Mix the filling</strong> — chicken, cream cheese, Jack, half the chiles, spices",
+            "<strong>Make the sauce</strong> — onion in butter, roux, broth + milk, then sour cream off the heat",
+            "<strong>Roll + sauce</strong> — thin layer of sauce under, rolls seam-down, rest of sauce over",
+            "<strong>Bake + broil</strong> at 350°F, then a quick broil for browned cheese"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why it works:</strong> The roux gives the sauce enough body to hold together in the oven, and milk makes it silkier than broth alone. Cream cheese keeps the filling moist."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Everything measured, prepped, and ready",
+      "measurements": [
+        { "item": "Cooked chicken", "qty": "3 cups shredded", "alts": ["Rotisserie chicken"] },
+        { "item": "Cream cheese", "qty": "4 oz, softened" },
+        { "item": "Monterey Jack", "qty": "2½ cups, divided", "alts": ["Pepper Jack"] },
+        { "item": "Green chiles", "qty": "7 oz can, split in half" },
+        { "item": "Ground cumin", "qty": "½ tsp + ½ tsp" },
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "½ tsp + ½ tsp" },
+        { "item": "Butter", "qty": "3 tbsp" },
+        { "item": "Onion", "qty": "½ small, finely diced" },
+        { "item": "All-purpose flour", "qty": "3 tbsp" },
+        { "item": "Chicken broth", "qty": "1½ cups" },
+        { "item": "Whole milk", "qty": "½ cup", "alts": ["Half-and-half"] },
+        { "item": "Sour cream", "qty": "1 cup, room temp", "alts": ["Plain Greek yogurt"] },
+        { "item": "Flour tortillas", "qty": "10 taco-size" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Preheat the oven to <strong>350°F</strong>; grease a <strong>9×13 baking dish</strong>.",
+            "Set out the <strong>4 oz cream cheese</strong> and <strong>1 cup sour cream</strong> to come to room temperature.",
+            "Shred the chicken to make <strong>3 cups</strong>. Shred <strong>2½ cups Monterey Jack</strong>: 1 cup for the filling, 1½ cups for the top.",
+            "Open the <strong>green chiles</strong> and split them roughly in half: one half for the filling, one for the sauce.",
+            "Finely dice <strong>½ small onion</strong>.",
+            "Measure the filling spices: <strong>½ tsp cumin, ½ tsp garlic powder, ½ tsp salt</strong>, pepper.",
+            "Measure the sauce: <strong>3 tbsp butter, 3 tbsp flour, 1½ cups broth, ½ cup milk, ½ tsp cumin, ½ tsp salt</strong>, optional cayenne.",
+            "Gather a <strong>medium bowl</strong>, a <strong>medium saucepan</strong>, a <strong>whisk</strong>, and the <strong>10 tortillas</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Room-temp sour cream:</strong> Cold sour cream hitting a hot sauce is the most common cause of curdling. Pull it out first."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Mix the Filling",
+      "checkboxLabel": "Filling mixed and seasoned",
+      "measurements": [
+        { "item": "Cooked chicken", "qty": "3 cups shredded" },
+        { "item": "Cream cheese", "qty": "4 oz, softened" },
+        { "item": "Monterey Jack", "qty": "1 cup" },
+        { "item": "Green chiles", "qty": "½ the can" },
+        { "item": "Ground cumin", "qty": "½ tsp" },
+        { "item": "Garlic powder", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "½ tsp" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "In a medium bowl, mash the <strong>cream cheese</strong> with a fork until smooth.",
+            "Add the <strong>chicken, 1 cup Jack, half the chiles, cumin, garlic powder, salt</strong>, and a few grinds of pepper.",
+            "Stir until the chicken is evenly coated. Taste and adjust salt."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Cream cheese stiff?</strong> Microwave it 10–15 seconds so it blends instead of leaving lumps."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Make the Sauce",
+      "checkboxLabel": "Sauce thickened, sour cream stirred in off heat",
+      "measurements": [
+        { "item": "Butter", "qty": "3 tbsp" },
+        { "item": "Onion", "qty": "½ small, diced" },
+        { "item": "All-purpose flour", "qty": "3 tbsp" },
+        { "item": "Chicken broth", "qty": "1½ cups" },
+        { "item": "Whole milk", "qty": "½ cup", "alts": ["Half-and-half"] },
+        { "item": "Ground cumin", "qty": "½ tsp" },
+        { "item": "Salt", "qty": "½ tsp" },
+        { "item": "Cayenne", "qty": "pinch (optional)" },
+        { "item": "Sour cream", "qty": "1 cup", "alts": ["Plain Greek yogurt"] },
+        { "item": "Green chiles", "qty": "½ the can" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Melt <strong>3 tbsp butter</strong> in a medium saucepan over <strong>medium</strong> heat.",
+            "Add the <strong>onion</strong>; cook <strong>3–4 min</strong> until soft, not browned.",
+            "Whisk in <strong>3 tbsp flour</strong>; cook <strong>1 min</strong>, whisking (don't let it brown).",
+            "Slowly whisk in <strong>broth</strong>, then <strong>milk</strong>, until smooth.",
+            "Simmer <strong>2–3 min</strong>, whisking, until it coats a spoon. Stir in <strong>cumin, salt</strong>, and cayenne.",
+            "<strong>Take the pan off the heat.</strong> Whisk in the <strong>sour cream</strong> and the other half of the <strong>chiles</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't boil after the sour cream goes in.</strong> It should look like a pourable gravy. Too thick? Splash in more broth."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Roll + Sauce",
+      "checkboxLabel": "Enchiladas rolled, sauced, and topped",
+      "measurements": [
+        { "item": "Sauce", "qty": "~½ cup under, rest over" },
+        { "item": "Flour tortillas", "qty": "10", "alts": ["Corn tortillas"] },
+        { "item": "Monterey Jack", "qty": "1½ cups (top)" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Spread about <strong>½ cup sauce</strong> over the bottom of the baking dish.",
+            "Warm the tortillas: wrap in a damp paper towel, microwave <strong>20–30 sec</strong> so they roll without cracking.",
+            "Spoon a heaping <strong>⅓ cup filling</strong> down the center of each tortilla, roll it tight, and set it <strong>seam-side down</strong>. Pack them in snugly.",
+            "Pour the rest of the sauce over everything, covering the tortilla edges.",
+            "Sprinkle the remaining <strong>1½ cups Jack</strong> over the top."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Cover the edges:</strong> Any exposed tortilla dries out and goes crunchy. Push sauce into the gaps."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Bake, Broil + Serve",
+      "checkboxLabel": "Baked bubbly, broiled golden, rested",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Bake <strong>uncovered</strong> at 350°F for <strong>20–25 min</strong>, until the sauce bubbles at the edges.",
+            "Optional: switch to <strong>broil (high)</strong> for <strong>1–2 min</strong> until the cheese has golden spots. Watch it the whole time.",
+            "Rest <strong>5 min</strong> so the sauce settles before serving.",
+            "Top with <strong>cilantro</strong> and <strong>green onion</strong>. Good with Mexican rice, refried beans, or a green salad."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Make-ahead:</strong> Assemble, cool the sauce completely, cover, and refrigerate up to 1 day or freeze up to 3 months. Let it come to room temp (or add 10–15 min) before baking."
+        }
+      ]
+    }
+  ]
+}
