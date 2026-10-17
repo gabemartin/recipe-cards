@@ -1,0 +1,377 @@
+{
+  "title": "Hard-Seared Cast-Iron Ahi",
+  "imagePrompt": "Two thick ahi tuna steaks sliced across the grain into 3/8-inch slices, shingled over a mound of fluffy golden couscous studded with halved cherry tomatoes, kalamata olives, and white crumbles of feta. Each slice shows a dark mahogany seared crust on top and bottom, a whisper-thin beige cooked rim, and a wide, glossy ruby-red center that is translucent at its core. A loose lemon-oregano olive oil drizzle flecked with chopped kalamata, green herbs, and red chili flakes beads across the cut faces and runs into the couscous, with a few flakes of sea salt and coarse cracked black pepper on the slices and a lemon wedge alongside.",
+  "subtitle": "Mahogany crust and a ruby center on two brined tuna steaks, cooked one at a time, with a lemon-oregano olive drizzle and your leftover couscous with feta.",
+  "storageKey": "hard_seared_ahi_tuna_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "2 ahi steaks (brined)" },
+    {              "label": "Pull",    "value": "108–110°F" },
+    {              "label": "Pan",     "value": "Cast iron, 475–500°F" },
+    {              "label": "Serves",  "value": "2" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "The tuna is already brined, so it gets no extra salt before cooking. Flaky salt goes only on the cut faces at the end.",
+    "items": [
+      "<strong>2 ahi/yellowfin tuna steaks</strong> (6–8 oz each, ~1–1¼\" thick), brined and patted dry",
+      "<strong>4 tsp avocado oil</strong>, 2 tsp per steak (refined peanut, grapeseed, or canola also work). <em>Do not use extra-virgin olive oil or butter in the pan.</em>",
+      "<strong>⅛ tsp sugar per steak</strong> (optional, side 1 only, for faster browning)",
+      "<strong>Coarsely cracked black pepper</strong>, to finish",
+      "<strong>Flaky salt</strong> (Maldon), a few flakes to finish",
+      "<strong>2 Tbsp fresh lemon juice + ½ tsp lemon zest</strong> (drizzle)",
+      "<strong>1 Tbsp hot tap water</strong> (drizzle, helps it emulsify)",
+      "<strong>½ small garlic clove</strong>, microplaned (drizzle)",
+      "<strong>¾ tsp dried oregano</strong>, rubbed between your palms (or 2 tsp fresh)",
+      "<strong>1 Tbsp kalamata olives</strong>, finely chopped (borrow from the couscous)",
+      "<strong>1 Tbsp parsley or mint</strong>, chopped (optional)",
+      "<strong>Pinch of red pepper flakes</strong>",
+      "<strong>3–4 Tbsp good extra-virgin olive oil</strong> (drizzle)",
+      "<strong>~2 cups leftover couscous</strong> (lemon, tomato, garlic, olive)",
+      "<strong>1 Tbsp extra-virgin olive oil + a squeeze of lemon</strong> (couscous refresh)",
+      "<strong>~⅓ cup feta</strong>, crumbled",
+      "<strong>Lemon wedges</strong>, for serving"
+    ],
+    "callout": "<strong>The whole game:</strong> dry fish, very hot dry cast iron (water drops skate like mercury), oil in, fish in at the first wisp of smoke, flip when it releases, pull at <strong>110°F</strong>.",
+    "shoppingList": [
+      { "item": "2 ahi tuna steaks (6–8 oz each, 1–1¼\" thick)", "substitutes": ["Yellowfin", "Bigeye"] },
+      { "item": "Avocado oil", "substitutes": ["Refined peanut oil", "Grapeseed oil", "Canola oil"] },
+      { "item": "2 lemons" },
+      { "item": "Garlic (1 clove)" },
+      { "item": "Dried oregano", "substitutes": ["Fresh oregano"] },
+      { "item": "Kalamata olives" },
+      { "item": "Fresh parsley or mint (optional)" },
+      { "item": "Red pepper flakes" },
+      { "item": "Extra-virgin olive oil" },
+      { "item": "Feta (Président chunks)" },
+      { "item": "Flaky salt", "substitutes": ["Kosher salt, a tiny pinch"] },
+      { "item": "Black peppercorns" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Two brined ahi steaks seared <strong>bare</strong>, with no spice crust, in very hot cast iron. You get a dark mahogany crust over a wide ruby center. The steaks are cooked <strong>one at a time</strong>: the pan keeps its full heat for each one, and steak #1 shows you exactly how to adjust steak #2. They're served with a quick Sicilian-style lemon-oregano olive drizzle over your room-temperature couscous with feta."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mise en place</strong>: bring the couscous to room temp, re-dry the tuna and chill it uncovered on a rack, stage the tools, and get the vent going",
+            "<strong>Make the drizzle</strong> and finish and plate the couscous",
+            "<strong>Preheat the cast iron dry</strong> to 475–500°F, using three tests",
+            "<strong>Sear steak #1</strong> and flip on cues, not the clock",
+            "<strong>Side 2 + pull at 110°F</strong>, then onto the rack",
+            "<strong>Calibrate, then sear steak #2</strong>",
+            "<strong>Rest 2–3 min</strong>, then slice across the grain",
+            "<strong>Plate</strong>: drizzle, flaky salt, cracked pepper"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Why no crust and no extra salt:</strong> a dry, brined surface gives the cleanest, darkest sear. Spice crusts insulate the fish and scorch. The brine already seasoned the fish all the way through, and the olives and feta bring more salt, so salting again would make it too salty."
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Cold fish, hot pan.</strong> Keep the steaks in the fridge until 30 seconds before they go in. A cold center buys you 20–30 extra seconds of sear before the middle goes past rare."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Tuna drying in fridge, tools staged, vent on",
+      "measurements": [
+        { "item": "Tuna steaks", "qty": "2 × 6–8 oz, brined" },
+        { "item": "Avocado oil", "qty": "4 tsp (2 per steak)", "alts": ["Peanut", "Grapeseed", "Canola"] },
+        { "item": "Sugar (optional)", "qty": "⅛ tsp per steak" },
+        { "item": "Leftover couscous", "qty": "~2 cups" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>T-45 min:</strong> take the <strong>couscous</strong> out of the fridge so it can come to room temperature.",
+            "<strong>T-40 min:</strong> pat the <strong>tuna</strong> dry one more time: both faces <em>and the edges</em>. Brined fish keeps sweating moisture to the surface. Set the steaks on a <strong>wire rack</strong> and put them back in the fridge <strong>uncovered for 20–30 min</strong>. The surface dries into a slightly tacky skin that browns faster and darker.",
+            "<strong>Measure the thickness</strong> of each steak with a ruler or by eye against your thumb. It sets your timing (see the table in Step 5).",
+            "Stage your tools next to the stove: <strong>cast-iron skillet</strong>, <strong>instant-read thermometer</strong>, IR thermometer if you have one, a <strong>thin fish spatula and tongs</strong>, a <strong>wire rack over a plate</strong> for resting, paper towels, a small cup of water, and your sharpest long knife.",
+            "Measure <strong>2 tsp avocado oil</strong> into each of two small cups (one per steak)."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Smoke plan, done now:</strong> turn the hood fan on <strong>high</strong> before any smoke appears, crack a window, and open a door near the smoke alarm. Once a steak is in the pan you don't leave the stove."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Drizzle + Couscous",
+      "checkboxLabel": "Drizzle made, couscous dressed and plated",
+      "measurements": [
+        { "item": "Lemon juice", "qty": "2 Tbsp" },
+        { "item": "Lemon zest", "qty": "½ tsp" },
+        { "item": "Hot tap water", "qty": "1 Tbsp" },
+        { "item": "Garlic", "qty": "½ small clove, grated" },
+        { "item": "Dried oregano", "qty": "¾ tsp", "alts": ["2 tsp fresh"] },
+        { "item": "Red pepper flakes", "qty": "pinch" },
+        { "item": "Extra-virgin olive oil", "qty": "3–4 Tbsp" },
+        { "item": "Kalamata olives", "qty": "1 Tbsp, chopped" },
+        { "item": "Parsley or mint", "qty": "1 Tbsp (optional)" },
+        { "item": "Couscous refresh", "qty": "1 Tbsp EVOO + squeeze of lemon" },
+        { "item": "Feta", "qty": "~⅓ cup, crumbled" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>T-20 min, the drizzle (a quick salmoriglio):</strong> whisk the <strong>lemon juice, zest, hot water, garlic, oregano, and chili flakes</strong>. Let it sit <strong>5 min</strong> so the garlic mellows in the acid.",
+            "Slowly whisk in <strong>3–4 Tbsp olive oil</strong> until it looks cloudy and slightly thickened. Stir in the <strong>chopped olives</strong> and <strong>herbs</strong>.",
+            "Taste. <strong>Add no salt</strong> unless it really needs it, because the olives and the brined fish already bring plenty.",
+            "<strong>The couscous:</strong> fluff it with a fork, then fold in <strong>1 Tbsp olive oil</strong>, a squeeze of lemon, <strong>1–2 Tbsp of the drizzle</strong>, and <strong>most of the feta</strong>. Mound it off-center on two plates now."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Feta goes on the couscous, not the tuna.</strong> Brined fish + olives + feta on the same bite is too much salt. Serve the couscous at room temperature: rare tuna next to a hot side is jarring. If you really want it warm, microwave it covered with a damp paper towel for 45–60 s, then add the feta afterward."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Preheat the Skillet",
+      "checkboxLabel": "Pan at 475–500°F: water skates, oil shimmers, first wisp",
+      "measurements": [
+        { "item": "Avocado oil", "qty": "2 tsp (steak #1)" },
+        { "item": "Target pan temp", "qty": "475–500°F" }
+      ],
+      "body": [
+        {
+          "type": "p",
+          "html": "<strong>Most of the result depends on this step.</strong> Start with a <strong>dry pan and no oil</strong>. Cast iron heats unevenly, so the heat needs time to spread out from the spot over the flame."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Gas:</strong> medium for <strong>4 min</strong>, then high for <strong>3–4 min</strong>.",
+            "<strong>Electric coil or glass-top:</strong> medium for <strong>5 min</strong>, then high for <strong>5 min</strong>. If it gets too hot, slide the pan halfway off the element, because electric burners are slow to cool down.",
+            "<strong>Induction:</strong> 7–8 out of 10 for about <strong>5 min</strong>. Watch it closely."
+          ]
+        },
+        { "type": "spacer" },
+        {
+          "type": "p",
+          "html": "<strong>Test 1, the water drop</strong> (dry pan). Flick a few drops of water on:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>They sizzle, spread, and boil away in 1–3 s</strong> → under ~350°F. <em>Not ready.</em>",
+            "<strong>They pull into beads that skate around like mercury</strong> → ~400°F+. Close. Give it <strong>another 60–90 s on high</strong>.",
+            "Wipe up any leftover water with a folded paper towel held in tongs."
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Test 2, IR thermometer</strong> (optional). Aim at the center, then near the edge: <strong>475–500°F</strong>, with the edge within ~50°F of the center. Below 450°F, keep heating. Above 525°F, take the pan off the heat for 20–30 s."
+        },
+        {
+          "type": "p",
+          "html": "<strong>Test 3, the oil (your go signal).</strong> Add <strong>2 tsp avocado oil</strong> and swirl it into a thin, unbroken film. A film sears; a puddle fries."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "It should <strong>shimmer and ripple instantly</strong>, thinning out like water.",
+            "Within <strong>5–15 s</strong> you'll see the <strong>first faint wisp of white smoke → GO.</strong>",
+            "Heavy, billowing smoke or oil turning dark → too hot. Pull the pan off the heat for 15–20 s, then go.",
+            "No shimmer → not ready. Wait."
+          ]
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Sear Steak #1: Side 1",
+      "checkboxLabel": "Steak #1 seared and flipped on all three cues",
+      "measurements": [
+        { "item": "Side 1, ¾\" steak", "qty": "45–60 s" },
+        { "item": "Side 1, 1\" steak", "qty": "75–90 s" },
+        { "item": "Side 1, 1¼\" steak", "qty": "90–105 s" },
+        { "item": "Side 1, 1½\" steak", "qty": "~2:00" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>T-30 s:</strong> take steak #1 out of the fridge and give it a final firm blot on both faces and the edges. Any visible moisture turns into steam instead of sear. If you're using <strong>sugar</strong>, dust it lightly on one face.",
+            "<strong>Start your timer.</strong> Lay the steak in <strong>away from you</strong>: put the near edge down first, then lower the rest away so the splatter goes away from your hand. Sugared side down.",
+            "<strong>Listen:</strong> you want a loud, immediate, steady hiss. A gentle fizz means the pan wasn't hot enough, so preheat longer before steak #2.",
+            "<strong>Press gently for 5–10 s</strong> with the flat of the spatula so the whole face touches the iron. Then <strong>hands off</strong>: no sliding, no peeking, no shaking the pan.",
+            "Keep the burner on <strong>HIGH</strong>. Drop to medium-high only if the smoke goes from wisps to clouds.",
+            "<strong>Watch the side of the steak.</strong> An opaque beige-gray band creeps up from the pan."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Flip when all three are true:</strong><br/>① <strong>Release</strong>: slide the spatula under a corner. A finished crust lets go on its own. <em>If it grabs, it isn't ready.</em> Wait 10–15 s and try again. Never pry.<br/>② <strong>Band</strong>: the cooked layer has climbed <strong>⅛–¼\"</strong> up the side, about a quarter of the thickness. If it's past a third, flip immediately.<br/>③ <strong>Color</strong>: the underside is <strong>deep golden-brown to mahogany</strong>. Pale tan → give it 10–15 s more."
+        },
+        {
+          "type": "p",
+          "html": "<strong>Flip</strong> with the spatula underneath and tongs steadying the top edge. Lay it onto a <strong>fresh patch of pan about 2\" over</strong>. That spot hasn't been cooled by the fish."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Side 2 + Pull at 110°F",
+      "checkboxLabel": "Steak #1 pulled at 108–110°F, on the rack",
+      "measurements": [
+        { "item": "¾\": side 1 / side 2", "qty": "45–60 s / 30–45 s, no edges, pull 105–108°F" },
+        { "item": "1\": side 1 / side 2", "qty": "75–90 s / 60–75 s, no edges, pull 108–110°F" },
+        { "item": "1¼\": side 1 / side 2", "qty": "90–105 s / 75–90 s, edges 8–10 s each (optional), pull 110°F" },
+        { "item": "1½\": side 1 / side 2", "qty": "~2:00 / ~1:30, edges 10–15 s each, pull 110°F" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Side 2 runs 15–20 s shorter</strong> than side 1 because the steak is already warm. Use the table below as a guide.",
+            "<strong>Edge sear (optional):</strong> only for steaks <strong>1¼\" or thicker</strong>. Hold the steak on its edge with tongs for 8–10 s per edge, for color only. <strong>Skip it at 1\" or thinner</strong>, because it costs you pink.",
+            "<strong>Thermometer:</strong> insert the probe <strong>horizontally from the side into the dead center</strong>."
+          ]
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>105–108°F</strong>: very rare. Cool, translucent red center.",
+            "<strong>108–110°F</strong>: <strong>the target. Pull here.</strong> A warm ruby center that's just starting to firm.",
+            "<strong>Never past 115°F at the pull.</strong> Carryover adds 3–5°F, and above ~120°F tuna turns dry, chalky, and gray."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>No thermometer?</strong> Look at the side of the steak. Pull when the two cooked bands (top and bottom) leave a <strong>red stripe at least half the steak's height</strong> in the middle. Or nick the center with a paring knife: it should be translucent red and feel cool to barely warm, never hot."
+        },
+        {
+          "type": "p",
+          "html": "<strong>Straight onto the wire rack, not a plate.</strong> A plate traps steam that softens the crust from below and pushes more carryover heat into the center."
+        },
+        {
+          "type": "callout",
+          "html": "<strong>The times are only a guide.</strong> Pan at 475–500°F, fridge-cold fish. <strong>The release, the band, and the thermometer decide</strong>, not the clock. The per-thickness timing is in the table below."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 6",
+      "title": "Calibrate + Sear Steak #2",
+      "checkboxLabel": "Steak #2 seared with adjusted times, on the rack",
+      "measurements": [
+        { "item": "Avocado oil", "qty": "2 tsp, fresh" },
+        { "item": "Reheat between steaks", "qty": "60–90 s on high" }
+      ],
+      "body": [
+        {
+          "type": "p",
+          "html": "<strong>Look at the side of steak #1.</strong> You want about <strong>⅛–¼\" of cooked band on each side</strong> with <strong>at least ½\" of ruby</strong> in between."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Band too thick or center too narrow</strong> → take <strong>10–15 s off each side</strong>.",
+            "<strong>Crust too pale but center perfect</strong> → the pan wasn't hot enough. Reheat longer and keep the same times.",
+            "<strong>Dark crust, thin band</strong> → you nailed it. Repeat exactly."
+          ]
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "Put the pan back on <strong>high for 60–90 s</strong>. If the old oil has darkened or has fish bits in it, carefully wipe it out with a wad of paper towels held in tongs (the pan is ~500°F).",
+            "Confirm the heat again: <strong>water drops skate</strong>, or the IR gun reads <strong>475–500°F</strong>.",
+            "Take steak #2 out of the fridge and give it a final blot. Add <strong>2 tsp fresh oil</strong>, wait for the <strong>shimmer + first wisp</strong>, then sear using your <strong>adjusted times</strong> and the same three flip cues.",
+            "Pull at <strong>108–110°F</strong> → onto the rack. <strong>Turn off the burner</strong> and move the pan to a cold burner so it stops smoking."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Both steaks at once? Only in a 12\" skillet.</strong> Preheat 2–3 min longer and use 1 Tbsp oil. Place them at 10 and 4 o'clock, <strong>at least 2\" apart</strong>, laid in 10 s apart. Flip and pull them in the order they went in, and expect about <strong>+15 s per side</strong>. Never put two steaks in a 10\" pan: they steam each other gray."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 7",
+      "title": "Rest + Slice",
+      "checkboxLabel": "Rested 2–3 min, sliced ⅜\" across the grain",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Rest 2–3 min minimum on the rack, uncovered.</strong> The crust sets and the outside cools enough to slice cleanly. Steak #1 resting longer is fine: most carryover happens in the first 2 minutes, and seared tuna is best warm to tepid.",
+            "<strong>No foil tent.</strong> It steams the crust and keeps cooking the center.",
+            "<strong>Find the grain:</strong> on the top face you'll see faint white lines running in arcs. <strong>Slice perpendicular to them.</strong>",
+            "<strong>Cut ⅜\" thick</strong> (~1 cm), 5–7 slices per steak. Thinner slices fall apart, and thicker ones get chewy.",
+            "<strong>One long pulling stroke per slice</strong>, heel to tip, and let the blade do the work. <strong>Don't saw.</strong> Sawing rips off the crust and smears the center.",
+            "Steady the steak with your fingertips on the <strong>sides</strong>. Wipe the blade if it starts to drag."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>What you're looking for:</strong> a thin (⅛\" or less) beige rim and a wide, glossy ruby center under a mahogany crust."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 8",
+      "title": "Plate + Finish",
+      "checkboxLabel": "Plated, drizzled, salted, eaten",
+      "measurements": [
+        { "item": "Drizzle", "qty": "1–1½ Tbsp per portion" },
+        { "item": "Flaky salt", "qty": "a few flakes, cut faces only" },
+        { "item": "Black pepper", "qty": "a few coarse turns" },
+        { "item": "Feta", "qty": "the remaining crumbles" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Scatter the <strong>remaining feta</strong> over the couscous.",
+            "<strong>Shingle the tuna slices</strong> against or partly over the couscous, ruby faces up.",
+            "<strong>Spoon 1–1½ Tbsp of drizzle over each portion</strong> so every slice gets olive bits and oregano, and let a little run into the couscous. Don't flood the plate.",
+            "Finish with <strong>a few flakes of flaky salt on the cut faces only</strong>, a few turns of <strong>coarse black pepper</strong>, and a <strong>lemon wedge</strong>.",
+            "<strong>Eat right away:</strong> room-temperature couscous, a warm, crackly crust, and a cool ruby center."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Lemon only after cooking.</strong> Acid on raw tuna makes the surface wet and ruins the sear."
+        }
+      ]
+    },
+    {
+      "kicker": "Reference",
+      "title": "If Something Goes Wrong",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Weak sizzle, water pooling</strong> → burner to max. Don't flip until it releases, even if that takes 2 min. Next steak: preheat longer and blot drier.",
+            "<strong>Band climbing fast but crust pale</strong> → the pan lost heat. Flip anyway when the band reaches ¼, and reheat longer before steak #2.",
+            "<strong>Steak sticks at flip time</strong> → the crust hasn't formed. Wait 10–15 s, then push a thin metal spatula flat along the pan.",
+            "<strong>Heavy smoke, oil darkening</strong> → pan off the heat for 15–20 s and keep cooking. Hood on max.",
+            "<strong>Center past pink</strong> → pull at 110°F next time, and check about 15 s earlier than you think.",
+            "<strong>Too salty</strong> → more lemon and plain couscous on the plate. Next time, salt only the cut faces."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Mistakes to avoid:</strong> under-preheating (no skating water drops = no fish) · a wet surface · salting again · EVOO or butter in the pan · letting the fish warm up on the counter · moving or peeking · prying a stuck steak · crowding · cooking by the clock alone · pulling past 115°F · resting on a plate or under foil · slicing with the grain or sawing."
+        }
+      ]
+    }
+  ]
+}

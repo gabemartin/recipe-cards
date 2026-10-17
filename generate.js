@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, statSync } from "fs";
 import { join, basename, dirname } from "path";
 import { fileURLToPath } from "url";
+import { execSync } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -2466,18 +2467,20 @@ ${renderPrintRecipe(recipe)}
 
 // ─── Index page ───────────────────────────────────────────────────────────────
 
-function buildIndex(entries) {
+function buildIndex(entries, addedAt = {}) {
   // entries: [{ name, recipe, imageFile }]
+  // addedAt: { slug: ISO date the recipe JSON was first committed } — drives the "new recipes" callout
+  const recipeMeta = entries.map(({ name, recipe }) => ({ slug: name, title: recipe.title, addedAt: addedAt[name] || null }));
   const cards = entries.map(({ name, recipe, imageFile }) => {
     const stepCount = recipe.slides.filter(s => s.checkboxLabel).length;
     const chips = recipe.chips.slice(0, 3).map(renderChip).join("\n          ");
     const thumb = renderIndexThumb(recipe, name, imageFile);
     return `
-    <a class="icard" href="${name}.html">
+    <a class="icard" href="${name}.html" data-slug="${name}">
       ${thumb}
       <div class="icard-head">
         <div>
-          <p class="kicker">${stepCount} steps</p>
+          <p class="kicker">${stepCount} steps<span class="new-badge">New</span></p>
           <h2 class="h">${recipe.title}</h2>
           <p class="muted">${recipe.subtitle}</p>
         </div>
@@ -2646,6 +2649,44 @@ function buildIndex(entries) {
       width:8px; height:8px; border-radius:999px;
       background:var(--accent); box-shadow:0 0 0 4px var(--accent-glow);
     }
+    .new-badge{
+      display:none; margin-left:8px; padding:2px 7px; border-radius:999px;
+      background:var(--accent); color:#fff; letter-spacing:.12em; font-size:10px; vertical-align:1px;
+    }
+    .icard.is-new .new-badge{ display:inline-block; }
+    .icard.is-new{ border-color:color-mix(in srgb,var(--accent) 55%,var(--border)); }
+    .new-callout{
+      position:relative; margin:0 0 20px; padding:16px 52px 16px 18px;
+      border-radius:var(--radius-xl); border:1px solid color-mix(in srgb,var(--accent) 60%,var(--border));
+      border-left:4px solid var(--accent);
+      background:linear-gradient(135deg,var(--accent-glow),transparent 70%),var(--background-secondary);
+      box-shadow:var(--shadow-elevated);
+      animation:new-callout-in .35s ease both;
+    }
+    .new-callout[hidden]{ display:none; }
+    .new-callout.is-leaving{ animation:new-callout-out .22s ease both; }
+    @keyframes new-callout-in{ from{ opacity:0; transform:translateY(-6px); } to{ opacity:1; transform:none; } }
+    @keyframes new-callout-out{ to{ opacity:0; transform:translateY(-6px); } }
+    .new-callout .kicker{ color:var(--accent); }
+    .new-callout-title{ margin:0 0 10px; font-size:18px; font-weight:900; line-height:1.2; }
+    .new-callout-list{ display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+    .new-callout-list a{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:7px 12px; border-radius:999px;
+      border:1px solid var(--border-strong); background:var(--surface-muted);
+      color:var(--foreground-primary); font-size:var(--text-sm); font-weight:700; text-decoration:none;
+    }
+    .new-callout-list a:hover{ border-color:var(--accent); }
+    .new-callout-close{
+      position:absolute; top:12px; right:12px;
+      appearance:none; width:32px; height:32px; border-radius:10px;
+      border:1px solid var(--border); background:var(--surface-muted);
+      color:var(--foreground-secondary); display:grid; place-items:center;
+      cursor:pointer; padding:0; -webkit-tap-highlight-color:transparent;
+    }
+    .new-callout-close:hover{ color:var(--foreground-primary); border-color:var(--border-strong); }
+    .new-callout-close svg{ width:16px; height:16px; }
+    @media (prefers-reduced-motion: reduce){ .new-callout,.new-callout.is-leaving{ animation:none; } }
     .empty{ color:var(--foreground-secondary); font-size:var(--text-sm); text-align:center; padding:40px 0; }
     .index-bottombar{
       position:fixed; left:0; right:0; bottom:0; z-index:10;
@@ -2714,6 +2755,12 @@ function buildIndex(entries) {
       </div>
       <button class="theme-toggle" type="button" role="switch" aria-checked="true" aria-label="Switch between light and dark theme" id="themeToggle"></button>
     </div>
+    <section class="new-callout" id="newCallout" hidden aria-live="polite">
+      <p class="kicker">Just added</p>
+      <p class="new-callout-title" id="newCalloutTitle">New recipes</p>
+      <ul class="new-callout-list" id="newCalloutList"></ul>
+      <button class="new-callout-close" type="button" id="newCalloutClose" aria-label="Dismiss new recipes">${HI.xMarkSmall}</button>
+    </section>
     <div class="list">
 ${cards || '      <p class="empty">No recipes yet.</p>'}
     </div>
@@ -2780,6 +2827,60 @@ ${cards || '      <p class="empty">No recipes yet.</p>'}
       renderTabs();
       window.addEventListener("storage", function(e){
         if (e.key === LS_PINS) renderTabs();
+      });
+    })();
+    (function(){
+      // "New recipes" callout: anything not in the seen-list is new. On a device's first visit,
+      // recipes committed within the last FRESH_DAYS count as new; everything older is pre-seen.
+      var LS_SEEN = "recipe_cards_seen_v1";
+      var FRESH_DAYS = 7;
+      var RECIPES = ${JSON.stringify(recipeMeta).replace(/</g, "\\u003c")};
+      var callout = document.getElementById("newCallout");
+      var list = document.getElementById("newCalloutList");
+      var title = document.getElementById("newCalloutTitle");
+
+      function loadSeen(){
+        try{
+          var raw = localStorage.getItem(LS_SEEN);
+          if (raw === null) return null;
+          var arr = JSON.parse(raw);
+          return Array.isArray(arr) ? arr : [];
+        }catch(e){ return []; }
+      }
+      function saveSeen(arr){
+        try{ localStorage.setItem(LS_SEEN, JSON.stringify(arr)); }catch(e){}
+      }
+
+      var seen = loadSeen();
+      if (seen === null) {
+        var cutoff = new Date().getTime() - FRESH_DAYS * 864e5;
+        seen = RECIPES.filter(function(r){
+          return !r.addedAt || new Date(r.addedAt).getTime() < cutoff;
+        }).map(function(r){ return r.slug; });
+        saveSeen(seen);
+      }
+      var fresh = RECIPES.filter(function(r){ return seen.indexOf(r.slug) === -1; })
+        .sort(function(a, b){ return (b.addedAt || "").localeCompare(a.addedAt || ""); });
+      if (!fresh.length) return;
+
+      fresh.forEach(function(r){
+        var card = document.querySelector('.icard[data-slug="' + r.slug + '"]');
+        if (card) card.classList.add("is-new");
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = r.slug + ".html";
+        a.textContent = r.title;
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      title.textContent = fresh.length === 1 ? "1 new recipe to try" : fresh.length + " new recipes to try";
+      callout.hidden = false;
+
+      document.getElementById("newCalloutClose").addEventListener("click", function(){
+        saveSeen(seen.concat(fresh.map(function(r){ return r.slug; })));
+        document.querySelectorAll(".icard.is-new").forEach(function(c){ c.classList.remove("is-new"); });
+        callout.classList.add("is-leaving");
+        setTimeout(function(){ callout.hidden = true; }, 220);
       });
     })();
     (function(){
@@ -2956,6 +3057,32 @@ async function processFile(src) {
   return { name, recipe, imageFile };
 }
 
+// First-commit date per recipe slug (needs full git history; uncommitted recipes count as "now").
+function recipeAddedDates() {
+  const dates = {};
+  try {
+    const out = execSync("git log --diff-filter=A --format=%x00%cI --name-only -- src/recipes", {
+      cwd: __dirname, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"],
+    });
+    let current = null;
+    for (const line of out.split("\n")) {
+      if (line.startsWith("\0")) current = line.slice(1).trim();
+      else if (line.endsWith(".json") && current) {
+        const slug = basename(line.trim(), ".json");
+        if (!dates[slug]) dates[slug] = current;
+      }
+    }
+  } catch (e) {
+    return dates;
+  }
+  const now = new Date().toISOString();
+  for (const f of readdirSync(join(__dirname, "src", "recipes"))) {
+    const slug = basename(f, ".json");
+    if (f.endsWith(".json") && !dates[slug]) dates[slug] = now;
+  }
+  return dates;
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const outDir = join(__dirname, "dist");
@@ -2980,7 +3107,7 @@ async function main() {
     entries.push(await processFile(join(recipesDir, f)));
   }
 
-  writeFileSync(join(outDir, "index.html"), buildIndex(entries), "utf8");
+  writeFileSync(join(outDir, "index.html"), buildIndex(entries, recipeAddedDates()), "utf8");
   console.log(`  ✓ index → dist/index.html (${entries.length} recipe${entries.length === 1 ? "" : "s"})`);
 
   const manifest = {
