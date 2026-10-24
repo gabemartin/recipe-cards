@@ -1,0 +1,194 @@
+{
+  "title": "Weber Kettle Steaks: ½\" + 1\"",
+  "imagePrompt": "Four grilled beef steaks on a board: two thick ribeye-style steaks with rendered, crackling golden fat edges and two thinner strip-style steaks. Each has dark charcoal sear marks over a deep brown crust flecked with cracked black pepper. The thick steaks are sliced against the grain to show a rosy-pink medium-rare center with a thin gray-brown rim, juices beading on the cut faces and pooling slightly on the board.",
+  "subtitle": "Two-zone charcoal on a Weber kettle for a mixed batch of pre-salted, room-temp steaks: thin ones seared hot and fast, thick ones seared then finished on the cool side.",
+  "storageKey": "weber_kettle_steaks_checks_v1",
+  "chips": [
+    { "dot": true, "label": "Protein", "value": "4 steaks, ½\" + 1\"" },
+    {              "label": "Grill",   "value": "Weber kettle, 2-zone" },
+    {              "label": "Pull",    "value": "125°F (med-rare)" },
+    {              "label": "Fuel",    "value": "1 full chimney" }
+  ],
+  "ingredients": {
+    "heading": "Ingredients",
+    "note": "Steaks are already salted, peppered, dried, and at room temp. Do not salt again.",
+    "items": [
+      "<strong>2 thick steaks (~1\")</strong>, ribeye/strip style with a fat edge",
+      "<strong>2 thin steaks (~½\")</strong>",
+      "<strong>1 full chimney of charcoal</strong>, fully lit",
+      "<strong>1–2 tsp high-heat oil</strong> on a folded paper towel, for the grate",
+      "<strong>Flaky salt + butter</strong> (optional, to finish)"
+    ],
+    "callout": "<strong>The whole game:</strong> all coals on one side. Thin steaks: hot side only, about 1½ min a side. Thick steaks: sear on the hot side, finish on the cool side, pull at <strong>125°F</strong>.",
+    "shoppingList": [
+      { "item": "Steaks: 2 at ~1\", 2 at ~½\"", "substitutes": ["Ribeye", "NY strip", "Top sirloin", "Chuck eye"] },
+      { "item": "Charcoal (1 full chimney)", "substitutes": ["Lump charcoal", "Briquettes"] },
+      { "item": "High-heat oil", "substitutes": ["Avocado", "Canola", "Vegetable"] },
+      { "item": "Flaky salt (optional)" },
+      { "item": "Butter (optional)" }
+    ]
+  },
+  "slides": [
+    {
+      "kicker": "Overview",
+      "title": "What You're Making",
+      "body": [
+        {
+          "type": "p",
+          "html": "Four steaks in two thicknesses on one fire. The trick is a <strong>two-zone fire</strong> and <strong>staggered timing</strong>: the 1\" steaks go on first, and the ½\" steaks go on when the thick ones move to the cool side. Everything comes off within a minute or two."
+        },
+        { "type": "spacer" },
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Mise en place</strong>: tools, thermometer, clean platter, oil rag, all next to the grill",
+            "<strong>Build the two-zone fire</strong> and preheat the grate 5 min",
+            "<strong>Sear the 1\" steaks</strong> on the hot side, 2–3 min a side",
+            "<strong>Move them to the cool side</strong>, and drop the ½\" steaks on the hot side",
+            "<strong>Pull everything</strong> by temp and feel, then rest 5 min"
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Thin steaks cook by the clock, thick steaks cook by the thermometer.</strong> A ½\" steak goes from medium-rare to medium in about 30 seconds, so never walk away from it."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 1",
+      "title": "Mise en Place",
+      "checkboxLabel": "Tools staged at the grill",
+      "measurements": [
+        { "item": "1\" steaks", "qty": "2" },
+        { "item": "½\" steaks", "qty": "2" },
+        { "item": "Oil for grate", "qty": "1–2 tsp on a paper towel", "alts": ["Avocado", "Canola"] }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Sort the steaks into <strong>two groups: 1\" and ½\"</strong>. Keep them apart on the tray.",
+            "Grab <strong>long tongs</strong>, an <strong>instant-read thermometer</strong>, a <strong>grill brush</strong>, and a <strong>clean platter</strong> (not the raw-meat tray).",
+            "Fold a paper towel into a pad and dab it with oil for the grate.",
+            "Optional: a pat of <strong>butter</strong> and <strong>flaky salt</strong> by the platter."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Don't re-salt.</strong> They're already seasoned. If a steak looks wet again, blot it right before it goes on."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 2",
+      "title": "Two-Zone Fire",
+      "checkboxLabel": "Coals banked on one side, grate hot and oiled",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Wait until the top coals in the chimney are <strong>ashed over gray</strong> and flames are licking out the top.",
+            "Dump <strong>all coals onto one half</strong> of the charcoal grate. Pile them in a slope. The other half stays <strong>empty</strong>: that's your cool side.",
+            "<strong>Bottom vent: fully open.</strong>",
+            "Set the cooking grate in place, <strong>lid on, top vent fully open</strong>, over the cool side. Preheat <strong>5 min</strong>.",
+            "Brush the grate clean, then wipe the hot side with the oiled towel held in tongs."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Hand test:</strong> hold your palm 5\" above the hot side. You should only last <strong>1–2 seconds</strong>. Longer than that, give it a few more minutes."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 3",
+      "title": "Sear the 1\" Steaks",
+      "checkboxLabel": "1\" steaks seared both sides",
+      "measurements": [
+        { "item": "Side 1", "qty": "2–3 min, lid off" },
+        { "item": "Side 2", "qty": "2–3 min, lid off" },
+        { "item": "Fat edge", "qty": "30–60 s, held with tongs" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Lay the <strong>1\" steaks</strong> on the <strong>hot side</strong>, lid off.",
+            "<strong>Don't touch for 2 min.</strong> Flip when it releases cleanly and has a dark crust.",
+            "Sear side 2 for <strong>2–3 min</strong>.",
+            "<strong>Render the fat edge:</strong> stand each steak on its fat cap with tongs over the coals for 30–60 s until it's golden and crisp."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Flare-up?</strong> Slide the steak to the cool side for 10–15 s until the flames die down, then move it back. Don't squirt water on the coals."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 4",
+      "title": "Finish 1\" Cool / Sear ½\" Hot",
+      "checkboxLabel": "Thin steaks seared, thick ones finishing",
+      "measurements": [
+        { "item": "½\" steaks, side 1", "qty": "60–90 s" },
+        { "item": "½\" steaks, side 2", "qty": "45–60 s" },
+        { "item": "1\" steaks, cool side", "qty": "2–5 min, lid on" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Move the 1\" steaks to the cool side</strong>, right next to the coals.",
+            "<strong>Lay the ½\" steaks on the hot side.</strong> Lid stays <strong>off</strong>: they cook fast.",
+            "<strong>½\" side 1:</strong> 60–90 s → flip → <strong>side 2:</strong> 45–60 s → <strong>pull to the platter</strong>.",
+            "Pop the <strong>lid on</strong> for the 1\" steaks. Start probing at <strong>2 min</strong>."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Too thin to probe?</strong> Press the center: it should feel soft with a slight spring, like the base of your thumb when you touch thumb to middle finger. Pull early. They'll carry over."
+        }
+      ]
+    },
+    {
+      "kicker": "Step 5",
+      "title": "Pull + Rest",
+      "checkboxLabel": "All steaks pulled and rested 5 min",
+      "measurements": [
+        { "item": "Rare", "qty": "pull 115–118°F" },
+        { "item": "Medium-rare", "qty": "pull 123–125°F" },
+        { "item": "Medium", "qty": "pull 130–133°F" }
+      ],
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Probe the 1\" steaks <strong>from the side into the center</strong>. Pull at <strong>125°F</strong> for medium-rare.",
+            "Rest on the platter <strong>5 min</strong>, uncovered. Optional: a pat of butter on top while they rest.",
+            "<strong>Slice across the grain</strong>, then a pinch of flaky salt on the cut faces.",
+            "<strong>Close all vents</strong> to kill the fire."
+          ]
+        },
+        {
+          "type": "callout",
+          "html": "<strong>Carryover:</strong> thick steaks rise another 3–5°F while resting. Thin ones barely rise, so they can come off closer to target."
+        }
+      ]
+    },
+    {
+      "kicker": "Reference",
+      "title": "Quick Fixes",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "<strong>Steak sticks</strong> → not ready. Wait 15–30 s and it'll release.",
+            "<strong>Crust pale, center done</strong> → fire too cool. Next time, give the grate a longer preheat.",
+            "<strong>Crust dark, 1\" center still raw</strong> → stay on the cool side, lid on, check every minute.",
+            "<strong>Constant flames</strong> → too much dripping fat. Work on the cool side and use the lid."
+          ]
+        }
+      ]
+    }
+  ]
+}
